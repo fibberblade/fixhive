@@ -212,19 +212,21 @@ nav ul li a.nav-packages-link:hover {
   border-color: var(--amber) !important;
   color: var(--amber) !important;
 }
-/* Special Offers nav pill — solid amber, distinct from Packages outline */
+/* Special Offers nav pill — outline amber, matches Packages style */
 nav ul li a.nav-offers-link {
-  background: var(--amber);
-  color: var(--dark) !important;
+  background: rgba(245,166,35,0.14);
+  border: 1.5px solid rgba(245,166,35,0.55);
+  color: var(--amber) !important;
   font-weight: 700 !important;
   padding: 0.28rem 0.9rem;
   border-radius: 20px;
-  transition: opacity .2s !important;
+  transition: background .2s, border-color .2s !important;
   white-space: nowrap;
 }
 nav ul li a.nav-offers-link:hover {
-  opacity: 0.85 !important;
-  color: var(--dark) !important;
+  background: rgba(245,166,35,0.26) !important;
+  border-color: var(--amber) !important;
+  color: var(--amber) !important;
 }
 .nav-hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; }
 .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
