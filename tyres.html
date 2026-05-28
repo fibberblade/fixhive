@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tyre Fitting & Wheel Alignment Dubai | FixHive Garage Dubai</title>
+  <meta name="description" content="New tyres, wheel alignment, balancing and TPMS service in Dubai. FixHive stocks all major tyre brands. Fast fitting, competitive prices." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://myfixhive.ae/tyres.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://myfixhive.ae/tyres.html" />
+  <meta property="og:title" content="Tyre Fitting, Alignment & Wheel Balancing Dubai | FixHive" />
+  <meta property="og:description" content="New tyres, wheel alignment, balancing, TPMS and nitrogen inflation in Dubai. All brands, all vehicles. FixHive Garage — honest prices, no surprises." />
+  <meta property="og:image" content="https://myfixhive.ae/images/og-fixhive.jpg" />
+  <meta property="og:site_name" content="FixHive Garage" />
+  <meta property="og:locale" content="en_AE" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tyres & Alignment Dubai | FixHive Garage" />
+  <meta name="twitter:description" content="Tyre fitting, alignment & balancing in Dubai — all brands, honest pricing." />
+  <meta name="twitter:image" content="https://myfixhive.ae/images/og-fixhive.jpg" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://myfixhive.ae/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://myfixhive.ae/services.html"},{"@type":"ListItem","position":3,"name":"Tyres & Wheels","item":"https://myfixhive.ae/tyres.html"}]}
+  </script>
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    .page-content { padding: 60px 5%; max-width: 1100px; margin: 0 auto; }
+    .service-includes { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2.5rem 0; }
+    .includes-col h3 { color: #1e3a8a; font-size: 1.1rem; margin-bottom: 1rem; }
+    .check-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+    .check-list li { display: flex; align-items: flex-start; gap: 0.6rem; color: #374151; font-size: 0.92rem; }
+    .check-list li::before { content: '✓'; color: #1d4ed8; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; margin: 2.5rem 0; }
+    .why-item { background: #f0f5ff; border-radius: 10px; padding: 1.5rem; }
+    .why-item .wi-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+    .why-item h4 { color: #1e3a8a; font-size: 0.97rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .why-item p { color: #6b7280; font-size: 0.87rem; line-height: 1.6; }
+    .page-cta { background: linear-gradient(135deg,#0a2463,#1d4ed8); padding: 50px 5%; text-align: center; color: #fff; }
+    .page-cta h2 { font-size: clamp(1.4rem,3vw,2rem); margin-bottom: 0.8rem; }
+    .page-cta p { color: rgba(255,255,255,0.8); margin-bottom: 1.8rem; }
+    @media(max-width:700px){ .service-includes{grid-template-columns:1fr;} .why-grid{grid-template-columns:1fr 1fr;} }
+    @media(max-width:480px){ .why-grid{grid-template-columns:1fr;} }
+
+    /* FAQ Accordion */
+    .faq-section { padding: 60px 5%; background: #f8faff; }
+    .faq-section .section-title { color: #1e3a8a; }
+    .faq-list { max-width: 820px; margin: 2rem auto 0; display: flex; flex-direction: column; gap: 0.6rem; }
+    .faq-item { background: #fff; border: 1.5px solid #e5e7eb; border-radius: 10px; overflow: hidden; }
+    .faq-q { width: 100%; text-align: left; padding: 1rem 1.2rem; background: none; border: none; font-size: 0.95rem; font-weight: 600; color: #1e3a8a; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq-q::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: #1d4ed8; flex-shrink: 0; transition: transform .2s; }
+    .faq-item.open .faq-q::after { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s; padding: 0 1.2rem; }
+    .faq-a p { padding: 0 0 1rem; color: #374151; font-size: 0.9rem; line-height: 1.7; margin: 0; }
+    .faq-item.open .faq-a { max-height: 300px; padding-top: 0; }
+
+    .symptoms-section { background: #fff8f0; border: 1.5px solid #fed7aa; border-radius: 12px; padding: 2rem 2.2rem; margin: 2.5rem 0; }
+    .symptoms-section h2 { color: #92400e; font-size: 1.1rem; margin-bottom: 1rem; }
+    .symptoms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+    .symptom-item { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.9rem; color: #374151; }
+    .symptom-item::before { content: '⚠️'; flex-shrink: 0; font-size: 0.85rem; margin-top: 1px; }
+    .dubai-section { margin: 2.5rem 0; }
+    .dubai-section h2 { color: #1e3a8a; }
+    .dubai-section p { color: #374151; font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.2rem; }
+    .process-steps { display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0; }
+    .process-step { display: flex; gap: 1.2rem; align-items: flex-start; }
+    .step-num { width: 32px; height: 32px; background: #1d4ed8; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.87rem; flex-shrink: 0; margin-top: 2px; }
+    .step-text h4 { color: #1e3a8a; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .step-text p { color: #374151; font-size: 0.88rem; line-height: 1.6; margin: 0; }
+    @media(max-width:600px){ .symptoms-grid{grid-template-columns:1fr;} }
+    .pricing-section { margin: 2.5rem 0; }
+    .pricing-section h2 { color: #1e3a8a; font-size: 1.4rem; margin-bottom: 1rem; }
+    .pricing-section p { color: #374151; font-size: 0.95rem; line-height: 1.85; margin-bottom: 1.2rem; }
+    .myth-section { background: #f0f5ff; border-radius: 12px; padding: 2rem 2.2rem; margin: 2.5rem 0; }
+    .myth-section h2 { color: #1e3a8a; font-size: 1.4rem; margin-bottom: 1.2rem; }
+    .myth-item { margin-bottom: 1.4rem; }
+    .myth-item strong { color: #1d4ed8; display: block; margin-bottom: 0.3rem; font-size: 0.97rem; }
+    .myth-item p { color: #374151; font-size: 0.92rem; line-height: 1.75; margin: 0; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What tyre pressure should I use in Dubai summer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Always use the manufacturer's recommended cold pressure (found on the door sticker or owner's manual). In summer, tyre pressure rises as the tyre heats up \u2014 check pressure when the car is cold (not after driving). Most Dubai passenger cars run 32\u201335 PSI cold."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I rotate my tyres in the UAE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every 10,000 km or once a year \u2014 whichever comes first. Rotation evens out wear, especially on front-wheel drive cars where the front tyres steer, drive and brake simultaneously. It significantly extends overall tyre life."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is wheel alignment and why does it matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wheel alignment sets the angles of your tyres so they contact the road correctly. Misalignment \u2014 caused by kerb strikes, potholes or normal wear \u2014 causes uneven tyre wear, poor fuel economy and pulling to one side. We recommend checking alignment every 20,000 km."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does wheel alignment cost in Dubai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard four-wheel alignment at FixHive starts from AED 150\u2013200. We use digital alignment equipment for accurate results. Many Dubai garages only do toe adjustment \u2014 we do full four-wheel geometry including camber and caster where adjustable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is TPMS and why is my warning light on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TPMS (Tyre Pressure Monitoring System) alerts you when a tyre is significantly under-inflated. The light can come on due to a puncture, a faulty TPMS sensor, or pressure loss from temperature change. We diagnose and reset TPMS sensors for all vehicle brands."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you supply and fit tyres at FixHive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes \u2014 we supply and fit tyres from all major brands including Michelin, Bridgestone, Goodyear, Continental and budget alternatives. We balance and fit on the spot. WhatsApp us your tyre size and vehicle for a quote."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="stylesheet" href="chatbot.css" />
+    <link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/tyres.html" />
+    <link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/tyres.html" />
+    <link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/tyres.html" /></head>
+<body>
+
+<a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="top-bar" target="_blank" rel="noopener" aria-label="Contact FixHive on WhatsApp">
+  <span>💬 <strong>WhatsApp Us Now</strong> — Fast Response, Free Advice &nbsp;|&nbsp; 054 169 9500</span>
+</a>
+
+<nav>
+  <a href="index.html" class="logo"><img src="img/logo.webp" alt="FixHive Garage Dubai" /></a>
+  <ul>
+    <li class="has-dropdown">
+      <a href="services.html">Services</a>
+      <ul class="nav-dropdown">
+        <li><a href="ac-service.html">AC &amp; Cooling</a></li>
+        <li><a href="engine.html">Engine &amp; Transmission</a></li>
+        <li><a href="brakes.html">Brakes &amp; Suspension</a></li>
+        <li><a href="tyres.html">Tyres &amp; Wheels</a></li>
+        <li><a href="body.html">Body &amp; Exterior</a></li>
+        <li><a href="electrical.html">Battery &amp; Electrical</a></li>
+        <li><a href="hybrid-ev.html">Hybrid &amp; EV</a></li>
+        <li><a href="pre-purchase-inspection.html">Pre-Purchase Inspection</a></li>
+        <li><a href="service-packages.html">Service Packages</a></li>
+        <li><a href="detailing.html">Detailing &amp; Protection</a></li>
+        <li><a href="gearbox.html">Gearbox &amp; Drivetrain</a></li>
+        <li><a href="diagnostics.html">Advanced Diagnostics</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="nav-cta">Book Now</a>
+  <a href="ar/tyres.html" class="nav-lang">🇦🇪 AR</a>
+  <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="services.html">All Services</a>
+  <a href="ac-service.html" style="padding-left:1.5rem;font-size:0.87rem;">AC &amp; Cooling</a>
+  <a href="engine.html" style="padding-left:1.5rem;font-size:0.87rem;">Engine &amp; Transmission</a>
+  <a href="brakes.html" style="padding-left:1.5rem;font-size:0.87rem;">Brakes &amp; Suspension</a>
+  <a href="tyres.html" style="padding-left:1.5rem;font-size:0.87rem;">Tyres &amp; Wheels</a>
+  <a href="body.html" style="padding-left:1.5rem;font-size:0.87rem;">Body &amp; Exterior</a>
+  <a href="electrical.html" style="padding-left:1.5rem;font-size:0.87rem;">Battery &amp; Electrical</a>
+  <a href="hybrid-ev.html" style="padding-left:1.5rem;font-size:0.87rem;">Hybrid &amp; EV</a>
+  <a href="pre-purchase-inspection.html" style="padding-left:1.5rem;font-size:0.87rem;">Pre-Purchase Inspection</a>
+  <a href="service-packages.html" style="padding-left:1.5rem;font-size:0.87rem;">Service Packages</a>
+  <a href="detailing.html" style="padding-left:1.5rem;font-size:0.87rem;">Detailing &amp; Protection</a>
+  <a href="gearbox.html" style="padding-left:1.5rem;font-size:0.87rem;">Gearbox &amp; Drivetrain</a>
+  <a href="diagnostics.html" style="padding-left:1.5rem;font-size:0.87rem;">Advanced Diagnostics</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment">📲 Book on WhatsApp</a>
+</div>
+
+<section class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> › <a href="services.html">Services</a> › Tyres &amp; Wheels</div>
+  <h1>Tyres & Wheel Services in Dubai</h1>
+  <p>New tyres fitted while you wait. Alignment, balancing, TPMS reset — everything your wheels need under one roof.</p>
+</section>
+
+<div class="page-content">
+  
+  <!-- SYMPTOMS -->
+  <div class="symptoms-section">
+    <h2>⚠️ Signs You May Need This Service</h2>
+    <div class="symptoms-grid">
+      <div class="symptom-item">Steering wheel vibrates at certain speeds (60–120 km/h)</div>
+      <div class="symptom-item">Car drifts or pulls to one side on a straight road</div>
+      <div class="symptom-item">Uneven tread wear — one edge worn more than the other</div>
+      <div class="symptom-item">TPMS warning light illuminated</div>
+      <div class="symptom-item">Tyres losing pressure regularly (more than 5 PSI per week)</div>
+      <div class="symptom-item">Cracks, bulges or blisters on tyre sidewalls</div>
+      <div class="symptom-item">Tread depth below 2mm (use a AED coin — if the rim shows, replace now)</div>
+      <div class="symptom-item">Humming or roaring noise that changes with speed</div>
+    </div>
+  </div>
+
+  <!-- DUBAI CONTEXT -->
+  <div class="dubai-section">
+    <h2>Tyres in Dubai's Climate: What You Need to Know</h2>
+    <p>Dubai's asphalt regularly reaches surface temperatures of 70–80°C in summer — hot enough to cook an egg and significantly above the temperatures most tyre compounds were designed to handle continuously. Tyre rubber softens in extreme heat, making it more susceptible to punctures and increasing wear rates. Tyres that would last 40,000 km in a mild climate often need replacing at 25,000–30,000 km in the UAE.</p>
+    <p>Tyre pressure is also dramatically affected by temperature. For every 10°C increase in temperature, tyre pressure rises by approximately 1 PSI. When a tyre goes from an air-conditioned garage (25°C) to sitting on hot asphalt (70°C), the pressure increase can be 4–5 PSI — pushing an already-full tyre to overinflation. We recommend setting cold tyre pressures at the lower end of the manufacturer's acceptable range in summer to account for this expansion.</p>
+    <p>Many Dubai cars run on nitrogen rather than compressed air, which helps stabilise pressure across temperature changes. However, nitrogen is only effective if the tyre was properly purged before filling — a 90% nitrogen fill behaves almost identically to air. At FixHive we use a proper nitrogen filling process that genuinely delivers the stability benefits, not just a label on the valve cap.</p>
+    <p>Wheel alignment is another commonly neglected item in Dubai. The city's speed bumps, road edges and occasional off-road detours knock alignment out far more frequently than European roads. Misaligned wheels cause rapid and uneven tyre wear — often destroying a new tyre in 10,000 km rather than 30,000 km. We recommend checking alignment with every tyre replacement and annually otherwise.</p>
+  </div>
+
+  <!-- PROCESS -->
+  <div class="section-label">Our Process</div>
+  <h2 class="section-title" style="color:#1e3a8a;">How We Diagnose &amp; Fix the Problem</h2>
+  <div class="process-steps">
+    <div class="process-step"><div class="step-num">1</div><div class="step-body"><strong>Tyre Condition Assessment</strong><p>We check all four tyres for tread depth at three points across the width, sidewall condition, and signs of heat damage or irregular wear. We also check the spare tyre — Dubai's roads mean you'll need it one day.</p></div></div>
+    <div class="process-step"><div class="step-num">2</div><div class="step-body"><strong>TPMS Sensor Check</strong><p>We check tyre pressure monitoring system sensors are functioning and reading correctly. TPMS sensors have batteries that fail after 5–8 years — a dead sensor won't warn you of a tyre problem.</p></div></div>
+    <div class="process-step"><div class="step-num">3</div><div class="step-body"><strong>Wheel Alignment Measurement</strong><p>We mount the vehicle on our 4-wheel alignment system and measure camber, caster and toe angles against manufacturer specification. We show you the readings before and after adjustment.</p></div></div>
+    <div class="process-step"><div class="step-num">4</div><div class="step-body"><strong>Dynamic Balancing</strong><p>We balance all wheels using a dynamic spin balancer that identifies both static and dynamic imbalance. Correct balancing eliminates steering vibration and prevents uneven tyre wear.</p></div></div>
+    <div class="process-step"><div class="step-num">5</div><div class="step-body"><strong>Post-Service Pressure Set</strong><p>We set all tyre pressures to the correct specification (adjusted for season) and confirm the TPMS system is showing correct readings on the dashboard before handing the car back.</p></div></div>
+  </div>
+
+<div class="section-label">What's Included</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Tyre & Wheel Services</h2>
+  <div class="service-includes">
+    <div class="includes-col">
+      <h3>Services Offered</h3>
+      <ul class="check-list">
+        <li>New Tyre Supply &amp; Fitting — full range of brands and sizes in stock, fitted and torqued to manufacturer specification</li>
+        <li>Wheel Alignment (2 &amp; 4 wheel) — camber, caster and toe set precisely to manufacturer values using laser alignment equipment</li>
+        <li>Wheel Balancing — static and dynamic balance corrected using precision weights to eliminate steering vibration at speed</li>
+        <li>TPMS Sensor Service &amp; Reset — faulty sensors replaced and system reset so your tyre pressure warning works correctly</li>
+        <li>Tyre Nitrogen Gas Filling — nitrogen inflation provides more stable pressure across temperature extremes common in Dubai's climate</li>
+        <li>Tyre Repair &amp; Puncture Fix — safe repairs carried out to British Standard where the tyre is repairable; honest advice when it isn't</li>
+      </ul>
+    </div>
+    <div class="includes-col">
+      <h3>What We Check</h3>
+      <ul class="check-list">
+        <li>Alloy wheel repair &amp; restoration — scuffs, kerb damage and corroded finishes repaired and refinished to match original appearance</li>
+        <li>Alloy Gator fitting — protective rim tape applied to guard alloy edges against future kerb damage</li>
+        <li>Tyre pressure check &amp; adjustment — all four tyres and spare set to the correct cold pressure as specified by the manufacturer</li>
+        <li>Tread depth inspection — remaining tread measured across all four tyres and compared against UAE legal minimums</li>
+        <li>Rotation &amp; cross-fitting — tyres rotated front-to-rear or cross-fitted to even out wear and extend overall tyre life</li>
+        <li>Run-flat tyre handling — specialist equipment used to safely mount and dismount run-flat tyres without rim damage</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-label">Why FixHive</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Your Wheels in the Right Hands</h2>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="wi-icon">🛞</div>
+      <h4>All Major Brands Stocked</h4>
+      <p>We carry Michelin, Bridgestone, Continental, Pirelli, Dunlop and more. We'll recommend the right tyre for your car and your budget — performance, comfort or value — with no unnecessary upsell.</p>
+    </div>
+    <div class="why-item">
+      <div class="wi-icon">📐</div>
+      <h4>Laser Wheel Alignment</h4>
+      <p>Our alignment equipment uses laser precision to set your wheels exactly to manufacturer specs — not close enough, exactly right. Correct alignment protects your tyres, improves fuel economy and makes the car feel planted and confident on the road.</p>
+    </div>
+    <div class="why-item">
+      <div class="wi-icon">⏱️</div>
+      <h4>Fast Fitting</h4>
+      <p>Most tyre jobs are done in under an hour. No need to leave your car all day — we're quick and we'll let you know as soon as it's ready. Walk-ins welcome; booking ahead guarantees your slot.</p>
+    </div>
+  
+
+  <!-- PRICING GUIDE -->
+  <div class="pricing-section">
+    <h2>Tyre Pricing Guide — Dubai AED Ranges</h2>
+    <p>Tyre prices in Dubai vary enormously by brand tier and size. Budget tyres for common 17-inch fitments (mid-size sedans and SUVs) start from around <strong>AED 180–280 per tyre</strong>. Mid-range brands from established manufacturers run <strong>AED 300–500</strong>. Premium brands — Michelin, Continental, Pirelli, Bridgestone — in standard 17–18 inch sizes cost <strong>AED 450–750 per tyre</strong>. Low-profile tyres on 20-inch or larger rims for performance SUVs and sports cars can reach <strong>AED 900–1,800 per tyre</strong>.</p>
+    <p>Fitting and balancing is typically <strong>AED 25–50 per tyre</strong> for standard sizes; low-profile tyres on large rims take more care and run slightly higher. Wheel alignment is a separate service costing <strong>AED 150–280</strong> for a four-wheel computerised alignment — always recommended after fitting new tyres. Running misaligned wheels with new tyres wastes the tyres within months, particularly on Dubai's roads where kerb strikes are common.</p>
+    <p>Tyre rotation — moving front to rear and vice versa to even out wear — should be done every 10,000 km and costs <strong>AED 60–100</strong>. In Dubai's heat, front tyres on front-wheel-drive cars wear significantly faster than rears due to steering and braking loads. Regular rotation can extend overall tyre life by 20–30%.</p>
+    <p>At FixHive we stock tyres from budget to premium and give you a fixed per-tyre price including fitting and balancing. We don't push the most expensive option — we recommend what suits the car and how it's driven.</p>
+  </div>
+
+  <!-- MYTHS -->
+  <div class="myth-section">
+    <h2>What Dubai Drivers Get Wrong About Tyres</h2>
+    <div class="myth-item">
+      <strong>Myth: "Higher tyre pressure handles Dubai heat better."</strong>
+      <p>Over-inflating tyres to compensate for heat expansion is counterproductive. Your tyres will self-inflate by about 4–6 PSI as they heat up on Dubai roads anyway. Over-inflation reduces the contact patch, increases wear in the centre tread, and worsens wet braking. Always set pressure cold (before driving or after the car has sat for at least three hours) to the figure on the door jamb sticker — not the maximum printed on the tyre sidewall, which is the maximum rated pressure, not the recommended operating pressure.</p>
+    </div>
+    <div class="myth-item">
+      <strong>Myth: "As long as there's tread left, the tyre is safe."</strong>
+      <p>Tyre rubber degrades with age even if the tread appears intact. UV exposure and heat cycling in Dubai's climate accelerate compound hardening — a seven-year-old tyre with 4mm of tread can be more dangerous in wet conditions than a three-year-old tyre with 2mm of tread, because the old compound no longer generates the same grip. Most tyre manufacturers recommend replacement at six years from the manufacture date regardless of remaining tread. Check the four-digit DOT date code on the sidewall.</p>
+    </div>
+    <div class="myth-item">
+      <strong>Myth: "A slow puncture just needs topping up."</strong>
+      <p>A slow puncture has a cause — usually a nail, screw, or damaged valve stem. Repeatedly topping up without repair risks sudden deflation at speed, and more practically, running at low pressure generates heat in the sidewall that can cause internal structural damage not visible from the outside. A proper plug-and-patch repair costs <strong>AED 30–60</strong> and fixes the problem. A tyre damaged by sustained low-pressure running may need replacement at ten times that cost.</p>
+    </div>
+  </div>
+
+</div>
+
+<section class="page-cta">
+  <h2>Need new tyres or an alignment?</h2>
+  <p>WhatsApp us your car make, model and tyre size and we'll quote you before you come in.</p>
+  <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="btn-primary" target="_blank" rel="noopener">📲 Book on WhatsApp</a>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><img src="img/logo.webp" alt="FixHive Garage Dubai" /></a>
+      <p>Reliable, affordable, and fast car repair services across Dubai. Dealer-level quality — without dealer prices.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="services.html">All Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment">Book on WhatsApp</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>📍 WH2 FixHive, 80 Street<br>Dubai Investment Park First, Dubai, UAE</p>
+      <p>🕐 Sat–Thu: 8:00am – 8:00pm</p>
+      <p>📞 <a href="tel:+971541699500">+971 54 169 9500</a></p>
+      <p>✉️ <a href="mailto:sale.ae@myfixhive.ae">sale.ae@myfixhive.ae</a></p>
+      <p>💬 <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment">WhatsApp Us</a></p>
+      <p>⭐ <a href="https://www.google.com/maps/search/Fixhive+Automotive+Garage+Car+Repair+Service+DIP+Dubai" target="_blank" rel="noopener">Google Reviews</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 FixHive Garage — Saher Auto General Repairing LLC</span>
+    <span>Dubai, UAE</span>
+  </div>
+</footer>
+
+
+<script src="chatbot.js"></script>
+<script>
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var item = this.closest('.faq-item');
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": "Summer AC Special",
+    "description": "Beat the Dubai heat — full AC service including gas refill, filter check & compressor inspection.",
+    "badge": "Limited Time",
+    "badgeColor": "amber",
+    "cta": "Book on WhatsApp",
+    "ctaUrl": "https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20to%20book%20the%20Summer%20AC%20Special",
+    "icon": "❄️",
+    "active": true
+  },
+  {
+    "id": 2,
+    "title": "Free Oil Change Check",
+    "description": "Book any service this month and get a complimentary oil level & condition check with your visit.",
+    "badge": "Free Add-on",
+    "badgeColor": "green",
+    "cta": "Book Now",
+    "ctaUrl": "https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20to%20book%20a%20service",
+    "icon": "🔧",
+    "active": true
+  },
+  {
+    "id": 3,
+    "title": "EV & Hybrid Diagnostics",
+    "description": "Full hybrid or EV diagnostic scan — identify issues before they become expensive. Fast, same-day results.",
+    "badge": "New Service",
+    "badgeColor": "blue",
+    "cta": "Learn More",
+    "ctaUrl": "https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20EV%20diagnostics",
+    "icon": "⚡",
+    "active": true
+  }
+]

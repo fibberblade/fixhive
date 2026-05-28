@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Car Diagnostics & ECU Repair Dubai | FixHive Garage Dubai</title>
+  <meta name="description" content="Engine management diagnostics, ECU repair, ADAS camera and radar calibration, and car software programming in Dubai. FixHive uses professional multi-brand diagnostic tools for accurate fault finding." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://myfixhive.ae/diagnostics.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://myfixhive.ae/diagnostics.html" />
+  <meta property="og:title" content="Advanced Car Diagnostics & ECU Repair Dubai | FixHive" />
+  <meta property="og:description" content="Full car diagnostics, ECU repair, ADAS calibration and software programming in Dubai. Factory-level scan tools, all makes. FixHive Garage — Dubai Investment Park." />
+  <meta property="og:image" content="https://myfixhive.ae/images/og-fixhive.jpg" />
+  <meta property="og:site_name" content="FixHive Garage" />
+  <meta property="og:locale" content="en_AE" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Car Diagnostics Dubai | FixHive Garage" />
+  <meta name="twitter:description" content="ECU repair, ADAS calibration & full diagnostics in Dubai — factory-level tools." />
+  <meta name="twitter:image" content="https://myfixhive.ae/images/og-fixhive.jpg" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://myfixhive.ae/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://myfixhive.ae/services.html"},{"@type":"ListItem","position":3,"name":"Advanced Diagnostics","item":"https://myfixhive.ae/diagnostics.html"}]}
+  </script>
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    .page-content { padding: 60px 5%; max-width: 1100px; margin: 0 auto; }
+    .service-includes { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2.5rem 0; }
+    .includes-col h3 { color: #1e3a8a; font-size: 1.1rem; margin-bottom: 1rem; }
+    .check-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+    .check-list li { display: flex; align-items: flex-start; gap: 0.6rem; color: #374151; font-size: 0.92rem; }
+    .check-list li::before { content: '✓'; color: #1d4ed8; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; margin: 2.5rem 0; }
+    .why-item { background: #f0f5ff; border-radius: 10px; padding: 1.5rem; }
+    .why-item .wi-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+    .why-item h4 { color: #1e3a8a; font-size: 0.97rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .why-item p { color: #6b7280; font-size: 0.87rem; line-height: 1.6; }
+    .page-cta { background: linear-gradient(135deg,#0a2463,#1d4ed8); padding: 50px 5%; text-align: center; color: #fff; }
+    .page-cta h2 { font-size: clamp(1.4rem,3vw,2rem); margin-bottom: 0.8rem; }
+    .page-cta p { color: rgba(255,255,255,0.8); margin-bottom: 1.8rem; }
+    @media(max-width:700px){ .service-includes{grid-template-columns:1fr;} .why-grid{grid-template-columns:1fr 1fr;} }
+    @media(max-width:480px){ .why-grid{grid-template-columns:1fr;} }
+
+    /* FAQ Accordion */
+    .faq-section { padding: 60px 5%; background: #f8faff; }
+    .faq-section .section-title { color: #1e3a8a; }
+    .faq-list { max-width: 820px; margin: 2rem auto 0; display: flex; flex-direction: column; gap: 0.6rem; }
+    .faq-item { background: #fff; border: 1.5px solid #e5e7eb; border-radius: 10px; overflow: hidden; }
+    .faq-q { width: 100%; text-align: left; padding: 1rem 1.2rem; background: none; border: none; font-size: 0.95rem; font-weight: 600; color: #1e3a8a; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq-q::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: #1d4ed8; flex-shrink: 0; transition: transform .2s; }
+    .faq-item.open .faq-q::after { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s; padding: 0 1.2rem; }
+    .faq-a p { padding: 0 0 1rem; color: #374151; font-size: 0.9rem; line-height: 1.7; margin: 0; }
+    .faq-item.open .faq-a { max-height: 300px; padding-top: 0; }
+
+    .symptoms-section { background: #fff8f0; border: 1.5px solid #fed7aa; border-radius: 12px; padding: 2rem 2.2rem; margin: 2.5rem 0; }
+    .symptoms-section h2 { color: #92400e; font-size: 1.1rem; margin-bottom: 1rem; }
+    .symptoms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+    .symptom-item { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.9rem; color: #374151; }
+    .symptom-item::before { content: '⚠️'; flex-shrink: 0; font-size: 0.85rem; margin-top: 1px; }
+    .dubai-section { margin: 2.5rem 0; }
+    .dubai-section h2 { color: #1e3a8a; }
+    .dubai-section p { color: #374151; font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.2rem; }
+    .process-steps { display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0; }
+    .process-step { display: flex; gap: 1.2rem; align-items: flex-start; }
+    .step-num { width: 32px; height: 32px; background: #1d4ed8; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.87rem; flex-shrink: 0; margin-top: 2px; }
+    .step-text h4 { color: #1e3a8a; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .step-text p { color: #374151; font-size: 0.88rem; line-height: 1.6; margin: 0; }
+    @media(max-width:600px){ .symptoms-grid{grid-template-columns:1fr;} }
+    .pricing-section { margin: 2.5rem 0; }
+    .pricing-section h2 { color: #1e3a8a; font-size: 1.4rem; margin-bottom: 1rem; }
+    .pricing-section p { color: #374151; font-size: 0.95rem; line-height: 1.85; margin-bottom: 1.2rem; }
+    .myth-section { background: #f0f5ff; border-radius: 12px; padding: 2rem 2.2rem; margin: 2.5rem 0; }
+    .myth-section h2 { color: #1e3a8a; font-size: 1.4rem; margin-bottom: 1.2rem; }
+    .myth-item { margin-bottom: 1.4rem; }
+    .myth-item strong { color: #1d4ed8; display: block; margin-bottom: 0.3rem; font-size: 0.97rem; }
+    .myth-item p { color: #374151; font-size: 0.92rem; line-height: 1.75; margin: 0; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a car diagnostic check cost in Dubai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A basic OBD fault code scan at FixHive starts from AED 100\u2013150. A comprehensive multi-system diagnostic (covering all modules including ABS, airbags, transmission, AC and body control) is AED 250\u2013350. We deduct the diagnostic fee from any repair work carried out on the same visit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is ECU programming or remapping?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The ECU (Engine Control Unit) is your car's brain \u2014 controlling fuel injection, ignition timing and more. ECU programming can be needed after a replacement ECU is fitted, following software updates, or after certain repairs. We use OEM-compatible programming tools, not generic alternatives."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does ADAS calibration mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ADAS (Advanced Driver Assistance Systems) includes cameras and sensors for lane keep assist, automatic emergency braking, adaptive cruise control and parking assist. After a windscreen replacement, suspension repair or wheel alignment, these sensors must be recalibrated to the exact manufacturer angles. We have the specialist targets and software required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you fix electronic faults that other garages couldn't diagnose?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often yes \u2014 many garages only read basic engine fault codes. We go deeper, scanning all modules (transmission, ABS, airbags, body control, infotainment) and using live data analysis to identify intermittent faults that don't always trigger a code. We're honest if a fault is beyond our equipment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you use OEM or aftermarket diagnostic tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We use a combination: brand-specific OEM tools for marques where generic tools miss data (BMW, Mercedes-Benz, Land Rover), plus comprehensive aftermarket platforms like Autel for multi-brand coverage. We never guess \u2014 every repair recommendation is backed by confirmed diagnostic evidence."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a full car diagnostic scan take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A full multi-system scan takes 30\u201360 minutes. Simple single-system reads (just engine codes) take 15\u201320 minutes. We recommend a full scan for any unknown fault to avoid missing related problems in other modules that may share the same root cause."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="stylesheet" href="chatbot.css" />
+    <link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/diagnostics.html" />
+    <link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/diagnostics.html" />
+    <link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/diagnostics.html" /></head>
+<body>
+
+<a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="top-bar" target="_blank" rel="noopener" aria-label="Contact FixHive on WhatsApp">
+  <span>💬 <strong>WhatsApp Us Now</strong> — Fast Response, Free Advice &nbsp;|&nbsp; 054 169 9500</span>
+</a>
+
+<nav>
+  <a href="index.html" class="logo"><img src="img/logo.webp" alt="FixHive Garage Dubai" /></a>
+  <ul>
+    <li class="has-dropdown">
+      <a href="services.html">Services</a>
+      <ul class="nav-dropdown">
+        <li><a href="ac-service.html">AC &amp; Cooling</a></li>
+        <li><a href="engine.html">Engine &amp; Transmission</a></li>
+        <li><a href="brakes.html">Brakes &amp; Suspension</a></li>
+        <li><a href="tyres.html">Tyres &amp; Wheels</a></li>
+        <li><a href="body.html">Body &amp; Exterior</a></li>
+        <li><a href="electrical.html">Battery &amp; Electrical</a></li>
+        <li><a href="hybrid-ev.html">Hybrid &amp; EV</a></li>
+        <li><a href="pre-purchase-inspection.html">Pre-Purchase Inspection</a></li>
+        <li><a href="service-packages.html">Service Packages</a></li>
+        <li><a href="detailing.html">Detailing &amp; Protection</a></li>
+        <li><a href="gearbox.html">Gearbox &amp; Drivetrain</a></li>
+        <li><a href="diagnostics.html">Advanced Diagnostics</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="nav-cta">Book Now</a>
+  <a href="ar/diagnostics.html" class="nav-lang">🇦🇪 AR</a>
+  <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="services.html">All Services</a>
+  <a href="ac-service.html" style="padding-left:1.5rem;font-size:0.87rem;">AC &amp; Cooling</a>
+  <a href="engine.html" style="padding-left:1.5rem;font-size:0.87rem;">Engine &amp; Transmission</a>
+  <a href="brakes.html" style="padding-left:1.5rem;font-size:0.87rem;">Brakes &amp; Suspension</a>
+  <a href="tyres.html" style="padding-left:1.5rem;font-size:0.87rem;">Tyres &amp; Wheels</a>
+  <a href="body.html" style="padding-left:1.5rem;font-size:0.87rem;">Body &amp; Exterior</a>
+  <a href="electrical.html" style="padding-left:1.5rem;font-size:0.87rem;">Battery &amp; Electrical</a>
+  <a href="hybrid-ev.html" style="padding-left:1.5rem;font-size:0.87rem;">Hybrid &amp; EV</a>
+  <a href="pre-purchase-inspection.html" style="padding-left:1.5rem;font-size:0.87rem;">Pre-Purchase Inspection</a>
+  <a href="service-packages.html" style="padding-left:1.5rem;font-size:0.87rem;">Service Packages</a>
+  <a href="detailing.html" style="padding-left:1.5rem;font-size:0.87rem;">Detailing &amp; Protection</a>
+  <a href="gearbox.html" style="padding-left:1.5rem;font-size:0.87rem;">Gearbox &amp; Drivetrain</a>
+  <a href="diagnostics.html" style="padding-left:1.5rem;font-size:0.87rem;">Advanced Diagnostics</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment">📲 Book on WhatsApp</a>
+</div>
+
+<section class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> › <a href="services.html">Services</a> › Advanced Diagnostics</div>
+  <h1>Advanced Diagnostics &amp; ECU Repair in Dubai</h1>
+  <p>Warning lights, software faults, ADAS calibration — our diagnostic equipment reads deeper than a basic OBD scanner, covering engine management, safety systems and control unit programming.</p>
+</section>
+
+<div class="page-content">
+  
+  <!-- SYMPTOMS -->
+  <div class="symptoms-section">
+    <h2>⚠️ Signs You May Need This Service</h2>
+    <div class="symptoms-grid">
+      <div class="symptom-item">One or more warning lights on the dashboard with no obvious cause</div>
+      <div class="symptom-item">Intermittent fault that's impossible to reproduce at a workshop</div>
+      <div class="symptom-item">Another garage said they couldn't find the problem</div>
+      <div class="symptom-item">Multiple systems showing faults simultaneously</div>
+      <div class="symptom-item">Car was repaired but the warning light came back immediately</div>
+      <div class="symptom-item">Unexplained behaviour — surging, stalling, hesitation</div>
+      <div class="symptom-item">OBD2 reader from the petrol station gave you a vague code</div>
+      <div class="symptom-item">Pre-sale inspection requirement — buyer wants a clean scan</div>
+    </div>
+  </div>
+
+  <!-- DUBAI CONTEXT -->
+  <div class="dubai-section">
+    <h2>Why Proper Diagnostics Require More Than a Code Reader</h2>
+    <p>Modern cars contain up to 100 separate electronic control units communicating over multiple networks. When something goes wrong, the fault code stored in one module is often just a symptom — the actual cause might be in a completely different system. A technician who reads one code and replaces the part listed in the description is guessing, not diagnosing. At FixHive we scan every accessible module in the vehicle simultaneously, map the fault codes against live sensor data, and build a causal picture before recommending any part replacement.</p>
+    <p>Intermittent faults are the hardest class of problem to solve and the most common reason for repeat workshop visits. A fault that only appears when the car has been running for 30 minutes in 40°C heat, or only when turning left at speed, will show no codes when the car arrives cold at a workshop. Our approach involves extended data logging under real driving conditions, using graphing software to capture the exact moment a fault triggers — giving us a freeze-frame of every sensor value at the instant of failure.</p>
+    <p>The UAE's diverse car population presents a particular challenge: we see vehicles from Europe, USA, Japan, Australia and other GCC states, all with different software versions and sometimes different specifications even within the same model. A generic code reader often cannot communicate with non-standard modules or read manufacturer-specific codes beyond the basic EOBD/OBD2 set. Our equipment covers OEM-level diagnostics for all major brands including Mercedes, BMW, Toyota, Nissan, Ford, Hyundai and many more.</p>
+    <p>Post-repair diagnostics are equally important. A fault that's properly fixed will clear its own code and not return. A fault that's been patched — or where the root cause was missed — will set the code again within days. We rescan every vehicle after repair and explain to you exactly which codes were present, what was done to address them, and what a clean scan looks like. Transparency in diagnostics is not common in Dubai — we make it our standard.</p>
+  </div>
+
+  <!-- PROCESS -->
+  <div class="section-label">Our Process</div>
+  <h2 class="section-title" style="color:#1e3a8a;">How We Diagnose &amp; Fix the Problem</h2>
+  <div class="process-steps">
+    <div class="process-step"><div class="step-num">1</div><div class="step-body"><strong>Full System Scan</strong><p>We connect our diagnostic interface and communicate with every available module in the vehicle. We record all fault codes — stored, pending and temporary — and note freeze-frame data captured at the time each fault triggered.</p></div></div>
+    <div class="process-step"><div class="step-num">2</div><div class="step-body"><strong>Live Data Analysis</strong><p>With the engine running, we monitor real-time sensor values across all relevant systems simultaneously. Patterns in the data — a temperature sensor that reads correctly when cold but drifts at operating temp, for example — are often invisible to code-based diagnosis alone.</p></div></div>
+    <div class="process-step"><div class="step-num">3</div><div class="step-body"><strong>Oscilloscope Testing</strong><p>For electrical faults — particularly intermittent ones — we use an oscilloscope to capture signal waveforms from sensors, actuators and network buses. Signal irregularities that cause no stored code show clearly on the waveform.</p></div></div>
+    <div class="process-step"><div class="step-num">4</div><div class="step-body"><strong>Guided Fault Isolation</strong><p>Using OEM-level guided diagnostics where available, we work through the fault tree systematically — testing each possible cause in order of likelihood and cost, so you're not paying for parts that aren't the root cause.</p></div></div>
+    <div class="process-step"><div class="step-num">5</div><div class="step-body"><strong>Clear Report & Fixed Quote</strong><p>We explain exactly what we found in plain language, which codes are active, which are historical, what we believe the root cause is, and what the repair will involve — with a fixed price before work begins.</p></div></div>
+  </div>
+
+<div class="section-label">What's Included</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Diagnostic &amp; Programming Services</h2>
+  <div class="service-includes">
+    <div class="includes-col">
+      <h3>Services Offered</h3>
+      <ul class="check-list">
+        <li>Full OBD Diagnostics (all systems)</li>
+        <li>Engine Control Unit (ECU) Repair &amp; Programming</li>
+        <li>Engine Management System Fault Finding</li>
+        <li>Comfort &amp; Body Control Module Repair</li>
+        <li>Car Software Updates &amp; Reprogramming</li>
+        <li>Fault Code Reading, Clearing &amp; Root Cause Analysis</li>
+      </ul>
+    </div>
+    <div class="includes-col">
+      <h3>What We Check / Also Includes</h3>
+      <ul class="check-list">
+        <li>ADAS Camera Calibration (front, rear, side)</li>
+        <li>Radar &amp; Sensor Calibration (adaptive cruise, parking)</li>
+        <li>Windscreen replacement recalibration</li>
+        <li>Throttle body &amp; idle relearn</li>
+        <li>Key &amp; immobiliser programming</li>
+        <li>Post-repair system verification</li>
+      </ul>
+    </div>
+  </div>
+  <div class="section-label">Why FixHive</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Accurate Diagnosis — Not Guesswork</h2>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="wi-icon">🖥️</div>
+      <h4>Professional Multi-Brand Tools</h4>
+      <p>We use dealer-level diagnostic equipment covering BMW, Mercedes, Audi, Toyota, Ford and more — not generic scanners that only read basic codes. We see the same data your manufacturer's system sees.</p>
+    </div>
+    <div class="why-item">
+      <div class="wi-icon">📡</div>
+      <h4>ADAS Calibration Done In-House</h4>
+      <p>After any windscreen replacement, suspension work or front-end repair, safety cameras and radar sensors must be recalibrated. We do this in-house with the correct target equipment — no sending out, no delays.</p>
+    </div>
+    <div class="why-item">
+      <div class="wi-icon">🔐</div>
+      <h4>ECU &amp; Key Programming</h4>
+      <p>Lost a key, replaced a control unit, or dealing with an immobiliser fault? We handle coding and programming for most vehicle brands, saving you a dealer visit and a dealer-sized bill.</p>
+    </div>
+  
+
+  <!-- PRICING GUIDE -->
+  <div class="pricing-section">
+    <h2>Diagnostic Service Pricing in Dubai</h2>
+    <p>A full OBD diagnostic scan — reading all stored and pending fault codes across engine, gearbox, ABS, airbag and body control modules — typically costs <strong>AED 100–200</strong> at FixHive. This is a starting point, not a final diagnosis. A fault code tells us which system flagged an issue; finding the root cause often requires additional testing. We explain what each fault code means in plain language and what the likely causes are before recommending further work.</p>
+    <p>Advanced diagnostic testing beyond code reading — oscilloscope signal analysis, injector waveform testing, compression testing, relative compression testing by cranking current, fuel pressure and volume testing — is billed at our workshop rate by time. Most complex fault investigations are completed within <strong>AED 200–500</strong> in diagnostic labour. We don't charge you for guessing; we charge for systematic testing that leads to a confirmed root cause before any parts are ordered.</p>
+    <p>ECU coding and programming — required after replacing control modules, injectors, or certain sensors on modern vehicles — is <strong>AED 200–500</strong> per module depending on the procedure. Key programming for lost or additional keys is a separate service: standard transponder keys run <strong>AED 200–450</strong> including coding; proximity and smart keys for premium brands can reach <strong>AED 600–1,500</strong> depending on the vehicle's security system.</p>
+    <p>We use manufacturer-level diagnostic tools (not generic consumer scanners) covering all makes. A proper diagnostic session at FixHive is the difference between replacing one confirmed faulty part and replacing three parts hoping one fixes it. The diagnostic fee pays for itself when it prevents unnecessary component changes.</p>
+    <p>ADAS calibration — required after windscreen replacement, front camera or radar removal, and sometimes after wheel alignment changes — is increasingly relevant as newer vehicles arrive in Dubai. Forward collision warning, lane departure, and adaptive cruise systems must be recalibrated to manufacturer targets after any relevant service. ADAS calibration costs <strong>AED 350–800</strong> depending on the system and whether static or dynamic calibration is required. Skipping calibration after a windscreen change leaves safety systems operating on incorrect reference points.</p>
+    <p>Immobiliser and anti-theft system faults are common after battery changes, key battery expiry, or after an attempted theft in Dubai. We diagnose and reset immobiliser systems across all brands and can programme additional keys where the original has been lost. Immobiliser diagnostic and reset typically costs <strong>AED 150–300</strong>; full key replacement with programming ranges from <strong>AED 250–1,500</strong> depending on the key type and vehicle brand. Dealer charges for the same key programming are typically 2–3 times higher.</p>
+  </div>
+
+  <!-- MYTHS -->
+  <div class="myth-section">
+    <h2>What Dubai Drivers Get Wrong About Car Diagnostics</h2>
+    <div class="myth-item">
+      <strong>Myth: "Clearing the fault code fixes the problem."</strong>
+      <p>Erasing a fault code removes the warning light — it doesn't resolve the underlying fault. If the fault condition still exists, the code will return within one or two drive cycles. More problematically, some faults (especially emissions and sensor faults) require the car to complete specific drive cycles before the code sets again — so the warning light might not immediately return, giving false reassurance that the problem is gone. The code is a symptom indicator; the actual fault requires diagnosis and repair.</p>
+    </div>
+    <div class="myth-item">
+      <strong>Myth: "The diagnostic scanner at the parts shop is as good as a professional scan."</strong>
+      <p>Consumer OBD scanners and free code readers at parts shops read generic OBD-II codes from the powertrain module. Professional diagnostic tools access manufacturer-specific codes across all control modules — ABS, airbag, body control, climate, gearbox, ADAS — and display live data parameters, actuator tests, and adaptation values that generic tools cannot access. For any fault beyond a simple engine code, a manufacturer-level scan provides far more information and often identifies faults the consumer tool completely misses.</p>
+    </div>
+    <div class="myth-item">
+      <strong>Myth: "If the car drives normally, the fault code isn't serious."</strong>
+      <p>Many fault codes are stored as intermittent or historical flags — the fault occurred, was detected, and the system is monitoring for recurrence. The car may drive normally right now while a sensor, actuator or circuit is developing a fault that will become critical without warning. Oxygen sensor faults, for example, often don't affect driveability noticeably but cause the engine to run rich, increasing fuel consumption and slowly damaging the catalytic converter. Addressing fault codes promptly, even when drivability seems fine, prevents downstream damage.</p>
+    </div>
+  </div>
+
+</div>
+
+<section class="page-cta">
+  <h2>Warning light on or system fault showing?</h2>
+  <p>WhatsApp us the warning light or fault description and we'll tell you what system is affected before you drive in.</p>
+  <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="btn-primary" target="_blank" rel="noopener">📲 Book on WhatsApp</a>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><img src="img/logo.webp" alt="FixHive Garage Dubai" /></a>
+      <p>Reliable, affordable, and fast car repair services across Dubai. Dealer-level quality — without dealer prices.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="services.html">All Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment">Book on WhatsApp</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>📍 WH2 FixHive, 80 Street<br>Dubai Investment Park First, Dubai, UAE</p>
+      <p>🕐 Sat–Thu: 8:00am – 8:00pm</p>
+      <p>📞 <a href="tel:+971541699500">+971 54 169 9500</a></p>
+      <p>✉️ <a href="mailto:sale.ae@myfixhive.ae">sale.ae@myfixhive.ae</a></p>
+      <p>💬 <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment">WhatsApp Us</a></p>
+      <p>⭐ <a href="https://www.google.com/maps/search/Fixhive+Automotive+Garage+Car+Repair+Service+DIP+Dubai" target="_blank" rel="noopener">Google Reviews</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 FixHive Garage — Saher Auto General Repairing LLC</span>
+    <span>Dubai, UAE</span>
+  </div>
+</footer>
+<script src="chatbot.js"></script>
+<script>
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var item = this.closest('.faq-item');
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
