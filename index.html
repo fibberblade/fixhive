@@ -820,7 +820,40 @@
     </div>
   </div>
   <div class="promos-grid" id="promosGrid">
-    <!-- Loaded from data/promotions.json -->
+
+    <!-- Offer 1: Summer AC -->
+    <div class="promo-card">
+      <div class="promo-card-top">
+        <span class="promo-card-icon">❄️</span>
+        <span class="promo-badge amber">Summer 2026</span>
+      </div>
+      <h3>Summer AC Service Package</h3>
+      <p>Full AC service — refrigerant top-up, leak test, cabin filter replacement &amp; compressor health check. Dubai summer starts now.</p>
+      <a href="https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20to%20book%20the%20Summer%20AC%20Service%20Package" class="promo-cta" target="_blank" rel="noopener">Book on WhatsApp</a>
+    </div>
+
+    <!-- Offer 2: Free safety check -->
+    <div class="promo-card">
+      <div class="promo-card-top">
+        <span class="promo-card-icon">🔍</span>
+        <span class="promo-badge green">Free Add-on</span>
+      </div>
+      <h3>Free 25-Point Safety Check</h3>
+      <p>Book any service and get a complimentary 25-point vehicle inspection — brakes, tyres, battery, coolant &amp; all fluid levels. Know your car is summer-ready.</p>
+      <a href="https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20to%20book%20a%20service%20and%20the%20free%20safety%20check" class="promo-cta" target="_blank" rel="noopener">Book Now</a>
+    </div>
+
+    <!-- Offer 3: Battery test -->
+    <div class="promo-card">
+      <div class="promo-card-top">
+        <span class="promo-card-icon">⚡</span>
+        <span class="promo-badge blue">Free Test</span>
+      </div>
+      <h3>Battery Health Test — Free</h3>
+      <p>Dubai heat kills car batteries fast. Free battery diagnostic with every visit — charge voltage, cold-crank amps &amp; alternator output tested before you're stranded.</p>
+      <a href="https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20a%20free%20battery%20health%20test" class="promo-cta" target="_blank" rel="noopener">Book Now</a>
+    </div>
+
   </div>
 </section>
 
@@ -907,7 +940,7 @@
         </div>
       `).join('');
     } catch(e) {
-      section.style.display = 'none';
+      // fetch failed — static cards in HTML remain visible
     }
     function esc(s) {
       return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');

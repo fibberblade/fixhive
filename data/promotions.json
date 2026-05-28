@@ -1,34 +1,34 @@
 [
   {
     "id": 1,
-    "title": "Summer AC Special",
-    "description": "Beat the Dubai heat — full AC service including gas refill, filter check & compressor inspection.",
-    "badge": "Limited Time",
+    "title": "Summer AC Service Package",
+    "description": "Full AC service — refrigerant top-up, leak test, cabin filter replacement & compressor health check. Dubai summer starts now.",
+    "badge": "Summer 2026",
     "badgeColor": "amber",
     "cta": "Book on WhatsApp",
-    "ctaUrl": "https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20to%20book%20the%20Summer%20AC%20Special",
+    "ctaUrl": "https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20to%20book%20the%20Summer%20AC%20Service%20Package",
     "icon": "❄️",
     "active": true
   },
   {
     "id": 2,
-    "title": "Free Oil Change Check",
-    "description": "Book any service this month and get a complimentary oil level & condition check with your visit.",
+    "title": "Free 25-Point Safety Check",
+    "description": "Book any service and get a complimentary 25-point vehicle inspection — brakes, tyres, battery, coolant, all fluid levels. Know your car is summer-ready.",
     "badge": "Free Add-on",
     "badgeColor": "green",
     "cta": "Book Now",
-    "ctaUrl": "https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20to%20book%20a%20service",
-    "icon": "🔧",
+    "ctaUrl": "https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20to%20book%20a%20service%20and%20the%20free%20safety%20check",
+    "icon": "🔍",
     "active": true
   },
   {
     "id": 3,
-    "title": "EV & Hybrid Diagnostics",
-    "description": "Full hybrid or EV diagnostic scan — identify issues before they become expensive. Fast, same-day results.",
-    "badge": "New Service",
+    "title": "Battery Health Test — Free",
+    "description": "Dubai heat kills car batteries fast. Free battery diagnostic with every visit — we test charge voltage, cold-crank amps & alternator output before you're stranded.",
+    "badge": "Free Test",
     "badgeColor": "blue",
-    "cta": "Learn More",
-    "ctaUrl": "https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20EV%20diagnostics",
+    "cta": "Book Now",
+    "ctaUrl": "https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20a%20free%20battery%20health%20test",
     "icon": "⚡",
     "active": true
   }
