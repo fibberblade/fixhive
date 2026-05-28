@@ -196,6 +196,22 @@ nav ul a:hover, nav ul a.active { color: var(--amber); }
   white-space: nowrap;
 }
 .nav-lang:hover { background: rgba(255,255,255,0.25); }
+
+/* Packages nav pill */
+nav ul li a.nav-packages-link {
+  background: rgba(245,166,35,0.14);
+  border: 1.5px solid rgba(245,166,35,0.55);
+  color: var(--amber) !important;
+  font-weight: 700 !important;
+  padding: 0.28rem 0.9rem;
+  border-radius: 20px;
+  transition: background .2s, border-color .2s !important;
+}
+nav ul li a.nav-packages-link:hover {
+  background: rgba(245,166,35,0.26) !important;
+  border-color: var(--amber) !important;
+  color: var(--amber) !important;
+}
 .nav-hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; }
 .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
 .mobile-menu {
