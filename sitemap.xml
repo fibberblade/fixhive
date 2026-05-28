@@ -29,4 +29,19 @@
   <url><loc>https://myfixhive.ae/audi-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://myfixhive.ae/honda-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://myfixhive.ae/ford-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Arabic pages -->
+  <url><loc>https://myfixhive.ae/ar/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/ar/ac-service.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://myfixhive.ae/ar/engine.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://myfixhive.ae/ar/brakes.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://myfixhive.ae/ar/tyres.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://myfixhive.ae/ar/body.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://myfixhive.ae/ar/electrical.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://myfixhive.ae/ar/hybrid-ev.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://myfixhive.ae/ar/pre-purchase-inspection.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://myfixhive.ae/ar/service-packages.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://myfixhive.ae/ar/detailing.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://myfixhive.ae/ar/gearbox.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://myfixhive.ae/ar/diagnostics.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
