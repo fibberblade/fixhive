@@ -119,7 +119,20 @@
     .page-cta { background:linear-gradient(135deg,#0a2463,#1d4ed8); padding:50px 5%; text-align:center; color:#fff; }
     .page-cta h2 { font-size:clamp(1.4rem,3vw,2rem); margin-bottom:0.8rem; }
     .page-cta p { color:rgba(255,255,255,0.8); margin-bottom:1.8rem; }
-    @media(max-width:700px){ .issues-grid{grid-template-columns:1fr;} .services-list{grid-template-columns:1fr;} }
+    /* ── 4-col service tiles ── */
+    .brand-svc-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:0.75rem; margin:1.5rem 0 1.2rem; }
+    .brand-svc-tile {
+      display:flex; flex-direction:column; align-items:flex-start; gap:0.45rem;
+      padding:1.1rem 1rem; background:#f8faff; border:1.5px solid #e0e7ff;
+      border-radius:10px; text-decoration:none; color:#1e3a8a;
+      font-size:0.87rem; font-weight:700; line-height:1.35;
+      transition:border-color .2s, background .2s, box-shadow .2s, transform .15s;
+    }
+    .brand-svc-tile:hover { border-color:var(--amber); background:#fff; box-shadow:0 4px 18px rgba(10,36,99,0.1); transform:translateY(-2px); }
+    .svc-tile-icon { font-size:1.3rem; }
+    .svc-tile-note { font-size:0.88rem; color:#6b7280; font-style:italic; margin:0.6rem 0 2.5rem; line-height:1.65; }
+    @media(max-width:700px){ .issues-grid{grid-template-columns:1fr;} .services-list{grid-template-columns:1fr;} .brand-svc-grid{grid-template-columns:repeat(2,1fr);} }
+    @media(max-width:420px){ .brand-svc-grid{grid-template-columns:1fr;} }
   </style>
   <link rel="stylesheet" href="chatbot.css" /></head>
 <body>
@@ -235,18 +248,65 @@
 
   <div class="section-label">What We Do</div>
   <h2 class="section-title" style="color:#1e3a8a;">Our Audi Services in Dubai</h2>
-  <ul class="services-list">
-        <li>VCDS-compatible full system diagnostics</li>
-        <li>DSG/S Tronic gearbox service & repair</li>
-        <li>TFSI engine service & repair</li>
-        <li>Air suspension repair</li>
-        <li>Quattro drivetrain service</li>
-        <li>AC service & recharge</li>
-        <li>Brake service (with VCDS adaptation)</li>
-        <li>Key & MMI programming</li>
-        <li>Tyre fitting & TPMS reset</li>
-        <li>Pre-purchase Audi inspection</li>
-  </ul>
+  <div class="brand-svc-grid">
+    <a href="engine.html" class="brand-svc-tile">
+      <span class="svc-tile-icon">⚙️</span>
+      <span>Audi Engine Repair</span>
+    </a>
+    <a href="gearbox.html" class="brand-svc-tile">
+      <span class="svc-tile-icon">🔄</span>
+      <span>Audi Gearbox Repair</span>
+    </a>
+    <a href="brakes.html" class="brand-svc-tile">
+      <span class="svc-tile-icon">🔧</span>
+      <span>Audi Suspension Repair</span>
+    </a>
+    <a href="gearbox.html" class="brand-svc-tile">
+      <span class="svc-tile-icon">⚡</span>
+      <span>Audi Transmission Repair</span>
+    </a>
+    <a href="tyres.html" class="brand-svc-tile">
+      <span class="svc-tile-icon">⚖️</span>
+      <span>Audi Touchless Wheel Alignment</span>
+    </a>
+    <a href="engine.html" class="brand-svc-tile">
+      <span class="svc-tile-icon">🔩</span>
+      <span>Audi Engine Refurbishment</span>
+    </a>
+    <a href="diagnostics.html" class="brand-svc-tile">
+      <span class="svc-tile-icon">💻</span>
+      <span>Audi Software Programming</span>
+    </a>
+    <a href="ac-service.html" class="brand-svc-tile">
+      <span class="svc-tile-icon">❄️</span>
+      <span>Audi AC Repair</span>
+    </a>
+    <a href="engine.html" class="brand-svc-tile">
+      <span class="svc-tile-icon">🌡️</span>
+      <span>Audi Engine Cooling System Repair</span>
+    </a>
+    <a href="brakes.html" class="brand-svc-tile">
+      <span class="svc-tile-icon">🛑</span>
+      <span>Audi Brake Repair</span>
+    </a>
+    <a href="diagnostics.html" class="brand-svc-tile">
+      <span class="svc-tile-icon">📡</span>
+      <span>Audi Camera &amp; Radar Calibration</span>
+    </a>
+    <a href="pre-purchase-inspection.html" class="brand-svc-tile">
+      <span class="svc-tile-icon">🔍</span>
+      <span>Audi Pre-Purchase Inspection</span>
+    </a>
+    <a href="service-packages.html" class="brand-svc-tile">
+      <span class="svc-tile-icon">📋</span>
+      <span>Audi Service Packages</span>
+    </a>
+    <a href="detailing.html" class="brand-svc-tile">
+      <span class="svc-tile-icon">✨</span>
+      <span>Audi Car Detailing</span>
+    </a>
+  </div>
+  <p class="svc-tile-note">Plus a range of other services that ensure all functions of your Audi are at their best. <a href="contact.html" style="color:var(--amber);font-weight:700;font-style:normal;">Ask us about your specific Audi requirement →</a></p>
 
 </div>
 
