@@ -554,7 +554,7 @@
 <nav>
   <a href="index.html" class="logo"><img src="img/logo.webp" alt="FixHive Garage Dubai" /></a>
   <ul>
-    <li><a href="about.html" class="nav-packages-link">About</a></li>
+    <li class="has-dropdown"><a href="about.html" class="nav-packages-link">About</a><ul class="nav-dropdown"><li><a href="about.html#values">Our Values</a></li><li><a href="about.html#history">How We Got Here</a></li><li><a href="about.html#brands">All Makes Welcome</a></li><li><a href="about.html#team" class="nav-dd-disabled">The Team <em>(coming soon)</em></a></li></ul></li>
     <li class="has-dropdown">
       <a href="services.html" class="nav-packages-link">Services</a>
       <ul class="nav-dropdown">
@@ -572,7 +572,7 @@
         <li><a href="diagnostics.html">Advanced Diagnostics</a></li>
       </ul>
     </li>
-    <li><a href="service-packages.html" class="nav-packages-link">Packages</a></li>
+    <li class="has-dropdown"><a href="service-packages.html" class="nav-packages-link">Packages</a><ul class="nav-dropdown"><li><a href="service-packages.html#fixcare">FixCare</a></li><li><a href="service-packages.html#fixprime">FixPrime</a></li><li><a href="service-packages.html#fixelite">FixElite</a></li></ul></li>
     <li><a href="index.html#promotions" class="nav-offers-link">🔥 Offers</a></li>
     <li><a href="contact.html" class="nav-packages-link">Contact</a></li>
   </ul>
@@ -598,8 +598,15 @@
   <a href="gearbox.html" style="padding-left:1.5rem;font-size:0.87rem;">Gearbox &amp; Drivetrain</a>
   <a href="diagnostics.html" style="padding-left:1.5rem;font-size:0.87rem;">Advanced Diagnostics</a>
   <a href="about.html" class="nav-packages-link">About</a>
+  <a href="about.html#values" style="padding-left:1.5rem;font-size:0.87rem;">Our Values</a>
+  <a href="about.html#history" style="padding-left:1.5rem;font-size:0.87rem;">How We Got Here</a>
+  <a href="about.html#brands" style="padding-left:1.5rem;font-size:0.87rem;">All Makes Welcome</a>
+  <a href="about.html#team" style="padding-left:1.5rem;font-size:0.87rem;opacity:0.5;pointer-events:none;">The Team (coming soon)</a>
   <a href="contact.html" class="nav-packages-link">Contact</a>
   <a href="service-packages.html" style="color:var(--amber);font-weight:700;">Packages</a>
+  <a href="service-packages.html#fixcare" style="padding-left:1.5rem;font-size:0.87rem;">FixCare</a>
+  <a href="service-packages.html#fixprime" style="padding-left:1.5rem;font-size:0.87rem;">FixPrime</a>
+  <a href="service-packages.html#fixelite" style="padding-left:1.5rem;font-size:0.87rem;">FixElite</a>
   <a href="index.html#promotions" style="color:var(--amber);background:rgba(245,166,35,0.14);border:1.5px solid rgba(245,166,35,0.55);font-weight:700;border-radius:20px;padding:0.4rem 1rem;">🔥 Special Offers</a>
   <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment">📲 Book on WhatsApp</a>
 </div>
@@ -638,7 +645,7 @@
   <div class="pkg-cards">
 
     <!-- FixCARE -->
-    <div class="pkg-card pkg-care">
+    <div class="pkg-card pkg-care" id="fixcare">
       <div class="pkg-tier">Essential</div>
       <div class="pkg-name">Fix<span>CARE</span></div>
       <div class="pkg-tagline">Reliable routine care for every car</div>
@@ -655,7 +662,7 @@
     </div>
 
     <!-- FixPRIME -->
-    <div class="pkg-card pkg-prime">
+    <div class="pkg-card pkg-prime" id="fixprime">
       <div class="pkg-popular-badge">Most Popular</div>
       <div class="pkg-tier">Comprehensive</div>
       <div class="pkg-name">Fix<span>PRIME</span></div>
@@ -674,7 +681,7 @@
     </div>
 
     <!-- FixELITE -->
-    <div class="pkg-card pkg-elite">
+    <div class="pkg-card pkg-elite" id="fixelite">
       <div class="pkg-tier">Ultimate</div>
       <div class="pkg-name">Fix<span>ELITE</span></div>
       <div class="pkg-tagline">The complete FixHive experience</div>

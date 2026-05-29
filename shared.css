@@ -115,6 +115,8 @@ nav ul a:hover, nav ul a.active { color: var(--amber); }
 }
 .nav-dropdown li a:hover { background: #f0f5ff; color: #1d4ed8 !important; }
 .nav-dropdown li:not(:last-child) a { border-bottom: 1px solid #f3f4f6; }
+.nav-dd-disabled { color: #b8c2d3 !important; cursor: default; pointer-events: none; }
+.nav-dd-disabled em { font-style: normal; font-size: 0.75em; opacity: 0.75; }
 
 /* Service card grid */
 .svc-grid {
