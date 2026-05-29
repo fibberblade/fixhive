@@ -255,9 +255,21 @@ nav ul li a.nav-offers-link:hover {
   border-radius: 5px;
   text-decoration: none;
   transition: opacity .2s, transform .15s;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+
+/* WhatsApp icon used inside CTA buttons and links */
+.wa-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  flex-shrink: 0;
+  display: inline-block;
+}
+[dir="rtl"] .wa-icon { margin-left: 0.1rem; }
 .btn-ghost {
   color: var(--dark);
   font-size: 0.95rem;
