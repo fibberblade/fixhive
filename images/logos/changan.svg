@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs><linearGradient id="cag" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#C8000A"/><stop offset="100%" stop-color="#8C0007"/></linearGradient></defs>
+  <path d="M50,6 L94,29 L94,71 L50,94 L6,71 L6,29 Z" fill="url(#cag)"/>
+  <path d="M50,6 L94,29 L94,71 L50,94 L6,71 L6,29 Z" fill="none" stroke="#E84040" stroke-width="1.5"/>
+  <text x="50" y="64" text-anchor="middle" font-family="Arial,sans-serif" font-size="36" font-weight="900" fill="#FFFFFF">C</text>
+</svg>

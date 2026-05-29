@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs><linearGradient id="chg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#CC0A22"/><stop offset="100%" stop-color="#8A0016"/></linearGradient></defs>
+  <circle cx="50" cy="50" r="47" fill="url(#chg)"/>
+  <circle cx="50" cy="50" r="47" fill="none" stroke="#E84050" stroke-width="1.2"/>
+  <circle cx="50" cy="50" r="39" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/>
+  <text x="50" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="30" font-weight="bold" fill="#FFFFFF" letter-spacing="1">Ch</text>
+</svg>

@@ -118,6 +118,44 @@ nav ul a:hover, nav ul a.active { color: var(--amber); }
 .nav-dd-disabled { color: #b8c2d3 !important; cursor: default; pointer-events: none; }
 .nav-dd-disabled em { font-style: normal; font-size: 0.75em; opacity: 0.75; }
 
+/* ── BRANDS MEGA MENU ── */
+.nav-mega {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(10,36,99,0.2);
+  width: 820px;
+  max-width: calc(100vw - 32px);
+  padding: 1.2rem 1rem 1rem;
+  padding-top: 28px;
+  list-style: none;
+  display: none;
+  z-index: 350;
+  columns: 5;
+  column-gap: 0;
+}
+.has-dropdown:hover .nav-mega { display: block; }
+.nav-mega::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 28px; background: transparent; }
+.nav-mega li { break-inside: avoid; page-break-inside: avoid; }
+.nav-mega li a {
+  display: block;
+  padding: 0.28rem 0.75rem;
+  color: #1a1a2e !important;
+  font-size: 0.83rem;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  letter-spacing: 0;
+  transition: background .15s, color .15s;
+  border-radius: 4px;
+}
+.nav-mega li a:hover { background: #f0f5ff; color: #1d4ed8 !important; }
+.nav-mega-footer { margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid #f3f4f6; column-span: all; }
+.nav-mega-footer a { color: #1d4ed8 !important; font-weight: 700 !important; font-size: 0.82rem !important; }
+
 /* Service card grid */
 .svc-grid {
   display: grid;
