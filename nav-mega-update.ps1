@@ -44,7 +44,7 @@ $brands = @(
     @('Lexus',           'lexus-repair-dubai.html'),
     @('Lincoln',         'contact.html?brand=lincoln'),
     @('Maserati',        'contact.html?brand=maserati'),
-    @('Maybach',         'contact.html?brand=maybach'),
+
     @('Mazda',           'mazda-repair-dubai.html'),
     @('Mercedes-Benz',   'mercedes-benz-repair-dubai.html'),
     @('MG',              'contact.html?brand=mg'),
