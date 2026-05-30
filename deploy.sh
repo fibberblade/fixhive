@@ -53,7 +53,7 @@ upload() {
   fi
 }
 
-# English pages
+# HTML pages (root)
 for f in *.html; do
   upload "$f" "$f"
 done
@@ -61,6 +61,32 @@ done
 # Arabic pages
 for f in ar/*.html; do
   upload "$f" "$f"
+done
+
+# JS files
+for f in js/*.js; do
+  upload "$f" "$f"
+done
+
+# CSS
+upload "shared.css" "shared.css"
+
+# Data
+upload "data/promotions.json" "data/promotions.json"
+
+# Images
+for f in images/*.jpg images/*.png images/*.webp 2>/dev/null; do
+  [ -f "$f" ] && upload "$f" "$f"
+done
+
+# Logos
+for f in images/logos/*.svg; do
+  [ -f "$f" ] && upload "$f" "$f"
+done
+
+# img/ folder
+for f in img/*.svg img/*.png img/*.webp img/*.jpg 2>/dev/null; do
+  [ -f "$f" ] && upload "$f" "$f"
 done
 
 # ── 4. Push to GitHub ────────────────────────────────────────
