@@ -401,77 +401,49 @@ footer ul a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.
 footer ul a:hover { color: var(--amber); }
 .footer-contact p { font-size: 0.87rem; margin-bottom: 0.5rem; }
 .footer-contact a { color: var(--amber); text-decoration: none; }
-/* ── PAYMENT METHODS ── */
+/* ── PAYMENT METHODS (footer-brand, bottom left) ── */
 .footer-payment {
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding-top: 1.5rem;
-  margin-top: 0.5rem;
+  margin-top: 1.3rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 .footer-payment-label {
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: rgba(255,255,255,0.35);
-  margin-bottom: 0.75rem;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 0.6rem;
 }
 .footer-payment-icons {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.4rem;
   align-items: center;
 }
-.footer-payment-icons a,
-.footer-payment-icons span {
-  display: flex;
+.pay-badge {
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  height: 32px;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
   text-decoration: none;
-  transition: opacity .2s, transform .2s;
+  cursor: default;
+  transition: opacity .2s, transform .18s;
+  vertical-align: middle;
 }
-.footer-payment-icons a:hover { opacity: 0.85; transform: translateY(-1px); }
-.footer-payment-icons img {
-  height: 28px;
-  width: auto;
-  border-radius: 5px;
-  display: block;
-}
-/* Payment row (full-width between footer-grid and footer-bottom) */
-.footer-payment-row {
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding: 1.25rem 0 0.5rem;
-  margin-bottom: 0.5rem;
-}
-.footer-payment-label {
-  font-size: 0.67rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: rgba(255,255,255,0.32);
-  margin-bottom: 0.65rem;
-}
-.footer-payment-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  align-items: center;
-}
-.footer-payment-icons a,
-.footer-payment-icons span {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  transition: opacity .2s, transform .2s;
-}
-.footer-payment-icons a:hover { opacity: 0.82; transform: translateY(-2px); }
-.footer-payment-icons img {
-  height: 30px;
-  width: auto;
-  border-radius: 5px;
-  display: block;
-  border: 1px solid rgba(255,255,255,0.1);
-}
+a.pay-badge { cursor: pointer; }
+a.pay-badge:hover { opacity: 0.8; transform: translateY(-2px); }
+.pay-badge svg { display: block; border-radius: 4px; }
+.pay-tabby  { background: #3DBDA0; color: #fff; padding: 0 11px; }
+.pay-paymob { background: #5B2D8E; color: #fff; padding: 0 11px; }
+.pay-fazaa  { background: #00529B; color: #fff; padding: 0 11px; border-bottom: 3px solid #C8A84B; }
 
-/* Hidden SEO text for payment search indexing */
+/* Hidden SEO text — readable by search engines, invisible to users */
 .payment-seo-text {
   position: absolute;
   width: 1px; height: 1px;
@@ -479,7 +451,6 @@ footer ul a:hover { color: var(--amber); }
   clip: rect(0,0,0,0);
   white-space: nowrap;
 }
-
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 1.5rem;
