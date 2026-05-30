@@ -51,27 +51,57 @@ function Ensure-FtpDir($dir) {
 }
 
 # --------------------------------------------------
-# STEP 1: FTP Upload
+# STEP 1: Git Commit + Push to GitHub
 # --------------------------------------------------
 Write-Host ""
 Write-Host "----------------------------------------------" -ForegroundColor Cyan
-Write-Host " STEP 1 -- FTP Upload to myfixhive.ae" -ForegroundColor Cyan
+Write-Host " STEP 1 -- Git Commit + Push to GitHub" -ForegroundColor Cyan
+Write-Host "----------------------------------------------" -ForegroundColor Cyan
+
+Set-Location $localBase
+git add -A 2>&1 | Out-Null
+
+$status = git status --porcelain 2>$null
+if (-not $status) {
+    Write-Host "Nothing to commit -- working tree clean." -ForegroundColor Yellow
+} else {
+    if (-not $Message) {
+        $Message = "Site update " + (Get-Date -Format "yyyy-MM-dd HH:mm")
+    }
+    $commitMsg = $Message + "`n`nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>"
+    git commit -m $commitMsg 2>&1 | ForEach-Object { Write-Host "  $_" }
+    Write-Host ""
+    Write-Host "Pushing to GitHub..." -ForegroundColor Cyan
+    git push $gitRemote main 2>&1 | ForEach-Object { Write-Host "  $_" }
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "Push successful." -ForegroundColor Green
+    } else {
+        Write-Host "Push failed -- check token or network." -ForegroundColor Red
+        Write-Host "Aborting FTP upload to keep live site in sync with GitHub." -ForegroundColor Red
+        exit 1
+    }
+}
+
+# --------------------------------------------------
+# STEP 2: FTP Upload to live site
+# --------------------------------------------------
+Write-Host ""
+Write-Host "----------------------------------------------" -ForegroundColor Cyan
+Write-Host " STEP 2 -- FTP Upload to myfixhive.ae" -ForegroundColor Cyan
 Write-Host "----------------------------------------------" -ForegroundColor Cyan
 
 Set-Location $localBase
 
-$changed  = git diff --name-only HEAD 2>$null
-$staged   = git diff --name-only --cached 2>$null
-$untracked = git ls-files --others --exclude-standard 2>$null
+# After committing, grab the files that were just committed (or all tracked files if nothing was committed)
+$changed   = git diff --name-only HEAD~1 HEAD 2>$null
+$untracked = @()   # already committed above, so no untracked remain
 
 $allFiles = @()
-if ($changed)   { $allFiles += $changed   }
-if ($staged)    { $allFiles += $staged    }
-if ($untracked) { $allFiles += $untracked }
+if ($changed) { $allFiles += $changed }
 $allFiles = $allFiles | Sort-Object -Unique | Where-Object { $_ -ne '' }
 
 if ($allFiles.Count -eq 0) {
-    Write-Host "No unstaged changes -- uploading all tracked site files..." -ForegroundColor Yellow
+    Write-Host "No files changed in last commit -- uploading all tracked site files..." -ForegroundColor Yellow
     $allFiles = git ls-files 2>$null | Where-Object {
         $_ -match '\.(html|css|js|svg|json|webp|png|jpg|jpeg|ico|xml|txt)$'
     }
@@ -105,36 +135,6 @@ if ($fail -eq 0) {
 } else {
     Write-Host "FTP: $ok OK, $fail failed." -ForegroundColor Yellow
     $failList | ForEach-Object { Write-Host "  - $_" -ForegroundColor Red }
-}
-
-# --------------------------------------------------
-# STEP 2: Git Commit + Push
-# --------------------------------------------------
-Write-Host ""
-Write-Host "----------------------------------------------" -ForegroundColor Cyan
-Write-Host " STEP 2 -- Git Commit + Push to GitHub" -ForegroundColor Cyan
-Write-Host "----------------------------------------------" -ForegroundColor Cyan
-
-Set-Location $localBase
-git add -A 2>&1 | Out-Null
-
-$status = git status --porcelain 2>$null
-if (-not $status) {
-    Write-Host "Nothing to commit -- working tree clean." -ForegroundColor Yellow
-} else {
-    if (-not $Message) {
-        $Message = "Site update " + (Get-Date -Format "yyyy-MM-dd HH:mm")
-    }
-    $commitMsg = $Message + "`n`nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>"
-    git commit -m $commitMsg 2>&1 | ForEach-Object { Write-Host "  $_" }
-    Write-Host ""
-    Write-Host "Pushing to GitHub..." -ForegroundColor Cyan
-    git push $gitRemote main 2>&1 | ForEach-Object { Write-Host "  $_" }
-    if ($LASTEXITCODE -eq 0) {
-        Write-Host "Push successful." -ForegroundColor Green
-    } else {
-        Write-Host "Push failed -- check token or network." -ForegroundColor Red
-    }
 }
 
 Write-Host ""
