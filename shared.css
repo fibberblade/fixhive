@@ -524,3 +524,230 @@ footer ul a:hover { color: var(--amber); }
   .trust-item { flex: 0 0 50%; border-right: none; border-bottom: 1px solid rgba(13,27,42,0.12); }
   .footer-grid { grid-template-columns: 1fr; }
 }
+
+
+/* ══ BRAND SPECIALS (shared across pages) ══ */
+/* ══════════════════════════════════════════════
+   BRAND SPECIALS SECTION
+══════════════════════════════════════════════ */
+.brand-specials-section {
+  background: #0d1b2a;
+  padding: 72px 0 64px;
+  overflow: hidden;
+}
+
+/* Header */
+.bs-header {
+  text-align: center;
+  padding: 0 5% 3rem;
+}
+.bs-header .section-label {
+  color: var(--amber);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+.bs-header .section-title {
+  font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 0.8rem;
+  line-height: 1.15;
+}
+.bs-header-sub {
+  color: rgba(255,255,255,0.5);
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* ── MARQUEE ── */
+.bs-marquee-wrap {
+  overflow: hidden;
+  margin-bottom: 1rem;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+.bs-track {
+  display: flex;
+  gap: 0.75rem;
+  width: max-content;
+  padding: 0.25rem 0;
+}
+@keyframes bs-scroll-left  { 0% { transform: translateX(0); }    100% { transform: translateX(-50%); } }
+@keyframes bs-scroll-right { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); }    }
+.bs-track-left  { animation: bs-scroll-left  40s linear infinite; }
+.bs-track-right { animation: bs-scroll-right 36s linear infinite; }
+.bs-track:hover { animation-play-state: paused; }
+
+/* Logo pill */
+.bs-logo-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 50px;
+  padding: 0.45rem 1rem 0.45rem 0.6rem;
+  white-space: nowrap;
+  transition: background .2s;
+}
+.bs-logo-pill:hover { background: rgba(255,255,255,0.12); }
+.bs-logo-pill img { width: 28px; height: 28px; object-fit: contain; filter: brightness(0) invert(1); }
+.bs-logo-pill span { font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.8); }
+.bs-pill-dark { background: rgba(255,255,255,0.04); }
+
+/* ── SPECIALIST CARDS ── */
+.bs-specials-inner {
+  padding: 2.5rem 5% 0;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+.bs-specials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Brand card */
+.bs-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 1.1rem 1rem;
+  text-decoration: none;
+  position: relative;
+  transition: background .22s, border-color .22s, transform .22s;
+  overflow: hidden;
+}
+.bs-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(245,166,35,0.08) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity .22s;
+}
+.bs-card:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(245,166,35,0.45);
+  transform: translateY(-3px);
+}
+.bs-card:hover::before { opacity: 1; }
+
+/* Premium (gold border accent) */
+.bs-card-premium {
+  border-color: rgba(245,166,35,0.22);
+  background: rgba(245,166,35,0.04);
+}
+.bs-card-premium:hover { border-color: rgba(245,166,35,0.7); }
+
+/* EV card */
+.bs-card-ev {
+  border-color: rgba(16,185,129,0.25);
+  background: rgba(16,185,129,0.05);
+}
+.bs-card-ev:hover { border-color: rgba(16,185,129,0.6); }
+
+/* Card logo */
+.bs-card-logo {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bs-card-logo img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* Card text */
+.bs-card-info { flex: 1; min-width: 0; }
+.bs-card-brand {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bs-card-offer {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.4;
+}
+
+/* Badge */
+.bs-card-badge {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.6rem;
+  font-size: 0.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.15rem 0.45rem;
+  border-radius: 20px;
+  background: rgba(245,166,35,0.15);
+  color: var(--amber);
+}
+.bs-badge-gold {
+  background: rgba(245,166,35,0.22);
+  color: #f5c842;
+}
+.bs-badge-ev {
+  background: rgba(16,185,129,0.2);
+  color: #34d399;
+}
+
+/* Footer CTA */
+.bs-footer-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  flex-wrap: wrap;
+}
+.bs-footer-cta p { color: rgba(255,255,255,0.6); font-size: 0.93rem; margin: 0; }
+.bs-footer-cta p strong { color: #fff; }
+.bs-footer-cta .btn-primary {
+  background: var(--amber);
+  color: #0d1b2a;
+  font-weight: 800;
+  font-size: 0.88rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity .2s;
+}
+.bs-footer-cta .btn-primary:hover { opacity: 0.88; }
+
+/* Responsive */
+@media(max-width:1100px) { .bs-specials-grid { grid-template-columns: repeat(3,1fr); } }
+@media(max-width:750px)  { .bs-specials-grid { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:480px)  {
+  .bs-specials-grid { grid-template-columns: 1fr; }
+  .bs-footer-cta { flex-direction: column; text-align: center; }
+}
