@@ -513,7 +513,6 @@
     </div>
     <a href="https://www.instagram.com/fixhive_ae/" target="_blank" rel="noopener" class="btn-insta">Follow @fixhive_ae</a>
   </div>
-  <div id="instaLive" style="display:none; padding: 0 3px 3px;"><div id="behold-widget"></div></div>
   <div class="insta-posts" id="instaFallback">
     <a href="https://www.instagram.com/fixhive_ae/" target="_blank" rel="noopener" class="insta-post" style="background:linear-gradient(135deg,#405de6,#833ab4)">
       <span>🔧</span><div class="insta-post-overlay"><span class="insta-post-caption">Engine diagnostics on a BMW 5-Series — found the fault in under 20 minutes.</span></div>
@@ -598,25 +597,6 @@ function handleSubmit(e) {
 }
 </script>
 
-<script>
-  (async () => {
-    try {
-      const r = await fetch('data/config.json?_=' + Date.now());
-      const cfg = await r.json();
-      const posts = cfg?.posts;
-      if (posts && posts.length) {
-        const fallback = document.getElementById('instaFallback');
-        const note = document.getElementById('instaSetupNote');
-        fallback.innerHTML = posts.slice(0, 3).map(p => {
-          const img = p.mediaType === 'VIDEO' ? p.thumbnailUrl : p.mediaUrl;
-          const cap = (p.prunedCaption || p.caption || '').split('\n')[0];
-          return `<a href="${p.permalink}" target="_blank" rel="noopener" class="insta-post" style="background:url('${img}') center/cover no-repeat"><div class="insta-post-overlay"><span class="insta-post-caption">${cap}</span></div></a>`;
-        }).join('');
-        if (note) note.style.display = 'none';
-      }
-    } catch(e) {}
-  })();
-</script>
 <script src="chatbot.js"></script>
 <script src="/js/search.js" defer></script>
 </body>
