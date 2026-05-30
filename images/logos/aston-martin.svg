@@ -1,11 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 90">
-  <defs>
-    <linearGradient id="amg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#004D1C"/>
-      <stop offset="100%" stop-color="#002D10"/>
-    </linearGradient>
-  </defs>
-  <ellipse cx="70" cy="45" rx="68" ry="42" fill="url(#amg)" stroke="#B8922E" stroke-width="2"/>
-  <ellipse cx="70" cy="45" rx="55" ry="32" fill="none" stroke="#B8922E" stroke-width="1"/>
-  <text x="70" y="52" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="26" font-weight="bold" fill="#B8922E" letter-spacing="4">AM</text>
+  <ellipse cx="70" cy="45" rx="68" ry="42" fill="none" stroke="#fff" stroke-width="2"/>
+  <text x="70" y="52" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="26" font-weight="bold" fill="#fff" letter-spacing="3">AM</text>
 </svg>
