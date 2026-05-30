@@ -3,3 +3,15 @@ RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 ErrorDocument 404 /404.html
+
+# ── Disable caching for HTML pages ──────────────────────────
+<FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+</FilesMatch>
+
+# ── Cache static assets for 30 days ─────────────────────────
+<FilesMatch "\.(css|js|svg|jpg|jpeg|png|webp|woff2|woff|ttf)$">
+    Header set Cache-Control "public, max-age=2592000"
+</FilesMatch>
