@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 500" role="img" aria-label="Fazaa - UAE Government Discount Programme">
+  <rect width="780" height="500" rx="40" fill="#00529B"/>
+  <rect x="0" y="380" width="780" height="120" rx="0" fill="#C8A84B"/>
+  <rect x="0" y="380" width="780" height="10" fill="#C8A84B" opacity="0"/>
+  <rect width="780" height="500" rx="40" fill="none" stroke="#C8A84B" stroke-width="12"/>
+  <text x="390" y="300" font-family="Arial,sans-serif" font-size="230" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="0">fazaa</text>
+  <text x="390" y="440" font-family="Arial,sans-serif" font-size="64" font-weight="600" fill="#C8A84B" text-anchor="middle" letter-spacing="4">UAE PROGRAMME</text>
+</svg>
