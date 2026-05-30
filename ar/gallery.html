@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-819HFHM37T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-819HFHM37T');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>معرض الصور — قريباً | فيكس هايف غاراج دبي</title>
+  <meta name="description" content="معرض صور فيكس هايف — قريباً. صور قبل وبعد الإصلاح، من ورشتنا وفريقنا في العمل. مدينة دبي للاستثمار." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://myfixhive.ae/ar/gallery.html" />
+  <meta name="geo.region" content="AE-DU">
+  <link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/gallery.html" />
+  <link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/gallery.html" />
+  <link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/gallery.html" />
+  <link rel="stylesheet" href="../shared.css" />
+  <style>
+    .gallery-hero {
+      min-height: 80vh;
+      background: linear-gradient(135deg, #0a0f1e 0%, #0a2463 50%, #1e3a8a 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 5%;
+      position: relative;
+      overflow: hidden;
+    }
+    .gallery-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(245,166,35,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(245,166,35,0.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridMove 20s linear infinite;
+    }
+    @keyframes gridMove { 0%{ transform:translateY(0); } 100%{ transform:translateY(60px); } }
+    .gallery-hero::after { content:''; position:absolute; bottom:-100px; left:50%; transform:translateX(-50%); width:600px; height:300px; background:radial-gradient(ellipse, rgba(245,166,35,0.15) 0%, transparent 70%); pointer-events:none; }
+    .gallery-content { position:relative; z-index:1; max-width:680px; }
+    .gallery-badge { display:inline-flex; align-items:center; gap:0.5rem; background:rgba(245,166,35,0.15); border:1.5px solid rgba(245,166,35,0.4); color:var(--amber); font-size:0.78rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:0.45rem 1.1rem; border-radius:30px; margin-bottom:2rem; }
+    .gallery-title { font-size:clamp(2.2rem,5vw,3.8rem); font-weight:900; color:#fff; line-height:1.1; margin-bottom:1.2rem; }
+    .gallery-title span { color:var(--amber); }
+    .gallery-sub { font-size:1.05rem; color:rgba(255,255,255,0.6); line-height:1.9; margin-bottom:3rem; max-width:520px; margin-left:auto; margin-right:auto; }
+    .gallery-preview { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-bottom:3rem; max-width:680px; width:100%; }
+    .preview-tile { aspect-ratio:1; border-radius:14px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.5rem; border:1.5px solid rgba(255,255,255,0.08); position:relative; overflow:hidden; backdrop-filter:blur(4px); transition:border-color .25s,transform .25s; }
+    .preview-tile:hover { border-color:rgba(245,166,35,0.4); transform:translateY(-3px); }
+    .preview-tile:nth-child(1){ background:linear-gradient(145deg,rgba(29,78,216,0.3),rgba(10,36,99,0.5)); }
+    .preview-tile:nth-child(2){ background:linear-gradient(145deg,rgba(245,166,35,0.15),rgba(10,36,99,0.5)); }
+    .preview-tile:nth-child(3){ background:linear-gradient(145deg,rgba(16,185,129,0.2),rgba(10,36,99,0.5)); }
+    .preview-tile:nth-child(4){ background:linear-gradient(145deg,rgba(220,38,38,0.2),rgba(10,36,99,0.5)); }
+    .preview-tile:nth-child(5){ background:linear-gradient(145deg,rgba(124,58,237,0.25),rgba(10,36,99,0.5)); }
+    .preview-tile:nth-child(6){ background:linear-gradient(145deg,rgba(245,166,35,0.2),rgba(10,36,99,0.5)); }
+    .tile-icon { font-size:1.8rem; }
+    .tile-label { font-size:0.68rem; font-weight:700; color:rgba(255,255,255,0.5); text-align:center; padding:0 0.5rem; }
+    .preview-tile::after { content:'قريباً'; position:absolute; inset:0; background:rgba(10,15,30,0.55); backdrop-filter:blur(6px); display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700; color:rgba(255,255,255,0.4); letter-spacing:1px; }
+    .gallery-actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+    .gallery-actions .btn-wa { display:inline-flex; align-items:center; gap:0.5rem; background:var(--amber); color:#fff; font-weight:700; font-size:0.95rem; padding:0.9rem 2rem; border-radius:8px; text-decoration:none; transition:opacity .2s,transform .2s; }
+    .gallery-actions .btn-wa:hover { opacity:0.9; transform:translateY(-2px); }
+    .gallery-actions .btn-insta { display:inline-flex; align-items:center; gap:0.5rem; background:transparent; border:1.5px solid rgba(255,255,255,0.25); color:#fff; font-weight:600; font-size:0.95rem; padding:0.9rem 2rem; border-radius:8px; text-decoration:none; transition:border-color .2s,background .2s; }
+    .gallery-actions .btn-insta:hover { border-color:rgba(245,166,35,0.6); background:rgba(245,166,35,0.08); }
+    .whats-coming { background:#f8faff; padding:60px 5%; text-align:center; }
+    .coming-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:900px; margin:2.5rem auto 0; }
+    .coming-card { background:#fff; border:1.5px solid #e5e7eb; border-radius:14px; padding:2rem 1.5rem; text-align:center; transition:border-color .2s,box-shadow .2s; }
+    .coming-card:hover { border-color:var(--amber); box-shadow:0 6px 24px rgba(245,166,35,0.1); }
+    .coming-card .cc-icon { font-size:2.2rem; margin-bottom:0.8rem; }
+    .coming-card h3 { font-size:0.97rem; font-weight:800; color:#0d1b2a; margin-bottom:0.5rem; }
+    .coming-card p { font-size:0.85rem; color:#6b7280; line-height:1.75; margin:0; }
+    @media(max-width:700px){ .gallery-preview{grid-template-columns:repeat(2,1fr);} .coming-grid{grid-template-columns:1fr;max-width:380px;} }
+  </style>
+  <link rel="stylesheet" href="../chatbot.css" />
+</head>
+<body>
+
+<a href="https://wa.me/971541699500?text=مرحبًا%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد" class="top-bar" target="_blank" rel="noopener">
+  <span class="top-bar-icon">💬</span>
+  <span class="top-bar-text"><strong>فحص تشخيصي مجاني</strong> — أرسل لنا مشكلة سيارتك الآن عبر واتساب</span>
+  <span class="top-bar-cta">تحدث الآن →</span>
+</a>
+
+<nav>
+  <a href="../index.html" class="logo">FixHive<span style="color:#F5A623">.</span></a>
+  <ul>
+    <li class="has-dropdown"><a href="../about.html" class="nav-packages-link">من نحن</a></li>
+    <li class="has-dropdown"><a href="../services.html" class="nav-packages-link">الخدمات</a></li>
+    <li class="has-dropdown"><a href="../brands.html" class="nav-packages-link">الماركات</a></li>
+    <li class="has-dropdown"><a href="../service-packages.html" class="nav-packages-link">الباقات</a></li>
+    <li><a href="../contact.html" class="nav-packages-link">اتصل بنا</a></li>
+    <li class="has-dropdown"><a href="#" class="nav-packages-link">المزيد</a><ul class="nav-dropdown"><li><a href="../faq.html">الأسئلة الشائعة</a></li><li><a href="../blogs.html">المدونة</a></li><li><a href="../gallery.html">المعرض</a></li></ul></li>
+  </ul>
+  <a href="https://wa.me/971541699500?text=مرحبًا%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد" class="nav-cta">احجز الآن</a>
+  <a href="../gallery.html" class="nav-lang">🇬🇧 EN</a>
+  <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="القائمة"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../services.html">جميع الخدمات</a>
+  <a href="../brands.html" style="color:var(--amber);font-weight:700;">الماركات</a>
+  <a href="../about.html">من نحن</a>
+  <a href="../contact.html">اتصل بنا</a>
+  <a href="#" style="color:var(--amber);font-weight:700;">المزيد</a>
+  <a href="../faq.html" style="padding-left:1.5rem;font-size:0.87rem;">الأسئلة الشائعة</a>
+  <a href="../blogs.html" style="padding-left:1.5rem;font-size:0.87rem;">المدونة</a>
+  <a href="../gallery.html" style="padding-left:1.5rem;font-size:0.87rem;">المعرض</a>
+  <a href="../service-packages.html" style="color:var(--amber);font-weight:700;">الباقات</a>
+  <a href="https://wa.me/971541699500?text=مرحبًا%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد">📲 احجز عبر واتساب</a>
+</div>
+
+<section class="gallery-hero">
+  <div class="gallery-content">
+    <div class="gallery-badge">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      قيد الإنشاء
+    </div>
+    <h1 class="gallery-title">معرضنا<br><span>قادم قريباً</span></h1>
+    <p class="gallery-sub">نعمل على تجميع صور حقيقية من ورشتنا — قبل وبعد الإصلاح، فريقنا أثناء العمل، والسيارات التي نحبّ العمل عليها. عودوا قريباً.</p>
+
+    <div class="gallery-preview">
+      <div class="preview-tile"><div class="tile-icon">🔧</div><div class="tile-label">إصلاح المحرك</div></div>
+      <div class="preview-tile"><div class="tile-icon">❄️</div><div class="tile-label">خدمة التكييف</div></div>
+      <div class="preview-tile"><div class="tile-icon">✨</div><div class="tile-label">التلميع والحماية</div></div>
+      <div class="preview-tile"><div class="tile-icon">🏎️</div><div class="tile-label">سيارات فاخرة</div></div>
+      <div class="preview-tile"><div class="tile-icon">⚡</div><div class="tile-label">كهربائية وهجينة</div></div>
+      <div class="preview-tile"><div class="tile-icon">🛠️</div><div class="tile-label">من الورشة</div></div>
+    </div>
+
+    <div class="gallery-actions">
+      <a href="https://wa.me/971541699500?text=مرحبًا%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد" class="btn-wa" target="_blank" rel="noopener">📲 احجز خدمة</a>
+      <a href="https://www.instagram.com/fixhive_ae/" class="btn-insta" target="_blank" rel="noopener">📸 تابعنا على إنستغرام</a>
+    </div>
+  </div>
+</section>
+
+<section class="whats-coming">
+  <div class="section-label">ما الذي ينتظركم</div>
+  <div class="section-title">لمحة عمّا سيأتي</div>
+  <div class="coming-grid">
+    <div class="coming-card">
+      <div class="cc-icon">🔄</div>
+      <h3>قبل وبعد</h3>
+      <p>تحولات حقيقية جنباً إلى جنب — من التلف إلى الكمال. كل عمل نفتخر به، موثّق بالصور.</p>
+    </div>
+    <div class="coming-card">
+      <div class="cc-icon">🏎️</div>
+      <h3>سيارات مميزة</h3>
+      <p>أعمال مثيرة للاهتمام وأعطال غير مألوفة ومركبات لافتة تمرّ عبر أبوابنا — من السيارات اليومية إلى الفاخرة.</p>
+    </div>
+    <div class="coming-card">
+      <div class="cc-icon">👨‍🔧</div>
+      <h3>الفريق والورشة</h3>
+      <p>خلف الكواليس في فيكس هايف — فنيّونا وأدواتنا والبيئة التي تُعامَل فيها سيارتك بعناية.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo">FixHive<span style="color:#F5A623">.</span></a>
+      <p>إصلاح موثوق وبأسعار معقولة للسيارات في دبي. جودة الوكالة — بدون أسعار الوكالة.</p>
+    </div>
+    <div>
+      <h4>روابط سريعة</h4>
+      <ul>
+        <li><a href="../services.html">جميع الخدمات</a></li>
+        <li><a href="../about.html">من نحن</a></li>
+        <li><a href="../faq.html">الأسئلة الشائعة</a></li>
+        <li><a href="../blogs.html">المدونة</a></li>
+        <li><a href="../contact.html">اتصل بنا</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>التواصل</h4>
+      <p>📍 WH2 فيكس هايف، شارع 80<br>مدينة دبي للاستثمار أولاً، دبي، الإمارات</p>
+      <p>🕐 السبت–الخميس: 8:00ص – 8:00م</p>
+      <p>📞 <a href="tel:+971541699500">+971 54 169 9500</a></p>
+      <p>✉️ <a href="mailto:sale.ae@myfixhive.ae">sale.ae@myfixhive.ae</a></p>
+      <p>💬 <a href="https://wa.me/971541699500?text=مرحبًا%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد">واتساب</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 فيكس هايف غاراج — ساهر أوتو للإصلاح العام LLC</span>
+    <span>دبي، الإمارات العربية المتحدة</span>
+  </div>
+</footer>
+<script src="../chatbot.js"></script>
+</body>
+</html>

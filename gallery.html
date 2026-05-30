@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-819HFHM37T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-819HFHM37T');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Coming Soon | FixHive Garage Dubai</title>
+  <meta name="description" content="FixHive Garage photo gallery — coming soon. Before & after repairs, workshop shots and our team in action. Dubai Investment Park." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://myfixhive.ae/gallery.html" />
+  <meta name="geo.region" content="AE-DU">
+  <meta name="geo.placename" content="Dubai">
+  <link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/gallery.html" />
+  <link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/gallery.html" />
+  <link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/gallery.html" />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    .gallery-hero {
+      min-height: 80vh;
+      background: linear-gradient(135deg, #0a0f1e 0%, #0a2463 50%, #1e3a8a 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 5%;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Animated grid background */
+    .gallery-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(245,166,35,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245,166,35,0.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridMove 20s linear infinite;
+    }
+    @keyframes gridMove {
+      0%   { transform: translateY(0); }
+      100% { transform: translateY(60px); }
+    }
+    /* Amber glow */
+    .gallery-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 300px;
+      background: radial-gradient(ellipse, rgba(245,166,35,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .gallery-content { position: relative; z-index: 1; max-width: 680px; }
+
+    .gallery-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(245,166,35,0.15);
+      border: 1.5px solid rgba(245,166,35,0.4);
+      color: var(--amber);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.45rem 1.1rem;
+      border-radius: 30px;
+      margin-bottom: 2rem;
+    }
+
+    .gallery-title {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+    .gallery-title span { color: var(--amber); }
+
+    .gallery-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.75;
+      margin-bottom: 3rem;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Preview tiles */
+    .gallery-preview {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 3rem;
+      max-width: 680px;
+      width: 100%;
+    }
+    .preview-tile {
+      aspect-ratio: 1;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      border: 1.5px solid rgba(255,255,255,0.08);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(4px);
+      transition: border-color .25s, transform .25s;
+    }
+    .preview-tile:hover { border-color: rgba(245,166,35,0.4); transform: translateY(-3px); }
+    .preview-tile:nth-child(1) { background: linear-gradient(145deg, rgba(29,78,216,0.3), rgba(10,36,99,0.5)); }
+    .preview-tile:nth-child(2) { background: linear-gradient(145deg, rgba(245,166,35,0.15), rgba(10,36,99,0.5)); }
+    .preview-tile:nth-child(3) { background: linear-gradient(145deg, rgba(16,185,129,0.2), rgba(10,36,99,0.5)); }
+    .preview-tile:nth-child(4) { background: linear-gradient(145deg, rgba(220,38,38,0.2), rgba(10,36,99,0.5)); }
+    .preview-tile:nth-child(5) { background: linear-gradient(145deg, rgba(124,58,237,0.25), rgba(10,36,99,0.5)); }
+    .preview-tile:nth-child(6) { background: linear-gradient(145deg, rgba(245,166,35,0.2), rgba(10,36,99,0.5)); }
+    .tile-icon { font-size: 1.8rem; filter: grayscale(0.3); }
+    .tile-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.5px;
+      text-align: center;
+      padding: 0 0.5rem;
+    }
+    /* Blur overlay */
+    .preview-tile::after {
+      content: 'Coming Soon';
+      position: absolute;
+      inset: 0;
+      background: rgba(10,15,30,0.55);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* CTA buttons */
+    .gallery-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .gallery-actions .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--amber);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity .2s, transform .2s;
+    }
+    .gallery-actions .btn-wa:hover { opacity: 0.9; transform: translateY(-2px); }
+    .gallery-actions .btn-insta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.25);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: border-color .2s, background .2s;
+    }
+    .gallery-actions .btn-insta:hover { border-color: rgba(245,166,35,0.6); background: rgba(245,166,35,0.08); }
+
+    /* What's coming */
+    .whats-coming {
+      background: #f8faff;
+      padding: 60px 5%;
+      text-align: center;
+    }
+    .coming-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 2.5rem auto 0;
+    }
+    .coming-card {
+      background: #fff;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .coming-card:hover { border-color: var(--amber); box-shadow: 0 6px 24px rgba(245,166,35,0.1); }
+    .coming-card .cc-icon { font-size: 2.2rem; margin-bottom: 0.8rem; }
+    .coming-card h3 { font-size: 0.97rem; font-weight: 800; color: #0d1b2a; margin-bottom: 0.5rem; }
+    .coming-card p { font-size: 0.85rem; color: #6b7280; line-height: 1.65; margin: 0; }
+
+    @media(max-width: 700px) {
+      .gallery-preview { grid-template-columns: repeat(2,1fr); }
+      .coming-grid { grid-template-columns: 1fr; max-width: 380px; }
+    }
+    @media(max-width: 420px) {
+      .gallery-preview { grid-template-columns: repeat(2,1fr); }
+    }
+  </style>
+  <link rel="stylesheet" href="chatbot.css" />
+</head>
+<body>
+
+<a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="top-bar" target="_blank" rel="noopener">
+  <span class="top-bar-icon">💬</span>
+  <span class="top-bar-text"><strong>Free Diagnostic Check</strong> — WhatsApp us your car problem now</span>
+  <span class="top-bar-cta">Chat Now →</span>
+</a>
+
+<nav>
+  <a href="index.html" class="logo">FixHive<span style="color:#F5A623">.</span></a>
+  <ul>
+    <li class="has-dropdown"><a href="about.html" class="nav-packages-link">About</a><ul class="nav-dropdown"><li><a href="about.html#values">Our Values</a></li><li><a href="about.html#history">How We Got Here</a></li><li><a href="about.html#why-fixhive">Why Choose FixHive</a></li><li><a href="about.html#social">Stay Connected</a></li><li><a href="about.html#team" class="nav-dd-disabled">The Team <em>(coming soon)</em></a></li></ul></li>
+    <li class="has-dropdown">
+      <a href="services.html" class="nav-packages-link">Services</a>
+      <ul class="nav-dropdown">
+        <li><a href="ac-service.html">AC &amp; Cooling</a></li>
+        <li><a href="engine.html">Engine &amp; Transmission</a></li>
+        <li><a href="brakes.html">Brakes &amp; Suspension</a></li>
+        <li><a href="tyres.html">Tyres &amp; Wheels</a></li>
+        <li><a href="body.html">Body &amp; Exterior</a></li>
+        <li><a href="electrical.html">Battery &amp; Electrical</a></li>
+        <li><a href="hybrid-ev.html">Hybrid &amp; EV</a></li>
+        <li><a href="pre-purchase-inspection.html">Pre-Purchase Inspection</a></li>
+        <li><a href="service-packages.html">Service Packages</a></li>
+        <li><a href="detailing.html">Detailing &amp; Protection</a></li>
+        <li><a href="gearbox.html">Gearbox &amp; Drivetrain</a></li>
+        <li><a href="diagnostics.html">Advanced Diagnostics</a></li>
+      </ul>
+    </li>
+    <li class="has-dropdown"><a href="brands.html" class="nav-packages-link">Brands</a><ul class="nav-mega"><li><a href="contact.html?brand=alfa-romeo">Alfa Romeo</a></li><li><a href="contact.html?brand=aston-martin">Aston Martin</a></li><li><a href="audi-repair-dubai.html">Audi</a></li><li><a href="contact.html?brand=bentley">Bentley</a></li><li><a href="bmw-repair-dubai.html">BMW</a></li><li><a href="contact.html?brand=byd">BYD</a></li><li><a href="contact.html?brand=cadillac">Cadillac</a></li><li><a href="contact.html?brand=changan">Changan</a></li><li><a href="contact.html?brand=chery">Chery</a></li><li><a href="contact.html?brand=chevrolet">Chevrolet</a></li><li><a href="contact.html?brand=chrysler">Chrysler</a></li><li><a href="contact.html?brand=daihatsu">Daihatsu</a></li><li><a href="contact.html?brand=dodge">Dodge</a></li><li><a href="contact.html?brand=ferrari">Ferrari</a></li><li><a href="contact.html?brand=fiat">Fiat</a></li><li><a href="ford-repair-dubai.html">Ford</a></li><li><a href="contact.html?brand=gac">GAC</a></li><li><a href="contact.html?brand=geely">Geely</a></li><li><a href="contact.html?brand=genesis">Genesis</a></li><li><a href="contact.html?brand=gmc">GMC</a></li><li><a href="contact.html?brand=haval">Haval</a></li><li><a href="honda-repair-dubai.html">Honda</a></li><li><a href="contact.html?brand=hongqi">HongQi</a></li><li><a href="hyundai-repair-dubai.html">Hyundai</a></li><li><a href="contact.html?brand=infiniti">Infiniti</a></li><li><a href="contact.html?brand=isuzu">Isuzu</a></li><li><a href="jaguar-repair-dubai.html">Jaguar</a></li><li><a href="contact.html?brand=jeep">Jeep</a></li><li><a href="contact.html?brand=jetour">Jetour</a></li><li><a href="kia-repair-dubai.html">Kia</a></li><li><a href="contact.html?brand=lamborghini">Lamborghini</a></li><li><a href="land-rover-repair-dubai.html">Land Rover</a></li><li><a href="lexus-repair-dubai.html">Lexus</a></li><li><a href="contact.html?brand=lincoln">Lincoln</a></li><li><a href="contact.html?brand=maserati">Maserati</a></li><li><a href="contact.html?brand=maybach">Maybach</a></li><li><a href="mazda-repair-dubai.html">Mazda</a></li><li><a href="mercedes-benz-repair-dubai.html">Mercedes-Benz</a></li><li><a href="contact.html?brand=mg">MG</a></li><li><a href="contact.html?brand=mini">MINI</a></li><li><a href="mitsubishi-repair-dubai.html">Mitsubishi</a></li><li><a href="nissan-repair-dubai.html">Nissan</a></li><li><a href="contact.html?brand=peugeot">Peugeot</a></li><li><a href="porsche-repair-dubai.html">Porsche</a></li><li><a href="contact.html?brand=ram">RAM</a></li><li><a href="land-rover-repair-dubai.html">Range Rover</a></li><li><a href="contact.html?brand=renault">Renault</a></li><li><a href="contact.html?brand=rolls-royce">Rolls-Royce</a></li><li><a href="contact.html?brand=subaru">Subaru</a></li><li><a href="contact.html?brand=suzuki">Suzuki</a></li><li><a href="tesla-repair-dubai.html">Tesla</a></li><li><a href="toyota-repair-dubai.html">Toyota</a></li><li><a href="volkswagen-repair-dubai.html">Volkswagen</a></li><li><a href="contact.html?brand=volvo">Volvo</a></li><li class="nav-mega-footer"><a href="brands.html">All Brands</a></li></ul></li>
+    <li class="has-dropdown"><a href="service-packages.html" class="nav-packages-link">Packages</a><ul class="nav-dropdown"><li><a href="service-packages.html#fixcare">FixCare</a></li><li><a href="service-packages.html#fixprime">FixPrime</a></li><li><a href="service-packages.html#fixelite">FixElite</a></li></ul></li>
+    <li><a href="index.html#promotions" class="nav-offers-link">🔥 Offers</a></li>
+    <li><a href="contact.html" class="nav-packages-link">Contact</a></li>
+    <li class="has-dropdown"><a href="#" class="nav-packages-link">More</a><ul class="nav-dropdown"><li><a href="faq.html">FAQ</a></li><li><a href="blogs.html">Blog</a></li><li><a href="gallery.html">Gallery</a></li></ul></li>
+  </ul>
+  <div class="nav-search" id="navSearch"><button class="nav-search-toggle" onclick="var ns=this.parentNode;ns.classList.toggle('open');if(ns.classList.contains('open')){var i=document.getElementById('navSearchInput');i&&i.focus()}" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button><div class="nav-search-drop"><input type="text" id="navSearchInput" placeholder="Search FixHive&#8230;" autocomplete="off" aria-label="Search FixHive"><div class="nav-search-results" id="navSearchResults"></div></div></div>
+  <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="nav-cta">Book Now</a>
+  <a href="ar/gallery.html" class="nav-lang">🇦🇪 AR</a>
+  <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="services.html">All Services</a>
+  <a href="ac-service.html" style="padding-left:1.5rem;font-size:0.87rem;">AC &amp; Cooling</a>
+  <a href="engine.html" style="padding-left:1.5rem;font-size:0.87rem;">Engine &amp; Transmission</a>
+  <a href="brakes.html" style="padding-left:1.5rem;font-size:0.87rem;">Brakes &amp; Suspension</a>
+  <a href="tyres.html" style="padding-left:1.5rem;font-size:0.87rem;">Tyres &amp; Wheels</a>
+  <a href="body.html" style="padding-left:1.5rem;font-size:0.87rem;">Body &amp; Exterior</a>
+  <a href="electrical.html" style="padding-left:1.5rem;font-size:0.87rem;">Battery &amp; Electrical</a>
+  <a href="hybrid-ev.html" style="padding-left:1.5rem;font-size:0.87rem;">Hybrid &amp; EV</a>
+  <a href="pre-purchase-inspection.html" style="padding-left:1.5rem;font-size:0.87rem;">Pre-Purchase Inspection</a>
+  <a href="service-packages.html" style="padding-left:1.5rem;font-size:0.87rem;">Service Packages</a>
+  <a href="detailing.html" style="padding-left:1.5rem;font-size:0.87rem;">Detailing &amp; Protection</a>
+  <a href="gearbox.html" style="padding-left:1.5rem;font-size:0.87rem;">Gearbox &amp; Drivetrain</a>
+  <a href="diagnostics.html" style="padding-left:1.5rem;font-size:0.87rem;">Advanced Diagnostics</a>
+  <a href="brands.html" style="color:var(--amber);font-weight:700;">Brands</a>
+  <a href="about.html">About</a>
+  <a href="about.html#values" style="padding-left:1.5rem;font-size:0.87rem;">Our Values</a>
+  <a href="about.html#history" style="padding-left:1.5rem;font-size:0.87rem;">How We Got Here</a>
+  <a href="about.html#why-fixhive" style="padding-left:1.5rem;font-size:0.87rem;">Why Choose FixHive</a>
+  <a href="about.html#social" style="padding-left:1.5rem;font-size:0.87rem;">Stay Connected</a>
+  <a href="about.html#team" style="padding-left:1.5rem;font-size:0.87rem;opacity:0.5;pointer-events:none;">The Team (coming soon)</a>
+  <a href="contact.html" class="nav-packages-link">Contact</a>
+  <a href="#" style="color:var(--amber);font-weight:700;">More</a>
+  <a href="faq.html" style="padding-left:1.5rem;font-size:0.87rem;">FAQ</a>
+  <a href="blogs.html" style="padding-left:1.5rem;font-size:0.87rem;">Blog</a>
+  <a href="gallery.html" style="padding-left:1.5rem;font-size:0.87rem;">Gallery</a>
+  <a href="service-packages.html" style="color:var(--amber);font-weight:700;">Packages</a>
+  <a href="service-packages.html#fixcare" style="padding-left:1.5rem;font-size:0.87rem;">FixCare</a>
+  <a href="service-packages.html#fixprime" style="padding-left:1.5rem;font-size:0.87rem;">FixPrime</a>
+  <a href="service-packages.html#fixelite" style="padding-left:1.5rem;font-size:0.87rem;">FixElite</a>
+  <a href="index.html#promotions" style="color:var(--amber);background:rgba(245,166,35,0.14);border:1.5px solid rgba(245,166,35,0.55);font-weight:700;border-radius:20px;padding:0.4rem 1rem;">🔥 Special Offers</a>
+  <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment">📲 Book on WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<section class="gallery-hero">
+  <div class="gallery-content">
+    <div class="gallery-badge">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Under Construction
+    </div>
+    <h1 class="gallery-title">Our Gallery is<br><span>Coming Soon</span></h1>
+    <p class="gallery-sub">We're putting together real photos from our workshop — before &amp; after repairs, the team in action, and the cars we love working on. Check back soon.</p>
+
+    <!-- Blurred preview tiles -->
+    <div class="gallery-preview">
+      <div class="preview-tile">
+        <div class="tile-icon">🔧</div>
+        <div class="tile-label">Engine Repairs</div>
+      </div>
+      <div class="preview-tile">
+        <div class="tile-icon">❄️</div>
+        <div class="tile-label">AC Service</div>
+      </div>
+      <div class="preview-tile">
+        <div class="tile-icon">✨</div>
+        <div class="tile-label">Detailing</div>
+      </div>
+      <div class="preview-tile">
+        <div class="tile-icon">🏎️</div>
+        <div class="tile-label">Luxury Cars</div>
+      </div>
+      <div class="preview-tile">
+        <div class="tile-icon">⚡</div>
+        <div class="tile-label">EV &amp; Hybrid</div>
+      </div>
+      <div class="preview-tile">
+        <div class="tile-icon">🛠️</div>
+        <div class="tile-label">Workshop</div>
+      </div>
+    </div>
+
+    <div class="gallery-actions">
+      <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="btn-wa" target="_blank" rel="noopener">📲 Book a Service</a>
+      <a href="https://www.instagram.com/fixhive_ae/" class="btn-insta" target="_blank" rel="noopener">📸 See us on Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S COMING -->
+<section class="whats-coming">
+  <div class="section-label">What to Expect</div>
+  <div class="section-title">A Sneak Peek at What's Coming</div>
+  <div class="coming-grid">
+    <div class="coming-card">
+      <div class="cc-icon">🔄</div>
+      <h3>Before &amp; After</h3>
+      <p>Real side-by-side transformations — from worn-out to workshop-perfect. Every job we're proud of, documented.</p>
+    </div>
+    <div class="coming-card">
+      <div class="cc-icon">🏎️</div>
+      <h3>Featured Cars</h3>
+      <p>The interesting builds, unusual faults and standout vehicles that come through our doors. From daily drivers to exotics.</p>
+    </div>
+    <div class="coming-card">
+      <div class="cc-icon">👨‍🔧</div>
+      <h3>Team &amp; Workshop</h3>
+      <p>Behind the scenes at FixHive DIP — our technicians, our tools and the environment your car gets looked after in.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">FixHive<span style="color:#F5A623">.</span></a>
+      <p>Reliable, affordable car repair across Dubai. Dealer-level quality — without dealer prices.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="services.html">All Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blogs.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment">Book on WhatsApp</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>📍 WH2 FixHive, 80 Street<br>Dubai Investment Park First, Dubai, UAE</p>
+      <p>🕐 Sat–Thu: 8:00am – 8:00pm</p>
+      <p>📞 <a href="tel:+971541699500">+971 54 169 9500</a></p>
+      <p>✉️ <a href="mailto:sale.ae@myfixhive.ae">sale.ae@myfixhive.ae</a></p>
+      <p>💬 <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment">WhatsApp Us</a></p>
+      <p>⭐ <a href="https://www.google.com/maps/search/Fixhive+Automotive+Garage+Car+Repair+Service+DIP+Dubai" target="_blank" rel="noopener">Google Reviews</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 FixHive Garage — Saher Auto General Repairing LLC</span>
+    <span>Dubai, UAE</span>
+  </div>
+</footer>
+
+<script src="chatbot.js"></script>
+<script src="/js/search.js" defer></script>
+</body>
+</html>
