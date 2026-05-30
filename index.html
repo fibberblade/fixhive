@@ -768,6 +768,26 @@
 </section>
 
 <style>
+/* ── PROMOTIONS ── */
+.promos-section { padding: 70px 5%; background: var(--dark); }
+.promos-header { margin-bottom: 2rem; }
+.promos-section .section-label { color: var(--amber); }
+.promos-section .section-title { color: var(--white); }
+.promos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+.promo-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 1.8rem; display: flex; flex-direction: column; gap: 0.8rem; transition: border-color .2s, background .2s; }
+.promo-card:hover { border-color: var(--amber); background: rgba(255,255,255,0.09); }
+.promo-card-top { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; }
+.promo-card-icon { font-size: 2rem; }
+.promo-badge { font-size: 0.72rem; font-weight: 700; padding: 0.25rem 0.7rem; border-radius: 20px; white-space: nowrap; }
+.promo-badge.amber { background: rgba(245,166,35,0.2); color: var(--amber); }
+.promo-badge.green { background: rgba(16,185,129,0.15); color: #6ee7b7; }
+.promo-badge.blue  { background: rgba(96,165,250,0.15); color: #93c5fd; }
+.promo-badge.red   { background: rgba(248,113,113,0.15); color: #fca5a5; }
+.promo-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--white); }
+.promo-card p { font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.6; flex: 1; }
+.promo-cta { display: inline-block; background: var(--amber); color: var(--dark); font-weight: 700; font-size: 0.85rem; padding: 0.6rem 1.2rem; border-radius: 5px; text-decoration: none; margin-top: 0.4rem; align-self: flex-start; transition: opacity .2s; }
+.promo-cta:hover { opacity: 0.88; }
+
 /* ── REVIEWS ── */
 .reviews-section { padding: 70px 5%; background: var(--white); text-align: center; }
 .reviews-section .section-title { margin-bottom: 0.5rem; }
@@ -1061,6 +1081,19 @@
   </div>
 </section>
 
+<!-- PROMOTIONS -->
+<section class="promos-section" id="promotions" aria-label="Current promotions">
+  <div class="promos-header">
+    <div>
+      <div class="section-label">Special Offers</div>
+      <div class="section-title" style="margin-bottom:0">Current Promotions</div>
+    </div>
+  </div>
+  <div class="promos-grid" id="promosGrid">
+    <!-- Loaded from data/promotions.json -->
+  </div>
+</section>
+
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -1109,6 +1142,31 @@
   </div>
 </footer>
 
+<script>
+  (async () => {
+    const grid = document.getElementById('promosGrid');
+    const section = document.getElementById('promotions');
+    if (!grid || !section) return;
+    try {
+      const r = await fetch('data/promotions.json?_=' + Date.now());
+      const promos = await r.json();
+      const active = promos.filter(p => p.active);
+      if (!active.length) { section.style.display = 'none'; return; }
+      function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+      grid.innerHTML = active.map(p => `
+        <div class="promo-card">
+          <div class="promo-card-top">
+            <span class="promo-card-icon">${esc(p.icon)}</span>
+            ${p.badge ? `<span class="promo-badge ${esc(p.badgeColor||'amber')}">${esc(p.badge)}</span>` : ''}
+          </div>
+          <h3>${esc(p.title)}</h3>
+          <p>${esc(p.description)}</p>
+          ${p.ctaUrl ? `<a href="${esc(p.ctaUrl)}" class="promo-cta" target="_blank" rel="noopener">${esc(p.cta||'Book Now')}</a>` : ''}
+        </div>
+      `).join('');
+    } catch(e) { section.style.display = 'none'; }
+  })();
+</script>
 <script src="chatbot.js" defer></script>
 <script src="/js/nav.js" defer></script>
 <script src="/js/search.js" defer></script>
