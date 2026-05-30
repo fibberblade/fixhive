@@ -145,7 +145,23 @@
     }
     .pkg-tier { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 0.55rem; }
     .pkg-name { font-size: 2.1rem; font-weight: 900; color: #1e3a8a; line-height: 1; margin-bottom: 0.55rem; direction: ltr; text-align: left; }
-    .pkg-tagline { font-size: 0.875rem; color: var(--muted); margin-bottom: 1.8rem; line-height: 1.6; }
+    .pkg-tagline { font-size: 0.875rem; color: var(--muted); margin-bottom: 0.9rem; line-height: 1.6; }
+    .pkg-plan-meta { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 1.4rem; padding: 0.75rem 1rem; border-radius: 8px; background: rgba(29,78,216,0.06); border: 1px solid rgba(29,78,216,0.12); }
+    .pkg-prime .pkg-plan-meta { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.15); }
+    .pkg-elite .pkg-plan-meta { background: rgba(147,197,253,0.07); border-color: rgba(147,197,253,0.15); }
+    .pkg-plan-meta .pm-km { font-size: 0.82rem; font-weight: 700; color: #1e3a8a; display: flex; align-items: center; gap: 0.45rem; flex-direction: row-reverse; }
+    .pkg-prime .pkg-plan-meta .pm-km { color: rgba(255,255,255,0.9); }
+    .pkg-elite .pkg-plan-meta .pm-km { color: #93c5fd; }
+    .pkg-plan-meta .pm-services { font-size: 0.78rem; color: var(--muted); text-align: right; }
+    .pkg-prime .pkg-plan-meta .pm-services { color: rgba(255,255,255,0.55); }
+    .pkg-elite .pkg-plan-meta .pm-services { color: rgba(147,197,253,0.65); }
+    .pkg-price-from { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.5px; color: var(--muted); margin-bottom: 0.2rem; }
+    .pkg-price-amount { font-size: 1.45rem; font-weight: 900; color: #1e3a8a; line-height: 1; margin-bottom: 0.2rem; direction: ltr; text-align: right; }
+    .pkg-price-amount .pa-vat { font-size: 0.72rem; font-weight: 600; opacity: 0.6; margin-right: 2px; }
+    .pkg-prime .pkg-price-from { color: rgba(255,255,255,0.5); }
+    .pkg-prime .pkg-price-amount { color: var(--amber); }
+    .pkg-elite .pkg-price-from { color: rgba(147,197,253,0.5); }
+    .pkg-elite .pkg-price-amount { color: #93c5fd; }
     .pkg-features { list-style: none; margin: 0 0 2rem; display: flex; flex-direction: column; }
     .pkg-features li { font-size: 0.875rem; color: #374151; padding: 0.55rem 0; border-bottom: 1px solid #f0f3f8; display: flex; align-items: flex-start; gap: 0.6rem; line-height: 1.5; flex-direction: row-reverse; }
     .pkg-features li:last-child { border-bottom: none; }
@@ -318,7 +334,13 @@
       <div class="pkg-tier">الأساسية</div>
       <div class="pkg-name">Fix<span>CARE</span></div>
       <div class="pkg-tagline">رعاية دورية موثوقة لكل سيارة</div>
-      <ul class="pkg-features">
+      <div class="pkg-plan-meta">
+        <div class="pm-km">🛣️ عقد 40,000 كم</div>
+        <div class="pm-services">3 صيانة صغيرة + صيانة كبيرة واحدة</div>
+      </div>
+      <div class="pkg-price-from">تبدأ من</div>
+      <div class="pkg-price-amount"><span class="pa-vat">+ ضريبة</span> 1,250 درهم</div>
+      <ul class="pkg-features" style="margin-top:1.4rem;">
         <li><span class="feature-check">✓</span>تبديل زيت المحرك والفلتر (مواصفات OEM)</li>
         <li><span class="feature-check">✓</span>تعبئة جميع مستويات السوائل</li>
         <li><span class="feature-check">✓</span>فحص السلامة 20 نقطة</li>
@@ -336,6 +358,10 @@
       <div class="pkg-tier">الشاملة</div>
       <div class="pkg-name">Fix<span>PRIME</span></div>
       <div class="pkg-tagline">رعاية متكاملة لراحة البال الحقيقية</div>
+      <div class="pkg-plan-meta">
+        <div class="pm-km">🛣️ عقد 50,000 كم</div>
+        <div class="pm-services">4 صيانة صغيرة + صيانة كبيرة واحدة</div>
+      </div>
       <ul class="pkg-features">
         <li><span class="feature-check" style="width:0;overflow:hidden;"></span><span class="feature-carry">كل ما في FixCARE، بالإضافة إلى:</span></li>
         <li><span class="feature-check">✓</span>تبديل فلتر الهواء والمكيف</li>
@@ -354,6 +380,10 @@
       <div class="pkg-tier">المتكاملة</div>
       <div class="pkg-name">Fix<span>ELITE</span></div>
       <div class="pkg-tagline">التجربة الكاملة مع فيكس هايف</div>
+      <div class="pkg-plan-meta">
+        <div class="pm-km">🛣️ عقد 60,000 كم</div>
+        <div class="pm-services">5 صيانة صغيرة + صيانة كبيرة واحدة</div>
+      </div>
       <ul class="pkg-features">
         <li><span class="feature-check" style="width:0;overflow:hidden;"></span><span class="feature-carry">كل ما في FixPRIME، بالإضافة إلى:</span></li>
         <li><span class="feature-check">✓</span>تفريغ وتعبئة نظام التبريد</li>
@@ -368,7 +398,8 @@
     </div>
 
   </div>
-  <p class="pkg-cards-note">تختلف الأسعار حسب نوع السيارة وموديلها وعدد الكيلومترات. <a href="#enquiry">أرسل استفساراً</a> وسنرد بعرض مخصص لسيارتك خلال ساعة.</p>
+  <p class="pkg-cards-note">تبدأ الأسعار من 1,250 درهم + ضريبة وتختلف حسب نوع السيارة وموديلها وعدد الكيلومترات. <a href="#enquiry">أرسل استفساراً</a> وسنرد بعرض مخصص لسيارتك خلال ساعة.</p>
+  <p class="pkg-cards-note" style="margin-top:0.6rem;">للاطلاع على تفاصيل العقد والشروط والأحكام، تواصل مع فريق خدمة العملاء لدينا عبر <a href="#enquiry">نموذج التواصل أدناه</a> أو <a href="https://wa.me/971541699500?text=مرحباً%2C%20أود%20الاستفسار%20عن%20تفاصيل%20عقد%20الصيانة%20والشروط%20والأحكام" target="_blank" rel="noopener">واتساب مباشرةً</a>.</p>
 </section>
 
 <!-- COMPARISON TABLE -->

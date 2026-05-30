@@ -255,9 +255,68 @@
     .pkg-tagline {
       font-size: 0.875rem;
       color: var(--muted);
-      margin-bottom: 1.8rem;
+      margin-bottom: 0.9rem;
       line-height: 1.5;
     }
+    .pkg-plan-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      margin-bottom: 1.4rem;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      background: rgba(29,78,216,0.06);
+      border: 1px solid rgba(29,78,216,0.12);
+    }
+    .pkg-prime .pkg-plan-meta {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(255,255,255,0.15);
+    }
+    .pkg-elite .pkg-plan-meta {
+      background: rgba(147,197,253,0.07);
+      border-color: rgba(147,197,253,0.15);
+    }
+    .pkg-plan-meta .pm-km {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .pkg-prime .pkg-plan-meta .pm-km { color: rgba(255,255,255,0.9); }
+    .pkg-elite .pkg-plan-meta .pm-km { color: #93c5fd; }
+    .pkg-plan-meta .pm-services {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .pkg-prime .pkg-plan-meta .pm-services { color: rgba(255,255,255,0.55); }
+    .pkg-elite .pkg-plan-meta .pm-services { color: rgba(147,197,253,0.65); }
+    .pkg-price-from {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+    }
+    .pkg-price-amount {
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: #1e3a8a;
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+    .pkg-price-amount .pa-vat {
+      font-size: 0.72rem;
+      font-weight: 600;
+      opacity: 0.6;
+      margin-left: 2px;
+    }
+    .pkg-prime .pkg-price-from { color: rgba(255,255,255,0.5); }
+    .pkg-prime .pkg-price-amount { color: var(--amber); }
+    .pkg-elite .pkg-price-from { color: rgba(147,197,253,0.5); }
+    .pkg-elite .pkg-price-amount { color: #93c5fd; }
     .pkg-features {
       list-style: none;
       margin: 0 0 2rem;
@@ -654,7 +713,13 @@
       <div class="pkg-tier">Essential</div>
       <div class="pkg-name">Fix<span>CARE</span></div>
       <div class="pkg-tagline">Reliable routine care for every car</div>
-      <ul class="pkg-features">
+      <div class="pkg-plan-meta">
+        <div class="pm-km">🛣️ 40,000 km contract</div>
+        <div class="pm-services">3 minor services + 1 major service</div>
+      </div>
+      <div class="pkg-price-from">Starting from</div>
+      <div class="pkg-price-amount">1,250 AED<span class="pa-vat">+ VAT</span></div>
+      <ul class="pkg-features" style="margin-top:1.4rem;">
         <li><span class="feature-check">✓</span>Engine oil &amp; filter change (OEM-grade)</li>
         <li><span class="feature-check">✓</span>All fluid levels top-up</li>
         <li><span class="feature-check">✓</span>20-point safety inspection</li>
@@ -672,6 +737,10 @@
       <div class="pkg-tier">Comprehensive</div>
       <div class="pkg-name">Fix<span>PRIME</span></div>
       <div class="pkg-tagline">Complete care for real peace of mind</div>
+      <div class="pkg-plan-meta">
+        <div class="pm-km">🛣️ 50,000 km contract</div>
+        <div class="pm-services">4 minor services + 1 major service</div>
+      </div>
       <ul class="pkg-features">
         <li><span class="feature-check" style="width:0;overflow:hidden;"></span><span class="feature-carry">Everything in FixCARE, plus:</span></li>
         <li><span class="feature-check">✓</span>Air &amp; cabin filter replacement</li>
@@ -690,6 +759,10 @@
       <div class="pkg-tier">Ultimate</div>
       <div class="pkg-name">Fix<span>ELITE</span></div>
       <div class="pkg-tagline">The complete FixHive experience</div>
+      <div class="pkg-plan-meta">
+        <div class="pm-km">🛣️ 60,000 km contract</div>
+        <div class="pm-services">5 minor services + 1 major service</div>
+      </div>
       <ul class="pkg-features">
         <li><span class="feature-check" style="width:0;overflow:hidden;"></span><span class="feature-carry">Everything in FixPRIME, plus:</span></li>
         <li><span class="feature-check">✓</span>Coolant system flush &amp; refill</li>
@@ -705,7 +778,8 @@
 
   </div>
 
-  <p class="pkg-cards-note">Pricing varies by car make, model and mileage. <a href="#enquiry">Send an enquiry</a> and we'll reply with your personalised quote within the hour.</p>
+  <p class="pkg-cards-note">Prices start from 1,250 AED + VAT and vary by car make, model and mileage. <a href="#enquiry">Send an enquiry</a> and we'll reply with your personalised quote within the hour.</p>
+  <p class="pkg-cards-note" style="margin-top:0.6rem;">For full contract details and Terms &amp; Conditions, reach out to our customer service team via the <a href="#enquiry">contact form below</a> or <a href="https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20FixHive%20service%20plan%20contracts%20and%20T%26Cs" target="_blank" rel="noopener">WhatsApp us directly</a>.</p>
 </section>
 
 <!-- COMPARISON TABLE -->
