@@ -260,6 +260,113 @@
     .value-card h3 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.5rem; }
     .value-card p { font-size: 0.87rem; color: var(--muted); line-height: 1.6; }
 
+    /* ── WHY CHOOSE FIXHIVE ── */
+    .why-section {
+      padding: 80px 5%;
+      background: #f8faff;
+    }
+    .why-intro {
+      max-width: 640px;
+      margin-bottom: 3.5rem;
+    }
+    .why-intro .section-label { margin-bottom: 0.5rem; }
+    .why-intro .section-title { margin-bottom: 1rem; }
+    .why-intro p { color: #4b5563; font-size: 1rem; line-height: 1.8; }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .why-card {
+      background: #fff;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 2rem 1.6rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color .25s, box-shadow .25s, transform .25s;
+    }
+    .why-card:hover {
+      border-color: var(--amber);
+      box-shadow: 0 8px 32px rgba(245,166,35,0.12);
+      transform: translateY(-4px);
+    }
+    .why-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--amber), #f97316);
+      opacity: 0;
+      transition: opacity .25s;
+    }
+    .why-card:hover::before { opacity: 1; }
+    .why-card-icon {
+      font-size: 2.2rem;
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .why-card h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #0d1b2a;
+      line-height: 1.3;
+    }
+    .why-card p {
+      font-size: 0.87rem;
+      color: #4b5563;
+      line-height: 1.75;
+      margin: 0;
+      flex: 1;
+    }
+    .why-stat {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #d97706;
+      background: #fef3c7;
+      padding: 0.25rem 0.7rem;
+      border-radius: 20px;
+      margin-top: 0.4rem;
+      width: fit-content;
+    }
+    /* Bottom CTA strip */
+    .why-cta-row {
+      margin-top: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .why-cta-row a.btn-primary {
+      background: var(--amber);
+      color: #fff;
+      font-weight: 700;
+      padding: 0.85rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: opacity .2s;
+    }
+    .why-cta-row a.btn-primary:hover { opacity: 0.88; }
+    .why-cta-row a.btn-secondary {
+      color: #1d4ed8;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .why-cta-row a.btn-secondary:hover { text-decoration: underline; }
+
+    @media(max-width: 900px){ .why-grid{ grid-template-columns: repeat(2,1fr); } }
+    @media(max-width: 560px){ .why-grid{ grid-template-columns: 1fr; } .why-cta-row{ flex-direction:column; align-items:flex-start; } }
+
     .timeline { padding: 60px 5%; }
     .timeline-items { display: flex; flex-direction: column; gap: 0; max-width: 600px; margin-top: 2rem; }
     .timeline-item { display: flex; gap: 1.5rem; padding-bottom: 2rem; position: relative; }
@@ -473,6 +580,66 @@
 
 <!-- TEAM ANCHOR (page under construction) -->
 <div id="team" style="scroll-margin-top:80px;"></div>
+
+<!-- WHY CHOOSE FIXHIVE -->
+<section class="why-section" id="why-fixhive" aria-label="Why Choose FixHive Automotive">
+  <div class="why-intro">
+    <div class="section-label">The FixHive Difference</div>
+    <div class="section-title">Why Choose FixHive Automotive?</div>
+    <p>With hundreds of garages across Dubai, the choice matters. Here is why thousands of drivers trust FixHive — and keep coming back.</p>
+  </div>
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <div class="why-card-icon">🔬</div>
+      <h3>Dealer-Level Diagnostics, Without Dealer Prices</h3>
+      <p>We use manufacturer-grade diagnostic platforms — VCDS, ISTA, PIWIS-compatible tools — giving us the same depth of access as official dealerships. We read every fault code, not just the obvious ones.</p>
+      <span class="why-stat">All makes & models covered</span>
+    </div>
+
+    <div class="why-card">
+      <div class="why-card-icon">🛡️</div>
+      <h3>Transparent Quotes. No Surprise Bills.</h3>
+      <p>We diagnose first, then quote. You approve the work before we start. No additions, no hidden labour charges — what we quote is what you pay. Every time.</p>
+      <span class="why-stat">Fixed pricing, zero surprises</span>
+    </div>
+
+    <div class="why-card">
+      <div class="why-card-icon">⚙️</div>
+      <h3>OEM-Grade Parts as Standard</h3>
+      <p>We use OEM-quality parts that meet or exceed manufacturer specifications. We will never fit a cheap imitation to save cost — your car deserves better, and so does your safety on UAE roads.</p>
+      <span class="why-stat">Quality you can verify</span>
+    </div>
+
+    <div class="why-card">
+      <div class="why-card-icon">🏆</div>
+      <h3>18+ Years Serving Dubai Drivers</h3>
+      <p>Founded in 2006, we have grown from a small DIP workshop into one of Dubai's most trusted independent garages. Our experience with UAE road conditions, heat cycles and local driving habits is unmatched.</p>
+      <span class="why-stat">Since 2006</span>
+    </div>
+
+    <div class="why-card">
+      <div class="why-card-icon">✅</div>
+      <h3>Your Warranty Stays Intact</h3>
+      <p>Servicing with FixHive does not void your manufacturer warranty. We stamp your service book, document every job with parts records and provide full written reports — everything your warranty requires.</p>
+      <span class="why-stat">Warranty-compliant servicing</span>
+    </div>
+
+    <div class="why-card">
+      <div class="why-card-icon">💬</div>
+      <h3>You Talk to the Technician, Not a Receptionist</h3>
+      <p>WhatsApp us your problem and you get a direct, honest answer from the team working on your car. No call centres, no upselling scripts — just straight talk about what your car needs and what it costs.</p>
+      <span class="why-stat">Same-day WhatsApp response</span>
+    </div>
+
+  </div>
+
+  <div class="why-cta-row">
+    <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="btn-primary" target="_blank" rel="noopener">📲 Book Your Service Now</a>
+    <a href="services.html" class="btn-secondary">See all services →</a>
+  </div>
+</section>
 
 <!-- SOCIAL MEDIA -->
 <section class="social-section" id="social" aria-label="Follow FixHive on social media">
