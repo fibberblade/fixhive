@@ -137,7 +137,7 @@ nav ul a:hover, nav ul a.active { color: var(--amber); }
   max-height: 72vh;
   overflow-y: auto;
 }
-.has-dropdown:hover .nav-mega { display: grid; }
+.nav-mega.open { display: grid; }
 .nav-mega li a {
   display: block;
   padding: 0.35rem 0.7rem;
