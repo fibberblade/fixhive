@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#431407"/>
+      <stop offset="55%" stop-color="#7c2d12"/>
+      <stop offset="100%" stop-color="#9a3412"/>
+    </linearGradient>
+    <linearGradient id="carBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdba74"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <linearGradient id="laserGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#fbbf24" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="laserGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="200" fill="url(#bg)"/>
+
+  <!-- Grid lines (alignment reference) -->
+  <g opacity="0.12" stroke="#fbbf24" stroke-width="0.8">
+    <line x1="0" y1="50" x2="400" y2="50"/>
+    <line x1="0" y1="100" x2="400" y2="100"/>
+    <line x1="0" y1="150" x2="400" y2="150"/>
+    <line x1="100" y1="0" x2="100" y2="200"/>
+    <line x1="200" y1="0" x2="200" y2="200"/>
+    <line x1="300" y1="0" x2="300" y2="200"/>
+  </g>
+
+  <!-- Centre alignment laser lines (horizontal — main) -->
+  <line x1="0" y1="100" x2="400" y2="100" stroke="url(#laserGrad)" stroke-width="2" filter="url(#laserGlow)"/>
+
+  <!-- Left laser beam -->
+  <line x1="20" y1="60" x2="140" y2="78" stroke="#fbbf24" stroke-width="1.5" stroke-opacity="0.7" stroke-dasharray="6 3" filter="url(#glow)"/>
+  <line x1="20" y1="140" x2="140" y2="122" stroke="#fbbf24" stroke-width="1.5" stroke-opacity="0.7" stroke-dasharray="6 3" filter="url(#glow)"/>
+
+  <!-- Right laser beam -->
+  <line x1="380" y1="60" x2="260" y2="78" stroke="#fbbf24" stroke-width="1.5" stroke-opacity="0.7" stroke-dasharray="6 3" filter="url(#glow)"/>
+  <line x1="380" y1="140" x2="260" y2="122" stroke="#fbbf24" stroke-width="1.5" stroke-opacity="0.7" stroke-dasharray="6 3" filter="url(#glow)"/>
+
+  <!-- Laser emitters left -->
+  <rect x="10" y="55" width="16" height="10" rx="2" fill="#fb923c" filter="url(#glow)"/>
+  <rect x="10" y="135" width="16" height="10" rx="2" fill="#fb923c" filter="url(#glow)"/>
+  <!-- Laser emitters right -->
+  <rect x="374" y="55" width="16" height="10" rx="2" fill="#fb923c" filter="url(#glow)"/>
+  <rect x="374" y="135" width="16" height="10" rx="2" fill="#fb923c" filter="url(#glow)"/>
+
+  <!-- Car top-down view, centred -->
+  <g filter="url(#glow)">
+    <!-- Car body -->
+    <rect x="150" y="62" width="100" height="76" rx="12" fill="url(#carBody)" opacity="0.95"/>
+    <!-- Roof/cabin area -->
+    <rect x="162" y="74" width="76" height="44" rx="8" fill="#7c2d12" opacity="0.6"/>
+    <!-- Windscreens -->
+    <rect x="163" y="75" width="74" height="14" rx="5" fill="#fdba74" opacity="0.3"/>
+    <rect x="163" y="111" width="74" height="10" rx="4" fill="#fdba74" opacity="0.25"/>
+
+    <!-- Front-left wheel -->
+    <rect x="136" y="67" width="16" height="22" rx="5" fill="#431407" stroke="#fbbf24" stroke-width="1.5"/>
+    <rect x="139" y="70" width="10" height="16" rx="3" fill="#7c2d12"/>
+    <!-- Front-right wheel -->
+    <rect x="248" y="67" width="16" height="22" rx="5" fill="#431407" stroke="#fbbf24" stroke-width="1.5"/>
+    <rect x="251" y="70" width="10" height="16" rx="3" fill="#7c2d12"/>
+    <!-- Rear-left wheel -->
+    <rect x="136" y="111" width="16" height="22" rx="5" fill="#431407" stroke="#fbbf24" stroke-width="1.5"/>
+    <rect x="139" y="114" width="10" height="16" rx="3" fill="#7c2d12"/>
+    <!-- Rear-right wheel -->
+    <rect x="248" y="111" width="16" height="22" rx="5" fill="#431407" stroke="#fbbf24" stroke-width="1.5"/>
+    <rect x="251" y="114" width="10" height="16" rx="3" fill="#7c2d12"/>
+  </g>
+
+  <!-- Alignment target crosshairs on each wheel -->
+  <g stroke="#fbbf24" stroke-width="1" opacity="0.8" filter="url(#glow)">
+    <!-- FL -->
+    <line x1="144" y1="73" x2="144" y2="83"/>
+    <line x1="139" y1="78" x2="149" y2="78"/>
+    <circle cx="144" cy="78" r="4" fill="none"/>
+    <!-- FR -->
+    <line x1="256" y1="73" x2="256" y2="83"/>
+    <line x1="251" y1="78" x2="261" y2="78"/>
+    <circle cx="256" cy="78" r="4" fill="none"/>
+    <!-- RL -->
+    <line x1="144" y1="117" x2="144" y2="127"/>
+    <line x1="139" y1="122" x2="149" y2="122"/>
+    <circle cx="144" cy="122" r="4" fill="none"/>
+    <!-- RR -->
+    <line x1="256" y1="117" x2="256" y2="127"/>
+    <line x1="251" y1="122" x2="261" y2="122"/>
+    <circle cx="256" cy="122" r="4" fill="none"/>
+  </g>
+
+  <!-- Measurement angles -->
+  <g opacity="0.5" stroke="#fbbf24" stroke-width="1">
+    <path d="M144,78 Q160,60 144,40" fill="none" stroke-dasharray="3 2"/>
+    <path d="M256,78 Q240,60 256,40" fill="none" stroke-dasharray="3 2"/>
+  </g>
+
+  <!-- Corner angle markers -->
+  <text x="18" y="48" font-family="Arial,sans-serif" font-size="8" fill="#fbbf24" opacity="0.6">0.0°</text>
+  <text x="364" y="48" font-family="Arial,sans-serif" font-size="8" fill="#fbbf24" opacity="0.6">0.0°</text>
+  <text x="18" y="160" font-family="Arial,sans-serif" font-size="8" fill="#fbbf24" opacity="0.6">0.0°</text>
+  <text x="364" y="160" font-family="Arial,sans-serif" font-size="8" fill="#fbbf24" opacity="0.6">0.0°</text>
+
+  <!-- Bottom fade -->
+  <rect x="0" y="160" width="400" height="40" fill="url(#bg)" opacity="0.5"/>
+</svg>

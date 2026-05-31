@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#052e16"/>
+      <stop offset="55%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#065f46"/>
+    </linearGradient>
+    <linearGradient id="carBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6ee7b7"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <radialGradient id="scanGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="200" fill="url(#bg)"/>
+
+  <!-- Scan glow centre -->
+  <ellipse cx="200" cy="100" rx="130" ry="90" fill="url(#scanGlow)"/>
+
+  <!-- Outer scan ring -->
+  <circle cx="200" cy="100" r="85" fill="none" stroke="#10b981" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="6 4"/>
+  <!-- Middle scan ring -->
+  <circle cx="200" cy="100" r="65" fill="none" stroke="#10b981" stroke-width="1.2" stroke-opacity="0.45" stroke-dasharray="8 3"/>
+  <!-- Inner scan ring -->
+  <circle cx="200" cy="100" r="45" fill="none" stroke="#34d399" stroke-width="1.5" stroke-opacity="0.6" stroke-dasharray="4 3"/>
+
+  <!-- Radar sweep arc (partial filled sector) -->
+  <path d="M200,100 L200,20 A80,80 0 0,1 260,135 Z" fill="#10b981" opacity="0.08"/>
+  <line x1="200" y1="100" x2="200" y2="20" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.5"/>
+  <line x1="200" y1="100" x2="262" y2="136" stroke="#34d399" stroke-width="1.5" stroke-opacity="0.7"/>
+
+  <!-- Cross-hair lines -->
+  <line x1="200" y1="8" x2="200" y2="25" stroke="#6ee7b7" stroke-width="1.5" stroke-opacity="0.5"/>
+  <line x1="200" y1="175" x2="200" y2="192" stroke="#6ee7b7" stroke-width="1.5" stroke-opacity="0.5"/>
+  <line x1="108" y1="100" x2="125" y2="100" stroke="#6ee7b7" stroke-width="1.5" stroke-opacity="0.5"/>
+  <line x1="275" y1="100" x2="292" y2="100" stroke="#6ee7b7" stroke-width="1.5" stroke-opacity="0.5"/>
+
+  <!-- Check nodes at compass points -->
+  <g filter="url(#glow)">
+    <!-- North -->
+    <circle cx="200" cy="17" r="7" fill="#065f46" stroke="#6ee7b7" stroke-width="1.5"/>
+    <path d="M196,17 L199,21 L204,13" fill="none" stroke="#6ee7b7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- East -->
+    <circle cx="283" cy="100" r="7" fill="#065f46" stroke="#6ee7b7" stroke-width="1.5"/>
+    <path d="M279,100 L282,104 L287,96" fill="none" stroke="#6ee7b7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- South -->
+    <circle cx="200" cy="183" r="7" fill="#065f46" stroke="#6ee7b7" stroke-width="1.5"/>
+    <path d="M196,183 L199,187 L204,179" fill="none" stroke="#6ee7b7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- West -->
+    <circle cx="117" cy="100" r="7" fill="#065f46" stroke="#6ee7b7" stroke-width="1.5"/>
+    <path d="M113,100 L116,104 L121,96" fill="none" stroke="#6ee7b7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- "360°" text -->
+  <text x="200" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#6ee7b7" opacity="0.7" letter-spacing="2">360°</text>
+
+  <!-- Car (top-down view) centred -->
+  <g filter="url(#glow)">
+    <!-- Car body -->
+    <rect x="174" y="78" width="52" height="44" rx="8" fill="url(#carBody)" opacity="0.95"/>
+    <!-- Roof panel -->
+    <rect x="180" y="83" width="40" height="28" rx="5" fill="#065f46" opacity="0.5"/>
+    <!-- Front windscreen -->
+    <rect x="181" y="84" width="38" height="10" rx="3" fill="#6ee7b7" opacity="0.35"/>
+    <!-- Wheels -->
+    <rect x="168" y="81" width="8" height="12" rx="3" fill="#052e16" stroke="#6ee7b7" stroke-width="1"/>
+    <rect x="224" y="81" width="8" height="12" rx="3" fill="#052e16" stroke="#6ee7b7" stroke-width="1"/>
+    <rect x="168" y="107" width="8" height="12" rx="3" fill="#052e16" stroke="#6ee7b7" stroke-width="1"/>
+    <rect x="224" y="107" width="8" height="12" rx="3" fill="#052e16" stroke="#6ee7b7" stroke-width="1"/>
+  </g>
+
+  <!-- Scan dots scattered -->
+  <circle cx="155" cy="62" r="2" fill="#10b981" opacity="0.4"/>
+  <circle cx="248" cy="58" r="2" fill="#10b981" opacity="0.4"/>
+  <circle cx="265" cy="148" r="2" fill="#10b981" opacity="0.35"/>
+  <circle cx="138" cy="143" r="2" fill="#10b981" opacity="0.35"/>
+
+  <!-- Bottom fade -->
+  <rect x="0" y="165" width="400" height="35" fill="url(#bg)" opacity="0.55"/>
+</svg>
