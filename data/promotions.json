@@ -61,5 +61,20 @@
     "ctaUrl": "https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20to%20book%20the%20Transmission%20Service%20Offer%20%E2%80%94%20starting%20from%20499%20AED",
     "tcNote": "* T&C's apply. Price varies by vehicle and transmission type.",
     "active": true
+  },
+  {
+    "id": 5,
+    "title": "Wheel Alignment Special",
+    "description": "Precision 4-wheel computerised alignment — corrects pulling, uneven tyre wear and steering drift caused by Dubai's speed bumps and kerbs. Extend your tyre life immediately.",
+    "badge": "Special Price",
+    "badgeColor": "amber",
+    "imageGradient": "linear-gradient(135deg, #431407 0%, #9a3412 45%, #ea580c 100%)",
+    "imageEmoji": "🎯",
+    "priceLabel": "Starting from",
+    "price": "149 AED + VAT",
+    "cta": "Book on WhatsApp",
+    "ctaUrl": "https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20to%20book%20the%20Wheel%20Alignment%20Special%20%E2%80%94%20starting%20from%20149%20AED",
+    "tcNote": "* T&C's apply. Price varies by vehicle type. 4-wheel alignment on eligible vehicles.",
+    "active": true
   }
 ]
