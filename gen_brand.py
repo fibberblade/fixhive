@@ -91,7 +91,7 @@ def make(slug, brand, models, tagline, intro,
   <meta name="description" content="Specialist {brand} repair in Dubai. {models}. Expert diagnostics, OEM parts, honest pricing. FixHive Garage, Dubai Investment Park."/>
   <meta name="robots" content="index,follow"/>
   <link rel="canonical" href="{url}"/>
-  <meta name="geo.position" content="24.98;55.10">
+  <meta name="geo.position" content="24.972111;55.1737988">
   <meta name="geo.region" content="AE-DU">
   <meta name="geo.placename" content="Dubai">
   <link rel="alternate" hreflang="en-AE" href="{url}"/>
@@ -101,6 +101,35 @@ def make(slug, brand, models, tagline, intro,
   <meta property="og:title" content="{brand} Repair &amp; Service Dubai | FixHive"/>
   <meta property="og:description" content="Specialist {brand} repair in Dubai. Expert diagnostics, OEM parts, honest pricing."/>
   <meta property="og:image" content="https://myfixhive.ae/images/og-fixhive.jpg"/>
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "AutoRepair"],
+    "name": "FixHive Garage",
+    "url": "https://myfixhive.ae",
+    "telephone": "+971541699500",
+    "address": {{"@type":"PostalAddress","streetAddress":"WH2 FixHive, 80 Street","addressLocality":"Dubai Investment Park","addressRegion":"Dubai","addressCountry":"AE"}},
+    "geo": {{"@type":"GeoCoordinates","latitude":24.972111,"longitude":55.1737988}},
+    "openingHours": "Sa-Th 08:00-20:00",
+    "hasMap": "https://www.google.com/maps/search/Fixhive+Automotive+Garage+Car+Repair+Service+DIP+Dubai",
+    "priceRange": "AED",
+    "image": "https://myfixhive.ae/images/og-fixhive.jpg",
+    "sameAs": ["https://www.instagram.com/fixhive_ae/","https://www.facebook.com/fixhive/"]
+  }}
+  </script>
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {{"@type":"Question","name":"{f1q}","acceptedAnswer":{{"@type":"Answer","text":"{f1a}"}}}},
+      {{"@type":"Question","name":"{f2q}","acceptedAnswer":{{"@type":"Answer","text":"{f2a}"}}}},
+      {{"@type":"Question","name":"{f3q}","acceptedAnswer":{{"@type":"Answer","text":"{f3a}"}}}},
+      {{"@type":"Question","name":"{f4q}","acceptedAnswer":{{"@type":"Answer","text":"{f4a}"}}}},
+      {{"@type":"Question","name":"{f5q}","acceptedAnswer":{{"@type":"Answer","text":"{f5a}"}}}}
+    ]
+  }}
+  </script>
   <link rel="stylesheet" href="shared.css"/>
   <style>{CSS}</style>
   <link rel="stylesheet" href="chatbot.css"/>
