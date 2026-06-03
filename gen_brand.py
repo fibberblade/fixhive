@@ -72,6 +72,11 @@ def std_tiles(b):
         tile("detailing.html","✨",f"{b} Car Detailing"),
     ])
 
+def _esc(s):
+    """Escape a string for embedding in a JSON string value."""
+    import html as _html
+    return _html.unescape(s).replace('\\', '\\\\').replace('"', '\\"')
+
 def make(slug, brand, models, tagline, intro,
          i1h,i1p, i2h,i2p, i3h,i3p, i4h,i4p,
          f1q,f1a, f2q,f2a, f3q,f3a, f4q,f4a, f5q,f5a,
@@ -80,6 +85,14 @@ def make(slug, brand, models, tagline, intro,
     all_tiles = std_tiles(brand)
     if xtiles:
         all_tiles += "\n" + xtiles
+    breadcrumb_schema = f'{{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"Home","item":"https://myfixhive.ae/"}},{{"@type":"ListItem","position":2,"name":"Brands","item":"https://myfixhive.ae/brands.html"}},{{"@type":"ListItem","position":3,"name":"{brand} Repair Dubai","item":"{url}"}}]}}'
+    faq_schema = f'''{{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+      {{"@type":"Question","name":"{_esc(f1q)}","acceptedAnswer":{{"@type":"Answer","text":"{_esc(f1a)}"}}}},
+      {{"@type":"Question","name":"{_esc(f2q)}","acceptedAnswer":{{"@type":"Answer","text":"{_esc(f2a)}"}}}},
+      {{"@type":"Question","name":"{_esc(f3q)}","acceptedAnswer":{{"@type":"Answer","text":"{_esc(f3a)}"}}}},
+      {{"@type":"Question","name":"{_esc(f4q)}","acceptedAnswer":{{"@type":"Answer","text":"{_esc(f4a)}"}}}},
+      {{"@type":"Question","name":"{_esc(f5q)}","acceptedAnswer":{{"@type":"Answer","text":"{_esc(f5a)}"}}}}
+    ]}}'''
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,6 +109,8 @@ def make(slug, brand, models, tagline, intro,
   <meta name="geo.placename" content="Dubai">
   <link rel="alternate" hreflang="en-AE" href="{url}"/>
   <link rel="alternate" hreflang="x-default" href="{url}"/>
+  <script type="application/ld+json">{breadcrumb_schema}</script>
+  <script type="application/ld+json">{faq_schema}</script>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="{url}"/>
   <meta property="og:title" content="{brand} Repair &amp; Service Dubai | FixHive"/>
