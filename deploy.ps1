@@ -92,19 +92,9 @@ Write-Host "----------------------------------------------" -ForegroundColor Cya
 
 Set-Location $localBase
 
-# After committing, grab the files that were just committed (or all tracked files if nothing was committed)
-$changed   = git diff --name-only HEAD~1 HEAD 2>$null
-$untracked = @()   # already committed above, so no untracked remain
-
-$allFiles = @()
-if ($changed) { $allFiles += $changed }
-$allFiles = $allFiles | Sort-Object -Unique | Where-Object { $_ -ne '' }
-
-if ($allFiles.Count -eq 0) {
-    Write-Host "No files changed in last commit -- uploading all tracked site files..." -ForegroundColor Yellow
-    $allFiles = git ls-files 2>$null | Where-Object {
-        $_ -match '\.(html|css|js|svg|json|webp|png|jpg|jpeg|ico|xml|txt)$'
-    }
+# Always upload all tracked site files
+$allFiles = git ls-files 2>$null | Where-Object {
+    $_ -match '\.(html|css|js|svg|json|webp|png|jpg|jpeg|ico|xml|txt)$'
 }
 
 Write-Host "Files to upload: $($allFiles.Count)"
