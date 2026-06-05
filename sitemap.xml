@@ -1,62 +1,545 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Core pages -->
-  <url><loc>https://myfixhive.ae/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://myfixhive.ae/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://myfixhive.ae/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/services.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://myfixhive.ae/service-packages.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/brands.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/blogs.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://myfixhive.ae/faq.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- ── Priority 1.0 — Core pages ── -->
+  <url>
+    <loc>https://myfixhive.ae/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/services.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/brands.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/brands.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/brands.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/brands.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/contact.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 
-  <!-- Service pages -->
-  <url><loc>https://myfixhive.ae/ac-service.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/engine.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/brakes.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/tyres.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/body.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/electrical.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/hybrid-ev.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/pre-purchase-inspection.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/detailing.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/gearbox.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/diagnostics.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- ── Priority 0.9 — Service pages ── -->
+  <url>
+    <loc>https://myfixhive.ae/ac-service.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/ac-service.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/ac-service.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/ac-service.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/body.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/body.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/body.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/body.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/brakes.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/brakes.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/brakes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/brakes.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/detailing.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/detailing.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/detailing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/detailing.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/diagnostics.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/diagnostics.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/diagnostics.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/diagnostics.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/electrical.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/electrical.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/electrical.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/electrical.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/engine.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/engine.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/engine.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/engine.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/gearbox.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/gearbox.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/gearbox.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/gearbox.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/hybrid-ev.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/hybrid-ev.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/hybrid-ev.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/hybrid-ev.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/pre-purchase-inspection.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/pre-purchase-inspection.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/pre-purchase-inspection.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/pre-purchase-inspection.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/tyres.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/tyres.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/tyres.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/tyres.html"/>
+  </url>
 
-  <!-- Brand-specific landing pages -->
-  <url><loc>https://myfixhive.ae/toyota-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/bmw-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/mercedes-benz-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/nissan-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/hyundai-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/kia-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/land-rover-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/audi-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/honda-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/ford-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/porsche-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/tesla-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://myfixhive.ae/volkswagen-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- ── Priority 0.9 — Brand pages ── -->
+  <url>
+    <loc>https://myfixhive.ae/toyota-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/bmw-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/mercedes-benz-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/nissan-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/hyundai-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/kia-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/honda-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/audi-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ford-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/land-rover-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/porsche-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/porsche-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/porsche-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/porsche-repair-dubai.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/volkswagen-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/volkswagen-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/volkswagen-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/volkswagen-repair-dubai.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/lexus-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/lexus-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/lexus-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/lexus-repair-dubai.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/mazda-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/mazda-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/mazda-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/mazda-repair-dubai.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/mitsubishi-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/mitsubishi-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/mitsubishi-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/mitsubishi-repair-dubai.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/peugeot-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/peugeot-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/peugeot-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/peugeot-repair-dubai.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/tesla-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/tesla-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/tesla-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/tesla-repair-dubai.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/daihatsu-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/daihatsu-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/daihatsu-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/daihatsu-repair-dubai.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/infiniti-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/infiniti-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/infiniti-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/infiniti-repair-dubai.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/subaru-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/subaru-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/subaru-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/subaru-repair-dubai.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/suzuki-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/suzuki-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/suzuki-repair-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/suzuki-repair-dubai.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/isuzu-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/jaguar-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/mini-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/volvo-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/genesis-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/renault-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/alfa-romeo-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/fiat-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
-  <!-- Arabic pages -->
-  <url><loc>https://myfixhive.ae/ar/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://myfixhive.ae/ar/ac-service.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://myfixhive.ae/ar/engine.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://myfixhive.ae/ar/brakes.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://myfixhive.ae/ar/tyres.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://myfixhive.ae/ar/body.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://myfixhive.ae/ar/electrical.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://myfixhive.ae/ar/hybrid-ev.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://myfixhive.ae/ar/pre-purchase-inspection.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://myfixhive.ae/ar/service-packages.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://myfixhive.ae/ar/detailing.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://myfixhive.ae/ar/gearbox.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://myfixhive.ae/ar/diagnostics.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://myfixhive.ae/ar/blogs.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://myfixhive.ae/ar/brands.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://myfixhive.ae/ar/porsche-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://myfixhive.ae/ar/tesla-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://myfixhive.ae/ar/volkswagen-repair-dubai.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <!-- ── Priority 0.8 — Key landing pages ── -->
+  <url>
+    <loc>https://myfixhive.ae/faq.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/about.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/service-packages.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/service-packages.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/service-packages.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/service-packages.html"/>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/offers.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ── Priority 0.7 — Blog ── -->
+  <url>
+    <loc>https://myfixhive.ae/blogs.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/blogs.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/blogs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/blogs.html"/>
+  </url>
+
+  <!-- ── Priority 0.6 — Arabic pages ── -->
+  <url>
+    <loc>https://myfixhive.ae/ar/index.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/brands.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/ac-service.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/body.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/brakes.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/detailing.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/diagnostics.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/electrical.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/engine.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/gearbox.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/hybrid-ev.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/pre-purchase-inspection.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/service-packages.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/tyres.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/blogs.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/daihatsu-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/infiniti-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/lexus-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/mazda-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/mitsubishi-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/peugeot-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/porsche-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/subaru-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/suzuki-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/tesla-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/volkswagen-repair-dubai.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
 </urlset>
