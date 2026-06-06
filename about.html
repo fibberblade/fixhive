@@ -248,17 +248,80 @@
       font-size: 4rem;
     }
 
-    .values { background: var(--white); padding: 60px 5%; }
-    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-    .value-card {
-      padding: 2rem 1.5rem;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: var(--bg);
+    .values {
+      background: var(--dark);
+      padding: 72px 5%;
+      position: relative;
+      overflow: hidden;
     }
-    .value-card .val-icon { font-size: 2rem; margin-bottom: 0.8rem; display: block; }
-    .value-card h3 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.5rem; }
-    .value-card p { font-size: 0.87rem; color: var(--muted); line-height: 1.6; }
+    .values::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(245,166,35,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .values .section-label { color: var(--amber); position: relative; }
+    .values .section-title { color: #fff; position: relative; }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+      position: relative;
+    }
+    .value-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 16px;
+      padding: 2.2rem 1.8rem 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .value-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--amber), #ffcc5c);
+      opacity: 0.6;
+      transition: opacity 0.25s ease;
+    }
+    .value-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(245,166,35,0.4);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 0 1px rgba(245,166,35,0.15);
+    }
+    .value-card:hover::before { opacity: 1; }
+    .value-card .val-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(245,166,35,0.12);
+      border: 1px solid rgba(245,166,35,0.25);
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
+      transition: background 0.25s ease;
+    }
+    .value-card:hover .val-icon {
+      background: rgba(245,166,35,0.22);
+    }
+    .value-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.01em;
+    }
+    .value-card p {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+    }
 
     /* ── WHY CHOOSE FIXHIVE ── */
     .why-section {
