@@ -115,6 +115,50 @@
 
   <link rel="stylesheet" href="shared.css" />
   <style>
+/* ====== FixHive Symptom Finder ====== */
+.sf-section { padding: 4rem 1rem; max-width: 860px; margin: 0 auto; }
+.sf-section h2 { font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 0.5rem; }
+.sf-section .sf-subtitle { text-align: center; color: #666; margin-bottom: 2rem; font-size: 1rem; }
+
+.sf-categories { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 1.5rem; }
+.sf-cat-btn { font-size: 13px; padding: 6px 16px; border-radius: 99px; border: 1px solid #ddd; background: transparent; color: #666; cursor: pointer; transition: all 0.15s; }
+.sf-cat-btn.active, .sf-cat-btn:hover { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+
+.sf-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-bottom: 1.5rem; }
+
+.sf-symptom { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 16px 12px; cursor: pointer; text-align: center; transition: border-color 0.15s, box-shadow 0.15s; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.sf-symptom:hover { border-color: #bbb; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.sf-symptom.selected { border: 2px solid #D85A30; background: #FFF5F2; }
+.sf-symptom svg { width: 28px; height: 28px; stroke: #888; }
+.sf-symptom.selected svg { stroke: #D85A30; }
+.sf-symptom span { font-size: 13px; font-weight: 600; color: #1a1a1a; line-height: 1.3; }
+
+.sf-result { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 1.5rem; overflow: hidden; max-height: 0; opacity: 0; transition: max-height 0.45s ease, opacity 0.3s ease; margin-top: 8px; }
+.sf-result.visible { max-height: 500px; opacity: 1; }
+
+.sf-result-top { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 1rem; }
+.sf-result-badge { width: 48px; height: 48px; border-radius: 10px; background: #FFF0EB; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.sf-result-badge svg { width: 26px; height: 26px; stroke: #D85A30; }
+.sf-result-title { font-size: 18px; font-weight: 700; margin: 0 0 4px; color: #1a1a1a; }
+.sf-result-desc { font-size: 14px; color: #666; margin: 0; line-height: 1.6; }
+
+.sf-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1rem; }
+.sf-tag { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 99px; background: #EAF5E9; color: #2D7A3A; }
+.sf-tag.urgent { background: #FFF0D6; color: #9A5A00; }
+
+.sf-divider { height: 1px; background: #f0f0f0; margin: 1rem 0; }
+
+.sf-wa-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 14px; border-radius: 10px; background: #25D366; color: #fff; font-size: 15px; font-weight: 700; text-decoration: none; transition: background 0.15s; }
+.sf-wa-btn:hover { background: #1ebe5d; }
+.sf-wa-btn svg { width: 22px; height: 22px; fill: #fff; }
+
+.sf-reset { display: block; text-align: center; font-size: 12px; color: #aaa; margin-top: 12px; cursor: pointer; text-decoration: underline; background: none; border: none; width: 100%; padding: 4px; }
+.sf-reset:hover { color: #666; }
+
+@media (max-width: 480px) {
+  .sf-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
+  .sf-section h2 { font-size: 1.5rem; }
+}
   </style>
   <link rel="stylesheet" href="chatbot.css" />
 </head>
@@ -320,6 +364,44 @@
 
 </div>
 
+<!-- SYMPTOM FINDER -->
+<div style="background:#f8f8f8;padding:2px 0;">
+<section class="sf-section">
+  <h2>What's wrong with your car?</h2>
+  <p class="sf-subtitle">Tap your symptom — we'll show you exactly what you need.</p>
+
+  <div class="sf-categories">
+    <button class="sf-cat-btn active" data-cat="all">All</button>
+    <button class="sf-cat-btn" data-cat="cooling">Cooling &amp; AC</button>
+    <button class="sf-cat-btn" data-cat="engine">Engine</button>
+    <button class="sf-cat-btn" data-cat="brakes">Brakes</button>
+    <button class="sf-cat-btn" data-cat="electrical">Electrical</button>
+    <button class="sf-cat-btn" data-cat="tyres">Tyres</button>
+  </div>
+
+  <div class="sf-grid" id="sf-grid"></div>
+
+  <div class="sf-result" id="sf-result">
+    <div class="sf-result-top">
+      <div class="sf-result-badge">
+        <svg id="sf-r-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l5.654-4.654m5.598-2.623 3.03-2.496c.384-.317.626-.74.766-1.208m0 0a9 9 0 1 0-9.47 9.47c.45-.09.891-.283 1.208-.766"/></svg>
+      </div>
+      <div>
+        <p class="sf-result-title" id="sf-r-service">Service name</p>
+        <p class="sf-result-desc" id="sf-r-desc">Description loads here.</p>
+      </div>
+    </div>
+    <div class="sf-tags" id="sf-r-tags"></div>
+    <div class="sf-divider"></div>
+    <a class="sf-wa-btn" id="sf-r-wa" href="#" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      <span id="sf-r-wa-text">Book on WhatsApp</span>
+    </a>
+    <button class="sf-reset" id="sf-reset">Choose a different symptom</button>
+  </div>
+</section>
+</div>
+
 <!-- MID-PAGE ESTIMATE STRIP -->
 <div style="background:#0a2463;padding:22px 5%;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;">
   <p style="color:#fff;font-size:clamp(0.95rem,2vw,1.15rem);font-weight:600;letter-spacing:0.5px;margin:0;text-transform:uppercase;">Get a free car repair &amp; service estimate — online now</p>
@@ -407,6 +489,78 @@
       if (!expanded) { btn.setAttribute('aria-expanded','true'); btn.nextElementSibling.style.display='block'; }
     });
   });
+</script>
+<script>
+(function() {
+  const WA = 'https://wa.me/971541699500?text=';
+  const symptoms = [
+    { id:1,  label:'AC not cold',         cat:'cooling',    icon:'❄', service:'AC & Cooling Service',      desc:'Refrigerant leak, failed compressor, or blocked condenser — all common in Dubai heat. Same-day diagnosis and fix.',       tags:['Same-day service','Common in UAE summer'], waMsg:"Hi FixHive, my car AC isn't blowing cold air. I'd like to book a diagnosis.", link:'/ac-service.html' },
+    { id:2,  label:'AC smells bad',        cat:'cooling',    icon:'💨', service:'AC & Cooling Service',      desc:'Mould in the evaporator or a clogged cabin filter. We clean, disinfect, and replace filters.',                        tags:['Cabin filter included','Quick fix'],          waMsg:"Hi FixHive, my car AC has a bad smell. I'd like it serviced.",            link:'/ac-service.html' },
+    { id:3,  label:'Strange noise',        cat:'engine',     icon:'🔊', service:'Engine & Transmission',     desc:'Knocking or rattling often means low oil pressure or worn timing parts. Diagnose early to avoid expensive repairs.',    tags:['Diagnostic from AED 99',"Don't ignore it"],  waMsg:"Hi FixHive, my car is making a strange noise. I'd like it checked.",      link:'/engine.html' },
+    { id:4,  label:'Overheating',          cat:'engine',     icon:'🌡', service:'Engine & Transmission',     desc:'Stop driving. Overheating can destroy an engine fast — coolant leak, failed thermostat, or blocked radiator.',         tags:['Urgent — stop driving','Call us now'],        waMsg:"Hi FixHive, my car is overheating. I need urgent assistance.",            link:'/engine.html', urgent:true },
+    { id:5,  label:'Warning light on',     cat:'engine',     icon:'⚠', service:'Advanced Diagnostics',      desc:'Full OBD scan with a written report. We read every fault code across all systems, not just the obvious ones.',          tags:['Full OBD scan','Written report'],             waMsg:"Hi FixHive, my warning light is on. I'd like a full diagnostic scan.",    link:'/diagnostics.html' },
+    { id:6,  label:'Car won\'t start',     cat:'electrical', icon:'🔑', service:'Battery & Electrical',      desc:'Dead battery, faulty starter, or bad ignition switch. We test the full starting circuit on the spot.',               tags:['Free battery test','Same-day fix'],           waMsg:"Hi FixHive, my car won't start. Can I get a same-day appointment?",       link:'/electrical.html' },
+    { id:7,  label:'Battery draining',     cat:'electrical', icon:'🔋', service:'Battery & Electrical',      desc:'Parasitic drain, aging battery, or failing alternator. We run a full charging system test.',                        tags:['Free battery check','Alternator test'],       waMsg:"Hi FixHive, my car battery keeps draining. I'd like it checked.",         link:'/electrical.html' },
+    { id:8,  label:'EV range dropping',    cat:'electrical', icon:'⚡', service:'Hybrid & EV Service',       desc:'Rapid range loss often means degraded HV battery cells or a charging fault. Full battery health scan available.',     tags:['HV battery scan','EV specialist'],            waMsg:"Hi FixHive, my EV is losing range quickly. I'd like a battery health check.", link:'/hybrid-ev.html' },
+    { id:9,  label:'Brakes feel soft',     cat:'brakes',     icon:'🛑', service:'Brakes & Suspension',       desc:'Spongy brakes mean air in the lines or worn pads — a safety issue. We inspect and fix before you drive further.',    tags:['Safety critical','Book today'],               waMsg:"Hi FixHive, my brakes feel soft. I need them checked urgently.",          link:'/brakes.html', urgent:true },
+    { id:10, label:'Car pulls to one side',cat:'brakes',     icon:'↔', service:'Brakes & Suspension',       desc:'Pulling when braking or cruising usually means a seized caliper or wheel alignment out of spec.',                   tags:['Alignment check','Brake inspection'],         waMsg:"Hi FixHive, my car pulls to one side. I'd like it checked.",             link:'/brakes.html' },
+    { id:11, label:'Tyre pressure low',    cat:'tyres',      icon:'🔵', service:'Tyres & Wheels',            desc:'Slow puncture, valve issue, or sidewall damage. We check all four, repair or replace, and re-balance.',             tags:['Repair from AED 30','Walk-in welcome'],       waMsg:"Hi FixHive, I have a tyre pressure issue and need it checked.",           link:'/tyres.html' },
+    { id:12, label:'Vibration when driving',cat:'tyres',     icon:'〰', service:'Tyres & Wheels',            desc:'Vibration through the wheel or seat usually means unbalanced tyres or a damaged rim. We balance and advise.',        tags:['Wheel balance','Tyre inspection'],            waMsg:"Hi FixHive, my car vibrates when I drive. Can I book an inspection?",     link:'/tyres.html' },
+  ];
+
+  const grid = document.getElementById('sf-grid');
+  const panel = document.getElementById('sf-result');
+  let selected = null;
+  let currentCat = 'all';
+
+  function render(cat) {
+    currentCat = cat;
+    const list = symptoms.filter(s => cat === 'all' || s.cat === cat);
+    grid.innerHTML = '';
+    list.forEach(s => {
+      const el = document.createElement('div');
+      el.className = 'sf-symptom' + (selected && selected.id === s.id ? ' selected' : '');
+      el.innerHTML = '<span style="font-size:26px" aria-hidden="true">' + s.icon + '</span><span>' + s.label + '</span>';
+      el.addEventListener('click', () => pick(s, el));
+      grid.appendChild(el);
+    });
+  }
+
+  function pick(s, el) {
+    document.querySelectorAll('.sf-symptom').forEach(e => e.classList.remove('selected'));
+    el.classList.add('selected');
+    selected = s;
+    document.getElementById('sf-r-service').textContent = s.service;
+    document.getElementById('sf-r-desc').textContent = s.desc;
+    const tags = document.getElementById('sf-r-tags');
+    tags.innerHTML = s.tags.map((t,i) => '<span class="sf-tag' + (s.urgent && i>0 ? ' urgent' : '') + '">' + t + '</span>').join('');
+    const wa = document.getElementById('sf-r-wa');
+    wa.href = WA + encodeURIComponent(s.waMsg);
+    document.getElementById('sf-r-wa-text').textContent = 'Book: ' + s.service + ' on WhatsApp';
+    panel.classList.add('visible');
+    setTimeout(() => panel.scrollIntoView({ behavior:'smooth', block:'nearest' }), 60);
+  }
+
+  document.getElementById('sf-reset').addEventListener('click', () => {
+    selected = null;
+    document.querySelectorAll('.sf-symptom').forEach(e => e.classList.remove('selected'));
+    panel.classList.remove('visible');
+  });
+
+  document.querySelectorAll('.sf-cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.sf-cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      render(btn.dataset.cat);
+      if (selected && btn.dataset.cat !== 'all' && selected.cat !== btn.dataset.cat) {
+        selected = null;
+        panel.classList.remove('visible');
+      }
+    });
+  });
+
+  render('all');
+})();
 </script>
 <script src="chatbot.js" defer></script>
 <script src="/js/nav.js" defer></script>
