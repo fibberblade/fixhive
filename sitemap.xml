@@ -373,16 +373,62 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- ── Priority 0.7 — Blog ── -->
+  <!-- ── Priority 0.7 — Blog index ── -->
   <url>
     <loc>https://myfixhive.ae/blogs.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/blogs.html"/>
     <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/blogs.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/blogs.html"/>
   </url>
+
+  <!-- ── Priority 0.7 — Individual blog posts (44) ── -->
+  <url><loc>https://myfixhive.ae/blog/post-summer-car-check-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/gearbox-problems-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/wheel-alignment-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/best-time-buy-car-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/ev-charging-dubai-guide.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/repair-vs-replace-car-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/winter-driving-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/car-insurance-dubai-guide.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/fuel-types-dubai-98-vs-95.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/year-end-car-check-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/ceramic-coating-vs-ppf-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/keep-car-cool-dubai-sun.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/engine-oil-uae-heat.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/car-battery-fail-dubai-heat.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/brake-pads-lifespan-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/dubai-heat-destroys-car-ac.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/sand-dust-engine-damage-uae.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/flood-damaged-car-repair-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/car-overheating-dubai-summer.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/nissan-patrol-common-problems-uae.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/toyota-land-cruiser-high-mileage-service.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/dashboard-warning-lights-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/best-tyres-dubai-roads.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/buy-pre-owned-car-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/porsche-cayenne-coolant-pipe-failure.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/ford-f150-service-guide-uae.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/bmw-n63-engine-problems-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/bmw-oil-consumption-issues.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/porsche-cayenne-transfer-case-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/land-rover-air-suspension-uae.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/porsche-cayenne-air-suspension-failure.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/hybrid-cars-dubai-2026.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/ac-pre-summer-checklist-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/car-service-intervals-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/bmw-flood-damage-repair-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/porsche-cayenne-rear-main-seal.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/mercedes-benz-air-suspension-failure.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/jeep-wrangler-death-wobble.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/engine-overheating-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/dubai-speed-bumps-suspension.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/car-detailing-dubai-paint.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/ac-regas-vs-full-overhaul.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/uae-road-trip-car-inspection.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://myfixhive.ae/blog/choose-trustworthy-mechanic-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- ── Priority 0.6 — Arabic pages ── -->
   <url>
