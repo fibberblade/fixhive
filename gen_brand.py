@@ -1,4 +1,4 @@
-import re, os, sys
+﻿import re, os, sys
 
 DIR = r"C:\Users\gianl\OneDrive\Desktop\AI\fixhive"
 audi = open(f"{DIR}/audi-repair-dubai.html", encoding="utf-8").read()
@@ -125,7 +125,7 @@ def make(slug, brand, models, tagline, intro,
     "telephone": "+971541699500",
     "address": {{"@type":"PostalAddress","streetAddress":"WH2 FixHive, 80 Street","addressLocality":"Dubai Investment Park","addressRegion":"Dubai","addressCountry":"AE"}},
     "geo": {{"@type":"GeoCoordinates","latitude":24.972111,"longitude":55.1737988}},
-    "openingHours": "Sa-Th 08:00-20:00",
+    "openingHours": "Mo-Sa 08:30-19:00",
     "hasMap": "https://www.google.com/maps/search/Fixhive+Automotive+Garage+Car+Repair+Service+DIP+Dubai",
     "priceRange": "AED",
     "image": "https://myfixhive.ae/images/og-fixhive.jpg",
