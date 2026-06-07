@@ -221,11 +221,19 @@
       background: transparent;
       border: none;
       outline: none;
-      color: #fff;
+      color: #fff !important;
+      -webkit-text-fill-color: #fff !important;
+      caret-color: var(--amber);
       font-size: 0.95rem;
       font-family: inherit;
     }
-    .symptom-search-input::placeholder { color: rgba(255,255,255,0.4); }
+    .symptom-search-input::placeholder { color: rgba(255,255,255,0.4); -webkit-text-fill-color: rgba(255,255,255,0.4); }
+    .symptom-search-input:-webkit-autofill,
+    .symptom-search-input:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+      -webkit-text-fill-color: #fff !important;
+      transition: background-color 9999s ease-in-out 0s;
+    }
     .symptom-add-btn {
       background: var(--amber);
       color: #0D1B2A;
