@@ -1,0 +1,1103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-819HFHM37T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-819HFHM37T');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="geo.position" content="24.972111;55.1737988">
+  <meta name="geo.region" content="AE-DU">
+  <meta name="geo.placename" content="Dubai">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free AI Car Diagnosis Dubai | FixHive Garage</title>
+  <meta name="description" content="Get a free AI-powered car diagnosis in seconds. Answer 4 quick questions about your car symptoms and get expert analysis from FixHive Garage Dubai — no signup required." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://myfixhive.ae/diagnosis.html" />
+  <link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/diagnosis.html" />
+  <link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/diagnosis.html" />
+  <link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/diagnosis.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://myfixhive.ae/diagnosis.html" />
+  <meta property="og:title" content="Free AI Car Diagnosis Dubai | FixHive Garage" />
+  <meta property="og:description" content="4 quick questions. AI diagnoses the most likely issues with your car — free, no signup." />
+  <meta property="og:image" content="https://myfixhive.ae/images/og-fixhive.jpg" />
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="chatbot.css" />
+  <style>
+    /* ── HERO ── */
+    .diag-hero {
+      background: linear-gradient(135deg, #070f1e 0%, #0d1b2a 55%, #0a2463 100%);
+      padding: 56px 5% 52px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .diag-hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: 50%; transform: translateX(-50%);
+      width: 700px; height: 450px;
+      background: radial-gradient(ellipse, rgba(245,166,35,0.14) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .diag-hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--amber);
+      background: rgba(245,166,35,0.1);
+      border: 1px solid rgba(245,166,35,0.28);
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      margin-bottom: 1.1rem;
+    }
+    .diag-hero h1 {
+      font-size: clamp(2rem, 4.5vw, 3.1rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.12;
+      margin-bottom: 0.85rem;
+    }
+    .diag-hero h1 em { color: var(--amber); font-style: normal; }
+    .diag-hero p {
+      color: rgba(255,255,255,0.58);
+      font-size: 1.05rem;
+      max-width: 480px;
+      margin: 0 auto 1.6rem;
+      line-height: 1.68;
+    }
+    .diag-trust-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+    .diag-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.38rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.45);
+    }
+    .diag-trust-item::before {
+      content: '✓';
+      color: #10b981;
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+
+    /* ── TOOL WRAPPER ── */
+    .diag-wrap {
+      background: #eef1f8;
+      padding: 48px 5% 72px;
+    }
+    .diag-card {
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 10px 56px rgba(13,27,42,0.10), 0 2px 8px rgba(0,0,0,0.04);
+      max-width: 700px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    /* ── PROGRESS BAR ── */
+    .diag-progress-bar {
+      height: 4px;
+      background: #e9ecf1;
+    }
+    .diag-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--amber), #f97316);
+      border-radius: 0 4px 4px 0;
+      transition: width 0.45s cubic-bezier(.22,1,.36,1);
+    }
+    .diag-step-header {
+      padding: 1.8rem 2.4rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .diag-step-num {
+      font-size: 0.71rem;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--amber);
+    }
+    .diag-step-dots {
+      display: flex;
+      gap: 7px;
+    }
+    .diag-step-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #e5e7eb;
+      transition: background 0.3s;
+    }
+    .diag-step-dot.active { background: var(--amber); transform: scale(1.2); }
+    .diag-step-dot.done { background: #10b981; }
+
+    /* ── STEP CONTENT ── */
+    .diag-step-body {
+      padding: 1.4rem 2.4rem 0.5rem;
+    }
+    .diag-step-body h2 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #0d1b2a;
+      margin-bottom: 0.35rem;
+      line-height: 1.25;
+    }
+    .step-sub {
+      color: #6b7280;
+      font-size: 0.88rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    /* ── INPUTS ── */
+    .diag-field { margin-bottom: 1.1rem; }
+    .diag-input-label {
+      display: block;
+      font-size: 0.77rem;
+      font-weight: 700;
+      color: #374151;
+      margin-bottom: 0.38rem;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+    .diag-input {
+      width: 100%;
+      padding: 0.82rem 1rem;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 10px;
+      font-size: 0.96rem;
+      color: #0d1b2a;
+      background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      font-family: inherit;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .diag-input:focus {
+      border-color: var(--amber);
+      box-shadow: 0 0 0 3px rgba(245,166,35,0.12);
+    }
+    .diag-input-group {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr 1.5fr;
+      gap: 0.75rem;
+    }
+
+    /* ── SYMPTOM CHIPS ── */
+    .symptom-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-bottom: 0.6rem;
+    }
+    .symptom-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.52rem 0.95rem;
+      border-radius: 50px;
+      border: 1.5px solid #e5e7eb;
+      background: #f9fafb;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #374151;
+      cursor: pointer;
+      transition: all 0.18s;
+      user-select: none;
+      line-height: 1.2;
+    }
+    .symptom-chip:hover {
+      border-color: var(--amber);
+      background: rgba(245,166,35,0.06);
+    }
+    .symptom-chip.selected {
+      background: rgba(245,166,35,0.1);
+      border-color: var(--amber);
+      color: #92400e;
+      font-weight: 700;
+    }
+    .symptom-chip.selected .chip-icon { filter: none; }
+    .chip-check {
+      display: none;
+      width: 14px; height: 14px;
+      background: var(--amber);
+      border-radius: 50%;
+      color: #fff;
+      font-size: 9px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .symptom-chip.selected .chip-check { display: inline-flex; }
+    .symptom-min-note {
+      font-size: 0.76rem;
+      color: #9ca3af;
+      margin-bottom: 1rem;
+    }
+
+    /* ── URGENCY ── */
+    .urgency-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.7rem;
+      margin-bottom: 1rem;
+    }
+    .urgency-opt {
+      border: 1.5px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 1.1rem 0.8rem 0.9rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .urgency-opt:hover { border-color: #d1d5db; background: #fafafa; }
+    .urgency-opt.sel-low { border-color: #10b981; background: rgba(16,185,129,0.06); }
+    .urgency-opt.sel-medium { border-color: var(--amber); background: rgba(245,166,35,0.07); }
+    .urgency-opt.sel-high { border-color: #ef4444; background: rgba(239,68,68,0.06); }
+    .urg-icon { font-size: 1.7rem; display: block; margin-bottom: 0.45rem; }
+    .urg-title { font-size: 0.87rem; font-weight: 800; color: #0d1b2a; display: block; margin-bottom: 0.2rem; }
+    .urg-desc { font-size: 0.72rem; color: #9ca3af; display: block; line-height: 1.45; }
+
+    /* ── NAV BUTTONS ── */
+    .diag-nav {
+      padding: 1rem 2.4rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .btn-diag-next {
+      flex: 1;
+      background: linear-gradient(135deg, #f5a623, #f97316);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.97rem;
+      padding: 0.9rem 1.5rem;
+      border-radius: 11px;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .btn-diag-next:hover:not(:disabled) { opacity: 0.9; transform: translateY(-1px); }
+    .btn-diag-next:disabled { opacity: 0.38; cursor: not-allowed; }
+    .btn-diag-back {
+      background: none;
+      border: 1.5px solid #e5e7eb;
+      color: #6b7280;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.9rem 1.1rem;
+      border-radius: 11px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .btn-diag-back:hover { border-color: #9ca3af; color: #374151; }
+
+    /* ── LOADING ── */
+    .diag-loading {
+      text-align: center;
+      padding: 4rem 2.4rem;
+    }
+    .diag-loading-icon {
+      font-size: 3.2rem;
+      display: block;
+      margin-bottom: 1.1rem;
+      animation: diag-spin 2.8s linear infinite;
+    }
+    @keyframes diag-spin { to { transform: rotate(360deg); } }
+    .diag-loading h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #0d1b2a;
+      margin-bottom: 0.4rem;
+    }
+    .diag-loading p { color: #9ca3af; font-size: 0.88rem; }
+    .loading-track {
+      height: 3px;
+      background: #e9ecf1;
+      border-radius: 3px;
+      margin: 1.3rem auto 0;
+      max-width: 220px;
+      overflow: hidden;
+    }
+    .loading-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #f5a623, #f97316);
+      border-radius: 3px;
+      animation: load-slide 1.7s ease-in-out infinite;
+    }
+    @keyframes load-slide {
+      0%   { width: 0%;   margin-left: 0; }
+      50%  { width: 65%;  margin-left: 0; }
+      100% { width: 0%;   margin-left: 100%; }
+    }
+
+    /* ── RESULTS ── */
+    .results-header {
+      padding: 1.8rem 2.4rem 1.2rem;
+      border-bottom: 1px solid #f0f1f5;
+    }
+    .results-header h2 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0d1b2a;
+      margin-bottom: 0.3rem;
+    }
+    .results-header p { color: #6b7280; font-size: 0.87rem; line-height: 1.55; }
+    .results-list { padding: 1.2rem 2.4rem 0; }
+
+    .issue-card {
+      border: 1.5px solid #e9ecf1;
+      border-radius: 14px;
+      padding: 1.2rem 1.35rem;
+      margin-bottom: 0.9rem;
+      transition: border-color 0.2s, box-shadow 0.18s;
+    }
+    .issue-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.05); }
+    .issue-card.urg-high { border-color: rgba(239,68,68,0.3); background: rgba(239,68,68,0.018); }
+    .issue-card.urg-medium { border-color: rgba(245,166,35,0.3); background: rgba(245,166,35,0.018); }
+    .issue-card.urg-low { border-color: rgba(16,185,129,0.25); background: rgba(16,185,129,0.015); }
+
+    .issue-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.7rem;
+    }
+    .issue-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: #0d1b2a;
+      line-height: 1.3;
+    }
+    .issue-badge {
+      font-size: 0.67rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.22rem 0.58rem;
+      border-radius: 20px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .badge-high { background: rgba(239,68,68,0.11); color: #dc2626; }
+    .badge-medium { background: rgba(245,166,35,0.14); color: #d97706; }
+    .badge-low { background: rgba(16,185,129,0.1); color: #059669; }
+
+    .issue-prob-row {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 0.72rem;
+    }
+    .prob-label { font-size: 0.72rem; color: #9ca3af; white-space: nowrap; }
+    .prob-bar-wrap {
+      flex: 1;
+      height: 6px;
+      background: #f0f1f5;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .prob-bar {
+      height: 100%;
+      border-radius: 6px;
+      width: 0;
+      transition: width 0.7s cubic-bezier(.22,1,.36,1);
+    }
+    .issue-card.urg-high .prob-bar { background: linear-gradient(90deg, #ef4444, #dc2626); }
+    .issue-card.urg-medium .prob-bar { background: linear-gradient(90deg, #f5a623, #f97316); }
+    .issue-card.urg-low .prob-bar { background: linear-gradient(90deg, #10b981, #059669); }
+    .prob-pct {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #374151;
+      min-width: 34px;
+      text-align: right;
+    }
+
+    .issue-desc {
+      font-size: 0.86rem;
+      color: #4b5563;
+      line-height: 1.68;
+      margin-bottom: 0.75rem;
+    }
+    .issue-tags { display: flex; flex-wrap: wrap; gap: 0.38rem; }
+    .issue-tag {
+      font-size: 0.71rem;
+      font-weight: 600;
+      color: #1d4ed8;
+      background: rgba(29,78,216,0.07);
+      padding: 0.18rem 0.55rem;
+      border-radius: 20px;
+    }
+
+    /* ── CTA BLOCK ── */
+    .results-cta { padding: 1.4rem 2.4rem 2rem; }
+    .results-disclaimer {
+      background: #f8f9fb;
+      border: 1px solid #e9ecf1;
+      border-radius: 10px;
+      padding: 0.85rem 1.05rem;
+      font-size: 0.77rem;
+      color: #6b7280;
+      line-height: 1.58;
+      margin-bottom: 1.1rem;
+    }
+    .results-disclaimer strong { color: #374151; }
+    .btn-wa-book {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      width: 100%;
+      background: #25D366;
+      color: #fff;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 1rem;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      margin-bottom: 0.7rem;
+    }
+    .btn-wa-book:hover { background: #1ebe5d; transform: translateY(-1px); }
+    .btn-restart {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      width: 100%;
+      background: none;
+      border: 1.5px solid #e5e7eb;
+      color: #6b7280;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.72rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+      font-family: inherit;
+    }
+    .btn-restart:hover { border-color: #9ca3af; color: #374151; }
+
+    /* ── ERROR ── */
+    .diag-error { text-align: center; padding: 2.8rem 2.4rem; }
+    .diag-error h3 { font-size: 1.05rem; font-weight: 800; color: #dc2626; margin-bottom: 0.5rem; }
+    .diag-error p { color: #6b7280; font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.2rem; }
+
+    .hidden { display: none !important; }
+
+    @media (max-width: 600px) {
+      .diag-step-header, .diag-step-body, .diag-nav,
+      .results-header, .results-list, .results-cta { padding-left: 1.15rem; padding-right: 1.15rem; }
+      .diag-input-group { grid-template-columns: 1fr 1fr; }
+      .urgency-grid { grid-template-columns: 1fr; gap: 0.5rem; }
+      .diag-hero h1 { font-size: 1.8rem; }
+    }
+  </style>
+  <script>window.FIXHIVE_WORKER_URL = 'https://round-flower-50fe.gianlucalietaert.workers.dev';</script>
+</head>
+<body>
+
+<a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="top-bar" target="_blank" rel="noopener">
+  <span class="top-bar-icon">💬</span>
+  <span class="top-bar-text"><strong>Free Diagnostic Check</strong> — WhatsApp us your car problem now</span>
+  <span class="top-bar-cta">Chat Now →</span>
+</a>
+
+<nav>
+  <a href="index.html" class="logo"><img src="img/logo.webp" alt="FixHive Garage Dubai" /></a>
+  <ul>
+    <li class="has-dropdown"><a href="about.html" class="nav-packages-link">About</a><ul class="nav-dropdown"><li><a href="about.html#values">Our Values</a></li><li><a href="about.html#history">How We Got Here</a></li><li><a href="about.html#why-fixhive">Why Choose FixHive</a></li><li><a href="about.html#social">Stay Connected</a></li><li><a href="about.html#team" class="nav-dd-disabled">The Team <em>(coming soon)</em></a></li></ul></li>
+    <li class="has-dropdown">
+      <a href="services.html" class="nav-packages-link">Services</a>
+      <ul class="nav-dropdown">
+        <li><a href="ac-service.html">AC &amp; Cooling</a></li>
+        <li><a href="engine.html">Engine &amp; Transmission</a></li>
+        <li><a href="brakes.html">Brakes &amp; Suspension</a></li>
+        <li><a href="tyres.html">Tyres &amp; Wheels</a></li>
+        <li><a href="body.html">Body &amp; Exterior</a></li>
+        <li><a href="electrical.html">Battery &amp; Electrical</a></li>
+        <li><a href="hybrid-ev.html">Hybrid &amp; EV</a></li>
+        <li><a href="pre-purchase-inspection.html">Pre-Purchase Inspection</a></li>
+        <li><a href="service-packages.html">Service Packages</a></li>
+        <li><a href="detailing.html">Detailing &amp; Protection</a></li>
+        <li><a href="gearbox.html">Gearbox &amp; Drivetrain</a></li>
+        <li><a href="diagnostics.html">Advanced Diagnostics</a></li>
+      </ul>
+    </li>
+    <li><a href="diagnosis.html" style="color:var(--amber);font-weight:700;">Free Diagnosis</a></li>
+    <li class="has-dropdown"><a href="brands.html" class="nav-packages-link">Brands</a><ul class="nav-mega"><li><a href="contact.html?brand=alfa-romeo">Alfa Romeo</a></li><li><a href="contact.html?brand=aston-martin">Aston Martin</a></li><li><a href="audi-repair-dubai.html">Audi</a></li><li><a href="contact.html?brand=bentley">Bentley</a></li><li><a href="bmw-repair-dubai.html">BMW</a></li><li><a href="contact.html?brand=byd">BYD</a></li><li><a href="contact.html?brand=cadillac">Cadillac</a></li><li><a href="contact.html?brand=changan">Changan</a></li><li><a href="contact.html?brand=chery">Chery</a></li><li><a href="contact.html?brand=chevrolet">Chevrolet</a></li><li><a href="contact.html?brand=chrysler">Chrysler</a></li><li><a href="daihatsu-repair-dubai.html">Daihatsu</a></li><li><a href="contact.html?brand=dodge">Dodge</a></li><li><a href="contact.html?brand=ferrari">Ferrari</a></li><li><a href="contact.html?brand=fiat">Fiat</a></li><li><a href="ford-repair-dubai.html">Ford</a></li><li><a href="contact.html?brand=gac">GAC</a></li><li><a href="contact.html?brand=geely">Geely</a></li><li><a href="contact.html?brand=genesis">Genesis</a></li><li><a href="contact.html?brand=gmc">GMC</a></li><li><a href="contact.html?brand=haval">Haval</a></li><li><a href="honda-repair-dubai.html">Honda</a></li><li><a href="contact.html?brand=hongqi">HongQi</a></li><li><a href="hyundai-repair-dubai.html">Hyundai</a></li><li><a href="infiniti-repair-dubai.html">Infiniti</a></li><li><a href="contact.html?brand=isuzu">Isuzu</a></li><li><a href="contact.html?brand=jaguar">Jaguar</a></li><li><a href="contact.html?brand=jeep">Jeep</a></li><li><a href="contact.html?brand=jetour">Jetour</a></li><li><a href="kia-repair-dubai.html">Kia</a></li><li><a href="contact.html?brand=lamborghini">Lamborghini</a></li><li><a href="land-rover-repair-dubai.html">Land Rover</a></li><li><a href="contact.html?brand=lexus">Lexus</a></li><li><a href="contact.html?brand=lincoln">Lincoln</a></li><li><a href="contact.html?brand=maserati">Maserati</a></li><li><a href="contact.html?brand=maybach">Maybach</a></li><li><a href="contact.html?brand=mazda">Mazda</a></li><li><a href="mercedes-benz-repair-dubai.html">Mercedes-Benz</a></li><li><a href="contact.html?brand=mg">MG</a></li><li><a href="contact.html?brand=mini">MINI</a></li><li><a href="contact.html?brand=mitsubishi">Mitsubishi</a></li><li><a href="nissan-repair-dubai.html">Nissan</a></li><li><a href="contact.html?brand=peugeot">Peugeot</a></li><li><a href="porsche-repair-dubai.html">Porsche</a></li><li><a href="contact.html?brand=ram">RAM</a></li><li><a href="land-rover-repair-dubai.html">Range Rover</a></li><li><a href="contact.html?brand=renault">Renault</a></li><li><a href="contact.html?brand=rolls-royce">Rolls-Royce</a></li><li><a href="subaru-repair-dubai.html">Subaru</a></li><li><a href="suzuki-repair-dubai.html">Suzuki</a></li><li><a href="contact.html?brand=tesla">Tesla</a></li><li><a href="toyota-repair-dubai.html">Toyota</a></li><li><a href="contact.html?brand=volkswagen">Volkswagen</a></li><li><a href="contact.html?brand=volvo">Volvo</a></li><li class="nav-mega-footer"><a href="brands.html">All Brands</a></li></ul></li>
+    <li class="has-dropdown"><a href="service-packages.html" class="nav-packages-link">Packages</a><ul class="nav-dropdown"><li><a href="service-packages.html#fixcare">FixCare</a></li><li><a href="service-packages.html#fixprime">FixPrime</a></li><li><a href="service-packages.html#fixelite">FixElite</a></li></ul></li>
+    <li><a href="offers.html" class="nav-offers-link">🔥 Offers</a></li>
+    <li><a href="contact.html" class="nav-packages-link">Contact</a></li>
+    <li class="has-dropdown"><a href="#" class="nav-packages-link">More</a><ul class="nav-dropdown"><li><a href="faq.html">FAQ</a></li><li><a href="blogs.html">Blog</a></li><li><a href="gallery.html">Gallery</a></li></ul></li>
+  </ul>
+  <div class="nav-search" id="navSearch"><button class="nav-search-toggle" onclick="var ns=this.parentNode;ns.classList.toggle('open');if(ns.classList.contains('open')){var i=document.getElementById('navSearchInput');i&&i.focus()}" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button><div class="nav-search-drop"><input type="text" id="navSearchInput" placeholder="Search FixHive&#8230;" autocomplete="off" aria-label="Search FixHive"><div class="nav-search-results" id="navSearchResults"></div></div></div>
+  <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="nav-cta">Book Now</a>
+  <a href="ar/diagnosis.html" class="nav-lang">🇦🇪 AR</a>
+  <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="services.html">All Services</a>
+  <a href="ac-service.html" style="padding-left:1.5rem;font-size:0.87rem;">AC &amp; Cooling</a>
+  <a href="engine.html" style="padding-left:1.5rem;font-size:0.87rem;">Engine &amp; Transmission</a>
+  <a href="brakes.html" style="padding-left:1.5rem;font-size:0.87rem;">Brakes &amp; Suspension</a>
+  <a href="tyres.html" style="padding-left:1.5rem;font-size:0.87rem;">Tyres &amp; Wheels</a>
+  <a href="body.html" style="padding-left:1.5rem;font-size:0.87rem;">Body &amp; Exterior</a>
+  <a href="electrical.html" style="padding-left:1.5rem;font-size:0.87rem;">Battery &amp; Electrical</a>
+  <a href="hybrid-ev.html" style="padding-left:1.5rem;font-size:0.87rem;">Hybrid &amp; EV</a>
+  <a href="diagnosis.html" style="color:var(--amber);font-weight:700;">🔬 Free Diagnosis</a>
+  <a href="brands.html" style="color:var(--amber);font-weight:700;">Brands</a>
+  <a href="about.html" class="nav-packages-link">About</a>
+  <a href="contact.html" class="nav-packages-link">Contact</a>
+  <a href="service-packages.html" style="color:var(--amber);font-weight:700;">Packages</a>
+  <a href="offers.html" style="color:var(--amber);background:rgba(245,166,35,0.14);border:1.5px solid rgba(245,166,35,0.55);font-weight:700;border-radius:20px;padding:0.4rem 1rem;">🔥 Special Offers</a>
+  <a href="faq.html">FAQ</a>
+  <a href="blogs.html">Blog</a>
+  <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment">📲 Book on WhatsApp</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="diag-hero">
+  <span class="diag-hero-label">✦ Powered by AI</span>
+  <h1>What's wrong with<br>your <em>car?</em></h1>
+  <p>Answer 4 quick questions. Our AI analyses your symptoms and pinpoints the most likely issues — free, in under 60 seconds.</p>
+  <div class="diag-trust-row">
+    <span class="diag-trust-item">Free — no cost ever</span>
+    <span class="diag-trust-item">No signup required</span>
+    <span class="diag-trust-item">Results in 60 seconds</span>
+    <span class="diag-trust-item">Dubai-specific analysis</span>
+  </div>
+</section>
+
+<!-- ── TOOL ── -->
+<section class="diag-wrap">
+  <div class="diag-card" id="diagCard">
+
+    <!-- PROGRESS -->
+    <div class="diag-progress-bar"><div class="diag-progress-fill" id="progressFill" style="width:25%"></div></div>
+
+    <!-- ════════════ STEP 1: NAME ════════════ -->
+    <div id="step1">
+      <div class="diag-step-header">
+        <span class="diag-step-num">Step 1 of 4</span>
+        <div class="diag-step-dots">
+          <div class="diag-step-dot active" id="dot1"></div>
+          <div class="diag-step-dot" id="dot2"></div>
+          <div class="diag-step-dot" id="dot3"></div>
+          <div class="diag-step-dot" id="dot4"></div>
+        </div>
+      </div>
+      <div class="diag-step-body">
+        <h2>Let's start — what's your name?</h2>
+        <p class="step-sub">We'll personalise your diagnosis report and use it on the WhatsApp booking message.</p>
+        <div class="diag-field">
+          <label class="diag-input-label" for="inputName">Your first name</label>
+          <input class="diag-input" type="text" id="inputName" placeholder="e.g. Ahmed" autocomplete="given-name" />
+        </div>
+      </div>
+      <div class="diag-nav">
+        <button class="btn-diag-next" id="btn1" onclick="goStep(2)">Continue <span>→</span></button>
+      </div>
+    </div>
+
+    <!-- ════════════ STEP 2: CAR ════════════ -->
+    <div id="step2" class="hidden">
+      <div class="diag-step-header">
+        <span class="diag-step-num">Step 2 of 4</span>
+        <div class="diag-step-dots">
+          <div class="diag-step-dot done"></div>
+          <div class="diag-step-dot active"></div>
+          <div class="diag-step-dot"></div>
+          <div class="diag-step-dot"></div>
+        </div>
+      </div>
+      <div class="diag-step-body">
+        <h2>Tell us about your car</h2>
+        <p class="step-sub">We use the year, make and model to tailor the diagnosis to known issues for your vehicle.</p>
+        <div class="diag-input-group">
+          <div class="diag-field">
+            <label class="diag-input-label" for="inputYear">Year</label>
+            <select class="diag-input" id="inputYear"></select>
+          </div>
+          <div class="diag-field">
+            <label class="diag-input-label" for="inputBrand">Brand</label>
+            <select class="diag-input" id="inputBrand"></select>
+          </div>
+          <div class="diag-field">
+            <label class="diag-input-label" for="inputModel">Model</label>
+            <input class="diag-input" type="text" id="inputModel" placeholder="e.g. Camry, X5, C-Class" />
+          </div>
+        </div>
+      </div>
+      <div class="diag-nav">
+        <button class="btn-diag-back" onclick="goStep(1)">← Back</button>
+        <button class="btn-diag-next" id="btn2" onclick="goStep(3)">Continue →</button>
+      </div>
+    </div>
+
+    <!-- ════════════ STEP 3: SYMPTOMS ════════════ -->
+    <div id="step3" class="hidden">
+      <div class="diag-step-header">
+        <span class="diag-step-num">Step 3 of 4</span>
+        <div class="diag-step-dots">
+          <div class="diag-step-dot done"></div>
+          <div class="diag-step-dot done"></div>
+          <div class="diag-step-dot active"></div>
+          <div class="diag-step-dot"></div>
+        </div>
+      </div>
+      <div class="diag-step-body">
+        <h2>What symptoms are you noticing?</h2>
+        <p class="step-sub">Select all that apply — the more you pick, the sharper the diagnosis.</p>
+        <p class="symptom-min-note">Tap to select (minimum 1)</p>
+        <div class="symptom-grid" id="symptomGrid"></div>
+      </div>
+      <div class="diag-nav">
+        <button class="btn-diag-back" onclick="goStep(2)">← Back</button>
+        <button class="btn-diag-next" id="btn3" onclick="goStep(4)" disabled>Continue →</button>
+      </div>
+    </div>
+
+    <!-- ════════════ STEP 4: MILEAGE + URGENCY ════════════ -->
+    <div id="step4" class="hidden">
+      <div class="diag-step-header">
+        <span class="diag-step-num">Step 4 of 4</span>
+        <div class="diag-step-dots">
+          <div class="diag-step-dot done"></div>
+          <div class="diag-step-dot done"></div>
+          <div class="diag-step-dot done"></div>
+          <div class="diag-step-dot active"></div>
+        </div>
+      </div>
+      <div class="diag-step-body">
+        <h2>Last step — mileage &amp; urgency</h2>
+        <p class="step-sub">Mileage helps us spot wear-related issues. Urgency tells us how quickly you need attention.</p>
+        <div class="diag-field">
+          <label class="diag-input-label" for="inputMileage">Approximate mileage (km)</label>
+          <input class="diag-input" type="number" id="inputMileage" placeholder="e.g. 85000" min="0" max="999999" />
+        </div>
+        <div class="diag-field">
+          <label class="diag-input-label" style="margin-bottom:0.6rem;">How urgent does this feel?</label>
+          <div class="urgency-grid">
+            <div class="urgency-opt" id="urgLow" onclick="selectUrgency('low')">
+              <span class="urg-icon">😌</span>
+              <span class="urg-title">Not urgent</span>
+              <span class="urg-desc">Car runs fine, just want to check</span>
+            </div>
+            <div class="urgency-opt" id="urgMedium" onclick="selectUrgency('medium')">
+              <span class="urg-icon">⚠️</span>
+              <span class="urg-title">Fairly urgent</span>
+              <span class="urg-desc">Noticeable issue, still driveable</span>
+            </div>
+            <div class="urgency-opt" id="urgHigh" onclick="selectUrgency('high')">
+              <span class="urg-icon">🚨</span>
+              <span class="urg-title">Very urgent</span>
+              <span class="urg-desc">Unsafe or car won't drive properly</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="diag-nav">
+        <button class="btn-diag-back" onclick="goStep(3)">← Back</button>
+        <button class="btn-diag-next" id="btn4" onclick="runDiagnosis()" disabled>🔬 Diagnose My Car</button>
+      </div>
+    </div>
+
+    <!-- ════════════ LOADING ════════════ -->
+    <div id="stepLoading" class="diag-loading hidden">
+      <span class="diag-loading-icon">⚙️</span>
+      <h3>Analysing your car…</h3>
+      <p>Our AI is cross-referencing your symptoms with<br>known issues for your vehicle in Dubai conditions.</p>
+      <div class="loading-track"><div class="loading-fill"></div></div>
+    </div>
+
+    <!-- ════════════ RESULTS ════════════ -->
+    <div id="stepResults" class="hidden">
+      <div class="results-header">
+        <h2 id="resultsTitle">Diagnosis results</h2>
+        <p id="resultsSubtitle"></p>
+      </div>
+      <div class="results-list" id="issueList"></div>
+      <div class="results-cta">
+        <div class="results-disclaimer">
+          <strong>Important:</strong> This AI diagnosis is a starting point based on reported symptoms — it is not a substitute for a professional inspection. FixHive technicians use manufacturer-grade diagnostic tools to confirm root causes and provide an accurate repair quote.
+        </div>
+        <a id="waBookBtn" href="#" class="btn-wa-book" target="_blank" rel="noopener">
+          💬 Book a Full Diagnostic at FixHive — WhatsApp
+        </a>
+        <button class="btn-restart" onclick="restartTool()">↺ Start a new diagnosis</button>
+      </div>
+    </div>
+
+    <!-- ════════════ ERROR ════════════ -->
+    <div id="stepError" class="diag-error hidden">
+      <h3>Something went wrong</h3>
+      <p id="errorMsg">We couldn't reach the diagnosis service. Please try again or WhatsApp us directly for a free assessment.</p>
+      <a href="https://wa.me/971541699500?text=Hi%20FixHive%2C%20I%20need%20help%20diagnosing%20my%20car." class="btn-wa-book" target="_blank" rel="noopener">💬 WhatsApp us instead</a>
+      <button class="btn-restart" onclick="restartTool()" style="margin-top:0.6rem;">↺ Try again</button>
+    </div>
+
+  </div><!-- /diag-card -->
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><img src="img/logo.webp" alt="FixHive Garage Dubai" /></a>
+      <p>Reliable, affordable, and fast car repair services across Dubai. Dealer-level quality — without dealer prices.</p>
+      <div class="footer-payment">
+        <div class="footer-payment-label">We Accept</div>
+        <div class="footer-payment-icons">
+          <span class="pay-badge" title="Visa"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="32" viewBox="0 0 52 32"><rect width="52" height="32" rx="4" fill="#1A1F71"/><text x="26" y="23" font-family="Arial" font-size="16" font-weight="900" font-style="italic" fill="#fff" text-anchor="middle">VISA</text></svg></span>
+          <span class="pay-badge" title="Mastercard"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="32" viewBox="0 0 52 32"><rect width="52" height="32" rx="4" fill="#1d1d1d"/><circle cx="20" cy="16" r="10" fill="#EB001B"/><circle cx="32" cy="16" r="10" fill="#F79E1B"/><path d="M26 7a10 10 0 0 1 0 18A10 10 0 0 1 26 7z" fill="#FF5F00"/></svg></span>
+          <a href="https://tabby.ai" class="pay-badge pay-tabby" target="_blank" rel="noopener">tabby</a>
+          <a href="https://paymob.com" class="pay-badge pay-paymob" target="_blank" rel="noopener">paymob</a>
+          <a href="https://www.fazaa.ae" class="pay-badge pay-fazaa" target="_blank" rel="noopener">fazaa</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="services.html">All Services</a></li>
+        <li><a href="diagnosis.html">Free AI Diagnosis</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blogs.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>📍 WH2 FixHive, 80 Street<br>Dubai Investment Park First, Dubai, UAE</p>
+      <p>🕐 Mon–Sat: 08:30 – 19:00</p>
+      <p>📞 <a href="tel:+971541699500">+971 54 169 9500</a></p>
+      <p>✉️ <a href="mailto:sale.ae@myfixhive.ae">sale.ae@myfixhive.ae</a></p>
+      <p>💬 <a href="https://wa.me/971541699500">WhatsApp Us</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 FixHive Garage — Saher Auto General Repairing LLC</span>
+    <span>Dubai, UAE</span>
+  </div>
+</footer>
+
+<script src="chatbot.js" defer></script>
+<script src="/js/nav.js" defer></script>
+<script src="/js/search.js" defer></script>
+<script>
+/* ── CONFIG ── */
+/* Set window.FIXHIVE_WORKER_URL before this script loads, e.g. in a <script> tag in <head>:
+   window.FIXHIVE_WORKER_URL = 'https://fixhive-diagnosis.YOUR-SUBDOMAIN.workers.dev';
+*/
+const WORKER_URL = (typeof window.FIXHIVE_WORKER_URL !== 'undefined' && window.FIXHIVE_WORKER_URL)
+  ? window.FIXHIVE_WORKER_URL
+  : 'https://fixhive-diagnosis.fixhive.workers.dev'; /* replace with your actual worker URL */
+
+/* ── CONSTANTS ── */
+const SYMPTOMS = [
+  { icon: '🚫', label: 'Engine won\'t start' },
+  { icon: '💡', label: 'Check engine light on' },
+  { icon: '🌡️', label: 'Overheating / temp warning' },
+  { icon: '🔊', label: 'Strange engine noise (knock/tick)' },
+  { icon: '📳', label: 'Rough idle / engine shaking' },
+  { icon: '🐌', label: 'Poor acceleration / loss of power' },
+  { icon: '⛽', label: 'High fuel consumption' },
+  { icon: '❄️', label: 'AC not cooling' },
+  { icon: '💨', label: 'AC making noise or smell' },
+  { icon: '🛑', label: 'Brake squealing or grinding' },
+  { icon: '🦶', label: 'Soft / spongy brake pedal' },
+  { icon: '↔️', label: 'Car pulling to one side' },
+  { icon: '📳', label: 'Vibration / shaking while driving' },
+  { icon: '💥', label: 'Suspension noise / rough ride' },
+  { icon: '⚙️', label: 'Transmission slipping or jerking' },
+  { icon: '🔄', label: 'Gear shifting issues' },
+  { icon: '🔋', label: 'Battery or electrical issue' },
+  { icon: '💧', label: 'Oil or fluid leak' },
+  { icon: '💨', label: 'Smoke from engine or exhaust' },
+  { icon: '🔵', label: 'Tyre pressure warning light' },
+];
+
+const BRANDS = [
+  'Alfa Romeo','Aston Martin','Audi','Bentley','BMW','BYD','Cadillac','Changan',
+  'Chery','Chevrolet','Chrysler','Daihatsu','Dodge','Ferrari','Fiat','Ford',
+  'GAC','Geely','Genesis','GMC','Haval','Honda','HongQi','Hyundai','Infiniti',
+  'Isuzu','Jaguar','Jeep','Jetour','Kia','Lamborghini','Land Rover','Lexus',
+  'Lincoln','Maserati','Maybach','Mazda','Mercedes-Benz','MG','MINI','Mitsubishi',
+  'Nissan','Peugeot','Porsche','RAM','Range Rover','Renault','Rolls-Royce',
+  'Subaru','Suzuki','Tesla','Toyota','Volkswagen','Volvo','Other'
+];
+
+/* ── STATE ── */
+const state = { name: '', year: '', brand: '', model: '', symptoms: [], mileage: '', urgency: '' };
+
+/* ── INIT ── */
+(function init() {
+  /* Year dropdown */
+  const sel = document.getElementById('inputYear');
+  for (let y = new Date().getFullYear(); y >= 1995; y--) {
+    const o = document.createElement('option');
+    o.value = y; o.textContent = y;
+    sel.appendChild(o);
+  }
+  /* Brand dropdown */
+  const bSel = document.getElementById('inputBrand');
+  const blank = document.createElement('option');
+  blank.value = ''; blank.textContent = 'Select brand'; blank.disabled = true; blank.selected = true;
+  bSel.appendChild(blank);
+  BRANDS.forEach(b => {
+    const o = document.createElement('option'); o.value = b; o.textContent = b; bSel.appendChild(o);
+  });
+  /* Symptom chips */
+  const grid = document.getElementById('symptomGrid');
+  SYMPTOMS.forEach((s, i) => {
+    const chip = document.createElement('div');
+    chip.className = 'symptom-chip';
+    chip.dataset.index = i;
+    chip.innerHTML = `<span>${s.icon}</span><span>${s.label}</span><span class="chip-check">✓</span>`;
+    chip.addEventListener('click', () => toggleSymptom(chip, s.label));
+    grid.appendChild(chip);
+  });
+  /* Input listeners for step validation */
+  document.getElementById('inputName').addEventListener('input', validateStep1);
+  document.getElementById('inputBrand').addEventListener('change', validateStep2);
+  document.getElementById('inputModel').addEventListener('input', validateStep2);
+  document.getElementById('inputMileage').addEventListener('input', validateStep4);
+})();
+
+/* ── VALIDATION ── */
+function validateStep1() {
+  document.getElementById('btn1').disabled = !document.getElementById('inputName').value.trim();
+}
+function validateStep2() {
+  const ok = document.getElementById('inputBrand').value && document.getElementById('inputModel').value.trim();
+  document.getElementById('btn2').disabled = !ok;
+}
+function validateStep4() {
+  const hasUrgency = !!state.urgency;
+  document.getElementById('btn4').disabled = !hasUrgency;
+}
+
+/* ── STEP NAVIGATION ── */
+function goStep(n) {
+  /* Save state on exit */
+  state.name    = document.getElementById('inputName').value.trim();
+  state.year    = document.getElementById('inputYear').value;
+  state.brand   = document.getElementById('inputBrand').value;
+  state.model   = document.getElementById('inputModel').value.trim();
+  state.mileage = document.getElementById('inputMileage').value;
+
+  [1,2,3,4].forEach(i => document.getElementById('step'+i).classList.add('hidden'));
+  document.getElementById('step'+n).classList.remove('hidden');
+  const pct = { 1:25, 2:50, 3:75, 4:100 }[n];
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('diagCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  /* Re-validate */
+  if (n === 1) validateStep1();
+  if (n === 2) validateStep2();
+  if (n === 4) validateStep4();
+}
+
+/* ── SYMPTOMS ── */
+function toggleSymptom(chip, label) {
+  chip.classList.toggle('selected');
+  if (chip.classList.contains('selected')) {
+    state.symptoms.push(label);
+  } else {
+    state.symptoms = state.symptoms.filter(s => s !== label);
+  }
+  document.getElementById('btn3').disabled = state.symptoms.length === 0;
+}
+
+/* ── URGENCY ── */
+function selectUrgency(level) {
+  ['low','medium','high'].forEach(l => {
+    const el = document.getElementById('urg' + l.charAt(0).toUpperCase() + l.slice(1));
+    el.className = 'urgency-opt';
+    if (l === level) el.classList.add('sel-' + level);
+  });
+  state.urgency = level;
+  validateStep4();
+}
+
+/* ── AI DIAGNOSIS ── */
+async function runDiagnosis() {
+  state.mileage = document.getElementById('inputMileage').value;
+
+  /* Show loading screen */
+  ['step1','step2','step3','step4','stepResults','stepError'].forEach(id =>
+    document.getElementById(id).classList.add('hidden')
+  );
+  document.getElementById('stepLoading').classList.remove('hidden');
+  document.getElementById('progressFill').style.width = '100%';
+  document.getElementById('diagCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  /* Build the structured payload — worker handles the prompt + Anthropic call */
+  const payload = {
+    name:     state.name,
+    brand:    state.brand,
+    model:    state.model,
+    year:     state.year,
+    mileage:  state.mileage || 'unknown',
+    symptoms: state.symptoms,
+    urgency:  state.urgency,
+    when:     '',   /* reserved for future "when did it start" step */
+    extra:    ''    /* reserved for future free-text notes step */
+  };
+
+  try {
+    const res = await fetch(WORKER_URL, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(payload)
+    });
+
+    if (!res.ok) {
+      const errText = await res.text();
+      throw new Error('Server error ' + res.status + ': ' + errText);
+    }
+
+    const data = await res.json();
+
+    /* Worker returns { issues: [...] } */
+    const issues = data.issues;
+    if (!Array.isArray(issues) || issues.length === 0) {
+      throw new Error('No issues returned — the AI response may have been empty.');
+    }
+
+    showResults(issues);
+
+  } catch (err) {
+    console.error('Diagnosis error:', err);
+    document.getElementById('stepLoading').classList.add('hidden');
+    document.getElementById('stepError').classList.remove('hidden');
+    document.getElementById('errorMsg').textContent =
+      'We couldn\'t complete the diagnosis (' + err.message + '). ' +
+      'Please try again or WhatsApp us for a free assessment.';
+  }
+}
+
+/* ── RENDER RESULTS ── */
+function showResults(issues) {
+  document.getElementById('stepLoading').classList.add('hidden');
+  document.getElementById('resultsTitle').textContent = state.name + '\'s Diagnosis — ' + state.year + ' ' + state.brand + ' ' + state.model;
+  document.getElementById('resultsSubtitle').textContent = issues.length + ' likely issue' + (issues.length > 1 ? 's' : '') + ' identified based on your reported symptoms. Tap any issue to expand.';
+
+  const list = document.getElementById('issueList');
+  list.innerHTML = '';
+  issues.forEach(issue => {
+    const urg = (issue.urgency || 'low').toLowerCase();
+    const prob = Math.min(100, Math.max(0, parseInt(issue.prob) || 50));
+    const badgeClass = { high: 'badge-high', medium: 'badge-medium', low: 'badge-low' }[urg] || 'badge-low';
+    const badgeLabel = { high: '⚠ Urgent', medium: 'Monitor', low: 'Non-urgent' }[urg];
+    const tags = Array.isArray(issue.tags) ? issue.tags : [];
+
+    const card = document.createElement('div');
+    card.className = 'issue-card urg-' + urg;
+    card.innerHTML = `
+      <div class="issue-card-top">
+        <div class="issue-title">${escHtml(issue.title || 'Unknown Issue')}</div>
+        <span class="issue-badge ${badgeClass}">${badgeLabel}</span>
+      </div>
+      <div class="issue-prob-row">
+        <span class="prob-label">Likelihood</span>
+        <div class="prob-bar-wrap"><div class="prob-bar" data-prob="${prob}"></div></div>
+        <span class="prob-pct">${prob}%</span>
+      </div>
+      <p class="issue-desc">${escHtml(issue.desc || '')}</p>
+      ${tags.length ? '<div class="issue-tags">' + tags.map(t => `<span class="issue-tag">${escHtml(t)}</span>`).join('') + '</div>' : ''}
+    `;
+    list.appendChild(card);
+  });
+
+  /* Animate probability bars after render */
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      document.querySelectorAll('.prob-bar[data-prob]').forEach(el => {
+        el.style.width = el.dataset.prob + '%';
+      });
+    });
+  });
+
+  /* Build WhatsApp pre-fill */
+  const wa = buildWaMessage(issues);
+  document.getElementById('waBookBtn').href = 'https://wa.me/971541699500?text=' + encodeURIComponent(wa);
+
+  document.getElementById('stepResults').classList.remove('hidden');
+  document.getElementById('diagCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function buildWaMessage(issues) {
+  const topIssues = issues.slice(0, 3).map(i => '• ' + i.title).join('\n');
+  return `Hi FixHive! I just used the AI Diagnosis tool on your website and got these results.
+
+My car: ${state.year} ${state.brand} ${state.model} (~${state.mileage ? state.mileage + ' km' : 'mileage unknown'})
+Symptoms: ${state.symptoms.join(', ')}
+Urgency: ${state.urgency}
+My name: ${state.name}
+
+Top AI-identified issues:
+${topIssues}
+
+Can you help me book a full diagnostic and get a quote?`;
+}
+
+function escHtml(str) {
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+/* ── RESTART ── */
+function restartTool() {
+  state.name = ''; state.year = ''; state.brand = ''; state.model = '';
+  state.symptoms = []; state.mileage = ''; state.urgency = '';
+  document.getElementById('inputName').value = '';
+  document.getElementById('inputModel').value = '';
+  document.getElementById('inputMileage').value = '';
+  document.getElementById('inputBrand').selectedIndex = 0;
+  document.querySelectorAll('.symptom-chip').forEach(c => c.classList.remove('selected'));
+  ['low','medium','high'].forEach(l => {
+    document.getElementById('urg'+l.charAt(0).toUpperCase()+l.slice(1)).className = 'urgency-opt';
+  });
+  ['stepResults','stepError','stepLoading','step2','step3','step4'].forEach(id =>
+    document.getElementById(id).classList.add('hidden')
+  );
+  document.getElementById('btn4').disabled = true;
+  document.getElementById('btn3').disabled = true;
+  document.getElementById('btn1').disabled = true;
+  goStep(1);
+}
+
+/* Initial validation state */
+document.getElementById('btn1').disabled = true;
+document.getElementById('btn2').disabled = true;
+</script>
+</body>
+</html>

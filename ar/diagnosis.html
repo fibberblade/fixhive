@@ -1,0 +1,535 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-819HFHM37T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-819HFHM37T');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="geo.position" content="24.972111;55.1737988">
+  <meta name="geo.region" content="AE-DU">
+  <meta name="geo.placename" content="Dubai">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تشخيص سيارتك بالذكاء الاصطناعي | فيكس هايف دبي</title>
+  <meta name="description" content="تشخيص مجاني لسيارتك بالذكاء الاصطناعي — أجب على 4 أسئلة سريعة واحصل على تحليل دقيق للمشاكل المحتملة في سيارتك. مجاني، بدون تسجيل." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://myfixhive.ae/ar/diagnosis.html" />
+  <link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/diagnosis.html" />
+  <link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/diagnosis.html" />
+  <link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/diagnosis.html" />
+  <link rel="stylesheet" href="../shared.css" />
+  <link rel="stylesheet" href="../chatbot.css" />
+  <style>
+    /* Inherit all diagnosis styles from shared, add RTL tweaks */
+    .diag-hero {
+      background: linear-gradient(135deg, #070f1e 0%, #0d1b2a 55%, #0a2463 100%);
+      padding: 56px 5% 52px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .diag-hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: 50%; transform: translateX(-50%);
+      width: 700px; height: 450px;
+      background: radial-gradient(ellipse, rgba(245,166,35,0.14) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .diag-hero-label {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 1px;
+      color: var(--amber);
+      background: rgba(245,166,35,0.1); border: 1px solid rgba(245,166,35,0.28);
+      padding: 0.3rem 0.9rem; border-radius: 20px; margin-bottom: 1.1rem;
+    }
+    .diag-hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 0.85rem; }
+    .diag-hero h1 em { color: var(--amber); font-style: normal; }
+    .diag-hero p { color: rgba(255,255,255,0.58); font-size: 1.05rem; max-width: 480px; margin: 0 auto 1.6rem; line-height: 1.8; }
+    .diag-trust-row { display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+    .diag-trust-item { display: flex; align-items: center; gap: 0.38rem; font-size: 0.83rem; font-weight: 600; color: rgba(255,255,255,0.45); }
+    .diag-trust-item::before { content: '✓'; color: #10b981; font-weight: 800; }
+    .diag-wrap { background: #eef1f8; padding: 48px 5% 72px; }
+    .diag-card { background: #fff; border-radius: 22px; box-shadow: 0 10px 56px rgba(13,27,42,0.10); max-width: 700px; margin: 0 auto; overflow: hidden; }
+    .diag-progress-bar { height: 4px; background: #e9ecf1; }
+    .diag-progress-fill { height: 100%; background: linear-gradient(90deg, var(--amber), #f97316); border-radius: 0 4px 4px 0; transition: width 0.45s cubic-bezier(.22,1,.36,1); }
+    .diag-step-header { padding: 1.8rem 2.4rem 0; display: flex; align-items: center; justify-content: space-between; }
+    .diag-step-num { font-size: 0.74rem; font-weight: 700; color: var(--amber); }
+    .diag-step-dots { display: flex; gap: 7px; }
+    .diag-step-dot { width: 8px; height: 8px; border-radius: 50%; background: #e5e7eb; transition: background 0.3s; }
+    .diag-step-dot.active { background: var(--amber); }
+    .diag-step-dot.done { background: #10b981; }
+    .diag-step-body { padding: 1.4rem 2.4rem 0.5rem; }
+    .diag-step-body h2 { font-size: 1.4rem; font-weight: 800; color: #0d1b2a; margin-bottom: 0.35rem; line-height: 1.3; }
+    .step-sub { color: #6b7280; font-size: 0.88rem; margin-bottom: 1.4rem; line-height: 1.7; }
+    .diag-field { margin-bottom: 1.1rem; }
+    .diag-input-label { display: block; font-size: 0.78rem; font-weight: 700; color: #374151; margin-bottom: 0.38rem; }
+    .diag-input { width: 100%; padding: 0.82rem 1rem; border: 1.5px solid #e5e7eb; border-radius: 10px; font-size: 0.95rem; color: #0d1b2a; background: #fff; transition: border-color 0.2s, box-shadow 0.2s; outline: none; font-family: inherit; -webkit-appearance: none; appearance: none; }
+    .diag-input:focus { border-color: var(--amber); box-shadow: 0 0 0 3px rgba(245,166,35,0.12); }
+    .diag-input-group { display: grid; grid-template-columns: 1fr 1.5fr 1.5fr; gap: 0.75rem; }
+    .symptom-grid { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-bottom: 0.6rem; }
+    .symptom-chip { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.52rem 0.95rem; border-radius: 50px; border: 1.5px solid #e5e7eb; background: #f9fafb; font-size: 0.84rem; font-weight: 600; color: #374151; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .symptom-chip:hover { border-color: var(--amber); background: rgba(245,166,35,0.06); }
+    .symptom-chip.selected { background: rgba(245,166,35,0.1); border-color: var(--amber); color: #92400e; font-weight: 700; }
+    .chip-check { display: none; width: 14px; height: 14px; background: var(--amber); border-radius: 50%; color: #fff; font-size: 9px; align-items: center; justify-content: center; flex-shrink: 0; }
+    .symptom-chip.selected .chip-check { display: inline-flex; }
+    .symptom-min-note { font-size: 0.76rem; color: #9ca3af; margin-bottom: 1rem; }
+    .urgency-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-bottom: 1rem; }
+    .urgency-opt { border: 1.5px solid #e5e7eb; border-radius: 14px; padding: 1.1rem 0.8rem 0.9rem; text-align: center; cursor: pointer; transition: all 0.2s; }
+    .urgency-opt.sel-low { border-color: #10b981; background: rgba(16,185,129,0.06); }
+    .urgency-opt.sel-medium { border-color: var(--amber); background: rgba(245,166,35,0.07); }
+    .urgency-opt.sel-high { border-color: #ef4444; background: rgba(239,68,68,0.06); }
+    .urg-icon { font-size: 1.7rem; display: block; margin-bottom: 0.45rem; }
+    .urg-title { font-size: 0.87rem; font-weight: 800; color: #0d1b2a; display: block; margin-bottom: 0.2rem; }
+    .urg-desc { font-size: 0.72rem; color: #9ca3af; display: block; line-height: 1.45; }
+    .diag-nav { padding: 1rem 2.4rem 2rem; display: flex; align-items: center; gap: 0.75rem; flex-direction: row-reverse; }
+    .btn-diag-next { flex: 1; background: linear-gradient(135deg, #f5a623, #f97316); color: #fff; font-weight: 800; font-size: 0.97rem; padding: 0.9rem 1.5rem; border-radius: 11px; border: none; cursor: pointer; transition: opacity 0.2s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-family: inherit; }
+    .btn-diag-next:disabled { opacity: 0.38; cursor: not-allowed; }
+    .btn-diag-back { background: none; border: 1.5px solid #e5e7eb; color: #6b7280; font-size: 0.88rem; font-weight: 600; padding: 0.9rem 1.1rem; border-radius: 11px; cursor: pointer; font-family: inherit; }
+    .diag-loading { text-align: center; padding: 4rem 2.4rem; }
+    .diag-loading-icon { font-size: 3.2rem; display: block; margin-bottom: 1.1rem; animation: diag-spin 2.8s linear infinite; }
+    @keyframes diag-spin { to { transform: rotate(360deg); } }
+    .diag-loading h3 { font-size: 1.15rem; font-weight: 800; color: #0d1b2a; margin-bottom: 0.4rem; }
+    .diag-loading p { color: #9ca3af; font-size: 0.88rem; }
+    .loading-track { height: 3px; background: #e9ecf1; border-radius: 3px; margin: 1.3rem auto 0; max-width: 220px; overflow: hidden; }
+    .loading-fill { height: 100%; background: linear-gradient(90deg, #f5a623, #f97316); border-radius: 3px; animation: load-slide 1.7s ease-in-out infinite; }
+    @keyframes load-slide { 0%{width:0%;margin-right:0} 50%{width:65%;margin-right:0} 100%{width:0%;margin-right:100%} }
+    .results-header { padding: 1.8rem 2.4rem 1.2rem; border-bottom: 1px solid #f0f1f5; }
+    .results-header h2 { font-size: 1.2rem; font-weight: 800; color: #0d1b2a; margin-bottom: 0.3rem; }
+    .results-header p { color: #6b7280; font-size: 0.87rem; line-height: 1.55; }
+    .results-list { padding: 1.2rem 2.4rem 0; }
+    .issue-card { border: 1.5px solid #e9ecf1; border-radius: 14px; padding: 1.2rem 1.35rem; margin-bottom: 0.9rem; }
+    .issue-card.urg-high { border-color: rgba(239,68,68,0.3); background: rgba(239,68,68,0.018); }
+    .issue-card.urg-medium { border-color: rgba(245,166,35,0.3); background: rgba(245,166,35,0.018); }
+    .issue-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.7rem; }
+    .issue-title { font-size: 0.98rem; font-weight: 800; color: #0d1b2a; line-height: 1.3; }
+    .issue-badge { font-size: 0.67rem; font-weight: 700; text-transform: uppercase; padding: 0.22rem 0.58rem; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
+    .badge-high { background: rgba(239,68,68,0.11); color: #dc2626; }
+    .badge-medium { background: rgba(245,166,35,0.14); color: #d97706; }
+    .badge-low { background: rgba(16,185,129,0.1); color: #059669; }
+    .issue-prob-row { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.72rem; }
+    .prob-label { font-size: 0.72rem; color: #9ca3af; white-space: nowrap; }
+    .prob-bar-wrap { flex: 1; height: 6px; background: #f0f1f5; border-radius: 6px; overflow: hidden; }
+    .prob-bar { height: 100%; border-radius: 6px; width: 0; transition: width 0.7s cubic-bezier(.22,1,.36,1); }
+    .issue-card.urg-high .prob-bar { background: linear-gradient(90deg, #ef4444, #dc2626); }
+    .issue-card.urg-medium .prob-bar { background: linear-gradient(90deg, #f5a623, #f97316); }
+    .issue-card.urg-low .prob-bar { background: linear-gradient(90deg, #10b981, #059669); }
+    .prob-pct { font-size: 0.82rem; font-weight: 700; color: #374151; min-width: 34px; }
+    .issue-desc { font-size: 0.86rem; color: #4b5563; line-height: 1.7; margin-bottom: 0.75rem; }
+    .issue-tags { display: flex; flex-wrap: wrap; gap: 0.38rem; }
+    .issue-tag { font-size: 0.71rem; font-weight: 600; color: #1d4ed8; background: rgba(29,78,216,0.07); padding: 0.18rem 0.55rem; border-radius: 20px; }
+    .results-cta { padding: 1.4rem 2.4rem 2rem; }
+    .results-disclaimer { background: #f8f9fb; border: 1px solid #e9ecf1; border-radius: 10px; padding: 0.85rem 1.05rem; font-size: 0.77rem; color: #6b7280; line-height: 1.6; margin-bottom: 1.1rem; }
+    .btn-wa-book { display: flex; align-items: center; justify-content: center; gap: 0.6rem; width: 100%; background: #25D366; color: #fff; font-weight: 800; font-size: 1rem; padding: 1rem; border-radius: 12px; text-decoration: none; transition: background 0.2s; margin-bottom: 0.7rem; }
+    .btn-wa-book:hover { background: #1ebe5d; }
+    .btn-restart { display: flex; align-items: center; justify-content: center; gap: 0.45rem; width: 100%; background: none; border: 1.5px solid #e5e7eb; color: #6b7280; font-size: 0.88rem; font-weight: 600; padding: 0.72rem; border-radius: 10px; cursor: pointer; font-family: inherit; }
+    .diag-error { text-align: center; padding: 2.8rem 2.4rem; }
+    .diag-error h3 { font-size: 1.05rem; font-weight: 800; color: #dc2626; margin-bottom: 0.5rem; }
+    .diag-error p { color: #6b7280; font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.2rem; }
+    .hidden { display: none !important; }
+    @media (max-width: 600px) {
+      .diag-step-header, .diag-step-body, .diag-nav, .results-header, .results-list, .results-cta { padding-left: 1.15rem; padding-right: 1.15rem; }
+      .diag-input-group { grid-template-columns: 1fr 1fr; }
+      .urgency-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="https://wa.me/971541699500?text=مرحباً%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد" class="top-bar" target="_blank" rel="noopener">
+  <span class="top-bar-icon">💬</span>
+  <span class="top-bar-text"><strong>تشخيص مجاني</strong> — راسلنا عبر واتساب الآن</span>
+  <span class="top-bar-cta">تحدث معنا ←</span>
+</a>
+
+<nav>
+  <a href="index.html" class="logo">فيكس هايف<span style="color:#F5A623">.</span></a>
+  <ul>
+    <li><a href="ac-service.html">تكييف السيارة</a></li>
+    <li><a href="diagnosis.html" style="color:var(--amber);font-weight:700;">تشخيص مجاني</a></li>
+    <li><a href="../contact.html">اتصل بنا</a></li>
+    <li><a href="service-packages.html" class="nav-packages-link">الباقات</a></li>
+  </ul>
+  <a href="../diagnosis.html" class="nav-lang">🇬🇧 EN</a>
+  <div class="nav-search" id="navSearch"><button class="nav-search-toggle" onclick="var ns=this.parentNode;ns.classList.toggle('open');if(ns.classList.contains('open')){var i=document.getElementById('navSearchInput');i&&i.focus()}" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button><div class="nav-search-drop"><input type="text" id="navSearchInput" placeholder="ابحث في فيكس هايف…" autocomplete="off" aria-label="Search FixHive"><div class="nav-search-results" id="navSearchResults"></div></div></div>
+  <a href="https://wa.me/971541699500?text=مرحباً%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد" class="nav-cta">احجز الآن</a>
+</nav>
+
+<!-- HERO -->
+<section class="diag-hero">
+  <span class="diag-hero-label">✦ يعمل بالذكاء الاصطناعي</span>
+  <h1>ما الخطأ في <em>سيارتك؟</em></h1>
+  <p>أجب على 4 أسئلة سريعة. يحلل الذكاء الاصطناعي أعراضك ويحدد المشاكل الأكثر احتمالاً — مجاناً في أقل من 60 ثانية.</p>
+  <div class="diag-trust-row">
+    <span class="diag-trust-item">مجاني تماماً</span>
+    <span class="diag-trust-item">بدون تسجيل</span>
+    <span class="diag-trust-item">نتائج خلال 60 ثانية</span>
+    <span class="diag-trust-item">تحليل خاص بدبي والإمارات</span>
+  </div>
+</section>
+
+<!-- TOOL -->
+<section class="diag-wrap">
+  <div class="diag-card" id="diagCard">
+
+    <div class="diag-progress-bar"><div class="diag-progress-fill" id="progressFill" style="width:25%"></div></div>
+
+    <!-- STEP 1 -->
+    <div id="step1">
+      <div class="diag-step-header">
+        <span class="diag-step-num">الخطوة 1 من 4</span>
+        <div class="diag-step-dots">
+          <div class="diag-step-dot active"></div>
+          <div class="diag-step-dot"></div>
+          <div class="diag-step-dot"></div>
+          <div class="diag-step-dot"></div>
+        </div>
+      </div>
+      <div class="diag-step-body">
+        <h2>لنبدأ — ما اسمك؟</h2>
+        <p class="step-sub">سنستخدم اسمك لتخصيص تقرير التشخيص ورسالة الحجز عبر واتساب.</p>
+        <div class="diag-field">
+          <label class="diag-input-label" for="inputName">اسمك الأول</label>
+          <input class="diag-input" type="text" id="inputName" placeholder="مثال: أحمد" autocomplete="given-name" />
+        </div>
+      </div>
+      <div class="diag-nav">
+        <button class="btn-diag-next" id="btn1" onclick="goStep(2)">التالي →</button>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div id="step2" class="hidden">
+      <div class="diag-step-header">
+        <span class="diag-step-num">الخطوة 2 من 4</span>
+        <div class="diag-step-dots">
+          <div class="diag-step-dot done"></div>
+          <div class="diag-step-dot active"></div>
+          <div class="diag-step-dot"></div>
+          <div class="diag-step-dot"></div>
+        </div>
+      </div>
+      <div class="diag-step-body">
+        <h2>أخبرنا عن سيارتك</h2>
+        <p class="step-sub">نستخدم السنة والماركة والموديل لتخصيص التشخيص وفق المشاكل المعروفة لسيارتك.</p>
+        <div class="diag-input-group">
+          <div class="diag-field">
+            <label class="diag-input-label" for="inputYear">السنة</label>
+            <select class="diag-input" id="inputYear"></select>
+          </div>
+          <div class="diag-field">
+            <label class="diag-input-label" for="inputBrand">الماركة</label>
+            <select class="diag-input" id="inputBrand"></select>
+          </div>
+          <div class="diag-field">
+            <label class="diag-input-label" for="inputModel">الموديل</label>
+            <input class="diag-input" type="text" id="inputModel" placeholder="مثال: كامري، X5" />
+          </div>
+        </div>
+      </div>
+      <div class="diag-nav">
+        <button class="btn-diag-next" id="btn2" onclick="goStep(3)">التالي →</button>
+        <button class="btn-diag-back" onclick="goStep(1)">→ رجوع</button>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div id="step3" class="hidden">
+      <div class="diag-step-header">
+        <span class="diag-step-num">الخطوة 3 من 4</span>
+        <div class="diag-step-dots">
+          <div class="diag-step-dot done"></div>
+          <div class="diag-step-dot done"></div>
+          <div class="diag-step-dot active"></div>
+          <div class="diag-step-dot"></div>
+        </div>
+      </div>
+      <div class="diag-step-body">
+        <h2>ما الأعراض التي تلاحظها؟</h2>
+        <p class="step-sub">اختر كل ما ينطبق — كلما اخترت أكثر، كان التشخيص أدق.</p>
+        <p class="symptom-min-note">اضغط للاختيار (الحد الأدنى 1)</p>
+        <div class="symptom-grid" id="symptomGrid"></div>
+      </div>
+      <div class="diag-nav">
+        <button class="btn-diag-next" id="btn3" onclick="goStep(4)" disabled>التالي →</button>
+        <button class="btn-diag-back" onclick="goStep(2)">→ رجوع</button>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div id="step4" class="hidden">
+      <div class="diag-step-header">
+        <span class="diag-step-num">الخطوة 4 من 4</span>
+        <div class="diag-step-dots">
+          <div class="diag-step-dot done"></div>
+          <div class="diag-step-dot done"></div>
+          <div class="diag-step-dot done"></div>
+          <div class="diag-step-dot active"></div>
+        </div>
+      </div>
+      <div class="diag-step-body">
+        <h2>الخطوة الأخيرة — المسافة والإلحاحية</h2>
+        <p class="step-sub">المسافة تساعدنا في اكتشاف مشاكل البلى. الإلحاحية تحدد مدى الحاجة للتدخل السريع.</p>
+        <div class="diag-field">
+          <label class="diag-input-label" for="inputMileage">عداد الكيلومترات التقريبي (كم)</label>
+          <input class="diag-input" type="number" id="inputMileage" placeholder="مثال: 85000" min="0" />
+        </div>
+        <div class="diag-field">
+          <label class="diag-input-label" style="margin-bottom:0.6rem;">ما مدى الإلحاحية؟</label>
+          <div class="urgency-grid">
+            <div class="urgency-opt" id="urgLow" onclick="selectUrgency('low')">
+              <span class="urg-icon">😌</span>
+              <span class="urg-title">غير عاجل</span>
+              <span class="urg-desc">السيارة تعمل، أريد فقط التحقق</span>
+            </div>
+            <div class="urgency-opt" id="urgMedium" onclick="selectUrgency('medium')">
+              <span class="urg-icon">⚠️</span>
+              <span class="urg-title">عاجل نسبياً</span>
+              <span class="urg-desc">مشكلة واضحة لكن السيارة تسير</span>
+            </div>
+            <div class="urgency-opt" id="urgHigh" onclick="selectUrgency('high')">
+              <span class="urg-icon">🚨</span>
+              <span class="urg-title">عاجل جداً</span>
+              <span class="urg-desc">خطر أو السيارة لا تسير بشكل صحيح</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="diag-nav">
+        <button class="btn-diag-next" id="btn4" onclick="runDiagnosis()" disabled>🔬 تشخيص سيارتي</button>
+        <button class="btn-diag-back" onclick="goStep(3)">→ رجوع</button>
+      </div>
+    </div>
+
+    <!-- LOADING -->
+    <div id="stepLoading" class="diag-loading hidden">
+      <span class="diag-loading-icon">⚙️</span>
+      <h3>جارٍ تحليل سيارتك…</h3>
+      <p>يقوم الذكاء الاصطناعي بمقارنة الأعراض مع المشاكل المعروفة<br>لسيارتك في ظروف المناخ الإماراتي.</p>
+      <div class="loading-track"><div class="loading-fill"></div></div>
+    </div>
+
+    <!-- RESULTS -->
+    <div id="stepResults" class="hidden">
+      <div class="results-header">
+        <h2 id="resultsTitle">نتائج التشخيص</h2>
+        <p id="resultsSubtitle"></p>
+      </div>
+      <div class="results-list" id="issueList"></div>
+      <div class="results-cta">
+        <div class="results-disclaimer">
+          <strong>تنبيه مهم:</strong> هذا التشخيص بالذكاء الاصطناعي هو نقطة انطلاق بناءً على الأعراض المُبلَّغ عنها — ولا يُغني عن الفحص الاحترافي. يستخدم فنيو فيكس هايف أدوات تشخيص بمستوى الوكالة لتأكيد السبب الجذري وتقديم عرض سعر دقيق للإصلاح.
+        </div>
+        <a id="waBookBtn" href="#" class="btn-wa-book" target="_blank" rel="noopener">
+          💬 احجز تشخيصاً كاملاً في فيكس هايف — واتساب
+        </a>
+        <button class="btn-restart" onclick="restartTool()">↺ ابدأ تشخيصاً جديداً</button>
+      </div>
+    </div>
+
+    <!-- ERROR -->
+    <div id="stepError" class="diag-error hidden">
+      <h3>حدث خطأ ما</h3>
+      <p id="errorMsg">تعذّر الوصول إلى خدمة التشخيص. يرجى المحاولة مجدداً أو التواصل معنا مباشرةً عبر واتساب.</p>
+      <a href="https://wa.me/971541699500?text=مرحباً%20فيكس%20هايف%2C%20أحتاج%20مساعدة%20في%20تشخيص%20سيارتي." class="btn-wa-book" target="_blank" rel="noopener">💬 واتساب مباشرة</a>
+      <button class="btn-restart" onclick="restartTool()" style="margin-top:0.6rem;">↺ حاول مجدداً</button>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">فيكس هايف<span style="color:#F5A623">.</span></a>
+      <p>خدمات إصلاح السيارات الموثوقة والمعقولة التكلفة في جميع أنحاء دبي. جودة الوكالة — بدون أسعار الوكالة.</p>
+    </div>
+    <div>
+      <h4>روابط سريعة</h4>
+      <ul>
+        <li><a href="../services.html">جميع الخدمات</a></li>
+        <li><a href="diagnosis.html">تشخيص مجاني بالذكاء الاصطناعي</a></li>
+        <li><a href="../contact.html">اتصل بنا</a></li>
+        <li><a href="../blogs.html">المدونة</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>اتصل بنا</h4>
+      <p>📍 مستودع 2 فيكس هايف، شارع 80<br>مجمع دبي للاستثمار الأول، دبي</p>
+      <p>🕐 الاثنين – السبت: 08:30 – 19:00</p>
+      <p>📞 <a href="tel:+971541699500">054 169 9500</a></p>
+      <p>💬 <a href="https://wa.me/971541699500">واتساب</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 فيكس هايف — شركة صاهر للإصلاح العام للسيارات ذ.م.م</span>
+    <span>دبي، الإمارات العربية المتحدة</span>
+  </div>
+</footer>
+
+<script src="../chatbot.js" defer></script>
+<script>
+const WORKER_URL = (typeof window.FIXHIVE_WORKER_URL !== 'undefined' && window.FIXHIVE_WORKER_URL)
+  ? window.FIXHIVE_WORKER_URL
+  : 'https://fixhive-diagnosis.fixhive.workers.dev';
+
+const SYMPTOMS = [
+  { icon: '🚫', label: 'السيارة لا تعمل' },
+  { icon: '💡', label: 'إضاءة Check Engine' },
+  { icon: '🌡️', label: 'ارتفاع الحرارة / تحذير الحرارة' },
+  { icon: '🔊', label: 'صوت غريب من المحرك' },
+  { icon: '📳', label: 'اهتزاز / خشونة المحرك أثناء الوقوف' },
+  { icon: '🐌', label: 'ضعف التسارع / فقدان القوة' },
+  { icon: '⛽', label: 'ارتفاع استهلاك الوقود' },
+  { icon: '❄️', label: 'التكييف لا يبرد' },
+  { icon: '💨', label: 'صوت أو رائحة من التكييف' },
+  { icon: '🛑', label: 'أصوات أو احتكاك في الفرامل' },
+  { icon: '🦶', label: 'دواسة الفرامل طرية أو رخوة' },
+  { icon: '↔️', label: 'انجراف السيارة لأحد الجانبين' },
+  { icon: '📳', label: 'اهتزاز أثناء القيادة' },
+  { icon: '💥', label: 'أصوات من نظام التعليق' },
+  { icon: '⚙️', label: 'انزلاق أو اهتزاز ناقل الحركة' },
+  { icon: '🔄', label: 'مشكلة في تغيير التروس' },
+  { icon: '🔋', label: 'مشكلة في البطارية أو الكهرباء' },
+  { icon: '💧', label: 'تسرب زيت أو سوائل' },
+  { icon: '💨', label: 'دخان من المحرك أو العادم' },
+  { icon: '🔵', label: 'تحذير ضغط الإطارات' },
+];
+
+const BRANDS = ['تويوتا','نيسان','هوندا','BMW','مرسيدس-بنز','أودي','فولكس واجن','بورشه','هيونداي','كيا','فورد','تسلا','لاند روفر','رنج روفر','لكزس','مازدا','ميتسوبيشي','جاكوار','بنتلي','رولز رويس','فيراري','لامبورغيني','شيفروليه','جيب','دودج','كاديلاك','GMC','سوبارو','سوزوكي','إنفينيتي','إيسوزو','دايهاتسو','جينيسيس','MINI','مازيراتي','ألفا روميو','فيات','أستون مارتن','RAM','لينكولن','كرايسلر','فولفو','بيجو','رينو','MG','BYD','شانغان','تشيري','GAC','جيلي','هافال','هونغتشي','جيتور','مايباخ','أخرى'];
+
+const state = { name:'', year:'', brand:'', model:'', symptoms:[], mileage:'', urgency:'' };
+
+(function init(){
+  const sel = document.getElementById('inputYear');
+  for(let y=new Date().getFullYear();y>=1995;y--){const o=document.createElement('option');o.value=y;o.textContent=y;sel.appendChild(o);}
+  const bSel=document.getElementById('inputBrand');
+  const blank=document.createElement('option');blank.value='';blank.textContent='اختر الماركة';blank.disabled=true;blank.selected=true;bSel.appendChild(blank);
+  BRANDS.forEach(b=>{const o=document.createElement('option');o.value=b;o.textContent=b;bSel.appendChild(o);});
+  const grid=document.getElementById('symptomGrid');
+  SYMPTOMS.forEach((s,i)=>{const chip=document.createElement('div');chip.className='symptom-chip';chip.dataset.index=i;chip.innerHTML=`<span>${s.icon}</span><span>${s.label}</span><span class="chip-check">✓</span>`;chip.addEventListener('click',()=>toggleSymptom(chip,s.label));grid.appendChild(chip);});
+  document.getElementById('inputName').addEventListener('input',validateStep1);
+  document.getElementById('inputBrand').addEventListener('change',validateStep2);
+  document.getElementById('inputModel').addEventListener('input',validateStep2);
+  document.getElementById('inputMileage').addEventListener('input',validateStep4);
+})();
+
+function validateStep1(){document.getElementById('btn1').disabled=!document.getElementById('inputName').value.trim();}
+function validateStep2(){document.getElementById('btn2').disabled=!(document.getElementById('inputBrand').value&&document.getElementById('inputModel').value.trim());}
+function validateStep4(){document.getElementById('btn4').disabled=!state.urgency;}
+
+function goStep(n){
+  state.name=document.getElementById('inputName').value.trim();
+  state.year=document.getElementById('inputYear').value;
+  state.brand=document.getElementById('inputBrand').value;
+  state.model=document.getElementById('inputModel').value.trim();
+  state.mileage=document.getElementById('inputMileage').value;
+  [1,2,3,4].forEach(i=>document.getElementById('step'+i).classList.add('hidden'));
+  document.getElementById('step'+n).classList.remove('hidden');
+  document.getElementById('progressFill').style.width={1:25,2:50,3:75,4:100}[n]+'%';
+  document.getElementById('diagCard').scrollIntoView({behavior:'smooth',block:'start'});
+  if(n===1)validateStep1();if(n===2)validateStep2();if(n===4)validateStep4();
+}
+
+function toggleSymptom(chip,label){
+  chip.classList.toggle('selected');
+  if(chip.classList.contains('selected')){state.symptoms.push(label);}else{state.symptoms=state.symptoms.filter(s=>s!==label);}
+  document.getElementById('btn3').disabled=state.symptoms.length===0;
+}
+
+function selectUrgency(level){
+  ['low','medium','high'].forEach(l=>{const el=document.getElementById('urg'+l.charAt(0).toUpperCase()+l.slice(1));el.className='urgency-opt';if(l===level)el.classList.add('sel-'+level);});
+  state.urgency=level;validateStep4();
+}
+
+const URGENCY_AR={low:'غير عاجل',medium:'عاجل نسبياً',high:'عاجل جداً'};
+
+async function runDiagnosis(){
+  state.mileage=document.getElementById('inputMileage').value;
+  ['step1','step2','step3','step4','stepResults','stepError'].forEach(id=>document.getElementById(id).classList.add('hidden'));
+  document.getElementById('stepLoading').classList.remove('hidden');
+  document.getElementById('progressFill').style.width='100%';
+  document.getElementById('diagCard').scrollIntoView({behavior:'smooth',block:'start'});
+
+  const mileageText=state.mileage?state.mileage+' كم':'غير معروف';
+  const prompt=`أنت ميكانيكي سيارات خبير بأكثر من 18 عاماً من الخبرة في دبي والإمارات. متخصص في تشخيص مشاكل السيارات في المناخ الخليجي: حرارة صيفية شديدة (40-50°م)، رياح رملية، مطبات سرعة حادة، وقيادة على الطرق السريعة.
+
+تقرير العميل:
+- الاسم: ${state.name}
+- السيارة: ${state.year} ${state.brand} ${state.model}
+- عداد الكيلومترات: ${mileageText}
+- درجة الإلحاحية: ${URGENCY_AR[state.urgency]||state.urgency}
+- الأعراض المُبلَّغ عنها: ${state.symptoms.join('، ')}
+
+حلل الأعراض وحدد أكثر 3-5 مشاكل ميكانيكية أو كهربائية احتمالاً. ضع في اعتبارك عوامل الإمارات مثل تلف التكييف بسبب الحرارة، وانسداد فلاتر الهواء بالغبار، وتدهور البطاريات في المناخ الحار، وتلف التعليق بسبب المطبات.
+
+أعد مصفوفة JSON صالحة فقط — بدون markdown وبدون أكواد وبدون نص توضيحي. كل كائن يجب أن يحتوي على:
+- "title": string (اسم المشكلة المختصر)
+- "prob": integer 0-100 (احتمالية أن تكون هذه هي السبب)
+- "desc": string (2-3 جمل: ما هي المشكلة، لماذا تتطابق مع الأعراض، وأي عامل إماراتي ذي صلة)
+- "tags": string array (1-3 وسوم لفئة الخدمة)
+- "urgency": "low" | "medium" | "high"
+
+رتّب حسب الـ prob تنازلياً.`;
+
+  try{
+    const res=await fetch(WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1500,messages:[{role:'user',content:prompt}]})});
+    if(!res.ok)throw new Error('Worker: '+res.status);
+    const data=await res.json();
+    const rawText=data.content?.[0]?.text||'';
+    const clean=rawText.replace(/```json?/gi,'').replace(/```/g,'').trim();
+    const match=clean.match(/\[[\s\S]*\]/);
+    if(!match)throw new Error('لا يوجد JSON في الرد');
+    const issues=JSON.parse(match[0]);
+    if(!issues||issues.length===0)throw new Error('رد فارغ من الذكاء الاصطناعي');
+    showResults(issues);
+  }catch(err){
+    document.getElementById('stepLoading').classList.add('hidden');
+    document.getElementById('stepError').classList.remove('hidden');
+    document.getElementById('errorMsg').textContent='تعذّر إتمام التشخيص ('+err.message+'). يرجى المحاولة مجدداً أو التواصل معنا عبر واتساب.';
+  }
+}
+
+function showResults(issues){
+  document.getElementById('stepLoading').classList.add('hidden');
+  document.getElementById('resultsTitle').textContent='نتائج التشخيص — '+state.year+' '+state.brand+' '+state.model;
+  document.getElementById('resultsSubtitle').textContent='تم تحديد '+issues.length+' مشكلة محتملة بناءً على الأعراض التي أبلغت عنها.';
+  const list=document.getElementById('issueList');list.innerHTML='';
+  issues.forEach(issue=>{
+    const urg=(issue.urgency||'low').toLowerCase();
+    const prob=Math.min(100,Math.max(0,parseInt(issue.prob)||50));
+    const badgeClass={high:'badge-high',medium:'badge-medium',low:'badge-low'}[urg]||'badge-low';
+    const badgeLabel={high:'⚠ عاجل',medium:'مراقبة',low:'غير عاجل'}[urg];
+    const tags=Array.isArray(issue.tags)?issue.tags:[];
+    const card=document.createElement('div');card.className='issue-card urg-'+urg;
+    card.innerHTML=`<div class="issue-card-top"><div class="issue-title">${escHtml(issue.title||'')}</div><span class="issue-badge ${badgeClass}">${badgeLabel}</span></div><div class="issue-prob-row"><span class="prob-label">الاحتمالية</span><div class="prob-bar-wrap"><div class="prob-bar" data-prob="${prob}"></div></div><span class="prob-pct">${prob}%</span></div><p class="issue-desc">${escHtml(issue.desc||'')}</p>${tags.length?'<div class="issue-tags">'+tags.map(t=>`<span class="issue-tag">${escHtml(t)}</span>`).join('')+'</div>':''}`;
+    list.appendChild(card);
+  });
+  requestAnimationFrame(()=>requestAnimationFrame(()=>document.querySelectorAll('.prob-bar[data-prob]').forEach(el=>{el.style.width=el.dataset.prob+'%';})));
+  const topIssues=issues.slice(0,3).map(i=>'• '+i.title).join('\n');
+  const wa=`مرحباً فيكس هايف! استخدمت للتو أداة التشخيص بالذكاء الاصطناعي على موقعكم وحصلت على هذه النتائج.\n\nسيارتي: ${state.year} ${state.brand} ${state.model} (~${state.mileage?state.mileage+' كم':'عداد غير معروف'})\nالأعراض: ${state.symptoms.join('، ')}\nالإلحاحية: ${URGENCY_AR[state.urgency]||state.urgency}\nاسمي: ${state.name}\n\nأبرز المشاكل التي حددها الذكاء الاصطناعي:\n${topIssues}\n\nهل يمكنكم مساعدتي في حجز تشخيص كامل والحصول على عرض سعر؟`;
+  document.getElementById('waBookBtn').href='https://wa.me/971541699500?text='+encodeURIComponent(wa);
+  document.getElementById('stepResults').classList.remove('hidden');
+  document.getElementById('diagCard').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function escHtml(str){return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+function restartTool(){
+  state.name='';state.year='';state.brand='';state.model='';state.symptoms=[];state.mileage='';state.urgency='';
+  document.getElementById('inputName').value='';document.getElementById('inputModel').value='';document.getElementById('inputMileage').value='';document.getElementById('inputBrand').selectedIndex=0;
+  document.querySelectorAll('.symptom-chip').forEach(c=>c.classList.remove('selected'));
+  ['low','medium','high'].forEach(l=>document.getElementById('urg'+l.charAt(0).toUpperCase()+l.slice(1)).className='urgency-opt');
+  ['stepResults','stepError','stepLoading','step2','step3','step4'].forEach(id=>document.getElementById(id).classList.add('hidden'));
+  document.getElementById('btn4').disabled=true;document.getElementById('btn3').disabled=true;document.getElementById('btn1').disabled=true;
+  goStep(1);
+}
+
+document.getElementById('btn1').disabled=true;
+document.getElementById('btn2').disabled=true;
+</script>
+</body>
+</html>
