@@ -204,8 +204,8 @@
     .symptom-search-wrap {
       display: flex;
       align-items: center;
-      background: rgba(255,255,255,0.07);
-      border: 1.5px solid rgba(255,255,255,0.18);
+      background: #fff;
+      border: 1.5px solid #e5e7eb;
       border-radius: 10px;
       padding: 0.55rem 0.9rem;
       margin-bottom: 1rem;
@@ -213,26 +213,25 @@
     }
     .symptom-search-wrap:focus-within {
       border-color: var(--amber);
-      background: rgba(245,166,35,0.06);
+      box-shadow: 0 0 0 3px rgba(245,166,35,0.15);
     }
-    .symptom-search-icon { font-size: 1rem; opacity: 0.6; flex-shrink: 0; }
+    .symptom-search-icon { font-size: 1rem; opacity: 0.5; flex-shrink: 0; }
     .symptom-search-input {
       flex: 1;
       background: transparent;
       border: none;
       outline: none;
-      color: #fff !important;
-      -webkit-text-fill-color: #fff !important;
-      caret-color: var(--amber);
+      color: #0d1b2a;
+      -webkit-text-fill-color: #0d1b2a;
+      caret-color: #0d1b2a;
       font-size: 0.95rem;
       font-family: inherit;
     }
-    .symptom-search-input::placeholder { color: rgba(255,255,255,0.4); -webkit-text-fill-color: rgba(255,255,255,0.4); }
+    .symptom-search-input::placeholder { color: #9ca3af; -webkit-text-fill-color: #9ca3af; }
     .symptom-search-input:-webkit-autofill,
     .symptom-search-input:-webkit-autofill:focus {
-      -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
-      -webkit-text-fill-color: #fff !important;
-      transition: background-color 9999s ease-in-out 0s;
+      -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+      -webkit-text-fill-color: #0d1b2a !important;
     }
     .symptom-add-btn {
       background: var(--amber);

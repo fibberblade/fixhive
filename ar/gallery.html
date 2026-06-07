@@ -9,69 +9,139 @@
     gtag('config', 'G-819HFHM37T');
   </script>
   <meta charset="UTF-8" />
+  <meta name="geo.position" content="24.972111;55.1737988">
+  <meta name="geo.region" content="AE-DU">
+  <meta name="geo.placename" content="Dubai">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>معرض الصور — قريباً | فيكس هايف غاراج دبي</title>
-  <meta name="description" content="معرض صور فيكس هايف — قريباً. صور قبل وبعد الإصلاح، من ورشتنا وفريقنا في العمل. مدينة دبي للاستثمار." />
-  <meta name="robots" content="noindex, follow" />
+  <title>معرض الصور | صور حقيقية من الورشة | فيكس هايف غاراج دبي</title>
+  <meta name="description" content="شاهد فيكس هايف غاراج من الداخل — صور حقيقية من ورشتنا وإصلاحاتنا وفريقنا في مدينة دبي للاستثمار." />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://myfixhive.ae/ar/gallery.html" />
   <meta name="geo.region" content="AE-DU">
   <link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/gallery.html" />
   <link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/gallery.html" />
   <link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/gallery.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://myfixhive.ae/ar/gallery.html" />
+  <meta property="og:title" content="معرض الصور | فيكس هايف غاراج دبي" />
+  <meta property="og:description" content="شاهد فيكس هايف غاراج من الداخل — صور حقيقية من ورشتنا وإصلاحاتنا وفريقنا في مدينة دبي للاستثمار." />
+  <meta property="og:image" content="https://myfixhive.ae/images/og-fixhive.jpg" />
+  <meta property="og:site_name" content="FixHive Garage" />
   <link rel="stylesheet" href="../shared.css" />
   <style>
     .gallery-hero {
-      min-height: 80vh;
-      background: linear-gradient(135deg, #0a0f1e 0%, #0a2463 50%, #1e3a8a 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      background: linear-gradient(135deg, #0a0f1e 0%, #0a2463 55%, #1e3a8a 100%);
+      padding: 120px 5% 80px;
       text-align: center;
-      padding: 80px 5%;
       position: relative;
       overflow: hidden;
     }
     .gallery-hero::before {
       content: '';
-      position: absolute;
-      inset: 0;
-      background-image: linear-gradient(rgba(245,166,35,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(245,166,35,0.05) 1px, transparent 1px);
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(245,166,35,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245,166,35,0.05) 1px, transparent 1px);
       background-size: 60px 60px;
       animation: gridMove 20s linear infinite;
     }
-    @keyframes gridMove { 0%{ transform:translateY(0); } 100%{ transform:translateY(60px); } }
-    .gallery-hero::after { content:''; position:absolute; bottom:-100px; left:50%; transform:translateX(-50%); width:600px; height:300px; background:radial-gradient(ellipse, rgba(245,166,35,0.15) 0%, transparent 70%); pointer-events:none; }
-    .gallery-content { position:relative; z-index:1; max-width:680px; }
-    .gallery-badge { display:inline-flex; align-items:center; gap:0.5rem; background:rgba(245,166,35,0.15); border:1.5px solid rgba(245,166,35,0.4); color:var(--amber); font-size:0.78rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:0.45rem 1.1rem; border-radius:30px; margin-bottom:2rem; }
-    .gallery-title { font-size:clamp(2.2rem,5vw,3.8rem); font-weight:900; color:#fff; line-height:1.1; margin-bottom:1.2rem; }
-    .gallery-title span { color:var(--amber); }
-    .gallery-sub { font-size:1.05rem; color:rgba(255,255,255,0.6); line-height:1.9; margin-bottom:3rem; max-width:520px; margin-left:auto; margin-right:auto; }
-    .gallery-preview { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-bottom:3rem; max-width:680px; width:100%; }
-    .preview-tile { aspect-ratio:1; border-radius:14px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.5rem; border:1.5px solid rgba(255,255,255,0.08); position:relative; overflow:hidden; backdrop-filter:blur(4px); transition:border-color .25s,transform .25s; }
-    .preview-tile:hover { border-color:rgba(245,166,35,0.4); transform:translateY(-3px); }
-    .preview-tile:nth-child(1){ background:linear-gradient(145deg,rgba(29,78,216,0.3),rgba(10,36,99,0.5)); }
-    .preview-tile:nth-child(2){ background:linear-gradient(145deg,rgba(245,166,35,0.15),rgba(10,36,99,0.5)); }
-    .preview-tile:nth-child(3){ background:linear-gradient(145deg,rgba(16,185,129,0.2),rgba(10,36,99,0.5)); }
-    .preview-tile:nth-child(4){ background:linear-gradient(145deg,rgba(220,38,38,0.2),rgba(10,36,99,0.5)); }
-    .preview-tile:nth-child(5){ background:linear-gradient(145deg,rgba(124,58,237,0.25),rgba(10,36,99,0.5)); }
-    .preview-tile:nth-child(6){ background:linear-gradient(145deg,rgba(245,166,35,0.2),rgba(10,36,99,0.5)); }
-    .tile-icon { font-size:1.8rem; }
-    .tile-label { font-size:0.68rem; font-weight:700; color:rgba(255,255,255,0.5); text-align:center; padding:0 0.5rem; }
-    .preview-tile::after { content:'قريباً'; position:absolute; inset:0; background:rgba(10,15,30,0.55); backdrop-filter:blur(6px); display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700; color:rgba(255,255,255,0.4); letter-spacing:1px; }
-    .gallery-actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
-    .gallery-actions .btn-wa { display:inline-flex; align-items:center; gap:0.5rem; background:var(--amber); color:#fff; font-weight:700; font-size:0.95rem; padding:0.9rem 2rem; border-radius:8px; text-decoration:none; transition:opacity .2s,transform .2s; }
-    .gallery-actions .btn-wa:hover { opacity:0.9; transform:translateY(-2px); }
-    .gallery-actions .btn-insta { display:inline-flex; align-items:center; gap:0.5rem; background:transparent; border:1.5px solid rgba(255,255,255,0.25); color:#fff; font-weight:600; font-size:0.95rem; padding:0.9rem 2rem; border-radius:8px; text-decoration:none; transition:border-color .2s,background .2s; }
-    .gallery-actions .btn-insta:hover { border-color:rgba(245,166,35,0.6); background:rgba(245,166,35,0.08); }
-    .whats-coming { background:#f8faff; padding:60px 5%; text-align:center; }
-    .coming-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:900px; margin:2.5rem auto 0; }
-    .coming-card { background:#fff; border:1.5px solid #e5e7eb; border-radius:14px; padding:2rem 1.5rem; text-align:center; transition:border-color .2s,box-shadow .2s; }
-    .coming-card:hover { border-color:var(--amber); box-shadow:0 6px 24px rgba(245,166,35,0.1); }
-    .coming-card .cc-icon { font-size:2.2rem; margin-bottom:0.8rem; }
-    .coming-card h3 { font-size:0.97rem; font-weight:800; color:#0d1b2a; margin-bottom:0.5rem; }
-    .coming-card p { font-size:0.85rem; color:#6b7280; line-height:1.75; margin:0; }
-    @media(max-width:700px){ .gallery-preview{grid-template-columns:repeat(2,1fr);} .coming-grid{grid-template-columns:1fr;max-width:380px;} }
+    @keyframes gridMove { 0% { transform: translateY(0); } 100% { transform: translateY(60px); } }
+    .gallery-hero::after {
+      content: ''; position: absolute;
+      bottom: -80px; left: 50%; transform: translateX(-50%);
+      width: 700px; height: 300px;
+      background: radial-gradient(ellipse, rgba(245,166,35,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+    .gallery-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(245,166,35,0.15); border: 1.5px solid rgba(245,166,35,0.4);
+      color: var(--amber); font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 1px; padding: 0.45rem 1.1rem; border-radius: 30px; margin-bottom: 1.6rem;
+    }
+    .gallery-hero h1 { font-size: clamp(2rem,5vw,3.5rem); font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 1rem; }
+    .gallery-hero h1 span { color: var(--amber); }
+    .gallery-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.65); line-height: 1.8; max-width: 520px; margin: 0 auto 2.5rem; }
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--amber); color: #fff; font-weight: 700; font-size: 0.95rem;
+      padding: 0.9rem 2rem; border-radius: 8px; text-decoration: none;
+      transition: opacity .2s, transform .2s;
+    }
+    .hero-cta:hover { opacity: 0.88; transform: translateY(-2px); }
+
+    .gallery-section { background: #f0f4fa; padding: 70px 5%; }
+    .gallery-grid { columns: 4 240px; column-gap: 14px; max-width: 1400px; margin: 0 auto; }
+    .gallery-item {
+      break-inside: avoid; margin-bottom: 14px; border-radius: 12px;
+      overflow: hidden; cursor: pointer; position: relative;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+      transition: transform .25s, box-shadow .25s;
+    }
+    .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(0,0,0,0.18); }
+    .gallery-item img { display: block; width: 100%; height: auto; object-fit: cover; transition: transform .4s; }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-item .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,36,99,0.55) 0%, transparent 50%);
+      opacity: 0; transition: opacity .25s;
+      display: flex; align-items: flex-end; padding: 1rem;
+    }
+    .gallery-item:hover .overlay { opacity: 1; }
+    .overlay-icon {
+      width: 36px; height: 36px; background: rgba(245,166,35,0.9); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; margin-right: auto;
+    }
+    .overlay-icon svg { width: 16px; height: 16px; stroke: #fff; fill: none; stroke-width: 2.5; }
+
+    #lightbox {
+      display: none; position: fixed; inset: 0; z-index: 9999;
+      background: rgba(5,10,25,0.95);
+      align-items: center; justify-content: center; padding: 20px;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img { max-width: 92vw; max-height: 88vh; border-radius: 10px; box-shadow: 0 20px 80px rgba(0,0,0,0.6); object-fit: contain; }
+    #lb-close {
+      position: fixed; top: 20px; left: 24px;
+      width: 42px; height: 42px; background: rgba(255,255,255,0.12);
+      border: 1.5px solid rgba(255,255,255,0.2); border-radius: 50%;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 1.3rem; transition: background .2s; z-index: 10000;
+    }
+    #lb-close:hover { background: rgba(245,166,35,0.4); }
+    #lb-prev, #lb-next {
+      position: fixed; top: 50%; transform: translateY(-50%);
+      width: 48px; height: 48px; background: rgba(255,255,255,0.1);
+      border: 1.5px solid rgba(255,255,255,0.18); border-radius: 50%;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 1.4rem; transition: background .2s; z-index: 10000; user-select: none;
+    }
+    #lb-prev { right: 16px; }
+    #lb-next { left: 16px; }
+    #lb-prev:hover, #lb-next:hover { background: rgba(245,166,35,0.4); }
+    #lb-counter { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.5); font-size: 0.82rem; }
+
+    .gallery-cta { background: linear-gradient(135deg, #0a2463, #1e3a8a); padding: 70px 5%; text-align: center; color: #fff; }
+    .gallery-cta h2 { font-size: clamp(1.6rem,3vw,2.4rem); font-weight: 900; margin-bottom: 0.8rem; }
+    .gallery-cta h2 span { color: var(--amber); }
+    .gallery-cta p { color: rgba(255,255,255,0.65); max-width: 500px; margin: 0 auto 2rem; line-height: 1.7; }
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .cta-btns a {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.9rem 2rem; border-radius: 8px;
+      font-weight: 700; font-size: 0.95rem; text-decoration: none;
+      transition: opacity .2s, transform .2s;
+    }
+    .cta-btns a:hover { opacity: 0.88; transform: translateY(-2px); }
+    .cta-btns .btn-primary { background: var(--amber); color: #fff; }
+    .cta-btns .btn-outline { border: 1.5px solid rgba(255,255,255,0.3); color: #fff; }
+    .cta-btns .btn-outline:hover { border-color: rgba(245,166,35,0.6); background: rgba(245,166,35,0.1); }
+
+    @media(max-width:600px) {
+      .gallery-grid { columns: 2 140px; column-gap: 8px; }
+      .gallery-item { margin-bottom: 8px; }
+    }
   </style>
   <link rel="stylesheet" href="../chatbot.css" />
 </head>
@@ -91,7 +161,7 @@
     <li class="has-dropdown"><a href="../brands.html" class="nav-packages-link">الماركات</a></li>
     <li class="has-dropdown"><a href="../service-packages.html" class="nav-packages-link">الباقات</a></li>
     <li><a href="../contact.html" class="nav-packages-link">اتصل بنا</a></li>
-    <li class="has-dropdown"><a href="#" class="nav-packages-link">المزيد</a><ul class="nav-dropdown"><li><a href="../faq.html">الأسئلة الشائعة</a></li><li><a href="../blogs.html">المدونة</a></li><li><a href="../gallery.html">المعرض</a></li></ul></li>
+    <li class="has-dropdown"><a href="#" class="nav-packages-link">المزيد</a><ul class="nav-dropdown"><li><a href="../faq.html">الأسئلة الشائعة</a></li><li><a href="../blogs.html">المدونة</a></li><li><a href="gallery.html">المعرض</a></li></ul></li>
   </ul>
   <a href="https://wa.me/971541699500?text=مرحبًا%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد" class="nav-cta">احجز الآن</a>
   <a href="../gallery.html" class="nav-lang">🇬🇧 EN</a>
@@ -103,57 +173,190 @@
   <a href="../about.html">من نحن</a>
   <a href="../contact.html">اتصل بنا</a>
   <a href="#" style="color:var(--amber);font-weight:700;">المزيد</a>
-  <a href="../faq.html" style="padding-left:1.5rem;font-size:0.87rem;">الأسئلة الشائعة</a>
-  <a href="../blogs.html" style="padding-left:1.5rem;font-size:0.87rem;">المدونة</a>
-  <a href="../gallery.html" style="padding-left:1.5rem;font-size:0.87rem;">المعرض</a>
+  <a href="../faq.html" style="padding-right:1.5rem;font-size:0.87rem;">الأسئلة الشائعة</a>
+  <a href="../blogs.html" style="padding-right:1.5rem;font-size:0.87rem;">المدونة</a>
+  <a href="gallery.html" style="padding-right:1.5rem;font-size:0.87rem;">المعرض</a>
   <a href="../service-packages.html" style="color:var(--amber);font-weight:700;">الباقات</a>
   <a href="https://wa.me/971541699500?text=مرحبًا%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد">📲 احجز عبر واتساب</a>
 </div>
 
+<!-- HERO -->
 <section class="gallery-hero">
-  <div class="gallery-content">
+  <div class="hero-inner">
     <div class="gallery-badge">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      قيد الإنشاء
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      صور حقيقية من الورشة
     </div>
-    <h1 class="gallery-title">معرضنا<br><span>قادم قريباً</span></h1>
-    <p class="gallery-sub">نعمل على تجميع صور حقيقية من ورشتنا — قبل وبعد الإصلاح، فريقنا أثناء العمل، والسيارات التي نحبّ العمل عليها. عودوا قريباً.</p>
-
-    <div class="gallery-preview">
-      <div class="preview-tile"><div class="tile-icon">🔧</div><div class="tile-label">إصلاح المحرك</div></div>
-      <div class="preview-tile"><div class="tile-icon">❄️</div><div class="tile-label">خدمة التكييف</div></div>
-      <div class="preview-tile"><div class="tile-icon">✨</div><div class="tile-label">التلميع والحماية</div></div>
-      <div class="preview-tile"><div class="tile-icon">🏎️</div><div class="tile-label">سيارات فاخرة</div></div>
-      <div class="preview-tile"><div class="tile-icon">⚡</div><div class="tile-label">كهربائية وهجينة</div></div>
-      <div class="preview-tile"><div class="tile-icon">🛠️</div><div class="tile-label">من الورشة</div></div>
-    </div>
-
-    <div class="gallery-actions">
-      <a href="https://wa.me/971541699500?text=مرحبًا%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد" class="btn-wa" target="_blank" rel="noopener">📲 احجز خدمة</a>
-      <a href="https://www.instagram.com/fixhive_ae/" class="btn-insta" target="_blank" rel="noopener">📸 تابعنا على إنستغرام</a>
-    </div>
+    <h1>من داخل <span>فيكس هايف</span></h1>
+    <p>من إصلاح المحركات إلى التلميع الفاخر — نظرة حقيقية على ورشتنا والسيارات التي نخدمها وفريقنا في مدينة دبي للاستثمار.</p>
+    <a href="https://wa.me/971541699500?text=مرحبًا%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد" class="hero-cta" target="_blank" rel="noopener">📲 احجز خدمة</a>
   </div>
 </section>
 
-<section class="whats-coming">
-  <div class="section-label">ما الذي ينتظركم</div>
-  <div class="section-title">لمحة عمّا سيأتي</div>
-  <div class="coming-grid">
-    <div class="coming-card">
-      <div class="cc-icon">🔄</div>
-      <h3>قبل وبعد</h3>
-      <p>تحولات حقيقية جنباً إلى جنب — من التلف إلى الكمال. كل عمل نفتخر به، موثّق بالصور.</p>
+<!-- PHOTO GRID -->
+<section class="gallery-section">
+  <div class="gallery-grid" id="galleryGrid">
+
+    <div class="gallery-item" onclick="openLb(0)">
+      <img src="../images/gallery/battery-replacement-car-service.JPEG" alt="Battery Replacement Car Service — FixHive Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
     </div>
-    <div class="coming-card">
-      <div class="cc-icon">🏎️</div>
-      <h3>سيارات مميزة</h3>
-      <p>أعمال مثيرة للاهتمام وأعطال غير مألوفة ومركبات لافتة تمرّ عبر أبوابنا — من السيارات اليومية إلى الفاخرة.</p>
+
+    <div class="gallery-item" onclick="openLb(1)">
+      <img src="../images/gallery/brake-pad-replacement-fixhive.JPEG" alt="Brake Pad Replacement — FixHive Garage Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
     </div>
-    <div class="coming-card">
-      <div class="cc-icon">👨‍🔧</div>
-      <h3>الفريق والورشة</h3>
-      <p>خلف الكواليس في فيكس هايف — فنيّونا وأدواتنا والبيئة التي تُعامَل فيها سيارتك بعناية.</p>
+
+    <div class="gallery-item" onclick="openLb(2)">
+      <img src="../images/gallery/car-ac-repair-service-dubai.JPEG" alt="Car AC Repair Service Dubai Investment Park" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
     </div>
+
+    <div class="gallery-item" onclick="openLb(3)">
+      <img src="../images/gallery/car-body-inspection-dubai-garage.JPG" alt="Car Body Inspection — Dubai Garage FixHive" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(4)">
+      <img src="../images/gallery/car-detailing-service-garage.JPEG" alt="Car Detailing Service — FixHive Garage" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(5)">
+      <img src="../images/gallery/car-diagnostics-scan-dubai.JPEG" alt="Car Diagnostics Scan — FixHive Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(6)">
+      <img src="../images/gallery/car-engine-repair-service-dubai.JPG" alt="Car Engine Repair Service Dubai — FixHive" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(7)">
+      <img src="../images/gallery/car-lift-underbody-inspection.JPG" alt="Car Lift Underbody Inspection — FixHive Workshop" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(8)">
+      <img src="../images/gallery/car-suspension-repair-garage.JPG" alt="Car Suspension Repair — FixHive Garage Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(9)">
+      <img src="../images/gallery/exhaust-system-repair-garage.JPEG" alt="Exhaust System Repair — FixHive Garage" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(10)">
+      <img src="../images/gallery/full-car-service-fixhive-dubai.JPG" alt="Full Car Service — FixHive Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(11)">
+      <img src="../images/gallery/mechanic-workshop-fixhive-dubai.JPEG" alt="Mechanic Workshop — FixHive Dubai Investment Park" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(12)">
+      <img src="../images/gallery/oil-change-service-auto-garage.JPG" alt="Oil Change Service — FixHive Auto Garage Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(13)">
+      <img src="../images/gallery/radiator-flush-coolant-service.JPEG" alt="Radiator Flush Coolant Service — FixHive" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(14)">
+      <img src="../images/gallery/spark-plug-replacement-workshop.JPEG" alt="Spark Plug Replacement — FixHive Workshop" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(15)">
+      <img src="../images/gallery/timing-belt-replacement-service.JPEG" alt="Timing Belt Replacement Service — FixHive Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(16)">
+      <img src="../images/gallery/tire-rotation-service-workshop.JPEG" alt="Tyre Rotation Service — FixHive Workshop Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(17)">
+      <img src="../images/gallery/transmission-repair-auto-service.JPEG" alt="Transmission Repair — FixHive Auto Service Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(18)">
+      <img src="../images/gallery/wheel-alignment-workshop-dubai.JPEG" alt="Wheel Alignment — FixHive Workshop Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(19)">
+      <img src="../images/gallery/Fixhive%20-%20Engine%20and%20transmission%20repair.png" alt="FixHive Engine and Transmission Repair Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(20)">
+      <img src="../images/gallery/IMG_0078.JPEG" alt="FixHive Workshop Dubai Investment Park" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(21)">
+      <img src="../images/gallery/IMG_0322.JPEG" alt="Car Service FixHive Garage Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(22)">
+      <img src="../images/gallery/IMG_0443.JPEG" alt="Professional Car Repair — FixHive Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(23)">
+      <img src="../images/gallery/IMG_0584.JPEG" alt="FixHive Garage Interior Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(24)">
+      <img src="../images/gallery/IMG_0591.JPEG" alt="Auto Repair Service — FixHive Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(25)">
+      <img src="../images/gallery/IMG_9689.JPEG" alt="Car Maintenance Dubai Investment Park" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(26)">
+      <img src="../images/gallery/IMG_9722.JPEG" alt="FixHive Mechanics at Work Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(27)">
+      <img src="../images/gallery/IMG_9839.JPEG" alt="Professional Car Service — FixHive Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(28)">
+      <img src="../images/gallery/52522206-18AF-4B6F-A928-B86ECAC132C1.JPG" alt="FixHive Garage Workshop Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLb(29)">
+      <img src="../images/gallery/9DCE0577-A915-4C82-837B-2F623B9908F0.JPG" alt="Car Repair Service — FixHive Dubai" loading="lazy" />
+      <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="gallery-cta">
+  <h2>هل أنت مستعد لحجز <span>خدمتك؟</span></h2>
+  <p>أحضر سيارتك إلى فيكس هايف واحصل على نفس جودة الرعاية التي تراها في كل صورة. خدمة سريعة وموثوقة بمستوى الوكالة — بدون أسعار الوكالة.</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/971541699500?text=مرحبًا%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد" class="btn-primary" target="_blank" rel="noopener">📲 احجز عبر واتساب</a>
+    <a href="../services.html" class="btn-outline">جميع الخدمات</a>
   </div>
 </section>
 
@@ -176,7 +379,7 @@
     <div class="footer-contact">
       <h4>التواصل</h4>
       <p>📍 WH2 فيكس هايف، شارع 80<br>مدينة دبي للاستثمار أولاً، دبي، الإمارات</p>
-      <p>🕐 الاثنين–السبت: 08:30 – 19:00</p>
+      <p>🕐 السبت–الخميس: 8:00ص – 8:00م</p>
       <p>📞 <a href="tel:+971541699500">+971 54 169 9500</a></p>
       <p>✉️ <a href="mailto:sale.ae@myfixhive.ae">sale.ae@myfixhive.ae</a></p>
       <p>💬 <a href="https://wa.me/971541699500?text=مرحبًا%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد">واتساب</a></p>
@@ -187,6 +390,49 @@
     <span>دبي، الإمارات العربية المتحدة</span>
   </div>
 </footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="عارض الصور">
+  <button id="lb-close" onclick="closeLb()" aria-label="إغلاق">✕</button>
+  <button id="lb-prev" onclick="moveLb(-1)" aria-label="السابق">›</button>
+  <img id="lb-img" src="" alt="صورة ورشة فيكس هايف" />
+  <button id="lb-next" onclick="moveLb(1)" aria-label="التالي">‹</button>
+  <div id="lb-counter"></div>
+</div>
+
+<script>
+  const imgs = Array.from(document.querySelectorAll('.gallery-item img')).map(i => i.src);
+  let cur = 0;
+  function openLb(idx) {
+    cur = idx;
+    document.getElementById('lb-img').src = imgs[cur];
+    document.getElementById('lb-counter').textContent = (cur+1) + ' / ' + imgs.length;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLb() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function moveLb(dir) {
+    cur = (cur + dir + imgs.length) % imgs.length;
+    document.getElementById('lb-img').src = imgs[cur];
+    document.getElementById('lb-counter').textContent = (cur+1) + ' / ' + imgs.length;
+  }
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLb();
+  });
+  document.addEventListener('keydown', function(e) {
+    const lb = document.getElementById('lightbox');
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft') moveLb(-1);
+    if (e.key === 'ArrowRight') moveLb(1);
+  });
+</script>
+
 <script src="../chatbot.js"></script>
+<script src="/js/nav.js" defer></script>
+<script src="/js/search.js" defer></script>
 </body>
 </html>
