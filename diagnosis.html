@@ -200,6 +200,48 @@
       gap: 0.75rem;
     }
 
+    /* ── SYMPTOM SEARCH BAR ── */
+    .symptom-search-wrap {
+      display: flex;
+      align-items: center;
+      background: rgba(255,255,255,0.07);
+      border: 1.5px solid rgba(255,255,255,0.18);
+      border-radius: 10px;
+      padding: 0.55rem 0.9rem;
+      margin-bottom: 1rem;
+      gap: 0.5rem;
+    }
+    .symptom-search-wrap:focus-within {
+      border-color: var(--amber);
+      background: rgba(245,166,35,0.06);
+    }
+    .symptom-search-icon { font-size: 1rem; opacity: 0.6; flex-shrink: 0; }
+    .symptom-search-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-size: 0.95rem;
+      font-family: inherit;
+    }
+    .symptom-search-input::placeholder { color: rgba(255,255,255,0.4); }
+    .symptom-add-btn {
+      background: var(--amber);
+      color: #0D1B2A;
+      border: none;
+      border-radius: 6px;
+      padding: 0.3rem 0.75rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .symptom-add-btn:hover { background: #e0941a; }
+    .symptom-add-btn.hidden { display: none; }
+    .symptom-chip.hidden { display: none; }
+
     /* ── SYMPTOM CHIPS ── */
     .symptom-grid {
       display: flex;
@@ -675,6 +717,11 @@
       <div class="diag-step-body">
         <h2>What symptoms are you noticing?</h2>
         <p class="step-sub">Select all that apply — the more you pick, the sharper the diagnosis.</p>
+        <div class="symptom-search-wrap">
+          <span class="symptom-search-icon">🔍</span>
+          <input type="text" id="symptomSearch" class="symptom-search-input" placeholder="Search symptoms or describe your own…" autocomplete="off" />
+          <button type="button" id="symptomAddBtn" class="symptom-add-btn hidden">+ Add</button>
+        </div>
         <p class="symptom-min-note">Tap to select (minimum 1)</p>
         <div class="symptom-grid" id="symptomGrid"></div>
       </div>
@@ -881,6 +928,7 @@ const state = { name: '', year: '', brand: '', model: '', symptoms: [], mileage:
     const chip = document.createElement('div');
     chip.className = 'symptom-chip';
     chip.dataset.index = i;
+    chip.dataset.label = s.label;
     chip.innerHTML = `<span>${s.icon}</span><span>${s.label}</span><span class="chip-check">✓</span>`;
     chip.addEventListener('click', () => toggleSymptom(chip, s.label));
     grid.appendChild(chip);
@@ -936,6 +984,55 @@ function toggleSymptom(chip, label) {
   }
   document.getElementById('btn3').disabled = state.symptoms.length === 0;
 }
+
+/* ── SYMPTOM SEARCH + CUSTOM ADD ── */
+(function initSymptomSearch() {
+  const searchInput = document.getElementById('symptomSearch');
+  const addBtn      = document.getElementById('symptomAddBtn');
+  const grid        = document.getElementById('symptomGrid');
+
+  searchInput.addEventListener('input', function() {
+    const q = this.value.trim().toLowerCase();
+    const chips = grid.querySelectorAll('.symptom-chip');
+    let anyVisible = false;
+    chips.forEach(chip => {
+      const text = chip.dataset.label.toLowerCase();
+      const show = !q || text.includes(q);
+      chip.classList.toggle('hidden', !show);
+      if (show) anyVisible = true;
+    });
+    /* Show "+ Add" button when query doesn't match any existing chip */
+    const exactMatch = [...chips].some(c => c.dataset.label.toLowerCase() === q);
+    addBtn.classList.toggle('hidden', !q || exactMatch);
+  });
+
+  addBtn.addEventListener('click', function() {
+    const label = searchInput.value.trim();
+    if (!label) return;
+    /* Don't add duplicates */
+    const existing = [...grid.querySelectorAll('.symptom-chip')].find(
+      c => c.dataset.label.toLowerCase() === label.toLowerCase()
+    );
+    if (existing) {
+      if (!existing.classList.contains('selected')) toggleSymptom(existing, existing.dataset.label);
+      existing.classList.remove('hidden');
+      existing.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } else {
+      const chip = document.createElement('div');
+      chip.className = 'symptom-chip selected';
+      chip.dataset.label = label;
+      chip.innerHTML = `<span>⚠️</span><span>${label}</span><span class="chip-check">✓</span>`;
+      chip.addEventListener('click', () => toggleSymptom(chip, label));
+      grid.appendChild(chip);
+      state.symptoms.push(label);
+      document.getElementById('btn3').disabled = false;
+    }
+    searchInput.value = '';
+    addBtn.classList.add('hidden');
+    /* Re-show all chips */
+    grid.querySelectorAll('.symptom-chip').forEach(c => c.classList.remove('hidden'));
+  });
+})();
 
 /* ── URGENCY ── */
 function selectUrgency(level) {
