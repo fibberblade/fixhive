@@ -13,7 +13,7 @@
   var T = isAr ? {
     greeting:       'أهلًا وسهلًا! 👋 مرحبًا بك في فيكس هايف غاراج.',
     howHelp:        'كيف يمكننا مساعدتك اليوم؟',
-    services:       ['تكييف وتبريد', 'المحرك', 'الفرامل والتعليق', 'الإطارات', 'الهيكل والديتيلينج', 'الجير', 'التشخيص', 'أخرى'],
+    services:       ['صيانة خفيفة', 'صيانة شاملة', 'تكييف وتبريد', 'المحرك', 'الفرامل والتعليق', 'الإطارات', 'الهيكل والديتيلينج', 'الجير', 'التشخيص', 'أخرى'],
     greatChoice:    'اختيار رائع! 👌 ما اسمك الكريم؟',
     namePlaceholder:'اسمك...',
     niceMeet:       'تشرفنا، ',
@@ -35,7 +35,7 @@
   } : {
     greeting:       'Hi there! 👋 Welcome to FixHive Garage.',
     howHelp:        'How can we help you today?',
-    services:       ['AC & Cooling', 'Engine', 'Brakes & Suspension', 'Tyres & Wheels', 'Body & Detailing', 'Gearbox', 'Diagnostics', 'Other'],
+    services:       ['Minor Service', 'Major Service', 'AC & Cooling', 'Engine', 'Brakes & Suspension', 'Tyres & Wheels', 'Body & Detailing', 'Gearbox', 'Diagnostics', 'Other'],
     greatChoice:    'Great choice! 👌 May I ask your name?',
     namePlaceholder:'Your name…',
     niceMeet:       'Nice to meet you, ',
@@ -242,7 +242,7 @@
       wrap.appendChild(btn);
     });
     msgs.appendChild(wrap);
-    scrollBottom();
+    msgs.scrollTop = wrap.offsetTop;
   }
 
   function removeChoices() {
