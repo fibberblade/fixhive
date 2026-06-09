@@ -283,6 +283,8 @@ nav ul li a.nav-offers-link:hover {
   gap: 1rem;
   z-index: 99;
   border-top: 1px solid rgba(255,255,255,0.08);
+  max-height: calc(100vh - 68px);
+  overflow-y: auto;
 }
 .mobile-menu.open { display: flex; }
 .mobile-menu a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
