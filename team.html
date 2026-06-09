@@ -357,37 +357,154 @@
   </button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="services.html">All Services</a>
-  <a href="ac-service.html" style="padding-left:1.5rem;font-size:0.87rem;">AC &amp; Cooling</a>
-  <a href="engine.html" style="padding-left:1.5rem;font-size:0.87rem;">Engine &amp; Transmission</a>
-  <a href="brakes.html" style="padding-left:1.5rem;font-size:0.87rem;">Brakes &amp; Suspension</a>
-  <a href="tyres.html" style="padding-left:1.5rem;font-size:0.87rem;">Tyres &amp; Wheels</a>
-  <a href="body.html" style="padding-left:1.5rem;font-size:0.87rem;">Body &amp; Exterior</a>
-  <a href="electrical.html" style="padding-left:1.5rem;font-size:0.87rem;">Battery &amp; Electrical</a>
-  <a href="hybrid-ev.html" style="padding-left:1.5rem;font-size:0.87rem;">Hybrid &amp; EV</a>
-  <a href="pre-purchase-inspection.html" style="padding-left:1.5rem;font-size:0.87rem;">Pre-Purchase Inspection</a>
-  <a href="service-packages.html" style="padding-left:1.5rem;font-size:0.87rem;">Service Packages</a>
-  <a href="detailing.html" style="padding-left:1.5rem;font-size:0.87rem;">Detailing &amp; Protection</a>
-  <a href="gearbox.html" style="padding-left:1.5rem;font-size:0.87rem;">Gearbox &amp; Drivetrain</a>
-  <a href="diagnostics.html" style="padding-left:1.5rem;font-size:0.87rem;">Advanced Diagnostics</a>
-  <a href="brands.html" style="color:var(--amber);font-weight:700;">Brands</a>
-  <a href="about.html">About</a>
-  <a href="about.html#values" style="padding-left:1.5rem;font-size:0.87rem;">Our Values</a>
-  <a href="about.html#history" style="padding-left:1.5rem;font-size:0.87rem;">How We Got Here</a>
-  <a href="team.html" style="padding-left:1.5rem;font-size:0.87rem;color:var(--amber);">The Team</a>
-  <a href="contact.html" class="nav-packages-link">Contact</a>
-  <a href="#" style="color:var(--amber);font-weight:700;">More</a>
-  <a href="faq.html" style="padding-left:1.5rem;font-size:0.87rem;">FAQ</a>
-  <a href="blogs.html" style="padding-left:1.5rem;font-size:0.87rem;">Blog</a>
-  <a href="gallery.html" style="padding-left:1.5rem;font-size:0.87rem;">Gallery</a>
-  <a href="service-packages.html" style="color:var(--amber);font-weight:700;">Packages</a>
-  <a href="service-packages.html#fixcare" style="padding-left:1.5rem;font-size:0.87rem;">FixCare</a>
-  <a href="service-packages.html#fixprime" style="padding-left:1.5rem;font-size:0.87rem;">FixPrime</a>
-  <a href="service-packages.html#fixelite" style="padding-left:1.5rem;font-size:0.87rem;">FixElite</a>
-  <a href="offers.html" style="color:var(--amber);background:rgba(245,166,35,0.14);border:1.5px solid rgba(245,166,35,0.55);font-weight:700;border-radius:20px;padding:0.4rem 1rem;">🔥 Special Offers</a>
-  <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment">📲 Book on WhatsApp</a>
+  <!-- About -->
+  <div class="mob-item">
+    <div class="mob-row">
+      <a href="/about.html" class="mob-row-link">About</a>
+      <button class="mob-toggle" onclick="var el=this;while(el&&!el.classList.contains('mob-item'))el=el.parentElement;if(el)el.classList.toggle('open')" aria-label="Expand">&#9660;</button>
+    </div>
+    <div class="mob-sub">
+      <a href="/about.html#values">Our Values</a>
+      <a href="/about.html#history">How We Got Here</a>
+      <a href="/about.html#why-fixhive">Why Choose FixHive</a>
+      <a href="/about.html#social">Stay Connected</a>
+      <a href="/about.html#team" class="mob-sub-disabled">The Team (coming soon)</a>
+    </div>
+  </div>
+  <!-- Services -->
+  <div class="mob-item">
+    <div class="mob-row">
+      <a href="/services.html" class="mob-row-link">Services</a>
+      <button class="mob-toggle" onclick="var el=this;while(el&&!el.classList.contains('mob-item'))el=el.parentElement;if(el)el.classList.toggle('open')" aria-label="Expand">&#9660;</button>
+    </div>
+    <div class="mob-sub">
+      <a href="/ac-service.html">AC &amp; Cooling</a>
+      <a href="/engine.html">Engine &amp; Transmission</a>
+      <a href="/brakes.html">Brakes &amp; Suspension</a>
+      <a href="/tyres.html">Tyres &amp; Wheels</a>
+      <a href="/body.html">Body &amp; Exterior</a>
+      <a href="/electrical.html">Battery &amp; Electrical</a>
+      <a href="/hybrid-ev.html">Hybrid &amp; EV</a>
+      <a href="/pre-purchase-inspection.html">Pre-Purchase Inspection</a>
+      <a href="/service-packages.html">Service Packages</a>
+      <a href="/detailing.html">Detailing &amp; Protection</a>
+      <a href="/gearbox.html">Gearbox &amp; Drivetrain</a>
+      <a href="/diagnostics.html">Advanced Diagnostics</a>
+    </div>
+  </div>
+  <!-- Self Diagnosis -->
+  <div class="mob-item">
+    <div class="mob-row">
+      <a href="/diagnosis.html" class="mob-row-link mob-diagnosis">&#x1F52C; Free AI Diagnosis</a>
+    </div>
+  </div>
+  <!-- Brands -->
+  <div class="mob-item">
+    <div class="mob-row">
+      <a href="/brands.html" class="mob-row-link">Brands</a>
+      <button class="mob-toggle" onclick="var el=this;while(el&&!el.classList.contains('mob-item'))el=el.parentElement;if(el)el.classList.toggle('open')" aria-label="Expand">&#9660;</button>
+    </div>
+    <div class="mob-sub-brands">
+      <a href="/alfa-romeo-repair-dubai.html">Alfa Romeo</a>
+      <a href="/aston-martin-repair-dubai.html">Aston Martin</a>
+      <a href="/audi-repair-dubai.html">Audi</a>
+      <a href="/bentley-repair-dubai.html">Bentley</a>
+      <a href="/bmw-repair-dubai.html">BMW</a>
+      <a href="/byd-repair-dubai.html">BYD</a>
+      <a href="/cadillac-repair-dubai.html">Cadillac</a>
+      <a href="/changan-repair-dubai.html">Changan</a>
+      <a href="/chery-repair-dubai.html">Chery</a>
+      <a href="/chevrolet-repair-dubai.html">Chevrolet</a>
+      <a href="/chrysler-repair-dubai.html">Chrysler</a>
+      <a href="/daihatsu-repair-dubai.html">Daihatsu</a>
+      <a href="/dodge-repair-dubai.html">Dodge</a>
+      <a href="/ferrari-repair-dubai.html">Ferrari</a>
+      <a href="/fiat-repair-dubai.html">Fiat</a>
+      <a href="/ford-repair-dubai.html">Ford</a>
+      <a href="/gac-repair-dubai.html">GAC</a>
+      <a href="/geely-repair-dubai.html">Geely</a>
+      <a href="/genesis-repair-dubai.html">Genesis</a>
+      <a href="/gmc-repair-dubai.html">GMC</a>
+      <a href="/haval-repair-dubai.html">Haval</a>
+      <a href="/honda-repair-dubai.html">Honda</a>
+      <a href="/hongqi-repair-dubai.html">HongQi</a>
+      <a href="/hyundai-repair-dubai.html">Hyundai</a>
+      <a href="/infiniti-repair-dubai.html">Infiniti</a>
+      <a href="/isuzu-repair-dubai.html">Isuzu</a>
+      <a href="/jaguar-repair-dubai.html">Jaguar</a>
+      <a href="/jeep-repair-dubai.html">Jeep</a>
+      <a href="/jetour-repair-dubai.html">Jetour</a>
+      <a href="/kia-repair-dubai.html">Kia</a>
+      <a href="/lamborghini-repair-dubai.html">Lamborghini</a>
+      <a href="/land-rover-repair-dubai.html">Land Rover</a>
+      <a href="/lexus-repair-dubai.html">Lexus</a>
+      <a href="/lincoln-repair-dubai.html">Lincoln</a>
+      <a href="/maserati-repair-dubai.html">Maserati</a>
+      <a href="/maybach-repair-dubai.html">Maybach</a>
+      <a href="/mazda-repair-dubai.html">Mazda</a>
+      <a href="/mercedes-benz-repair-dubai.html">Mercedes-Benz</a>
+      <a href="/mg-repair-dubai.html">MG</a>
+      <a href="/mini-repair-dubai.html">MINI</a>
+      <a href="/mitsubishi-repair-dubai.html">Mitsubishi</a>
+      <a href="/nissan-repair-dubai.html">Nissan</a>
+      <a href="/peugeot-repair-dubai.html">Peugeot</a>
+      <a href="/porsche-repair-dubai.html">Porsche</a>
+      <a href="/ram-repair-dubai.html">RAM</a>
+      <a href="/land-rover-repair-dubai.html">Range Rover</a>
+      <a href="/renault-repair-dubai.html">Renault</a>
+      <a href="/rolls-royce-repair-dubai.html">Rolls-Royce</a>
+      <a href="/subaru-repair-dubai.html">Subaru</a>
+      <a href="/suzuki-repair-dubai.html">Suzuki</a>
+      <a href="/tesla-repair-dubai.html">Tesla</a>
+      <a href="/toyota-repair-dubai.html">Toyota</a>
+      <a href="/volkswagen-repair-dubai.html">Volkswagen</a>
+      <a href="/volvo-repair-dubai.html">Volvo</a>
+      <a href="/brands.html" class="mob-brands-all">View All Brands &#8594;</a>
+    </div>
+  </div>
+  <!-- Packages -->
+  <div class="mob-item">
+    <div class="mob-row">
+      <a href="/service-packages.html" class="mob-row-link">Packages</a>
+      <button class="mob-toggle" onclick="var el=this;while(el&&!el.classList.contains('mob-item'))el=el.parentElement;if(el)el.classList.toggle('open')" aria-label="Expand">&#9660;</button>
+    </div>
+    <div class="mob-sub">
+      <a href="/service-packages.html#fixcare">FixCare</a>
+      <a href="/service-packages.html#fixprime">FixPrime</a>
+      <a href="/service-packages.html#fixelite">FixElite</a>
+    </div>
+  </div>
+  <!-- Offers -->
+  <div class="mob-item">
+    <div class="mob-row">
+      <a href="/offers.html" class="mob-row-link mob-offers">&#x1F525; Special Offers</a>
+    </div>
+  </div>
+  <!-- Contact -->
+  <div class="mob-item">
+    <div class="mob-row">
+      <a href="/contact.html" class="mob-row-link">Contact</a>
+    </div>
+  </div>
+  <!-- More -->
+  <div class="mob-item">
+    <div class="mob-row">
+      <a href="#" class="mob-row-link">More</a>
+      <button class="mob-toggle" onclick="var el=this;while(el&&!el.classList.contains('mob-item'))el=el.parentElement;if(el)el.classList.toggle('open')" aria-label="Expand">&#9660;</button>
+    </div>
+    <div class="mob-sub">
+      <a href="/faq.html">FAQ</a>
+      <a href="/blogs.html">Blog</a>
+      <a href="/gallery.html">Gallery</a>
+    </div>
+  </div>
+  <!-- WhatsApp -->
+  <div class="mob-item">
+    <div class="mob-row">
+      <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="mob-row-link mob-whatsapp">&#x1F4F2; Book on WhatsApp</a>
+    </div>
+  </div>
 </div>
-
 <div class="page-hero">
   <div class="breadcrumb"><a href="/">Home</a> / <a href="about.html">About Us</a> / The Team</div>
   <h1>Meet the <em>Team</em></h1>
