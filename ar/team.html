@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-819HFHM37T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-819HFHM37T');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>تعرّف على الفريق | ورشة فيكس هايف دبي</title>
+  <meta name="description" content="تعرّف على فريق ورشة فيكس هايف دبي — مهندسون متخصصون وعشاق سيارات يقدمون خدمة إصلاح بمستوى الوكالة." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://myfixhive.ae/ar/team.html" />
+  <meta name="geo.position" content="24.98;55.10">
+  <meta name="geo.region" content="AE-DU">
+  <meta name="geo.placename" content="Dubai">
+
+  <link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/team.html" />
+  <link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/team.html" />
+  <link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/team.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://myfixhive.ae/ar/team.html" />
+  <meta property="og:title" content="تعرّف على الفريق | ورشة فيكس هايف دبي" />
+  <meta property="og:description" content="تعرّف على المهندسين وعشاق السيارات خلف ورشة فيكس هايف دبي." />
+  <meta property="og:image" content="https://myfixhive.ae/images/og-fixhive.jpg" />
+  <meta property="og:locale" content="ar_AE" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://myfixhive.ae/ar/"},
+      {"@type":"ListItem","position":2,"name":"من نحن","item":"https://myfixhive.ae/ar/about.html"},
+      {"@type":"ListItem","position":3,"name":"الفريق","item":"https://myfixhive.ae/ar/team.html"}
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="../shared.css" />
+  <style>
+    /* ── TEAM PAGE ── */
+    .team-intro {
+      padding: 64px 5% 48px;
+      max-width: 780px;
+      margin-right: 0;
+      margin-left: auto;
+    }
+    .team-intro p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.9;
+      margin-top: 0.8rem;
+    }
+
+    /* ── TEAM GRID ── */
+    .team-section {
+      padding: 0 5% 80px;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 2.5rem;
+    }
+
+    /* ── MEMBER CARD ── */
+    .member-card {
+      background: #fff;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+      position: relative;
+    }
+    .member-card:hover {
+      box-shadow: 0 20px 60px rgba(13,27,42,0.12), 0 0 0 1px rgba(245,166,35,0.2);
+      transform: translateY(-6px);
+      border-color: rgba(245,166,35,0.4);
+    }
+
+    .member-photo-wrap {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: var(--dark);
+    }
+    .member-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .member-card:hover .member-photo-wrap img {
+      transform: scale(1.04);
+    }
+    .member-role-badge {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      background: var(--dark);
+      color: var(--amber);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      border: 1px solid rgba(245,166,35,0.4);
+    }
+
+    .member-body {
+      padding: 1.8rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .member-name {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--dark);
+      margin-bottom: 0.2rem;
+      letter-spacing: -0.01em;
+    }
+    .member-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--amber);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+    .member-divider {
+      width: 40px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--amber), #ffcc5c);
+      border-radius: 2px;
+      margin-bottom: 1.4rem;
+    }
+    .member-bio {
+      color: #4b5563;
+      font-size: 0.93rem;
+      line-height: 1.9;
+      flex: 1;
+    }
+    .member-bio p {
+      margin-bottom: 0.9rem;
+    }
+    .member-bio p:last-child { margin-bottom: 0; }
+
+    .member-traits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+    .trait-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #0d1b2a;
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+      padding: 0.3rem 0.8rem;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .member-card:hover .trait-tag {
+      background: #fef3c7;
+      border-color: #fcd34d;
+    }
+
+    .member-card-placeholder {
+      background: #f8faff;
+      border: 2px dashed #d1d5db;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 3rem 2rem;
+      text-align: center;
+      min-height: 320px;
+    }
+    .placeholder-icon {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: #e5e7eb;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+    }
+    .placeholder-label {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #6b7280;
+    }
+    .placeholder-sub {
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+
+    .team-cta {
+      background: var(--dark);
+      padding: 60px 5%;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .team-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(245,166,35,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .team-cta .section-label { color: var(--amber); position: relative; }
+    .team-cta h2 {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 900;
+      color: #fff;
+      margin: 0.6rem 0 0.8rem;
+      position: relative;
+    }
+    .team-cta p {
+      color: rgba(255,255,255,0.6);
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto 2rem;
+      line-height: 1.8;
+      position: relative;
+    }
+    .team-cta-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .team-cta-btns a.btn-amber {
+      background: var(--amber);
+      color: #fff;
+      font-weight: 700;
+      padding: 0.9rem 2.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: opacity 0.2s;
+    }
+    .team-cta-btns a.btn-amber:hover { opacity: 0.88; }
+    .team-cta-btns a.btn-outline {
+      background: transparent;
+      color: #fff;
+      font-weight: 700;
+      padding: 0.9rem 2.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .team-cta-btns a.btn-outline:hover {
+      border-color: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.07);
+    }
+
+    @media (max-width: 600px) {
+      .team-grid { grid-template-columns: 1fr; }
+      .member-body { padding: 1.4rem 1.4rem 1.6rem; }
+    }
+  </style>
+  <link rel="stylesheet" href="../chatbot.css" />
+</head>
+<body>
+
+<a href="https://wa.me/971541699500?text=مرحباً%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد" class="top-bar" target="_blank" rel="noopener" aria-label="تواصل مع مستشار الخدمة على واتساب">
+  <span class="top-bar-icon">💬</span>
+  <span class="top-bar-text"><strong>تحدّث مع مستشار الخدمة</strong> — متاح الآن على واتساب</span>
+  <span class="top-bar-cta">تواصل الآن ←</span>
+</a>
+
+<nav>
+  <a href="../index.html" class="logo"><img src="../img/logo.webp" alt="ورشة فيكس هايف دبي" /></a>
+  <ul>
+    <li class="has-dropdown"><a href="../about.html" class="nav-packages-link">من نحن</a><ul class="nav-dropdown"><li><a href="../about.html#values">قيمنا</a></li><li><a href="../about.html#history">مسيرتنا</a></li><li><a href="../about.html#why-fixhive">لماذا فيكس هايف</a></li><li><a href="team.html" class="active">الفريق</a></li></ul></li>
+    <li class="has-dropdown"><a href="../services.html" class="nav-packages-link">الخدمات</a><ul class="nav-dropdown"><li><a href="../ac-service.html">التكييف والتبريد</a></li><li><a href="../engine.html">المحرك وناقل الحركة</a></li><li><a href="../brakes.html">الفرامل والتعليق</a></li><li><a href="../tyres.html">الإطارات والعجلات</a></li><li><a href="../body.html">الهيكل والمظهر الخارجي</a></li><li><a href="../electrical.html">البطارية والكهرباء</a></li><li><a href="../hybrid-ev.html">الهجين والكهربائي</a></li><li><a href="../service-packages.html">باقات الخدمة</a></li></ul></li>
+    <li class="has-dropdown"><a href="../brands.html" class="nav-packages-link">الماركات</a></li>
+    <li class="has-dropdown"><a href="../service-packages.html" class="nav-packages-link">الباقات</a><ul class="nav-dropdown"><li><a href="../service-packages.html#fixcare">فيكس كير</a></li><li><a href="../service-packages.html#fixprime">فيكس برايم</a></li><li><a href="../service-packages.html#fixelite">فيكس إيليت</a></li></ul></li>
+    <li><a href="../offers.html" class="nav-offers-link">🔥 العروض</a></li>
+    <li><a href="../contact.html" class="nav-packages-link">اتصل بنا</a></li>
+    <li class="has-dropdown"><a href="#" class="nav-packages-link">المزيد</a><ul class="nav-dropdown"><li><a href="../faq.html">الأسئلة الشائعة</a></li><li><a href="../blogs.html">المدونة</a></li><li><a href="../gallery.html">المعرض</a></li></ul></li>
+  </ul>
+  <div class="nav-search" id="navSearch"><button class="nav-search-toggle" onclick="var ns=this.parentNode;ns.classList.toggle('open');if(ns.classList.contains('open')){var i=document.getElementById('navSearchInput');i&&i.focus()}" aria-label="بحث"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button><div class="nav-search-drop"><input type="text" id="navSearchInput" placeholder="ابحث في فيكس هايف…" autocomplete="off" aria-label="بحث" style="text-align:right;"><div class="nav-search-results" id="navSearchResults"></div></div></div>
+  <a href="https://wa.me/971541699500?text=مرحباً%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد" class="nav-cta">احجز الآن</a>
+  <a href="../team.html" class="nav-lang">🇬🇧 EN</a>
+  <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="القائمة">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../about.html">من نحن</a>
+  <a href="team.html" style="padding-right:1.5rem;font-size:0.87rem;color:var(--amber);">الفريق</a>
+  <a href="../services.html" style="color:var(--amber);font-weight:700;">الخدمات</a>
+  <a href="../service-packages.html" style="color:var(--amber);font-weight:700;">الباقات</a>
+  <a href="../offers.html" style="color:var(--amber);background:rgba(245,166,35,0.14);border:1.5px solid rgba(245,166,35,0.55);font-weight:700;border-radius:20px;padding:0.4rem 1rem;">🔥 العروض</a>
+  <a href="../contact.html">اتصل بنا</a>
+  <a href="https://wa.me/971541699500?text=مرحباً%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد">📲 احجز على واتساب</a>
+</div>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="../index.html">الرئيسية</a> / <a href="../about.html">من نحن</a> / الفريق</div>
+  <h1>تعرّف على <em>الفريق</em></h1>
+  <p>الأشخاص خلف كل تشخيص، كل إصلاح، وكل سيارة تعود إلى الطريق. شغوفون، ماهرون، ويحبون فعلاً ما يعملون.</p>
+</div>
+
+<div class="trust-bar">
+  <div class="trust-item"><strong>+18</strong><span>سنة خبرة</span></div>
+  <div class="trust-item"><strong>5 ★</strong><span>تقييم العملاء</span></div>
+  <div class="trust-item"><strong>جميع الماركات</strong><span>أوروبي · ياباني · أمريكي · كوري</span></div>
+  <div class="trust-item"><strong>مدينة دبي للاستثمار</strong><span>Dubai Investment Park</span></div>
+</div>
+
+<div class="team-intro">
+  <div class="section-label">الكوادر البشرية</div>
+  <div class="section-title">خبراء يهتمون حقاً</div>
+  <p>في فيكس هايف، فريقنا هو كل شيء. مهندسون وعشاق سيارات وحلّالو مشكلات يؤمنون بأن رعاية السيارات الممتازة تبدأ بأشخاص ممتازين. كل فرد في الفريق يشترك في نفس الالتزام: إنجاز العمل بإتقان، والصدق الدائم، وعدم التوقف عن التطوّر.</p>
+</div>
+
+<!-- TEAM GRID -->
+<section class="team-section" aria-label="فريق فيكس هايف">
+  <div class="team-grid">
+
+    <!-- Luca — Owner -->
+    <article class="member-card" id="luca">
+      <div class="member-photo-wrap">
+        <img src="../images/team/luca.jpg" alt="لوكا — مالك ورشة فيكس هايف دبي" loading="lazy" />
+        <span class="member-role-badge">المالك</span>
+      </div>
+      <div class="member-body">
+        <div class="member-name">Luca</div>
+        <div class="member-title">المالك والقوة المحرّكة</div>
+        <div class="member-divider"></div>
+        <div class="member-bio">
+          <p>أنا لوكا، مالك الشركة والقوة المحرّكة خلفها.</p>
+          <p>بدأت مسيرتي في الهندسة، حيث طوّرت شغفاً بفهم كيفية عمل الأشياء، وحلّ المشكلات المعقدة، وإيجاد حلول عملية. لا يزال ذهني الهندسي يشكّل كل ما أفعله اليوم — سواء في تشخيص مشكلة معقدة في السيارة، أو تطوير عمليات الورشة، أو بناء شركة تقدّم قيمة حقيقية للعملاء.</p>
+          <p>أنا عاشق سيارات بامتياز، وأعتزّ بكوني "ميكانيكي أيدي". السيارات والمحركات والأنظمة الميكانيكية لم تكن يوماً مجرد مهنة بالنسبة لي — بل شغف. أستمتع بالعمل بيدَيّ، وحل المشكلات التي يعجز الآخرون عن حلّها، والتعلم المستمر عن أحدث تقنيات السيارات.</p>
+          <p>خارج الورشة، أنا شغوف بالأعمال والعمليات. أؤمن بأن النجاح يأتي من الجمع بين الخبرة التقنية والعمليات الفعّالة وخدمة العملاء القوية والتركيز الدائم على الجودة. هدفي بناء شركة يثق بها العملاء وفريق يفخر بتقديم نتائج استثنائية.</p>
+          <p>سواء كان الأمر يتعلق بحلّ تحدٍّ تقني معقد، أو تحسين الكفاءة التشغيلية، أو مساعدة عميل على العودة إلى الطريق، فأنا مدفوع دائماً بمبدأ واحد: أنجز العمل بإتقان ولا تتوقف عن التطوّر.</p>
+          <p>حين تزور ورشتنا، لا تتعامل مع مجرد شركة — بل مع أناس يحبون فعلاً ما يعملون.</p>
+        </div>
+        <div class="member-traits">
+          <span class="trait-tag">⚙️ خلفية هندسية</span>
+          <span class="trait-tag">🔧 ميكانيكي أيدي</span>
+          <span class="trait-tag">🏎️ عاشق سيارات</span>
+          <span class="trait-tag">📈 عمليات ونمو</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Placeholder -->
+    <div class="member-card-placeholder" aria-label="المزيد من أعضاء الفريق قريباً">
+      <div class="placeholder-icon">👤</div>
+      <div class="placeholder-label">المزيد من أعضاء الفريق قريباً</div>
+      <div class="placeholder-sub">نعمل على إضافة الفريق كاملاً. تابعونا.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="team-cta" aria-label="احجز خدمة في فيكس هايف">
+  <div class="section-label">تعالَ وزُرنا</div>
+  <h2>يسعدنا الاعتناء بسيارتك.</h2>
+  <p>احجز خدمة واختبر الفرق مع فيكس هايف بنفسك. نصائح صادقة، أيدٍ ماهرة، وفريق يهتم حقاً.</p>
+  <div class="team-cta-btns">
+    <a href="https://wa.me/971541699500?text=مرحباً%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد" target="_blank" rel="noopener" class="btn-amber">📲 احجز على واتساب</a>
+    <a href="../about.html" class="btn-outline">من نحن ←</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo"><img src="../img/logo.webp" alt="ورشة فيكس هايف دبي" /></a>
+      <p>خدمات إصلاح سيارات موثوقة وبأسعار معقولة وسريعة في جميع أنحاء دبي. جودة على مستوى الوكالة — بدون أسعار الوكالة.</p>
+    </div>
+    <div>
+      <h4>روابط سريعة</h4>
+      <ul>
+        <li><a href="../services.html">جميع الخدمات</a></li>
+        <li><a href="../about.html">من نحن</a></li>
+        <li><a href="team.html">الفريق</a></li>
+        <li><a href="../contact.html">اتصل بنا</a></li>
+        <li><a href="https://wa.me/971541699500?text=مرحباً%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد">احجز على واتساب</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>تواصل معنا</h4>
+      <p>📍 WH2 فيكس هايف، شارع 80<br>مدينة دبي للاستثمار الأولى، دبي، الإمارات</p>
+      <p>🕐 الاثنين – السبت: 08:30 – 19:00</p>
+      <p>📞 <a href="tel:+971541699500">+971 54 169 9500</a></p>
+      <p>✉️ <a href="mailto:sale.ae@myfixhive.ae">sale.ae@myfixhive.ae</a></p>
+      <p>💬 <a href="https://wa.me/971541699500?text=مرحباً%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد">واتساب</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 فيكس هايف — شركة ساهر لإصلاح السيارات العامة ذ.م.م</span>
+    <span>دبي، الإمارات العربية المتحدة</span>
+  </div>
+</footer>
+
+<script src="../chatbot.js" defer></script>
+<script src="/js/nav.js" defer></script>
+</body>
+</html>

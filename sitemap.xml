@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- ── Priority 1.0 — Core pages ── -->
+  <!-- â”€â”€ Priority 1.0 â€” Core pages â”€â”€ -->
   <url>
     <loc>https://myfixhive.ae/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/"/>
-    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/"/>
   </url>
   <url>
@@ -34,7 +34,7 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- ── Priority 0.9 — Service pages ── -->
+  <!-- â”€â”€ Priority 0.9 â€” Service pages â”€â”€ -->
   <url>
     <loc>https://myfixhive.ae/ac-service.html</loc>
     <lastmod>2026-06-05</lastmod>
@@ -153,7 +153,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/tyres.html"/>
   </url>
 
-  <!-- ── Priority 0.9 — Brand pages ── -->
+  <!-- â”€â”€ Priority 0.9 â€” Brand pages â”€â”€ -->
   <url>
     <loc>https://myfixhive.ae/toyota-repair-dubai.html</loc>
     <lastmod>2026-06-05</lastmod>
@@ -362,7 +362,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- ── Priority 0.8 — Key landing pages ── -->
+  <!-- â”€â”€ Priority 0.8 â€” Key landing pages â”€â”€ -->
   <url>
     <loc>https://myfixhive.ae/faq.html</loc>
     <lastmod>2026-06-05</lastmod>
@@ -391,7 +391,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- ── Priority 0.7 — Blog index ── -->
+  <!-- â”€â”€ Priority 0.7 â€” Blog index â”€â”€ -->
   <url>
     <loc>https://myfixhive.ae/blogs.html</loc>
     <lastmod>2026-06-06</lastmod>
@@ -402,7 +402,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/blogs.html"/>
   </url>
 
-  <!-- ── Priority 0.7 — Individual blog posts (44) ── -->
+  <!-- â”€â”€ Priority 0.7 â€” Individual blog posts (44) â”€â”€ -->
   <url><loc>https://myfixhive.ae/blog/post-summer-car-check-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://myfixhive.ae/blog/gearbox-problems-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://myfixhive.ae/blog/wheel-alignment-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -448,9 +448,9 @@
   <url><loc>https://myfixhive.ae/blog/uae-road-trip-car-inspection.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://myfixhive.ae/blog/choose-trustworthy-mechanic-dubai.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <!-- ── Priority 0.6 — Arabic pages ── -->
+  <!-- â”€â”€ Priority 0.6 â€” Arabic pages â”€â”€ -->
   <url>
-    <loc>https://myfixhive.ae/ar/index.html</loc>
+    <loc>https://myfixhive.ae/ar/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -619,3 +619,4 @@
   </url>
 
 </urlset>
+

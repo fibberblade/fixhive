@@ -1,0 +1,514 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-819HFHM37T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-819HFHM37T');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Meet the Team | FixHive Garage Dubai</title>
+  <meta name="description" content="Meet the people behind FixHive Garage Dubai. Passionate engineers, petrolheads and automotive experts dedicated to delivering dealer-quality car repair." />
+  <meta name="keywords" content="FixHive team, car repair team Dubai, automotive experts Dubai, Luca FixHive owner" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://myfixhive.ae/team.html" />
+  <meta name="geo.position" content="24.98;55.10">
+  <meta name="geo.region" content="AE-DU">
+  <meta name="geo.placename" content="Dubai">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://myfixhive.ae/team.html" />
+  <meta property="og:title" content="Meet the Team | FixHive Garage Dubai" />
+  <meta property="og:description" content="Meet the passionate engineers and automotive experts behind FixHive Garage Dubai." />
+  <meta property="og:image" content="https://myfixhive.ae/images/og-fixhive.jpg" />
+  <meta property="og:site_name" content="FixHive Garage" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meet the Team | FixHive Garage Dubai" />
+  <meta name="twitter:description" content="Passionate engineers and automotive experts — meet the FixHive team." />
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://myfixhive.ae/"},
+      {"@type":"ListItem","position":2,"name":"About Us","item":"https://myfixhive.ae/about.html"},
+      {"@type":"ListItem","position":3,"name":"The Team","item":"https://myfixhive.ae/team.html"}
+    ]
+  }
+  </script>
+
+  <!-- Person Schema — Luca -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Luca",
+    "jobTitle": "Owner",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "FixHive Garage",
+      "url": "https://myfixhive.ae"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    /* ── TEAM PAGE ── */
+    .team-intro {
+      padding: 64px 5% 48px;
+      max-width: 780px;
+    }
+    .team-intro p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-top: 0.8rem;
+    }
+
+    /* ── TEAM GRID ── */
+    .team-section {
+      padding: 0 5% 80px;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 2.5rem;
+    }
+
+    /* ── MEMBER CARD ── */
+    .member-card {
+      background: #fff;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+      position: relative;
+    }
+    .member-card:hover {
+      box-shadow: 0 20px 60px rgba(13,27,42,0.12), 0 0 0 1px rgba(245,166,35,0.2);
+      transform: translateY(-6px);
+      border-color: rgba(245,166,35,0.4);
+    }
+
+    /* Photo area */
+    .member-photo-wrap {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: var(--dark);
+    }
+    .member-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .member-card:hover .member-photo-wrap img {
+      transform: scale(1.04);
+    }
+    .member-role-badge {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      background: var(--dark);
+      color: var(--amber);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      border: 1px solid rgba(245,166,35,0.4);
+    }
+
+    /* Card body */
+    .member-body {
+      padding: 1.8rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .member-name {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--dark);
+      margin-bottom: 0.2rem;
+      letter-spacing: -0.01em;
+    }
+    .member-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--amber);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+    .member-divider {
+      width: 40px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--amber), #ffcc5c);
+      border-radius: 2px;
+      margin-bottom: 1.4rem;
+    }
+    .member-bio {
+      color: #4b5563;
+      font-size: 0.93rem;
+      line-height: 1.8;
+      flex: 1;
+    }
+    .member-bio p {
+      margin-bottom: 0.9rem;
+    }
+    .member-bio p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Traits / tags */
+    .member-traits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+    .trait-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #0d1b2a;
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+      padding: 0.3rem 0.8rem;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .member-card:hover .trait-tag {
+      background: #fef3c7;
+      border-color: #fcd34d;
+    }
+
+    /* ── COMING SOON CARD ── */
+    .member-card-placeholder {
+      background: #f8faff;
+      border: 2px dashed #d1d5db;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 3rem 2rem;
+      text-align: center;
+      min-height: 320px;
+    }
+    .placeholder-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+    .placeholder-label {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #6b7280;
+    }
+    .placeholder-sub {
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+
+    /* ── CTA STRIP ── */
+    .team-cta {
+      background: var(--dark);
+      padding: 60px 5%;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .team-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(245,166,35,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .team-cta .section-label { color: var(--amber); position: relative; }
+    .team-cta h2 {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 900;
+      color: #fff;
+      margin: 0.6rem 0 0.8rem;
+      position: relative;
+    }
+    .team-cta p {
+      color: rgba(255,255,255,0.6);
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+      position: relative;
+    }
+    .team-cta-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .team-cta-btns a.btn-amber {
+      background: var(--amber);
+      color: #fff;
+      font-weight: 700;
+      padding: 0.9rem 2.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: opacity 0.2s;
+    }
+    .team-cta-btns a.btn-amber:hover { opacity: 0.88; }
+    .team-cta-btns a.btn-outline {
+      background: transparent;
+      color: #fff;
+      font-weight: 700;
+      padding: 0.9rem 2.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .team-cta-btns a.btn-outline:hover {
+      border-color: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.07);
+    }
+
+    @media (max-width: 600px) {
+      .team-grid { grid-template-columns: 1fr; }
+      .member-body { padding: 1.4rem 1.4rem 1.6rem; }
+    }
+  </style>
+  <link rel="stylesheet" href="chatbot.css" />
+  <link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/team.html" />
+  <link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/team.html" />
+  <link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/team.html" />
+</head>
+<body>
+
+<a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="top-bar" target="_blank" rel="noopener" aria-label="Contact our service advisor on WhatsApp">
+  <span class="top-bar-icon">💬</span>
+  <span class="top-bar-text"><strong>Speak to a Service Advisor</strong> — available now on WhatsApp</span>
+  <span class="top-bar-cta">Chat Now →</span>
+</a>
+
+<nav>
+  <a href="/" class="logo"><img src="img/logo.webp" alt="FixHive Garage Dubai" /></a>
+  <ul>
+    <li class="has-dropdown"><a href="about.html" class="nav-packages-link">About</a><ul class="nav-dropdown"><li><a href="about.html#values">Our Values</a></li><li><a href="about.html#history">How We Got Here</a></li><li><a href="about.html#why-fixhive">Why Choose FixHive</a></li><li><a href="about.html#social">Stay Connected</a></li><li><a href="team.html" class="active">The Team</a></li></ul></li>
+    <li class="has-dropdown">
+      <a href="services.html" class="nav-packages-link">Services</a>
+      <ul class="nav-dropdown">
+        <li><a href="ac-service.html">AC &amp; Cooling</a></li>
+        <li><a href="engine.html">Engine &amp; Transmission</a></li>
+        <li><a href="brakes.html">Brakes &amp; Suspension</a></li>
+        <li><a href="tyres.html">Tyres &amp; Wheels</a></li>
+        <li><a href="body.html">Body &amp; Exterior</a></li>
+        <li><a href="electrical.html">Battery &amp; Electrical</a></li>
+        <li><a href="hybrid-ev.html">Hybrid &amp; EV</a></li>
+        <li><a href="pre-purchase-inspection.html">Pre-Purchase Inspection</a></li>
+        <li><a href="service-packages.html">Service Packages</a></li>
+        <li><a href="detailing.html">Detailing &amp; Protection</a></li>
+        <li><a href="gearbox.html">Gearbox &amp; Drivetrain</a></li>
+        <li><a href="diagnostics.html">Advanced Diagnostics</a></li>
+      </ul>
+    </li>
+    <li><a href="diagnosis.html" class="nav-packages-link">Self Diagnosis</a></li>
+    <li class="has-dropdown"><a href="brands.html" class="nav-packages-link">Brands</a><ul class="nav-mega"><li><a href="alfa-romeo-repair-dubai.html">Alfa Romeo</a></li><li><a href="aston-martin-repair-dubai.html">Aston Martin</a></li><li><a href="audi-repair-dubai.html">Audi</a></li><li><a href="bentley-repair-dubai.html">Bentley</a></li><li><a href="bmw-repair-dubai.html">BMW</a></li><li><a href="byd-repair-dubai.html">BYD</a></li><li><a href="cadillac-repair-dubai.html">Cadillac</a></li><li><a href="changan-repair-dubai.html">Changan</a></li><li><a href="chery-repair-dubai.html">Chery</a></li><li><a href="chevrolet-repair-dubai.html">Chevrolet</a></li><li><a href="chrysler-repair-dubai.html">Chrysler</a></li><li><a href="daihatsu-repair-dubai.html">Daihatsu</a></li><li><a href="dodge-repair-dubai.html">Dodge</a></li><li><a href="ferrari-repair-dubai.html">Ferrari</a></li><li><a href="fiat-repair-dubai.html">Fiat</a></li><li><a href="ford-repair-dubai.html">Ford</a></li><li><a href="gac-repair-dubai.html">GAC</a></li><li><a href="geely-repair-dubai.html">Geely</a></li><li><a href="genesis-repair-dubai.html">Genesis</a></li><li><a href="gmc-repair-dubai.html">GMC</a></li><li><a href="haval-repair-dubai.html">Haval</a></li><li><a href="honda-repair-dubai.html">Honda</a></li><li><a href="hongqi-repair-dubai.html">HongQi</a></li><li><a href="hyundai-repair-dubai.html">Hyundai</a></li><li><a href="infiniti-repair-dubai.html">Infiniti</a></li><li><a href="isuzu-repair-dubai.html">Isuzu</a></li><li><a href="jaguar-repair-dubai.html">Jaguar</a></li><li><a href="jeep-repair-dubai.html">Jeep</a></li><li><a href="jetour-repair-dubai.html">Jetour</a></li><li><a href="kia-repair-dubai.html">Kia</a></li><li><a href="lamborghini-repair-dubai.html">Lamborghini</a></li><li><a href="land-rover-repair-dubai.html">Land Rover</a></li><li><a href="lexus-repair-dubai.html">Lexus</a></li><li><a href="lincoln-repair-dubai.html">Lincoln</a></li><li><a href="maserati-repair-dubai.html">Maserati</a></li><li><a href="maybach-repair-dubai.html">Maybach</a></li><li><a href="mazda-repair-dubai.html">Mazda</a></li><li><a href="mercedes-benz-repair-dubai.html">Mercedes-Benz</a></li><li><a href="mg-repair-dubai.html">MG</a></li><li><a href="mini-repair-dubai.html">MINI</a></li><li><a href="mitsubishi-repair-dubai.html">Mitsubishi</a></li><li><a href="nissan-repair-dubai.html">Nissan</a></li><li><a href="peugeot-repair-dubai.html">Peugeot</a></li><li><a href="porsche-repair-dubai.html">Porsche</a></li><li><a href="ram-repair-dubai.html">RAM</a></li><li><a href="land-rover-repair-dubai.html">Range Rover</a></li><li><a href="renault-repair-dubai.html">Renault</a></li><li><a href="rolls-royce-repair-dubai.html">Rolls-Royce</a></li><li><a href="subaru-repair-dubai.html">Subaru</a></li><li><a href="suzuki-repair-dubai.html">Suzuki</a></li><li><a href="tesla-repair-dubai.html">Tesla</a></li><li><a href="toyota-repair-dubai.html">Toyota</a></li><li><a href="volkswagen-repair-dubai.html">Volkswagen</a></li><li><a href="volvo-repair-dubai.html">Volvo</a></li><li class="nav-mega-footer"><a href="brands.html">All Brands</a></li></ul></li>
+    <li class="has-dropdown"><a href="service-packages.html" class="nav-packages-link">Packages</a><ul class="nav-dropdown"><li><a href="service-packages.html#fixcare">FixCare</a></li><li><a href="service-packages.html#fixprime">FixPrime</a></li><li><a href="service-packages.html#fixelite">FixElite</a></li></ul></li>
+    <li><a href="offers.html" class="nav-offers-link">🔥 Offers</a></li>
+    <li><a href="contact.html" class="nav-packages-link">Contact</a></li>
+    <li class="has-dropdown"><a href="#" class="nav-packages-link">More</a><ul class="nav-dropdown"><li><a href="faq.html">FAQ</a></li><li><a href="blogs.html">Blog</a></li><li><a href="gallery.html">Gallery</a></li></ul></li>
+  </ul>
+  <div class="nav-search" id="navSearch"><button class="nav-search-toggle" onclick="var ns=this.parentNode;ns.classList.toggle('open');if(ns.classList.contains('open')){var i=document.getElementById('navSearchInput');i&&i.focus()}" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button><div class="nav-search-drop"><input type="text" id="navSearchInput" placeholder="Search FixHive&#8230;" autocomplete="off" aria-label="Search FixHive"><div class="nav-search-results" id="navSearchResults"></div></div></div>
+  <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="nav-cta">Book Now</a>
+  <a href="ar/team.html" class="nav-lang">🇦🇪 AR</a>
+  <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="services.html">All Services</a>
+  <a href="ac-service.html" style="padding-left:1.5rem;font-size:0.87rem;">AC &amp; Cooling</a>
+  <a href="engine.html" style="padding-left:1.5rem;font-size:0.87rem;">Engine &amp; Transmission</a>
+  <a href="brakes.html" style="padding-left:1.5rem;font-size:0.87rem;">Brakes &amp; Suspension</a>
+  <a href="tyres.html" style="padding-left:1.5rem;font-size:0.87rem;">Tyres &amp; Wheels</a>
+  <a href="body.html" style="padding-left:1.5rem;font-size:0.87rem;">Body &amp; Exterior</a>
+  <a href="electrical.html" style="padding-left:1.5rem;font-size:0.87rem;">Battery &amp; Electrical</a>
+  <a href="hybrid-ev.html" style="padding-left:1.5rem;font-size:0.87rem;">Hybrid &amp; EV</a>
+  <a href="pre-purchase-inspection.html" style="padding-left:1.5rem;font-size:0.87rem;">Pre-Purchase Inspection</a>
+  <a href="service-packages.html" style="padding-left:1.5rem;font-size:0.87rem;">Service Packages</a>
+  <a href="detailing.html" style="padding-left:1.5rem;font-size:0.87rem;">Detailing &amp; Protection</a>
+  <a href="gearbox.html" style="padding-left:1.5rem;font-size:0.87rem;">Gearbox &amp; Drivetrain</a>
+  <a href="diagnostics.html" style="padding-left:1.5rem;font-size:0.87rem;">Advanced Diagnostics</a>
+  <a href="brands.html" style="color:var(--amber);font-weight:700;">Brands</a>
+  <a href="about.html">About</a>
+  <a href="about.html#values" style="padding-left:1.5rem;font-size:0.87rem;">Our Values</a>
+  <a href="about.html#history" style="padding-left:1.5rem;font-size:0.87rem;">How We Got Here</a>
+  <a href="team.html" style="padding-left:1.5rem;font-size:0.87rem;color:var(--amber);">The Team</a>
+  <a href="contact.html" class="nav-packages-link">Contact</a>
+  <a href="#" style="color:var(--amber);font-weight:700;">More</a>
+  <a href="faq.html" style="padding-left:1.5rem;font-size:0.87rem;">FAQ</a>
+  <a href="blogs.html" style="padding-left:1.5rem;font-size:0.87rem;">Blog</a>
+  <a href="gallery.html" style="padding-left:1.5rem;font-size:0.87rem;">Gallery</a>
+  <a href="service-packages.html" style="color:var(--amber);font-weight:700;">Packages</a>
+  <a href="service-packages.html#fixcare" style="padding-left:1.5rem;font-size:0.87rem;">FixCare</a>
+  <a href="service-packages.html#fixprime" style="padding-left:1.5rem;font-size:0.87rem;">FixPrime</a>
+  <a href="service-packages.html#fixelite" style="padding-left:1.5rem;font-size:0.87rem;">FixElite</a>
+  <a href="offers.html" style="color:var(--amber);background:rgba(245,166,35,0.14);border:1.5px solid rgba(245,166,35,0.55);font-weight:700;border-radius:20px;padding:0.4rem 1rem;">🔥 Special Offers</a>
+  <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment">📲 Book on WhatsApp</a>
+</div>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="/">Home</a> / <a href="about.html">About Us</a> / The Team</div>
+  <h1>Meet the <em>Team</em></h1>
+  <p>The people behind every diagnosis, every repair, and every car returned to the road. Passionate, skilled, and genuinely love what they do.</p>
+</div>
+
+<div class="trust-bar">
+  <div class="trust-item"><strong>18+</strong><span>Years Experience</span></div>
+  <div class="trust-item"><strong>5 ★</strong><span>Customer Rating</span></div>
+  <div class="trust-item"><strong>All Makes</strong><span>EU · JPN · US · KR</span></div>
+  <div class="trust-item"><strong>DIP</strong><span>Dubai Investment Park</span></div>
+</div>
+
+<div class="team-intro">
+  <div class="section-label">The People</div>
+  <div class="section-title">Experts Who Care</div>
+  <p>At FixHive, our team is everything. We're engineers, petrolheads, and problem-solvers who believe that great car care starts with great people. Every person here shares the same commitment: do the job properly, be honest, and never stop improving.</p>
+</div>
+
+<!-- TEAM GRID -->
+<section class="team-section" aria-label="FixHive team members">
+  <div class="team-grid">
+
+    <!-- Luca — Owner -->
+    <article class="member-card" id="luca">
+      <div class="member-photo-wrap">
+        <img src="images/team/luca.jpg" alt="Luca — Owner of FixHive Garage Dubai" loading="lazy" />
+        <span class="member-role-badge">Owner</span>
+      </div>
+      <div class="member-body">
+        <div class="member-name">Luca</div>
+        <div class="member-title">Owner &amp; Driving Force</div>
+        <div class="member-divider"></div>
+        <div class="member-bio">
+          <p>I'm Luca, the owner and driving force behind the business.</p>
+          <p>My journey started in engineering, where I developed a passion for understanding how things work, solving complex problems, and finding practical solutions. That engineering mindset still shapes everything I do today — whether it's diagnosing a challenging vehicle issue, improving workshop operations, or building a business that delivers real value to customers.</p>
+          <p>I'm a true petrolhead at heart and proudly consider myself a grease monkey. Cars, engines, and mechanical systems have always been more than just a profession for me — they're a passion. I enjoy getting my hands dirty, troubleshooting problems others can't solve, and continuously learning about the latest automotive technologies.</p>
+          <p>Beyond the workshop, I'm passionate about business and operations. I believe that success comes from combining technical expertise with efficient processes, strong customer service, and a relentless focus on quality. My goal is to build a company that customers can trust and a team that takes pride in delivering exceptional results.</p>
+          <p>Whether it's solving a complex technical challenge, improving operational efficiency, or helping a customer get back on the road, I'm driven by the same principle: do the job properly and never stop improving.</p>
+          <p>When you visit our workshop, you're not just dealing with a business — you're dealing with people who genuinely love what they do.</p>
+        </div>
+        <div class="member-traits">
+          <span class="trait-tag">⚙️ Engineering Background</span>
+          <span class="trait-tag">🔧 Grease Monkey</span>
+          <span class="trait-tag">🏎️ Petrolhead</span>
+          <span class="trait-tag">📈 Operations &amp; Growth</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Placeholder — more team members coming -->
+    <div class="member-card-placeholder" aria-label="More team members coming soon">
+      <div class="placeholder-icon">👤</div>
+      <div class="placeholder-label">More Team Members Coming Soon</div>
+      <div class="placeholder-sub">We're adding the full team here. Check back soon.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="team-cta" aria-label="Book a service at FixHive">
+  <div class="section-label">Come Meet Us</div>
+  <h2>We'd love to look after your car.</h2>
+  <p>Book a service and experience the FixHive difference firsthand. Honest advice, skilled hands, and a team that genuinely cares.</p>
+  <div class="team-cta-btns">
+    <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" target="_blank" rel="noopener" class="btn-amber">📲 Book on WhatsApp</a>
+    <a href="about.html" class="btn-outline">About FixHive →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="logo"><img src="img/logo.webp" alt="FixHive Garage Dubai" /></a>
+      <p>Reliable, affordable, and fast car repair services across Dubai. Dealer-level quality — without dealer prices.</p>
+      <div class="footer-payment">
+        <div class="footer-payment-label">We Accept</div>
+        <div class="footer-payment-icons">
+          <span class="pay-badge" title="Visa" aria-label="Visa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="32" viewBox="0 0 52 32" role="img" aria-label="Visa"><rect width="52" height="32" rx="4" fill="#1A1F71"/><text x="26" y="23" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="900" font-style="italic" fill="#fff" text-anchor="middle">VISA</text></svg>
+          </span>
+          <span class="pay-badge" title="Mastercard" aria-label="Mastercard">
+            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="32" viewBox="0 0 52 32" role="img" aria-label="Mastercard"><rect width="52" height="32" rx="4" fill="#1d1d1d"/><circle cx="20" cy="16" r="10" fill="#EB001B"/><circle cx="32" cy="16" r="10" fill="#F79E1B"/><path d="M26 7a10 10 0 0 1 0 18A10 10 0 0 1 26 7z" fill="#FF5F00"/></svg>
+          </span>
+          <a href="https://tabby.ai" class="pay-badge pay-tabby" target="_blank" rel="noopener" title="Tabby – Pay in 4 interest-free instalments" aria-label="Tabby Buy Now Pay Later">tabby</a>
+          <a href="https://paymob.com" class="pay-badge pay-paymob" target="_blank" rel="noopener" title="Paymob secure online payment" aria-label="Paymob">paymob</a>
+          <a href="https://www.fazaa.ae" class="pay-badge pay-fazaa" target="_blank" rel="noopener" title="Fazaa UAE Government Discount Programme" aria-label="Fazaa UAE">fazaa</a>
+        </div>
+        <p class="payment-seo-text">FixHive Garage Dubai accepts Visa, Mastercard, Tabby buy now pay later (pay in 4 instalments), Paymob online payment, and Fazaa UAE government discount programme. Pay for car repairs in instalments with Tabby. Fazaa cardholders receive exclusive discounts. We accept all major credit cards and debit cards.</p>
+      </div>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="services.html">All Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="team.html">The Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment">Book on WhatsApp</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>📍 WH2 FixHive, 80 Street<br>Dubai Investment Park First, Dubai, UAE</p>
+      <p>🕐 Mon–Sat: 08:30 – 19:00</p>
+      <p>📞 <a href="tel:+971541699500">+971 54 169 9500</a></p>
+      <p>✉️ <a href="mailto:sale.ae@myfixhive.ae">sale.ae@myfixhive.ae</a></p>
+      <p>💬 <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment">WhatsApp Us</a></p>
+      <p>⭐ <a href="https://www.google.com/maps/search/Fixhive+Automotive+Garage+Car+Repair+Service+DIP+Dubai" target="_blank" rel="noopener">Google Reviews</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 FixHive Garage — Saher Auto General Repairing LLC</span>
+    <span>Dubai, UAE</span>
+  </div>
+</footer>
+
+<script src="chatbot.js" defer></script>
+<script src="/js/nav.js" defer></script>
+<script src="/js/search.js" defer></script>
+</body>
+</html>
+

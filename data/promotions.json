@@ -17,18 +17,18 @@
   {
     "id": 2,
     "title": "Free 360° Safety Check",
-    "description": "Book any service and receive a complimentary 360° vehicle inspection — brakes, tyres, battery, fluids, suspension, lights and more. Know exactly where your car stands.",
-    "badge": "Free Add-on",
+    "description": "Get a complimentary 360° vehicle inspection — brakes, tyres, battery, fluids, suspension, lights and more. Know exactly where your car stands.",
+    "badge": "Free",
     "badgeColor": "green",
     "imageUrl": "images/promos/safety.svg",
     "imageAlt": "360 degree vehicle safety inspection scan",
     "priceLabel": "Price",
-    "price": "Free at every service",
+    "price": "Complimentary",
     "priceColor": "green",
     "priceSmall": true,
     "cta": "Book on WhatsApp",
-    "ctaUrl": "https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20to%20book%20a%20service%20and%20the%20free%20360%20safety%20check",
-    "tcNote": "* T&C's apply. Free 360° check included with every paid service booking.",
+    "ctaUrl": "https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20360%20safety%20check",
+    "tcNote": "* T&C's apply.",
     "active": true
   },
   {
