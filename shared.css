@@ -312,11 +312,6 @@ nav ul li a.nav-offers-link:hover {
 .mob-sub-brands a:hover { color: #fff; }
 .mob-sub-brands .mob-brands-all { width: 100%; text-align: center; color: var(--amber); font-weight: 700; margin-top: 0.25rem; padding-top: 0.6rem; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: none; }
 
-/* highlight items */
-.mob-row-link.mob-amber { color: var(--amber); }
-.mob-row-link.mob-offers { color: var(--amber); background: rgba(245,166,35,0.12); border-radius: 20px; padding: 0.25rem 0.8rem; }
-.mob-row-link.mob-whatsapp { color: #4ade80; }
-.mob-row-link.mob-diagnosis { color: var(--amber); }
 
 /* ── BUTTONS ── */
 .btn-primary {
