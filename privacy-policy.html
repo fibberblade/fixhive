@@ -57,17 +57,62 @@
     }
 
     .pp-toc {
-      background: #f8faff;
-      border: 1.5px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 1.5rem 2rem;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
     }
-    .pp-toc h2 { font-size: 0.95rem; font-weight: 700; color: #1e3a8a; margin: 0 0 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
-    .pp-toc ol { margin: 0; padding-left: 1.4rem; }
-    .pp-toc li { margin-bottom: 0.4rem; }
-    .pp-toc a { color: #1d4ed8; font-size: 0.92rem; text-decoration: none; }
-    .pp-toc a:hover { text-decoration: underline; }
+    .pp-toc-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      background: #f0f4ff;
+      border: 1.5px solid #c7d7f0;
+      border-radius: 10px;
+      padding: 0.85rem 1.2rem;
+      cursor: pointer;
+      width: 100%;
+      font-family: inherit;
+      transition: background .2s, border-color .2s;
+    }
+    .pp-toc-toggle:hover { background: #e4ecff; border-color: #1d4ed8; }
+    .pp-toc-toggle.open { border-radius: 10px 10px 0 0; border-bottom-color: transparent; }
+    .pp-toc-toggle-left { display: flex; align-items: center; gap: 0.6rem; }
+    .pp-toc-toggle-left svg { color: #1e3a8a; flex-shrink: 0; }
+    .pp-toc-label { font-size: 0.88rem; font-weight: 700; color: #1e3a8a; text-transform: uppercase; letter-spacing: 0.06em; }
+    .pp-toc-count { font-size: 0.78rem; color: #6b7280; font-weight: 500; }
+    .pp-toc-chevron { color: #6b7280; transition: transform .25s; flex-shrink: 0; }
+    .pp-toc-toggle.open .pp-toc-chevron { transform: rotate(180deg); }
+
+    .pp-toc-body {
+      display: none;
+      background: #f8faff;
+      border: 1.5px solid #c7d7f0;
+      border-top: none;
+      border-radius: 0 0 10px 10px;
+      padding: 0.5rem 0 0.75rem;
+    }
+    .pp-toc-body.open { display: block; }
+    .pp-toc-body ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      columns: 2;
+      column-gap: 0;
+    }
+    .pp-toc-body li { break-inside: avoid; }
+    .pp-toc-body a {
+      display: block;
+      padding: 0.38rem 1.4rem;
+      color: #1d4ed8;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background .15s, color .15s;
+    }
+    .pp-toc-body a:hover { background: #e4ecff; color: #0a2463; }
+    .pp-toc-body .toc-num { color: #9ca3af; font-size: 0.78rem; margin-left: 0.3rem; }
+
+    @media (max-width: 560px) {
+      .pp-toc-body ol { columns: 1; }
+    }
 
     .pp-section { margin-bottom: 3rem; scroll-margin-top: 120px; }
     .pp-section h2 {
@@ -122,7 +167,6 @@
     .pp-contact-box a:hover { text-decoration: underline; }
 
     @media (max-width: 640px) {
-      .pp-toc { padding: 1.2rem; }
       .pp-contact-box { padding: 1.5rem; }
     }
   </style>
@@ -335,21 +379,30 @@
   <span class="pp-updated">Last updated: June 2026</span>
 
   <nav class="pp-toc" aria-label="Table of contents">
-    <h2>Contents</h2>
-    <ol>
-      <li><a href="#who-we-are">Who We Are</a></li>
-      <li><a href="#data-we-collect">Personal Data We Collect</a></li>
-      <li><a href="#how-we-collect">How We Collect Your Data</a></li>
-      <li><a href="#why-we-use">Why We Use Your Data &amp; Legal Basis</a></li>
-      <li><a href="#sharing">Sharing Your Data</a></li>
-      <li><a href="#retention">How Long We Keep Your Data</a></li>
-      <li><a href="#security">How We Protect Your Data</a></li>
-      <li><a href="#your-rights">Your Rights Under UAE Law</a></li>
-      <li><a href="#cookies">Cookies &amp; Analytics</a></li>
-      <li><a href="#children">Children's Privacy</a></li>
-      <li><a href="#changes">Changes to This Policy</a></li>
-      <li><a href="#contact-dpo">Contact Us / Data Enquiries</a></li>
-    </ol>
+    <button class="pp-toc-toggle" id="tocToggle" aria-expanded="false" aria-controls="tocBody">
+      <span class="pp-toc-toggle-left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        <span class="pp-toc-label">Contents</span>
+        <span class="pp-toc-count">12 sections</span>
+      </span>
+      <svg class="pp-toc-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="pp-toc-body" id="tocBody" role="region">
+      <ol>
+        <li><a href="#who-we-are"><span class="toc-num">1.</span> Who We Are</a></li>
+        <li><a href="#data-we-collect"><span class="toc-num">2.</span> Personal Data We Collect</a></li>
+        <li><a href="#how-we-collect"><span class="toc-num">3.</span> How We Collect Your Data</a></li>
+        <li><a href="#why-we-use"><span class="toc-num">4.</span> Why We Use Your Data &amp; Legal Basis</a></li>
+        <li><a href="#sharing"><span class="toc-num">5.</span> Sharing Your Data</a></li>
+        <li><a href="#retention"><span class="toc-num">6.</span> How Long We Keep Your Data</a></li>
+        <li><a href="#security"><span class="toc-num">7.</span> How We Protect Your Data</a></li>
+        <li><a href="#your-rights"><span class="toc-num">8.</span> Your Rights Under UAE Law</a></li>
+        <li><a href="#cookies"><span class="toc-num">9.</span> Cookies &amp; Analytics</a></li>
+        <li><a href="#children"><span class="toc-num">10.</span> Children's Privacy</a></li>
+        <li><a href="#changes"><span class="toc-num">11.</span> Changes to This Policy</a></li>
+        <li><a href="#contact-dpo"><span class="toc-num">12.</span> Contact Us / Data Enquiries</a></li>
+      </ol>
+    </div>
   </nav>
 
   <!-- 1 -->
@@ -549,5 +602,22 @@
   </div>
 </footer>
 
+
+<script>
+var toggle = document.getElementById('tocToggle');
+var body = document.getElementById('tocBody');
+toggle.addEventListener('click', function() {
+  var open = body.classList.toggle('open');
+  toggle.classList.toggle('open', open);
+  toggle.setAttribute('aria-expanded', open);
+});
+body.querySelectorAll('a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    body.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  });
+});
+</script>
 </body>
 </html>
