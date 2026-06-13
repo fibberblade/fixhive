@@ -821,4 +821,11 @@
   <url><loc>https://myfixhive.ae/ar/offers.html</loc><lastmod>2026-06-09</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://myfixhive.ae/ar/team.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 
+  <url>
+    <loc>https://myfixhive.ae/privacy-policy.html</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>
