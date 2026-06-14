@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Hexagon background -->
+  <polygon points="32,2 58,17 58,47 32,62 6,47 6,17" fill="#0a2463"/>
+  <!-- Amber accent stripe -->
+  <polygon points="32,2 58,17 58,47 32,62 6,47 6,17" fill="none" stroke="#F5A623" stroke-width="3"/>
+  <!-- F letter -->
+  <text x="10" y="44" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="28" fill="#F5A623">F</text>
+  <!-- H letter -->
+  <text x="33" y="44" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="28" fill="#ffffff">H</text>
+</svg>
