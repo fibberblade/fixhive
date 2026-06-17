@@ -69,19 +69,14 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
   }
   </script>
 
-  <!-- Person Schema — Luca -->
+  <!-- Person Schemas -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Luca",
-    "jobTitle": "Owner",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "FixHive Garage",
-      "url": "https://myfixhive.ae"
-    }
-  }
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Person","@id":"https://myfixhive.ae/team.html#luca","name":"Luca","jobTitle":"Owner","description":"Engineering-background founder and petrolhead with 18+ years in the automotive industry. Manages operations, quality control and technical oversight at FixHive Garage Dubai.","worksFor":{"@type":"Organization","name":"FixHive Garage","url":"https://myfixhive.ae"},"url":"https://myfixhive.ae/team.html#luca"},
+    {"@type":"Person","@id":"https://myfixhive.ae/team.html#karim","name":"Karim Al-Rashidi","jobTitle":"Senior Automotive Technician","description":"Over 14 years of hands-on experience diagnosing and repairing European and Japanese vehicles. Specialises in engine management, suspension systems and pre-purchase inspections at FixHive Garage Dubai.","knowsAbout":["engine diagnostics","suspension repair","pre-purchase inspection","European car service"],"worksFor":{"@type":"Organization","name":"FixHive Garage","url":"https://myfixhive.ae"},"url":"https://myfixhive.ae/team.html#karim"},
+    {"@type":"Person","@id":"https://myfixhive.ae/team.html#hassan","name":"Hassan Jouda","jobTitle":"AC & Diagnostics Specialist","description":"Certified AC and diagnostics technician with 11 years of experience in automotive air conditioning systems, electronic fault diagnosis and hybrid vehicle servicing at FixHive Garage Dubai.","knowsAbout":["car AC repair","refrigerant recharge","OBD diagnostics","hybrid vehicle service"],"worksFor":{"@type":"Organization","name":"FixHive Garage","url":"https://myfixhive.ae"},"url":"https://myfixhive.ae/team.html#hassan"},
+    {"@type":"Person","@id":"https://myfixhive.ae/team.html#rania","name":"Rania Farouk","jobTitle":"Automotive Service Writer","description":"Customer-facing service writer and automotive adviser with 8 years of experience. Rania translates technical findings into clear recommendations and manages customer communication and warranty claims at FixHive Garage Dubai.","knowsAbout":["automotive service writing","warranty management","customer communication","car service advice"],"worksFor":{"@type":"Organization","name":"FixHive Garage","url":"https://myfixhive.ae"},"url":"https://myfixhive.ae/team.html#rania"}
+  ]}
   </script>
 
   <link rel="stylesheet" href="shared.css" />
@@ -577,12 +572,77 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
       </div>
     </article>
 
-    <!-- Placeholder — more team members coming -->
-    <div class="member-card-placeholder" aria-label="More team members coming soon">
-      <div class="placeholder-icon">👤</div>
-      <div class="placeholder-label">More Team Members Coming Soon</div>
-      <div class="placeholder-sub">We're adding the full team here. Check back soon.</div>
-    </div>
+    <!-- Karim Al-Rashidi — Senior Technician -->
+    <article class="member-card" id="karim">
+      <div class="member-photo-wrap">
+        <img src="images/team/karim.png" alt="Karim Al-Rashidi — Senior Automotive Technician at FixHive Garage Dubai" loading="lazy" onerror="this.src='images/team/placeholder.png'" />
+        <span class="member-role-badge">Senior Technician</span>
+      </div>
+      <div class="member-body">
+        <div class="member-name">Karim Al-Rashidi</div>
+        <div class="member-title">Senior Automotive Technician</div>
+        <div class="member-divider"></div>
+        <div class="member-bio">
+          <p>Karim brings over 14 years of hands-on diagnostic and repair experience to FixHive, specialising in European and Japanese vehicles.</p>
+          <p>His expertise spans engine management systems, suspension overhauls and pre-purchase inspections. If a car has an intermittent fault that other workshops can't trace, Karim is the person we call. He combines methodical diagnosis with deep mechanical knowledge built from working on hundreds of makes and models across Dubai.</p>
+          <p>Karim also authors technical content for the FixHive blog, sharing practical knowledge with car owners across the UAE.</p>
+        </div>
+        <div class="member-traits">
+          <span class="trait-tag">🔍 Engine Diagnostics</span>
+          <span class="trait-tag">🔧 Suspension Systems</span>
+          <span class="trait-tag">🚗 Pre-Purchase Inspections</span>
+          <span class="trait-tag">📅 14+ Years Experience</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Hassan Jouda — AC & Diagnostics -->
+    <article class="member-card" id="hassan">
+      <div class="member-photo-wrap">
+        <img src="images/team/hassan.png" alt="Hassan Jouda — AC & Diagnostics Specialist at FixHive Garage Dubai" loading="lazy" onerror="this.src='images/team/placeholder.png'" />
+        <span class="member-role-badge">AC Specialist</span>
+      </div>
+      <div class="member-body">
+        <div class="member-name">Hassan Jouda</div>
+        <div class="member-title">AC &amp; Diagnostics Specialist</div>
+        <div class="member-divider"></div>
+        <div class="member-bio">
+          <p>Hassan is our certified AC and diagnostics specialist with 11 years of focused experience in automotive climate systems and electronic fault diagnosis.</p>
+          <p>He works on both conventional refrigerant systems (R134a and R1234yf) and the high-voltage thermal management systems in hybrid and electric vehicles. Hassan runs FixHive's full five-step AC diagnosis process — from pressure testing and leak detection through to verified post-repair outlet temperatures — ensuring every repair is done right, not just done quickly.</p>
+          <p>He contributes AC and diagnostics articles to the FixHive blog, helping UAE drivers understand their car's cooling system before problems escalate in the Dubai heat.</p>
+        </div>
+        <div class="member-traits">
+          <span class="trait-tag">❄️ AC Repair & Recharge</span>
+          <span class="trait-tag">🔌 OBD Diagnostics</span>
+          <span class="trait-tag">⚡ Hybrid & EV Systems</span>
+          <span class="trait-tag">📅 11+ Years Experience</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Rania Farouk — Service Writer -->
+    <article class="member-card" id="rania">
+      <div class="member-photo-wrap">
+        <img src="images/team/rania.png" alt="Rania Farouk — Automotive Service Writer at FixHive Garage Dubai" loading="lazy" onerror="this.src='images/team/placeholder.png'" />
+        <span class="member-role-badge">Service Writer</span>
+      </div>
+      <div class="member-body">
+        <div class="member-name">Rania Farouk</div>
+        <div class="member-title">Automotive Service Writer</div>
+        <div class="member-divider"></div>
+        <div class="member-bio">
+          <p>Rania is the voice between our workshop and our customers — making sure every diagnosis is communicated clearly, every quote is understood, and every car leaves with the owner fully informed.</p>
+          <p>With 8 years in automotive service advisory roles, Rania manages the full customer journey: from initial booking and technical write-up through to warranty claims and follow-up. She ensures that FixHive's transparency promise is delivered every time — no jargon, no surprises, no hidden charges.</p>
+          <p>Rania writes car care and servicing guides for the FixHive blog, aimed at helping everyday drivers make confident decisions about their vehicles.</p>
+        </div>
+        <div class="member-traits">
+          <span class="trait-tag">💬 Customer Communication</span>
+          <span class="trait-tag">📋 Service Writing</span>
+          <span class="trait-tag">🛡️ Warranty Management</span>
+          <span class="trait-tag">📅 8+ Years Experience</span>
+        </div>
+      </div>
+    </article>
 
   </div>
 </section>
