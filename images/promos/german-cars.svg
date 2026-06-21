@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="gcBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="55%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="gcCarBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c0c8d4"/>
+      <stop offset="100%" stop-color="#8898aa"/>
+    </linearGradient>
+    <linearGradient id="gcAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f5a623"/>
+      <stop offset="100%" stop-color="#f7c948"/>
+    </linearGradient>
+    <radialGradient id="gcGlow" cx="50%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#f5a623" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#f5a623" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="gcShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="gcGlowFilter">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="200" fill="url(#gcBg)"/>
+  <!-- Ambient glow -->
+  <ellipse cx="200" cy="140" rx="180" ry="70" fill="url(#gcGlow)"/>
+
+  <!-- Amber accent bar top -->
+  <rect x="0" y="0" width="400" height="3" fill="url(#gcAccent)"/>
+
+  <!-- Luxury car silhouette (sedan profile) -->
+  <g filter="url(#gcShadow)" transform="translate(30,55)">
+    <!-- Car body -->
+    <path d="M20,100 L20,70 Q22,60 35,52 L90,35 Q115,28 150,26 L210,26 Q240,26 260,35 L300,60 Q315,68 318,76 L320,100 Z"
+          fill="url(#gcCarBody)" opacity="0.95"/>
+    <!-- Roof/cabin -->
+    <path d="M90,35 Q115,28 150,26 L210,26 Q240,26 260,35 L245,14 Q230,5 210,4 L155,4 Q130,4 108,14 Z"
+          fill="#d0d8e0" opacity="0.9"/>
+    <!-- Windscreen -->
+    <path d="M108,14 Q130,4 155,4 L155,26 L90,35 Z" fill="#6a9fd8" opacity="0.5"/>
+    <!-- Rear window -->
+    <path d="M245,14 Q230,5 210,4 L210,26 L260,35 Z" fill="#6a9fd8" opacity="0.45"/>
+    <!-- Side windows -->
+    <path d="M155,4 L210,4 L210,26 L150,26 Z" fill="#6a9fd8" opacity="0.4"/>
+    <!-- Grille -->
+    <rect x="302" y="68" width="18" height="22" rx="2" fill="#333" stroke="#f5a623" stroke-width="1.2"/>
+    <line x1="311" y1="68" x2="311" y2="90" stroke="#f5a623" stroke-width="0.8"/>
+    <line x1="302" y1="76" x2="320" y2="76" stroke="#f5a623" stroke-width="0.8"/>
+    <line x1="302" y1="82" x2="320" y2="82" stroke="#f5a623" stroke-width="0.8"/>
+    <!-- Front headlight -->
+    <ellipse cx="315" cy="64" rx="8" ry="4" fill="#fef3c7" opacity="0.8" filter="url(#gcGlowFilter)"/>
+    <!-- Rear light -->
+    <rect x="18" y="65" width="12" height="8" rx="2" fill="#ef4444" opacity="0.7"/>
+    <!-- Door lines -->
+    <line x1="170" y1="26" x2="166" y2="100" stroke="#aab4be" stroke-width="0.8" opacity="0.6"/>
+    <line x1="230" y1="26" x2="234" y2="100" stroke="#aab4be" stroke-width="0.8" opacity="0.6"/>
+    <!-- Wheels -->
+    <circle cx="80" cy="100" r="24" fill="#111" stroke="#888" stroke-width="1.5"/>
+    <circle cx="80" cy="100" r="16" fill="#222" stroke="#aaa" stroke-width="1"/>
+    <circle cx="80" cy="100" r="8" fill="#555"/>
+    <circle cx="260" cy="100" r="24" fill="#111" stroke="#888" stroke-width="1.5"/>
+    <circle cx="260" cy="100" r="16" fill="#222" stroke="#aaa" stroke-width="1"/>
+    <circle cx="260" cy="100" r="8" fill="#555"/>
+    <!-- Wheel spokes front -->
+    <line x1="260" y1="84" x2="260" y2="116" stroke="#aaa" stroke-width="1.2"/>
+    <line x1="244" y1="100" x2="276" y2="100" stroke="#aaa" stroke-width="1.2"/>
+    <line x1="249" y1="89" x2="271" y2="111" stroke="#aaa" stroke-width="1.2"/>
+    <line x1="271" y1="89" x2="249" y2="111" stroke="#aaa" stroke-width="1.2"/>
+    <!-- Wheel spokes rear -->
+    <line x1="80" y1="84" x2="80" y2="116" stroke="#aaa" stroke-width="1.2"/>
+    <line x1="64" y1="100" x2="96" y2="100" stroke="#aaa" stroke-width="1.2"/>
+    <line x1="69" y1="89" x2="91" y2="111" stroke="#aaa" stroke-width="1.2"/>
+    <line x1="91" y1="89" x2="69" y2="111" stroke="#aaa" stroke-width="1.2"/>
+    <!-- Ground shadow -->
+    <ellipse cx="170" cy="124" rx="155" ry="8" fill="#000" opacity="0.35"/>
+  </g>
+
+  <!-- "15% OFF" badge -->
+  <g transform="translate(290,18)">
+    <rect width="96" height="36" rx="8" fill="url(#gcAccent)"/>
+    <text x="48" y="24" font-family="Arial,sans-serif" font-size="18" font-weight="900" fill="#1a1a1a" text-anchor="middle">15% OFF</text>
+  </g>
+
+  <!-- German flag stripes (subtle, bottom-right) -->
+  <g opacity="0.18" transform="translate(340,155)">
+    <rect width="50" height="12" fill="#222"/>
+    <rect y="12" width="50" height="12" fill="#cc0000"/>
+    <rect y="24" width="50" height="12" fill="#ffcc00"/>
+  </g>
+
+  <!-- Stars (brand quality indicators) -->
+  <g fill="#f5a623" opacity="0.5" font-size="10" font-family="Arial">
+    <text x="14" y="190">★ BMW</text>
+    <text x="72" y="190">★ Mercedes</text>
+    <text x="168" y="190">★ Audi</text>
+    <text x="222" y="190">★ Porsche</text>
+    <text x="294" y="190">★ VW</text>
+  </g>
+</svg>

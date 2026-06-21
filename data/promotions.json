@@ -63,6 +63,22 @@
     "active": true
   },
   {
+    "id": 6,
+    "title": "15% Off German Car Service + Free Inspection",
+    "description": "Exclusive limited-time offer on all German vehicle repair and maintenance — BMW, Mercedes-Benz, Audi, Volkswagen, Porsche and more. Includes a complimentary full vehicle inspection with every booking.",
+    "badge": "Limited Time Offer",
+    "badgeColor": "red",
+    "imageUrl": "images/promos/german-cars.svg",
+    "imageAlt": "German car service offer — BMW, Mercedes, Audi, Porsche repair Dubai",
+    "priceLabel": "Discount",
+    "price": "15% OFF",
+    "priceColor": "",
+    "cta": "Book on WhatsApp",
+    "ctaUrl": "https://wa.me/971541699500?text=Hi%2C%20I%27d%20like%20to%20claim%20the%2015%25%20off%20German%20Car%20Service%20offer%20%2B%20free%20inspection",
+    "tcNote": "* T&C's apply. Valid on repair and maintenance services for German vehicles. Free inspection included with every booking. Limited time only.",
+    "active": true
+  },
+  {
     "id": 5,
     "title": "Wheel Alignment Special",
     "description": "Precision 4-wheel computerised alignment — corrects pulling, uneven tyre wear and steering drift caused by Dubai’s speed bumps and kerbs. Extend your tyre life immediately.",
