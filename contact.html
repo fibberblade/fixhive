@@ -792,11 +792,14 @@ function handleSubmit(e) {
   var waText = encodeURIComponent(lines.join('\n'));
   var waURL  = 'https://wa.me/971541699500?text=' + waText;
 
-  // Show success message and open WhatsApp
+  // Open WhatsApp immediately (synchronously, in direct response to the click) so
+  // Safari/iOS doesn't block the popup — a setTimeout delay here gets blocked on WebKit.
+  window.open(waURL, '_blank');
+
+  // Show success message
   document.getElementById('contactForm').style.display = 'none';
   document.getElementById('successMsg').style.display = 'block';
   document.getElementById('successMsg').innerHTML = '✅ Redirecting to WhatsApp — your message is ready to send!';
-  setTimeout(function(){ window.open(waURL, '_blank'); }, 600);
 }
 </script>
 
