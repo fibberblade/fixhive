@@ -885,6 +885,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="section-label">Customer Reviews</div>
   <div class="section-title">Trusted by Dubai Drivers</div>
   <p class="section-subtitle">Don't take our word for it — here's what our customers say.</p>
+  <div id="liveReviewBanner" style="max-width:520px;margin:0 auto 2.5rem;text-align:center;padding:1.2rem 1.5rem;background:#fff8ea;border:1.5px solid #fde68a;border-radius:12px;">
+    <div id="liveReviewStars" style="color:#f5a623;font-size:1.4rem;letter-spacing:2px;">★★★★★</div>
+    <div style="margin:0.4rem 0;font-size:1.05rem;font-weight:700;color:#0a2463;">
+      <span id="liveReviewRating">4.9</span> out of 5 — based on <span id="liveReviewCount">117</span>+ Google reviews
+    </div>
+    <a href="https://www.google.com/maps/search/Fixhive+Automotive+Garage+Car+Repair+Service+DIP+Dubai" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.5rem;margin-top:0.6rem;background:#fff;border:1.5px solid #e0e0e0;border-radius:8px;padding:0.6rem 1.3rem;font-weight:700;font-size:0.85rem;color:#333;text-decoration:none;">
+      <span style="background:#4285F4;color:#fff;border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:0.75rem;flex-shrink:0;">G</span>
+      See all reviews on Google
+    </a>
+  </div>
+  <script>
+  (function(){
+    var API_KEY  = 'AIzaSyATaxHzWKeQt2SaKCQmrrPQA-3w51SYLg8';
+    var PLACE_ID = 'ChIJFT7f41pzXz4R7BUmTnnX0Rc';
+    fetch('https://places.googleapis.com/v1/places/' + PLACE_ID, {
+      headers: {
+        'X-Goog-Api-Key': API_KEY,
+        'X-Goog-FieldMask': 'rating,userRatingCount'
+      }
+    })
+    .then(function(res){ if (!res.ok) throw new Error('Places API error'); return res.json(); })
+    .then(function(data){
+      if (typeof data.rating !== 'number' || typeof data.userRatingCount !== 'number') return;
+      document.getElementById('liveReviewRating').textContent = data.rating.toFixed(1);
+      document.getElementById('liveReviewCount').textContent = data.userRatingCount;
+      var full = Math.round(data.rating);
+      document.getElementById('liveReviewStars').textContent = '★★★★★☆☆☆☆☆'.slice(5 - full, 10 - full);
+    })
+    .catch(function(){ /* fetch failed — banner keeps its static 4.9 / 117 fallback values */ });
+  })();
+  </script>
   <div class="reviews-grid">
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
