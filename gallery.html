@@ -62,11 +62,16 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Gallery | FixHive Garage Dubai",
+    "@type": "ImageGallery",
+    "name": "FixHive Garage Workshop Gallery — Dubai",
     "url": "https://myfixhive.ae/gallery.html",
-    "description": "Real workshop photos from FixHive Garage — repairs, luxury cars and team at Dubai Investment Park.",
-    "publisher": { "@type": "Organization", "name": "FixHive Garage", "url": "https://myfixhive.ae" }
+    "description": "36 real workshop photos from FixHive Garage Dubai Investment Park — engine rebuilds, brake service, diagnostics, luxury car repairs, detailing and our team in action.",
+    "publisher": { "@type": "Organization", "name": "FixHive Garage", "url": "https://myfixhive.ae" },
+    "about": {
+      "@type": "AutoRepair",
+      "name": "FixHive Garage",
+      "address": { "@type": "PostalAddress", "streetAddress": "WH2 80 Street, Dubai Investment Park First", "addressLocality": "Dubai", "addressCountry": "AE" }
+    }
   }
   </script>
   <link rel="stylesheet" href="shared.css" />
@@ -116,6 +121,14 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     }
     .hero-cta:hover { opacity: 0.88; transform: translateY(-2px); }
 
+    .gallery-intro { background: #fff; padding: 60px 5%; max-width: 1100px; margin: 0 auto; }
+    .gallery-intro h2 { font-size: clamp(1.5rem,3vw,2rem); font-weight: 800; color: #0a2463; margin-bottom: 1rem; }
+    .gallery-intro p { color: #444; line-height: 1.8; margin-bottom: 1rem; font-size: 1rem; }
+    .gallery-categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; margin-top: 2rem; }
+    .gallery-cat { background: #f0f4fa; border-left: 3px solid #F5A623; border-radius: 6px; padding: 1rem 1.2rem; }
+    .gallery-cat strong { display: block; color: #0a2463; font-size: 0.9rem; margin-bottom: 0.3rem; }
+    .gallery-cat span { color: #555; font-size: 0.85rem; line-height: 1.5; }
+
     .gallery-section { background: #f0f4fa; padding: 70px 5%; }
     .gallery-grid { columns: 4 240px; column-gap: 14px; max-width: 1400px; margin: 0 auto; }
     .gallery-item {
@@ -127,6 +140,7 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(0,0,0,0.18); }
     .gallery-item img { display: block; width: 100%; height: auto; object-fit: cover; transition: transform .4s; }
     .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-caption { padding: 0.6rem 0.8rem; background: #fff; font-size: 0.78rem; color: #444; line-height: 1.4; }
     .gallery-item .overlay {
       position: absolute; inset: 0;
       background: linear-gradient(to top, rgba(10,36,99,0.55) 0%, transparent 50%);
@@ -399,6 +413,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- INTRO TEXT -->
+<div class="gallery-intro">
+  <h2>A Real Look Inside FixHive Garage, Dubai Investment Park</h2>
+  <p>Every photo in this gallery is taken inside our workshop at Dubai Investment Park First (DIP 1). We don't use stock images — what you see is what you get. Our team of experienced mechanics works on everything from daily drivers to exotic supercars, using professional-grade equipment and genuine or OEM-equivalent parts.</p>
+  <p>FixHive Garage specialises in engine rebuilds, gearbox and transmission overhauls, brake and suspension repair, AC and cooling system service, full car diagnostics with OBD and advanced scan tools, tyre fitting and wheel alignment, battery and electrical repairs, car detailing and paint protection, and hybrid and EV servicing. We work on all major brands including Mercedes-Benz, BMW, Porsche, Toyota, Nissan, Land Rover, Jeep, Ferrari and more.</p>
+  <p>Our workshop is equipped with four-post lifts, two-post lifts, a dedicated AC service bay, wheel alignment rig, and a detailing zone with extraction and coating equipment. Jobs are handled by brand-trained technicians and overseen by our senior workshop manager. Every car leaves with a full job report and a warranty on parts and labour.</p>
+  <div class="gallery-categories">
+    <div class="gallery-cat"><strong>Engine &amp; Transmission</strong><span>Full rebuilds, oil service, timing chains, gearbox overhauls and clutch replacements</span></div>
+    <div class="gallery-cat"><strong>Brakes &amp; Suspension</strong><span>Brake pad and disc replacement, caliper service, shock absorbers and alignment</span></div>
+    <div class="gallery-cat"><strong>Diagnostics</strong><span>OBD scan, live data analysis, fault code reading and repair verification</span></div>
+    <div class="gallery-cat"><strong>AC &amp; Cooling</strong><span>AC regas, compressor replacement, radiator flush and coolant service</span></div>
+    <div class="gallery-cat"><strong>Detailing &amp; Paint</strong><span>Full detail, ceramic coating, paint correction and interior deep clean</span></div>
+    <div class="gallery-cat"><strong>Electrical &amp; Battery</strong><span>Battery replacement, alternator, starter motor and full electrical diagnostics</span></div>
+  </div>
+</div>
+
 <!-- PHOTO GRID -->
 <section class="gallery-section">
   <div class="gallery-grid" id="galleryGrid">
@@ -406,181 +436,217 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="gallery-item" onclick="openLb(0)">
       <img src="images/gallery/battery-replacement-car-service.JPEG" alt="Battery Replacement Car Service — FixHive Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Battery replacement service — testing and fitting a new car battery at FixHive Dubai Investment Park</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(1)">
       <img src="images/gallery/brake-pad-replacement-fixhive.JPEG" alt="Brake Pad Replacement — FixHive Garage Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Brake pad replacement — new brake pads and disc inspection at FixHive Garage</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(2)">
       <img src="images/gallery/car-ac-repair-service-dubai.JPEG" alt="Car AC Repair Service Dubai Investment Park" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Car AC repair service — diagnosing and repairing air conditioning at our DIP workshop</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(3)">
       <img src="images/gallery/car-body-inspection-dubai-garage.JPG" alt="Car Body Inspection — Dubai Garage FixHive" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Pre-purchase body inspection — checking panels, paint and structural condition at FixHive Dubai</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(4)">
       <img src="images/gallery/car-detailing-service-garage.JPEG" alt="Car Detailing Service — FixHive Garage" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Professional car detailing service — paint decontamination and interior deep clean at FixHive</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(5)">
       <img src="images/gallery/car-diagnostics-scan-dubai.JPEG" alt="Car Diagnostics Scan — FixHive Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Advanced diagnostics scan — reading live OBD data and fault codes using professional scan tools</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(6)">
       <img src="images/gallery/car-engine-repair-service-dubai.JPG" alt="Car Engine Repair Service Dubai — FixHive" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Engine repair service — FixHive technician working on engine internals at Dubai Investment Park garage</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(7)">
       <img src="images/gallery/car-lift-underbody-inspection.JPG" alt="Car Lift Underbody Inspection — FixHive Workshop" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Underbody inspection on the two-post lift — checking suspension, chassis and exhaust at FixHive</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(8)">
       <img src="images/gallery/car-suspension-repair-garage.JPG" alt="Car Suspension Repair — FixHive Garage Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Suspension repair — replacing worn shock absorbers and control arm bushings at FixHive Dubai</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(9)">
       <img src="images/gallery/exhaust-system-repair-garage.JPEG" alt="Exhaust System Repair — FixHive Garage" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Exhaust system repair — inspecting and replacing exhaust components at FixHive Garage DIP</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(10)">
       <img src="images/gallery/full-car-service-fixhive-dubai.JPG" alt="Full Car Service — FixHive Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Full car service in progress — oil change, filters, fluids and multi-point inspection at FixHive</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(11)">
       <img src="images/gallery/mechanic-workshop-fixhive-dubai.JPEG" alt="Mechanic Workshop — FixHive Dubai Investment Park" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Inside the FixHive workshop at Dubai Investment Park — one of our experienced mechanics at work</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(12)">
       <img src="images/gallery/oil-change-service-auto-garage.JPG" alt="Oil Change Service — FixHive Auto Garage Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Oil change service — draining and refilling engine oil with correct grade and filter at FixHive Dubai</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(13)">
       <img src="images/gallery/radiator-flush-coolant-service.JPEG" alt="Radiator Flush Coolant Service — FixHive" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Radiator flush and coolant service — essential maintenance for surviving Dubai summer heat</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(14)">
       <img src="images/gallery/spark-plug-replacement-workshop.JPEG" alt="Spark Plug Replacement — FixHive Workshop" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Spark plug replacement — removing and fitting new plugs to restore ignition performance at FixHive</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(15)">
       <img src="images/gallery/timing-belt-replacement-service.JPEG" alt="Timing Belt Replacement Service — FixHive Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Timing belt replacement — a critical engine service performed at correct mileage intervals at FixHive</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(16)">
       <img src="images/gallery/tire-rotation-service-workshop.JPEG" alt="Tyre Rotation Service — FixHive Workshop Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Tyre rotation service — rotating tyres to even out wear and extend tyre life at FixHive Dubai</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(17)">
       <img src="images/gallery/transmission-repair-auto-service.JPEG" alt="Transmission Repair — FixHive Auto Service Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Automatic transmission repair — gearbox disassembly and rebuild at FixHive Garage Dubai</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(18)">
       <img src="images/gallery/wheel-alignment-workshop-dubai.JPEG" alt="Wheel Alignment — FixHive Workshop Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">4-wheel alignment — computerised alignment rig ensuring correct camber, caster and toe settings</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(19)">
       <img src="images/gallery/Fixhive%20-%20Engine%20and%20transmission%20repair.png" alt="FixHive Engine and Transmission Repair Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Engine and transmission repair — FixHive specialises in full drivetrain rebuilds at our DIP workshop</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(20)">
       <img src="images/gallery/IMG_0078.JPEG" alt="FixHive Workshop Dubai Investment Park" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">The FixHive workshop floor at Dubai Investment Park — multiple service bays operating in parallel</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(21)">
       <img src="images/gallery/IMG_0322.JPEG" alt="Car Service FixHive Garage Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Car service in progress at FixHive Garage — real workshop conditions, no staged shots</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(22)">
       <img src="images/gallery/IMG_0443.JPEG" alt="Professional Car Repair — FixHive Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Professional car repair at FixHive — our technicians use brand-specific tools and OEM-grade parts</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(23)">
       <img src="images/gallery/IMG_0584.JPEG" alt="FixHive Garage Interior Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">FixHive garage interior — clean, organised and well-lit workshop at Dubai Investment Park First</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(24)">
       <img src="images/gallery/IMG_0591.JPEG" alt="Auto Repair Service — FixHive Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Auto repair service underway at FixHive — every job documented and reported back to the customer</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(25)">
       <img src="images/gallery/IMG_9689.JPEG" alt="Car Maintenance Dubai Investment Park" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Car maintenance at our Dubai Investment Park garage — routine service handled by certified mechanics</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(26)">
       <img src="images/gallery/IMG_9722.JPEG" alt="FixHive Mechanics at Work Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">FixHive mechanics at work — experienced technicians trained on European and Japanese car brands</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(27)">
       <img src="images/gallery/IMG_9839.JPEG" alt="Professional Car Service — FixHive Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Professional car service at FixHive — quality workmanship backed by parts and labour warranty</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(28)">
       <img src="images/gallery/fixhive-engine-rebuild-team-dubai.webp" alt="FixHive technicians performing full engine rebuild in Dubai garage" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Full engine rebuild — our team performing a complete engine overhaul at FixHive Dubai Investment Park</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(29)">
       <img src="images/gallery/9DCE0577-A915-4C82-837B-2F623B9908F0.JPG" alt="Car Repair Service — FixHive Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Car repair service at FixHive — every vehicle treated with care and returned cleaner than it arrived</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(30)">
       <img src="images/gallery/fixhive-jeep-interior-electrical-repair-dubai.webp" alt="FixHive team restoring Jeep interior and electrical systems Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Jeep interior and electrical repair — restoring dashboard, wiring and control modules at FixHive Dubai</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(31)">
       <img src="images/gallery/fixhive-jeep-wrangler-engine-repair-dubai.webp" alt="FixHive mechanics servicing Jeep Wrangler engine at DIP workshop" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Jeep Wrangler engine service — specialist off-road vehicle maintenance at FixHive DIP workshop</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(32)">
       <img src="images/gallery/fixhive-ferrari-brake-disc-service-dubai.webp" alt="FixHive technician servicing Ferrari brake disc and caliper Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Ferrari brake disc and caliper service — high-performance brake work on supercar at FixHive Dubai</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(33)">
       <img src="images/gallery/fixhive-porsche-cayenne-engine-inspection-dubai.webp" alt="FixHive mechanic inspecting Porsche Cayenne engine bay Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Porsche Cayenne engine bay inspection — checking cooling, oil and ancillary systems at FixHive</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(34)">
       <img src="images/gallery/fixhive-v8-engine-removal-workshop-dubai.webp" alt="V8 engine removed for rebuild — FixHive Garage Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">V8 engine removed for full rebuild — major engine overhaul work at FixHive Garage Dubai</div>
     </div>
 
     <div class="gallery-item" onclick="openLb(35)">
       <img src="images/gallery/fixhive-porsche-engine-gearbox-removal-dubai.webp" alt="Porsche engine and gearbox removed for major rebuild — FixHive Dubai" loading="lazy" />
       <div class="overlay"><div class="overlay-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gallery-caption">Porsche engine and gearbox removed for major rebuild — extensive drivetrain overhaul at FixHive Dubai</div>
     </div>
 
   </div>
