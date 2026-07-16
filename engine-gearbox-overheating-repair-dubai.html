@@ -81,8 +81,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 24.98,
-          "longitude": 55.10
+          "latitude": 24.972111,
+          "longitude": 55.1737988
         },
         "openingHoursSpecification": [
           {
@@ -141,19 +141,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             "@type": "Review",
             "author": {"@type": "Person", "name": "Jonathan Pearson"},
             "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-            "reviewBody": "10/10 service! Luca and his team are superb. They did the inspection while I waited — talked me through exactly what needed fixing. Car back in no time, running better than it's ever been."
+            "reviewBody": "10/10 service! Luca and his team are superb. They did the inspection while I waited — talked me through exactly what needed fixing. Car back in no time, running better than it's ever been.",
+            "itemReviewed": {"@id": "https://myfixhive.ae/#organization"}
           },
           {
             "@type": "Review",
             "author": {"@type": "Person", "name": "James Guajardo"},
             "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-            "reviewBody": "Dubai is full of auto shops, none of which I trust until now. Fixhive does it all with genuine parts. Don't go to the agency. Saved me money and time."
+            "reviewBody": "Dubai is full of auto shops, none of which I trust until now. Fixhive does it all with genuine parts. Don't go to the agency. Saved me money and time.",
+            "itemReviewed": {"@id": "https://myfixhive.ae/#organization"}
           },
           {
             "@type": "Review",
             "author": {"@type": "Person", "name": "Channa Welihinda"},
             "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-            "reviewBody": "Excellent service. Delivered as promised. No advance payment required. Job done perfectly. Very professional. Will recommend any day."
+            "reviewBody": "Excellent service. Delivered as promised. No advance payment required. Job done perfectly. Very professional. Will recommend any day.",
+            "itemReviewed": {"@id": "https://myfixhive.ae/#organization"}
           }
         ],
         "sameAs": [
@@ -1129,7 +1132,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="reviews-grid">
         <article class="review-card" itemscope itemtype="https://schema.org/Review">
-          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/LocalBusiness" style="display:none"><meta itemprop="name" content="FixHive Garage"></span>
+          <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" aria-label="5 out of 5 stars">★★★★★<meta itemprop="ratingValue" content="5"><meta itemprop="bestRating" content="5"></div>
           <p class="review-text" itemprop="reviewBody">"10/10 service! Luca and his team are superb. They did the inspection while I waited — talked me through exactly what needed fixing and showed me the problems. Had my car back in no time, running better than it's ever been. Great, friendly and honest service."</p>
           <div class="reviewer">
             <div class="avatar" aria-hidden="true">JP</div>
@@ -1141,7 +1145,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </article>
 
         <article class="review-card" itemscope itemtype="https://schema.org/Review">
-          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/LocalBusiness" style="display:none"><meta itemprop="name" content="FixHive Garage"></span>
+          <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" aria-label="5 out of 5 stars">★★★★★<meta itemprop="ratingValue" content="5"><meta itemprop="bestRating" content="5"></div>
           <p class="review-text" itemprop="reviewBody">"Dubai is full of auto shops, none of which I trust… until now. This is the only auto shop I'll be dealing with from now on. Fixhive does it all with genuine parts. Don't go to the agency — let Fixhive handle it. Saved me money and so much time."</p>
           <div class="reviewer">
             <div class="avatar" aria-hidden="true">JG</div>
@@ -1153,7 +1158,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </article>
 
         <article class="review-card" itemscope itemtype="https://schema.org/Review">
-          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/LocalBusiness" style="display:none"><meta itemprop="name" content="FixHive Garage"></span>
+          <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" aria-label="5 out of 5 stars">★★★★★<meta itemprop="ratingValue" content="5"><meta itemprop="bestRating" content="5"></div>
           <p class="review-text" itemprop="reviewBody">"Excellent service. Delivered as promised. No advance payment asked. Did the job and confirmed car was ready for collection. Collected following day. Job done perfectly. Very professional! Will recommend any day."</p>
           <div class="reviewer">
             <div class="avatar" aria-hidden="true">CW</div>
