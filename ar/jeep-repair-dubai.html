@@ -87,6 +87,30 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .svc-tile-note{font-size:0.88rem;color:#6b7280;font-style:italic;margin:0.6rem 0 2.5rem;line-height:1.8;}
     @media(max-width:700px){.issues-grid{grid-template-columns:1fr;}.brand-svc-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr;}}
+      .models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 2.5rem;}
+    .model-card{background:#f8faff;border:1.5px solid #e0e7ff;border-radius:10px;padding:1.1rem 1.2rem;}
+    .model-card h3{font-size:0.92rem;font-weight:800;color:#1e3a8a;margin:0 0 0.4rem;}
+    .model-card p{font-size:0.82rem;color:#4b5563;line-height:1.6;margin:0;}
+    .pricing-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2.5rem;font-size:0.9rem;}
+    .pricing-table thead tr{background:#1e3a8a;color:#fff;}
+    .pricing-table th{padding:0.8rem 1rem;text-align:right;}
+    .pricing-table th:last-child{border-radius:8px 0 0 0;}
+    .pricing-table th:first-child{border-radius:0 8px 0 0;}
+    .pricing-table tbody tr:nth-child(odd){background:#f8faff;}
+    .pricing-table td{padding:0.7rem 1rem;border-bottom:1px solid #e5e7eb;text-align:right;}
+    .pricing-table .price-val{font-weight:700;color:#1e3a8a;}
+    .why-section{background:#f0f4ff;border-right:4px solid #1e3a8a;border-radius:10px 0 0 10px;padding:1.5rem 2rem;margin:2rem 0 2.5rem;}
+    .why-section p{font-size:0.88rem;color:#374151;line-height:1.8;margin:0 0 0.8rem;}
+    .why-section p:last-child{margin:0;}
+    .brand-services-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.75rem;margin:1.5rem 0 2.5rem;}
+    .brand-svc-card{background:#fff;border:1.5px solid #e0e7ff;border-radius:10px;padding:1rem;text-decoration:none;transition:border-color .2s,box-shadow .2s;display:flex;flex-direction:column;gap:0.4rem;}
+    .brand-svc-card:hover{border-color:#3b82f6;box-shadow:0 2px 10px rgba(59,130,246,.15);}
+    .brand-svc-card .svc-icon{font-size:1.5rem;}
+    .brand-svc-card .svc-name{font-size:0.82rem;font-weight:800;color:#1e3a8a;line-height:1.3;}
+    .brand-svc-card .svc-desc{font-size:0.76rem;color:#6b7280;line-height:1.5;}
+    @media(max-width:900px){.brand-services-grid{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:700px){.models-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:560px){.brand-services-grid{grid-template-columns:1fr 1fr;}.models-grid{grid-template-columns:1fr;}}
   </style>
   <link rel="stylesheet" href="../chatbot.css" />
 <script defer async src='https://cdn.trustindex.io/loader.js?3b03f0074cde804a372626da12c'></script>
@@ -306,6 +330,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <p class="svc-tile-note">جميع خدمات Jeep تُنفَّذ بمعايير المصنع. الصيانة الخفيفة تبدأ من 300 درهم.</p>
 </div>
+
+
+  <div class="section-label">الموديلات</div>
+  <h2 class="section-title" style="color:#1e3a8a;">موديلات جيب التي نخدمها في دبي</h2>
+  <div class="models-grid">
+    <div class="model-card"><h3>Wrangler (JK / JL)</h3><p>أيقونة الطرق الوعرة. المشكلات الشائعة في الإمارات: اهتزاز عجلة القيادة من بلى مكونات التوجيه، تآكل محاور Dana مع الإطارات الكبيرة، أعطال كهربائية في الإصدارات المكشوفة.</p></div>
+    <div class="model-card"><h3>Grand Cherokee (WK2 / WL)</h3><p>أشهر سيارات جيب في الإمارات. المشكلات الشائعة: عطل معلق هوائي Quadra-Lift، اهتزاز علبة تروس ZF 8HP، تآكل سلسلة توقيت محرك 3.6L Pentastar.</p></div>
+    <div class="model-card"><h3>Gladiator</h3><p>بيك أب على قاعدة Wrangler. المشكلات الشائعة: تشقق غطاء العادم من حرارة الإمارات، تسرب ديفرنسيال أمامي، تخفيف زيت محرك 2.0T eTorque في ازدحام دبي.</p></div>
+    <div class="model-card"><h3>Commander</h3><p>سيارة عائلية 3 صفوف. المشكلات الشائعة: تذبذب شحن تيربو 2.0T في الحرارة، تجمد شاشة Uconnect، ضعف تكييف الصف الخلفي صيفاً.</p></div>
+    <div class="model-card"><h3>Compass</h3><p>سيارة رياضية مدمجة. المشكلات الشائعة: تردد علبة التروس ذات 9 سرعات، تراكم كربون على محرك 1.4 MultiAir، انسداد مشعاع مكيف الهواء بغبار الإمارات.</p></div>
+  </div>
+
+  <div class="section-label">الأسعار</div>
+  <h2 class="section-title" style="color:#1e3a8a;">أسعار صيانة جيب في دبي</h2>
+  <table class="pricing-table">
+    <thead><tr><th>الخدمة</th><th>الموديل / المحرك</th><th>ابتداءً من (درهم)</th></tr></thead>
+    <tbody>
+      <tr><td>صيانة صغيرة (زيت + فلتر)</td><td>Wrangler / Compass</td><td class="price-val">AED 600</td></tr>
+      <tr><td>صيانة صغيرة (زيت + فلتر)</td><td>Grand Cherokee / Commander</td><td class="price-val">AED 800</td></tr>
+      <tr><td>صيانة كبيرة</td><td>جميع الموديلات</td><td class="price-val">AED 1,400+</td></tr>
+      <tr><td>تشخيص معلق هوائي Quadra-Lift</td><td>Grand Cherokee WL</td><td class="price-val">AED 200</td></tr>
+      <tr><td>خدمة زيت علبة تروس ZF 8HP</td><td>Grand Cherokee / Gladiator</td><td class="price-val">AED 750</td></tr>
+      <tr><td>إصلاح اهتزاز التوجيه</td><td>Wrangler JK/JL</td><td class="price-val">AED 500+</td></tr>
+      <tr><td>فحص إلكتروني شامل</td><td>جميع الموديلات</td><td class="price-val">AED 250</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.82rem;color:#6b7280;margin-bottom:2.5rem;">الأسعار استرشادية. السعر النهائي بعد فحص السيارة. أسعار قطع الغيار تختلف حسب موديل السيارة وسنة الصنع.</p>
+
+<section style="margin:2.5rem 0;">
+  <div class="section-label">خدماتنا</div>
+  <h2 class="section-title" style="color:#1e3a8a;">خدماتنا لسيارات جيب في دبي</h2>
+  <div class="brand-services-grid">
+    <a href="../engine-repair-dubai.html" class="brand-svc-card">
+      <span class="svc-icon">🔧</span>
+      <span class="svc-name">إصلاح المحرك</span>
+      <span class="svc-desc">إصلاح سلسلة توقيت Pentastar، مضخة ماء، مسبار HEMI، وجميع محركات جيب.</span>
+    </a>
+    <a href="../gearbox-repair-dubai.html" class="brand-svc-card">
+      <span class="svc-icon">⚙️</span>
+      <span class="svc-name">إصلاح ناقل الحركة</span>
+      <span class="svc-desc">خدمة زيت ZF 8HP وTorqueFlite، برمجة علبة التروس، خدمة نظام 4WD.</span>
+    </a>
+    <a href="../suspension-repair-dubai.html" class="brand-svc-card">
+      <span class="svc-icon">🚗</span>
+      <span class="svc-name">إصلاح التعليق</span>
+      <span class="svc-desc">إصلاح اهتزاز Wrangler، معلق هوائي Grand Cherokee، تركيب رافعات للطرق الوعرة.</span>
+    </a>
+    <a href="../car-diagnostics-dubai.html" class="brand-svc-card">
+      <span class="svc-icon">🔍</span>
+      <span class="svc-name">الفحص الإلكتروني</span>
+      <span class="svc-desc">فحص wiTECH 2.0 لجميع وحدات التحكم — محرك، ناقل حركة، ABS، Terrain Command.</span>
+    </a>
+    <a href="../oil-change-dubai.html" class="brand-svc-card">
+      <span class="svc-icon">🛢️</span>
+      <span class="svc-name">تغيير الزيت</span>
+      <span class="svc-desc">زيت Mopar المعتمد للمحرك، إعادة ضبط مؤشر عمر الزيت EVIC، سجل صيانة.</span>
+    </a>
+  </div>
+</section>
 
 <section class="faq-section">
   <div style="max-width:1100px;margin:0 auto;">
