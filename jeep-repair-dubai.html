@@ -99,6 +99,14 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
       .why-section{background:#f0f4ff;border-left:4px solid #1e3a8a;border-radius:0 10px 10px 0;padding:1.5rem 2rem;margin:2rem 0 2.5rem;}
     .why-section p{font-size:0.88rem;color:#374151;line-height:1.8;margin:0 0 0.8rem;}
     .why-section p:last-child{margin:0;}
+      .brand-services-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.75rem;margin:1.5rem 0 2.5rem;}
+    .brand-svc-card{background:#fff;border:1.5px solid #e0e7ff;border-radius:10px;padding:1rem;text-decoration:none;transition:border-color .2s,box-shadow .2s;display:flex;flex-direction:column;gap:0.4rem;}
+    .brand-svc-card:hover{border-color:#3b82f6;box-shadow:0 2px 10px rgba(59,130,246,.15);}
+    .brand-svc-card .svc-icon{font-size:1.5rem;}
+    .brand-svc-card .svc-name{font-size:0.82rem;font-weight:800;color:#1e3a8a;line-height:1.3;}
+    .brand-svc-card .svc-desc{font-size:0.76rem;color:#6b7280;line-height:1.5;}
+    @media(max-width:900px){.brand-services-grid{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:560px){.brand-services-grid{grid-template-columns:1fr 1fr;}}
   </style>
   <link rel="stylesheet" href="chatbot.css" />
 <style>.brand-blog-links{background:#f0f4ff;border-left:4px solid #1d4ed8;border-radius:0 8px 8px 0;padding:1.2rem 1.5rem;margin:2.5rem 0 0}.brand-blog-links h3{font-size:1rem;font-weight:800;color:#1e3a8a;margin:0 0 .8rem}.brand-blog-links ul{margin:0;padding:0 0 0 1.2rem}.brand-blog-links li{margin-bottom:.4rem}.brand-blog-links a{color:#1d4ed8;text-decoration:none;font-weight:500}.brand-blog-links a:hover{text-decoration:underline}</style>
@@ -378,6 +386,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <p class="svc-tile-note">All Jeep services performed by trained technicians using manufacturer-specified fluids and OEM-equivalent parts. Minor services from AED 300.</p>
 </div>
+
+<section style="margin:2.5rem 0;">
+  <div class="section-label">Services</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Services We Provide for Jeep in Dubai</h2>
+  <div class="brand-services-grid">
+    <a href="engine-repair-dubai.html" class="brand-svc-card">
+      <span class="svc-icon">🔧</span>
+      <span class="svc-name">Jeep Engine Repair Dubai</span>
+      <span class="svc-desc">3.6L Pentastar cam chain and water pump, 2.0T eTorque MHEV oil dilution service, and 5.7L HEMI MDS lifter failure diagnosis and repair. Full wiTECH 2.0 access.</span>
+    </a>
+    <a href="gearbox-repair-dubai.html" class="brand-svc-card">
+      <span class="svc-icon">⚙️</span>
+      <span class="svc-name">Jeep Gearbox Repair Dubai</span>
+      <span class="svc-desc">ZF 8HP and TorqueFlite 8-speed fluid service, 9-speed gearbox relearn procedure, and NVG241/NVG242 transfer case fluid service on all Jeep 4WD models.</span>
+    </a>
+    <a href="suspension-repair-dubai.html" class="brand-svc-card">
+      <span class="svc-icon">🚗</span>
+      <span class="svc-name">Jeep Suspension Repair Dubai</span>
+      <span class="svc-desc">Wrangler death wobble correction, Grand Cherokee Quadra-Lift air suspension repair, and coilover and lift kit installation for off-road use in the UAE.</span>
+    </a>
+    <a href="car-diagnostics-dubai.html" class="brand-svc-card">
+      <span class="svc-icon">🔍</span>
+      <span class="svc-name">Jeep Diagnostics Dubai</span>
+      <span class="svc-desc">wiTECH 2.0 and Autel full-system scan — Wrangler, Grand Cherokee, Gladiator, Commander, Compass. We access all modules including 4x4 Terrain Command and eSelas system.</span>
+    </a>
+    <a href="oil-change-dubai.html" class="brand-svc-card">
+      <span class="svc-icon">🛢️</span>
+      <span class="svc-name">Jeep Oil Change Dubai</span>
+      <span class="svc-desc">Mopar-specified or equivalent 5W-20, 5W-30, or 0W-20 fully synthetic in the correct grade for each Jeep engine. We reset the EVIC oil life monitor and update the service record.</span>
+    </a>
+  </div>
+</section>
 
 <section class="faq-section">
   <div style="max-width:1100px;margin:0 auto;">
