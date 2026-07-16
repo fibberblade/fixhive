@@ -82,6 +82,23 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .svc-tile-note{font-size:0.88rem;color:#6b7280;font-style:italic;margin:0.6rem 0 2.5rem;line-height:1.65;}
     @media(max-width:700px){.issues-grid{grid-template-columns:1fr;}.brand-svc-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr;}}
+      .models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 2.5rem;}
+    .model-card{background:#f8faff;border:1.5px solid #e0e7ff;border-radius:10px;padding:1.1rem 1.2rem;}
+    .model-card h3{font-size:0.92rem;font-weight:800;color:#1e3a8a;margin:0 0 0.4rem;}
+    .model-card p{font-size:0.82rem;color:#4b5563;line-height:1.6;margin:0;}
+    .pricing-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2.5rem;font-size:0.9rem;}
+    .pricing-table thead tr{background:#1e3a8a;color:#fff;}
+    .pricing-table th{padding:0.8rem 1rem;text-align:left;}
+    .pricing-table th:first-child{border-radius:8px 0 0 0;}
+    .pricing-table th:last-child{border-radius:0 8px 0 0;}
+    .pricing-table tbody tr:nth-child(odd){background:#f8faff;}
+    .pricing-table td{padding:0.7rem 1rem;border-bottom:1px solid #e5e7eb;}
+    .pricing-table .price-val{font-weight:700;color:#1e3a8a;}
+    @media(max-width:700px){.models-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:420px){.models-grid{grid-template-columns:1fr;}}
+      .why-section{background:#f0f4ff;border-left:4px solid #1e3a8a;border-radius:0 10px 10px 0;padding:1.5rem 2rem;margin:2rem 0 2.5rem;}
+    .why-section p{font-size:0.88rem;color:#374151;line-height:1.8;margin:0 0 0.8rem;}
+    .why-section p:last-child{margin:0;}
   </style>
   <link rel="stylesheet" href="chatbot.css" />
 <style>.brand-blog-links{background:#f0f4ff;border-left:4px solid #1d4ed8;border-radius:0 8px 8px 0;padding:1.2rem 1.5rem;margin:2.5rem 0 0}.brand-blog-links h3{font-size:1rem;font-weight:800;color:#1e3a8a;margin:0 0 .8rem}.brand-blog-links ul{margin:0;padding:0 0 0 1.2rem}.brand-blog-links li{margin-bottom:.4rem}.brand-blog-links a{color:#1d4ed8;text-decoration:none;font-weight:500}.brand-blog-links a:hover{text-decoration:underline}</style>
@@ -306,8 +323,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <h2 class="section-title">Our Jeep Services in Dubai</h2>
-  <div class="brand-svc-grid">
+  
+
+  <div class="section-label">Models We Cover</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Jeep Models We Service in Dubai</h2>
+  <div class="models-grid">
+
+    <div class="model-card"><h3>Wrangler (JK / JL)</h3><p>The most off-road-capable Jeep. In the UAE the JL 3.6L Pentastar V6 is most common. Known faults: death wobble from worn track bar and steering components, Dana 30/44 axle wear when running oversized tyres, and electrical gremlins on soft-top models parked in desert heat.</p></div>
+    <div class="model-card"><h3>Grand Cherokee (WK2 / WL)</h3><p>The premium Jeep SUV. In UAE both petrol and V8 variants. Known faults: Quadra-Lift air suspension failure (compressor and air bags), ZF 8HP gearbox shudder from neglected fluid, 3.6L Pentastar cam chain stretch on high-mileage examples.</p></div>
+    <div class="model-card"><h3>Gladiator</h3><p>The pickup truck variant on the Wrangler platform. Known faults: exhaust manifold cracking from UAE heat cycling, front differential oil leaks, 2.0T eTorque oil dilution in stop-start Dubai traffic.</p></div>
+    <div class="model-card"><h3>Commander (3-row)</h3><p>Popular family SUV in the UAE. Known faults: 2.0T turbo boost fluctuation in heat, infotainment freezes (Uconnect updates required), rear AC performance issues in summer.</p></div>
+    <div class="model-card"><h3>Compass</h3><p>Compact SUV. Known faults: 9-speed automatic hesitation and hunting gears (requires ZF relearn), 1.4 MultiAir carbon buildup, AC condenser clogging with UAE road dust.</p></div>
+    <div class="model-card"><h3>Cherokee (KL)</h3><p>Mid-size SUV. Known faults: 9-speed gearbox erratic behaviour (software-updatable), 2.4L Tigershark oil consumption, front differential actuator failure disabling 4WD.</p></div>
+  </div>
+
+  <div class="section-label">Pricing Guide</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Jeep Service Pricing in Dubai</h2>
+  <table class="pricing-table">
+    <thead><tr><th>Service</th><th>Model / Engine</th><th>From (AED)</th></tr></thead>
+    <tbody>
+      <tr><td>Minor service (oil + filter)</td><td>Wrangler / Compass</td><td class="price-val">AED 600</td></tr>
+      <tr><td>Minor service (oil + filter)</td><td>Grand Cherokee / Commander</td><td class="price-val">AED 800</td></tr>
+      <tr><td>Major service (full check)</td><td>All models</td><td class="price-val">AED 1,400+</td></tr>
+      <tr><td>Quadra-Lift air suspension diagnosis</td><td>Grand Cherokee WL</td><td class="price-val">AED 200</td></tr>
+      <tr><td>ZF 8HP gearbox fluid service</td><td>Grand Cherokee / Gladiator</td><td class="price-val">AED 750</td></tr>
+      <tr><td>Death wobble correction</td><td>Wrangler JK/JL</td><td class="price-val">AED 500+</td></tr>
+      <tr><td>Full diagnostic scan</td><td>All modules (wiTECH)</td><td class="price-val">AED 250</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.82rem;color:#6b7280;margin-bottom:2.5rem;">Prices are indicative. Final quote after vehicle inspection. Parts prices vary by model year and OEM vs quality aftermarket.</p>
+
+<h2 class="section-title">Our Jeep Services in Dubai</h2>
+  <div class="why-section">
+  <div class="section-label">Why FixHive</div>
+  <h2 class="section-title">Why Choose FixHive for Your Jeep in Dubai?</h2>
+  <p>Jeep vehicles are built for capability — but maintaining them correctly in the UAE's conditions requires more than a standard garage. The combination of desert off-road use, extreme summer heat, and stop-start Dubai traffic creates specific wear patterns that generic workshops often misdiagnose. FixHive technicians understand Jeep&rsquo;s Stellantis platform inside-out: from the older 3.6L Pentastar to the newer 2.0L eTorque, 4xe hybrid, and FCA/ZF gearbox combinations.</p>
+  <p>We use <strong>wiTECH 2.0 and Autel diagnostic platforms</strong> to access all Jeep modules — engine, transmission, 4x4 transfer case, Terrain Command, ABS, SRS and body control — giving you the same diagnostic depth as an authorised dealer at a fraction of dealer pricing. Our workshop carries Jeep-specified Mopar fluids and quality OEM-equivalent filter kits for every service.</p>
+  <p>Off-road owners trust FixHive because we also understand the mechanical consequences of off-road use in the UAE: axle seal leaks from water crossings, steering component wear from dune driving, and the suspension stress of repeated wheel articulation. We inspect these components as part of every service, not just when a warning light appears.</p>
+</div>
+
+<div class="brand-svc-grid">
     <a href="engine-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F527;</span>Engine Repair &amp; Service</a>
     <a href="gearbox-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x2699;&#xFE0F;</span>Gearbox &amp; Transmission</a>
     <a href="brake-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F6D1;</span>Brake Repair</a>
@@ -333,7 +388,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="faq-item"><button class="faq-q">Which Jeep models do you service?</button><div class="faq-a"><p>All Jeep models — Wrangler, Grand Cherokee, Compass, Renegade, Gladiator, and more.</p></div></div>
       <div class="faq-item"><button class="faq-q">Do you use genuine Mopar parts?</button><div class="faq-a"><p>Yes, we use Mopar genuine parts and quality approved alternatives for all Jeep repairs.</p></div></div>
       <div class="faq-item"><button class="faq-q">Do you offer pickup and delivery?</button><div class="faq-a"><p>Yes, we collect and return your Jeep across Dubai at your convenience.</p></div></div>
+        <div class="faq-item">
+      <button class="faq-q">How often should I service my Jeep Wrangler in Dubai?</button>
+      <div class="faq-a"><p>In the UAE, we recommend every 7,500 km or 6 months — whichever comes first. The 3.6L Pentastar runs hot in UAE traffic and benefits from more frequent oil changes than the 15,000 km interval Land Rover suggests for cooler climates. If you use your Wrangler off-road, check axle fluids and transfer case fluid every 20,000 km.</p></div>
     </div>
+    <div class="faq-item">
+      <button class="faq-q">Can you fix Jeep Grand Cherokee air suspension in Dubai?</button>
+      <div class="faq-a"><p>Yes. Quadra-Lift air suspension repair is a routine procedure for FixHive. We diagnose the exact component — compressor, air bags, valve block, or height sensors — before recommending replacement. Compressor failures are most common in Dubai due to the heat load. Air bag failures are second most common. We stock quality replacement compressors and air bag kits for the WK2 Grand Cherokee.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">My Jeep has a death wobble — what causes it and can you fix it?</button>
+      <div class="faq-a"><p>Death wobble on Wrangler (JK and JL) is caused by worn steering and suspension components — most commonly the track bar, track bar mount, and steering stabiliser. Wheel balancing issues and worn tie rod ends can contribute. FixHive diagnoses the full steering system and replaces only the worn components. Fitting an aftermarket track bar brace and heavy-duty track bar eliminates recurrence.</p></div>
+    </div>
+</div>
   </div>
 </section>
 
@@ -354,11 +421,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="brand-blog-links">
   <h3>From Our Blog</h3>
   <ul>
-    <li><a href="blog/jeep-wrangler-death-wobble.html">Jeep Wrangler Death Wobble Dubai — Causes and Proper Fix</a></li>
-    <li><a href="blog/dubai-speed-bumps-suspension.html">Dubai Speed Bumps Are Destroying Your Suspension</a></li>
-    <li><a href="blog/dashboard-warning-lights-dubai.html">Dashboard Warning Lights: What They Mean in Dubai</a></li>
+    <li><a href="blog/jeep-wrangler-death-wobble.html">Jeep Wrangler Death Wobble — Causes & Fix in UAE</a></li>
+    <li><a href="blog/jeep-wrangler-service-guide-uae.html">Jeep Wrangler Service Guide UAE</a></li>
+    <li><a href="blog/4wd-offroad-dubai.html">4WD & Off-Road Driving in Dubai — What You Need to Know</a></li>
   </ul>
 </section>
+
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">

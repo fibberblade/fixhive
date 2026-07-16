@@ -83,7 +83,21 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .svc-tile-icon{font-size:1.25rem;flex-shrink:0}
     .svc-tile-note{font-size:.88rem;color:#6b7280;font-style:italic;margin:.6rem 0 2.5rem;line-height:1.65}
     @media(max-width:700px){.issues-grid{grid-template-columns:1fr}.brand-svc-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr}}</style>
+    @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr}}    .models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 2.5rem;}
+    .model-card{background:#f8faff;border:1.5px solid #e0e7ff;border-radius:10px;padding:1.1rem 1.2rem;}
+    .model-card h3{font-size:0.92rem;font-weight:800;color:#1e3a8a;margin:0 0 0.4rem;}
+    .model-card p{font-size:0.82rem;color:#4b5563;line-height:1.6;margin:0;}
+    .pricing-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2.5rem;font-size:0.9rem;}
+    .pricing-table thead tr{background:#1e3a8a;color:#fff;}
+    .pricing-table th{padding:0.8rem 1rem;text-align:left;}
+    .pricing-table th:first-child{border-radius:8px 0 0 0;}
+    .pricing-table th:last-child{border-radius:0 8px 0 0;}
+    .pricing-table tbody tr:nth-child(odd){background:#f8faff;}
+    .pricing-table td{padding:0.7rem 1rem;border-bottom:1px solid #e5e7eb;}
+    .pricing-table .price-val{font-weight:700;color:#1e3a8a;}
+    @media(max-width:700px){.models-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:420px){.models-grid{grid-template-columns:1fr;}}
+  </style>
   <link rel="stylesheet" href="chatbot.css"/>
 <script defer async src='https://cdn.trustindex.io/loader.js?3b03f0074cde804a372626da12c'></script>
 </head>
@@ -309,7 +323,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="section-label">What We Do</div>
   <h2 class="section-title" style="color:#1e3a8a;">Our MINI Services in Dubai</h2>
-  <div class="brand-svc-grid">
+  
+
+  <div class="section-label">Models We Cover</div>
+  <h2 class="section-title" style="color:#1e3a8a;">MINI Models We Service in Dubai</h2>
+  <div class="models-grid">
+
+    <div class="model-card"><h3>Cooper S (F56 3-door / F55 5-door)</h3><p>The iconic MINI hatchback. Known faults: B48 engine timing chain stretch on early F56 models (updated chain from 2016+), electric power steering rack failure (common fault in the UAE heat causing heavy steering), and LED adaptive headlight overheating when parked.</p></div>
+    <div class="model-card"><h3>Countryman (F60)</h3><p>The most popular MINI in the UAE. Known faults: 7-speed dual-clutch (DCT) hesitation and shudder in stop-start Dubai traffic, rear differential wear on ALL4 AWD with UAE driving style, and panoramic roof drainage seal cracking in heat.</p></div>
+    <div class="model-card"><h3>Clubman</h3><p>The estate variant. Known faults: B48 timing chain (same as Cooper S), rear twin-door latch mechanism wear, and AC evaporator seal leaks in UAE temperature cycles.</p></div>
+    <div class="model-card"><h3>MINI Electric (SE)</h3><p>The electric MINI. Known faults: battery range significantly reduced in UAE summer heat, DC charging port heat soaking limiting charge speed, and regenerative braking calibration in UAE conditions.</p></div>
+  </div>
+
+  <div class="section-label">Pricing Guide</div>
+  <h2 class="section-title" style="color:#1e3a8a;">MINI Service Pricing in Dubai</h2>
+  <table class="pricing-table">
+    <thead><tr><th>Service</th><th>Model / Engine</th><th>From (AED)</th></tr></thead>
+    <tbody>
+      <tr><td>Minor service (oil + filter)</td><td>Cooper / Cooper S</td><td class="price-val">AED 700</td></tr>
+      <tr><td>Minor service (oil + filter)</td><td>Countryman / Clubman</td><td class="price-val">AED 850</td></tr>
+      <tr><td>EV service check</td><td>MINI Electric</td><td class="price-val">AED 400</td></tr>
+      <tr><td>Major service</td><td>All petrol models</td><td class="price-val">AED 1,600+</td></tr>
+      <tr><td>DCT fluid service</td><td>Countryman / Clubman</td><td class="price-val">AED 650</td></tr>
+      <tr><td>Power steering rack inspection</td><td>Cooper S F56</td><td class="price-val">AED 200</td></tr>
+      <tr><td>Full diagnostic scan (ISTA)</td><td>All modules</td><td class="price-val">AED 250</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.82rem;color:#6b7280;margin-bottom:2.5rem;">Prices are indicative. Final quote after vehicle inspection. Parts prices vary by model year and OEM vs quality aftermarket.</p>
+
+<div class="brand-svc-grid">
     <a href="engine-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">⚙️</span><span>MINI Engine Repair</span></a>
     <a href="gearbox-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">🔄</span><span>MINI Gearbox Repair</span></a>
     <a href="brake-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">🔧</span><span>MINI Suspension Repair</span></a>
@@ -358,6 +400,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p>WhatsApp us your MINI model and issue — we'll give you an honest quote before you drive in.</p>
   <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="btn-primary" target="_blank" rel="noopener">📲 Book on WhatsApp</a>
 </section>
+<section class="brand-blog-links">
+  <h3>From Our Blog</h3>
+  <ul>
+    <li><a href="blog/car-service-intervals-dubai.html">Car Service Intervals in Dubai — Follow the Book or Adapt?</a></li>
+    <li><a href="blog/dashboard-warning-lights-dubai.html">Dashboard Warning Lights: What They Mean in Dubai</a></li>
+  </ul>
+</section>
+
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">

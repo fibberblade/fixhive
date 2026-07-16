@@ -82,6 +82,23 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .svc-tile-note{font-size:0.88rem;color:#6b7280;font-style:italic;margin:0.6rem 0 2.5rem;line-height:1.65;}
     @media(max-width:700px){.issues-grid{grid-template-columns:1fr;}.brand-svc-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr;}}
+      .models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 2.5rem;}
+    .model-card{background:#f8faff;border:1.5px solid #e0e7ff;border-radius:10px;padding:1.1rem 1.2rem;}
+    .model-card h3{font-size:0.92rem;font-weight:800;color:#1e3a8a;margin:0 0 0.4rem;}
+    .model-card p{font-size:0.82rem;color:#4b5563;line-height:1.6;margin:0;}
+    .pricing-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2.5rem;font-size:0.9rem;}
+    .pricing-table thead tr{background:#1e3a8a;color:#fff;}
+    .pricing-table th{padding:0.8rem 1rem;text-align:left;}
+    .pricing-table th:first-child{border-radius:8px 0 0 0;}
+    .pricing-table th:last-child{border-radius:0 8px 0 0;}
+    .pricing-table tbody tr:nth-child(odd){background:#f8faff;}
+    .pricing-table td{padding:0.7rem 1rem;border-bottom:1px solid #e5e7eb;}
+    .pricing-table .price-val{font-weight:700;color:#1e3a8a;}
+    @media(max-width:700px){.models-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:420px){.models-grid{grid-template-columns:1fr;}}
+      .why-section{background:#f0f4ff;border-left:4px solid #1e3a8a;border-radius:0 10px 10px 0;padding:1.5rem 2rem;margin:2rem 0 2.5rem;}
+    .why-section p{font-size:0.88rem;color:#374151;line-height:1.8;margin:0 0 0.8rem;}
+    .why-section p:last-child{margin:0;}
   </style>
   <link rel="stylesheet" href="chatbot.css" />
 <script defer async src='https://cdn.trustindex.io/loader.js?3b03f0074cde804a372626da12c'></script>
@@ -306,7 +323,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <h2 class="section-title">Our Mercedes-Maybach Services in Dubai</h2>
-  <div class="brand-svc-grid">
+  
+
+  <div class="section-label">Models We Cover</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Maybach Models We Service in Dubai</h2>
+  <div class="models-grid">
+
+    <div class="model-card"><h3>Mercedes-Maybach S 580 / S 680</h3><p>Ultra-luxury saloon flagship. The S 680 uses a 6.0L V12 bi-turbo. Known faults: V12 oil consumption between services requires level checks every 2,000 km, rear axle steering module calibration drift, and Burmester 3D sound amplifier overheating in UAE heat.</p></div>
+    <div class="model-card"><h3>Mercedes-Maybach GLS 600</h3><p>Luxury full-size SUV — one of the most common Maybachs in the UAE. Known faults: E-Active Body Control hydraulic suspension requires specialist fluid and calibration service, 4.0L V8 bi-turbo intercooler cleaning, and rear massage seat rail corrosion in UAE humidity.</p></div>
+    <div class="model-card"><h3>Mercedes-Maybach EQS 680 SUV</h3><p>Electric Maybach SUV. Known faults: high-voltage battery range reduction in UAE summer (up to 20%), air suspension calibration with heavy loads, and Hyperscreen display calibration in extreme temperature changes.</p></div>
+  </div>
+
+  <div class="section-label">Pricing Guide</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Maybach Service Pricing in Dubai</h2>
+  <table class="pricing-table">
+    <thead><tr><th>Service</th><th>Model / Engine</th><th>From (AED)</th></tr></thead>
+    <tbody>
+      <tr><td>Minor service (oil + filter)</td><td>GLS 600 / EQS 680 SUV</td><td class="price-val">AED 2,500+</td></tr>
+      <tr><td>Minor service (oil + filter)</td><td>S 580 / S 680</td><td class="price-val">AED 3,500+</td></tr>
+      <tr><td>Major service</td><td>All models</td><td class="price-val">AED 7,000+</td></tr>
+      <tr><td>E-Active Body Control diagnosis</td><td>GLS 600</td><td class="price-val">AED 400</td></tr>
+      <tr><td>V12 oil consumption check</td><td>S 680</td><td class="price-val">AED 200</td></tr>
+      <tr><td>EV battery health check</td><td>EQS 680 SUV</td><td class="price-val">AED 350</td></tr>
+      <tr><td>Full XENTRY diagnostic scan</td><td>All modules</td><td class="price-val">AED 400</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.82rem;color:#6b7280;margin-bottom:2.5rem;">Prices are indicative. Final quote after vehicle inspection. Parts prices vary by model year and OEM vs quality aftermarket.</p>
+
+<div class="why-section">
+  <div class="section-label">Why FixHive</div>
+  <h2 class="section-title">Why Choose FixHive for Your Mercedes-Maybach in Dubai?</h2>
+  <p>Mercedes-Maybach represents the absolute pinnacle of the Mercedes-Benz range — and ownership in the UAE brings specific servicing requirements. The GLS 600 Maybach&rsquo;s E-Active Body Control hydraulic suspension system is one of the most complex active suspension architectures in any production vehicle, and requires specialist diagnostic access and hydraulic fluid expertise. The S 680&rsquo;s 6.0L V12 bi-turbo is one of the last production V12 saloon engines in the world and demands meticulous oil maintenance in UAE heat.</p>
+  <p>FixHive uses <strong>Mercedes-Benz XENTRY/DAS diagnostic platforms</strong> — the same tools used by authorised MB dealers — to access all Maybach-specific modules: E-Active Body Control, MBUX infotainment, Burmester sound system electronics, rear-axle steering, and the EQS 680 SUV's EV high-voltage system. We use MB-approved 0W-40 engine oil for V8 engines and 0W-30 for V12, in the correct MB specifications (MB 229.5 / 229.51 / 229.71).</p>
+  <p>Mercedes-Maybach authorised service in Dubai can exceed AED 10,000 for a major service. FixHive provides the same XENTRY diagnostic depth and Mercedes-specification fluids at an independent rate — with the discretion and attention to detail that Maybach ownership deserves.</p>
+</div>
+
+<div class="brand-svc-grid">
     <a href="engine-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F527;</span>Engine Repair &amp; Service</a>
     <a href="gearbox-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x2699;&#xFE0F;</span>Gearbox &amp; Transmission</a>
     <a href="brake-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F6D1;</span>Brake Repair</a>
@@ -332,7 +384,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="faq-item"><button class="faq-q">Do you use genuine Mercedes-Maybach parts?</button><div class="faq-a"><p>Yes, exclusively OEM Mercedes-Benz parts are used to maintain Maybach standards.</p></div></div>
       <div class="faq-item"><button class="faq-q">Can you service the Maybach V12 engine?</button><div class="faq-a"><p>Yes, our technicians are trained on Mercedes' AMG 6.0L M297 V12 biturbo engine.</p></div></div>
       <div class="faq-item"><button class="faq-q">Do you offer collection and delivery?</button><div class="faq-a"><p>Yes, we offer fully discreet white-glove collection and delivery across Dubai.</p></div></div>
+        <div class="faq-item">
+      <button class="faq-q">How much does a Mercedes-Maybach GLS 600 service cost in Dubai?</button>
+      <div class="faq-a"><p>A Mercedes-Maybach GLS 600 minor service at FixHive starts from AED 2,500. Major service including spark plugs, brake fluid, air filter, and full XENTRY diagnostic check starts from AED 5,000. E-Active Body Control hydraulic fluid service (every 100,000 km) is additional. All prices significantly below authorised MB-Maybach dealer pricing.</p></div>
     </div>
+    <div class="faq-item">
+      <button class="faq-q">Can you service the Mercedes-Maybach S 680 V12 in Dubai?</button>
+      <div class="faq-a"><p>Yes. The S 680's 6.0L M279 V12 bi-turbo is a known engine at FixHive — we also service it in various Rolls-Royce-adjacent BMW configurations and in older S65 AMG models. Key UAE-specific service items: oil change every 10,000 km maximum (V12 oil consumption is higher in heat), spark plug inspection at 60,000 km, and ignition coil condition check. We use MB 229.5 specification 0W-30 for all V12 oil services.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do you service the Mercedes-Maybach EQS 680 SUV in Dubai?</button>
+      <div class="faq-a"><p>Yes. The EQS 680 Maybach uses the same EV platform as the standard EQS. FixHive services it using XENTRY access to all HV modules — battery thermal management, charging system, air suspension, and MBUX Hyperscreen. In UAE summer, EQS 680 range typically reduces 20–25% — we can confirm if your range loss is within expected parameters or indicates a cell group issue.</p></div>
+    </div>
+</div>
   </div>
 </section>
 
@@ -347,6 +411,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Book Your Mercedes-Maybach Service in Dubai Today</h2>
   <p>Book your Maybach service with Dubai's ultra-luxury specialists today.</p>
   <a href="https://wa.me/971541699500?text=Hi FixHive, I need a service/repair for my Mercedes-Maybach" class="btn-primary" style="background:#f5a623;color:#0a2463;padding:0.85rem 2rem;border-radius:30px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4F2; WhatsApp to Book</a>
+</section>
+
+<section class="brand-blog-links">
+  <h3>From Our Blog</h3>
+  <ul>
+    <li><a href="blog/mercedes-benz-air-suspension-failure.html">Mercedes-Benz Air Suspension Failure — What to Do in Dubai</a></li>
+    <li><a href="blog/car-service-intervals-dubai.html">Car Service Intervals in Dubai — Follow the Book or Adapt?</a></li>
+  </ul>
 </section>
 
 <footer>

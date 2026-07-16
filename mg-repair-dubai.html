@@ -82,6 +82,23 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .svc-tile-note{font-size:0.88rem;color:#6b7280;font-style:italic;margin:0.6rem 0 2.5rem;line-height:1.65;}
     @media(max-width:700px){.issues-grid{grid-template-columns:1fr;}.brand-svc-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr;}}
+      .models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 2.5rem;}
+    .model-card{background:#f8faff;border:1.5px solid #e0e7ff;border-radius:10px;padding:1.1rem 1.2rem;}
+    .model-card h3{font-size:0.92rem;font-weight:800;color:#1e3a8a;margin:0 0 0.4rem;}
+    .model-card p{font-size:0.82rem;color:#4b5563;line-height:1.6;margin:0;}
+    .pricing-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2.5rem;font-size:0.9rem;}
+    .pricing-table thead tr{background:#1e3a8a;color:#fff;}
+    .pricing-table th{padding:0.8rem 1rem;text-align:left;}
+    .pricing-table th:first-child{border-radius:8px 0 0 0;}
+    .pricing-table th:last-child{border-radius:0 8px 0 0;}
+    .pricing-table tbody tr:nth-child(odd){background:#f8faff;}
+    .pricing-table td{padding:0.7rem 1rem;border-bottom:1px solid #e5e7eb;}
+    .pricing-table .price-val{font-weight:700;color:#1e3a8a;}
+    @media(max-width:700px){.models-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:420px){.models-grid{grid-template-columns:1fr;}}
+      .why-section{background:#f0f4ff;border-left:4px solid #1e3a8a;border-radius:0 10px 10px 0;padding:1.5rem 2rem;margin:2rem 0 2.5rem;}
+    .why-section p{font-size:0.88rem;color:#374151;line-height:1.8;margin:0 0 0.8rem;}
+    .why-section p:last-child{margin:0;}
   </style>
   <link rel="stylesheet" href="chatbot.css" />
 <script defer async src='https://cdn.trustindex.io/loader.js?3b03f0074cde804a372626da12c'></script>
@@ -305,8 +322,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <h2 class="section-title">Our MG Services in Dubai</h2>
-  <div class="brand-svc-grid">
+  
+
+  <div class="section-label">Models We Cover</div>
+  <h2 class="section-title" style="color:#1e3a8a;">MG Models We Service in Dubai</h2>
+  <div class="models-grid">
+
+    <div class="model-card"><h3>MG HS / HS Plus EV</h3><p>MG's best-selling SUV in the UAE. Known faults: 1.5T DCT dual-clutch hesitation in stop-start Dubai traffic, AC compressor output drops at peak UAE temperatures (above 43°C), and tyre wear faster than expected on sport trim.</p></div>
+    <div class="model-card"><h3>MG ZS / ZS EV</h3><p>Compact SUV. The EV variant is one of the most popular EVs in the UAE. Known faults (EV): battery range reduction of up to 30% in summer heat, DC fast-charging speed limited in hot weather, and regenerative braking calibration issues in UAE driving conditions.</p></div>
+    <div class="model-card"><h3>MG4 EV</h3><p>Compact electric hatchback. Known faults: battery thermal management system working overtime in UAE heat, OTA software updates required for optimisation, and suspension rattle on UAE road surfaces.</p></div>
+    <div class="model-card"><h3>MG5 / MG6</h3><p>Saloon models. Known faults: CVT fluid degradation from UAE heat (service every 30,000 km), infotainment software requiring Arabic localisation updates, and brake dust accumulation from UAE dust conditions.</p></div>
+  </div>
+
+  <div class="section-label">Pricing Guide</div>
+  <h2 class="section-title" style="color:#1e3a8a;">MG Service Pricing in Dubai</h2>
+  <table class="pricing-table">
+    <thead><tr><th>Service</th><th>Model / Engine</th><th>From (AED)</th></tr></thead>
+    <tbody>
+      <tr><td>Minor service (oil + filter)</td><td>MG5 / MG6 / ZS</td><td class="price-val">AED 300</td></tr>
+      <tr><td>Minor service (oil + filter)</td><td>HS / HS Plus</td><td class="price-val">AED 400</td></tr>
+      <tr><td>EV service check</td><td>ZS EV / MG4</td><td class="price-val">AED 250</td></tr>
+      <tr><td>Major service</td><td>All petrol models</td><td class="price-val">AED 700+</td></tr>
+      <tr><td>DCT fluid service</td><td>HS / HS Plus</td><td class="price-val">AED 380</td></tr>
+      <tr><td>EV battery health check</td><td>ZS EV / MG4</td><td class="price-val">AED 250</td></tr>
+      <tr><td>Full diagnostic scan</td><td>All modules</td><td class="price-val">AED 200</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.82rem;color:#6b7280;margin-bottom:2.5rem;">Prices are indicative. Final quote after vehicle inspection. Parts prices vary by model year and OEM vs quality aftermarket.</p>
+
+<h2 class="section-title">Our MG Services in Dubai</h2>
+  <div class="why-section">
+  <div class="section-label">Why FixHive</div>
+  <h2 class="section-title">Why Choose FixHive for Your MG in Dubai?</h2>
+  <p>MG has become one of the fastest-growing automotive brands in the UAE — offering competitive pricing, strong specifications, and an expanding EV lineup. The MG ZS EV is one of the most popular electric vehicles in Dubai. As MG ownership grows in the UAE, specialist servicing knowledge becomes important: the ZS EV and MG4 battery systems require specific thermal management expertise in Dubai's extreme summer heat, and the HS's 1.5T DCT is a well-known hesitation point in stop-start traffic.</p>
+  <p>FixHive uses <strong>Autel MaxiSys with MG-specific database access</strong> to read all ECUs — engine, DCT/CVT, EV high-voltage battery management, SRS, ABS, ADAS, and body control modules. For MG EVs, we have EV-specific safety protocols and BMS access to check cell balance and battery health. All MG petrol engine services use 5W-30 or 0W-20 fully synthetic as specified for each variant.</p>
+  <p>MG servicing at the authorised dealer network in the UAE is available but wait times can be long for popular models. FixHive offers faster turnaround — usually same-day for standard services — at competitive pricing. We carry common MG parts including filters, spark plugs, and DCT/CVT fluid in stock for same-day completion.</p>
+</div>
+
+<div class="brand-svc-grid">
     <a href="engine-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F527;</span>Engine Repair &amp; Service</a>
     <a href="gearbox-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x2699;&#xFE0F;</span>Gearbox &amp; Transmission</a>
     <a href="brake-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F6D1;</span>Brake Repair</a>
@@ -332,7 +385,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="faq-item"><button class="faq-q">How often should my MG be serviced?</button><div class="faq-a"><p>Every 10,000 km or 12 months for petrol models; EVs follow MG's maintenance schedule.</p></div></div>
       <div class="faq-item"><button class="faq-q">Do you use genuine MG parts?</button><div class="faq-a"><p>Yes, we use genuine SAIC-MG parts and approved quality alternatives.</p></div></div>
       <div class="faq-item"><button class="faq-q">Do you offer a vehicle pickup service?</button><div class="faq-a"><p>Yes, we offer pickup and delivery across Dubai at your convenience.</p></div></div>
+        <div class="faq-item">
+      <button class="faq-q">How much does an MG HS service cost in Dubai?</button>
+      <div class="faq-a"><p>An MG HS minor service (oil, filter, inspection) at FixHive starts from AED 400. We use 5W-30 fully synthetic and quality OEM-equivalent filter kits. DCT fluid service (recommended every 40,000 km in UAE) is AED 380 additional and significantly improves low-speed engagement feel on the 7DCT gearbox.</p></div>
     </div>
+    <div class="faq-item">
+      <button class="faq-q">Can you service the MG ZS EV and MG4 EV in Dubai?</button>
+      <div class="faq-a"><p>Yes. Both use SAIC-sourced electric drivetrains with liquid-cooled battery packs. FixHive has EV service capability including battery health checks, cooling circuit inspection, and charging system diagnosis. In UAE summer, ZS EV and MG4 range reduces by approximately 25–35% — we can confirm if your range loss is within expected parameters or indicates a cell group fault that may be covered under warranty.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Does MG have a warranty on UAE vehicles?</button>
+      <div class="faq-a"><p>New MG vehicles in the UAE typically come with a 5-year / 100,000 km warranty from the authorised importer. Out-of-warranty servicing at FixHive is covered by our standard service guarantee. We recommend maintaining your MG service records to support any warranty claims during the warranty period.</p></div>
+    </div>
+</div>
   </div>
 </section>
 
@@ -347,6 +412,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Book Your MG Service in Dubai Today</h2>
   <p>Book your MG service with Dubai's trusted specialists today.</p>
   <a href="https://wa.me/971541699500?text=Hi FixHive, I need a service/repair for my MG" class="btn-primary" style="background:#f5a623;color:#0a2463;padding:0.85rem 2rem;border-radius:30px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4F2; WhatsApp to Book</a>
+</section>
+
+<section class="brand-blog-links">
+  <h3>From Our Blog</h3>
+  <ul>
+    <li><a href="blog/ev-charging-dubai-guide.html">EV Charging in Dubai — Complete Guide</a></li>
+    <li><a href="blog/car-service-intervals-dubai.html">Car Service Intervals in Dubai — Follow the Book or Adapt?</a></li>
+  </ul>
 </section>
 
 <footer>

@@ -82,6 +82,23 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .svc-tile-note{font-size:0.88rem;color:#6b7280;font-style:italic;margin:0.6rem 0 2.5rem;line-height:1.65;}
     @media(max-width:700px){.issues-grid{grid-template-columns:1fr;}.brand-svc-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr;}}
+      .models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 2.5rem;}
+    .model-card{background:#f8faff;border:1.5px solid #e0e7ff;border-radius:10px;padding:1.1rem 1.2rem;}
+    .model-card h3{font-size:0.92rem;font-weight:800;color:#1e3a8a;margin:0 0 0.4rem;}
+    .model-card p{font-size:0.82rem;color:#4b5563;line-height:1.6;margin:0;}
+    .pricing-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2.5rem;font-size:0.9rem;}
+    .pricing-table thead tr{background:#1e3a8a;color:#fff;}
+    .pricing-table th{padding:0.8rem 1rem;text-align:left;}
+    .pricing-table th:first-child{border-radius:8px 0 0 0;}
+    .pricing-table th:last-child{border-radius:0 8px 0 0;}
+    .pricing-table tbody tr:nth-child(odd){background:#f8faff;}
+    .pricing-table td{padding:0.7rem 1rem;border-bottom:1px solid #e5e7eb;}
+    .pricing-table .price-val{font-weight:700;color:#1e3a8a;}
+    @media(max-width:700px){.models-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:420px){.models-grid{grid-template-columns:1fr;}}
+      .why-section{background:#f0f4ff;border-left:4px solid #1e3a8a;border-radius:0 10px 10px 0;padding:1.5rem 2rem;margin:2rem 0 2.5rem;}
+    .why-section p{font-size:0.88rem;color:#374151;line-height:1.8;margin:0 0 0.8rem;}
+    .why-section p:last-child{margin:0;}
   </style>
   <link rel="stylesheet" href="chatbot.css" />
 <script defer async src='https://cdn.trustindex.io/loader.js?3b03f0074cde804a372626da12c'></script>
@@ -305,8 +322,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <h2 class="section-title">Our RAM Services in Dubai</h2>
-  <div class="brand-svc-grid">
+  
+
+  <div class="section-label">Models We Cover</div>
+  <h2 class="section-title" style="color:#1e3a8a;">RAM Models We Service in Dubai</h2>
+  <div class="models-grid">
+
+    <div class="model-card"><h3>RAM 1500 (DT Platform)</h3><p>The current-generation half-ton truck with class-leading technology. Known faults: eTorque 48V MHEV belt-starter-generator failure in extreme UAE heat, 3.6L Pentastar V6 and 5.7L HEMI lifter noise, and 8-speed TorqueFlite transmission hesitation requiring software update.</p></div>
+    <div class="model-card"><h3>RAM 1500 Classic (DS)</h3><p>The previous-generation model still sold new in some markets and common used. Known faults: 5.7L HEMI MDS (cylinder deactivation) lifter failure, AC evaporator leaks, and transmission shudder in warm climates.</p></div>
+    <div class="model-card"><h3>RAM 2500 Power Wagon</h3><p>Heavy-duty off-road truck. Known faults: Cummins diesel AdBlue/DEF system issues, front axle U-joint wear with aggressive off-road use, and air ride suspension (optional) compressor.</p></div>
+    <div class="model-card"><h3>RAM 1500 TRX</h3><p>Supercharged 6.2L Hellcat performance truck. Known faults: oil change intervals critically short in UAE heat (every 5,000–7,000 km), Fox suspension shock seals leaking after dune use, and carbon ceramic clutch pack wear.</p></div>
+  </div>
+
+  <div class="section-label">Pricing Guide</div>
+  <h2 class="section-title" style="color:#1e3a8a;">RAM Service Pricing in Dubai</h2>
+  <table class="pricing-table">
+    <thead><tr><th>Service</th><th>Model / Engine</th><th>From (AED)</th></tr></thead>
+    <tbody>
+      <tr><td>Minor service (oil + filter)</td><td>RAM 1500 V6/V8</td><td class="price-val">AED 700</td></tr>
+      <tr><td>Minor service (oil + filter)</td><td>RAM 2500 / TRX</td><td class="price-val">AED 1,000</td></tr>
+      <tr><td>Major service (full check)</td><td>All models</td><td class="price-val">AED 1,600+</td></tr>
+      <tr><td>eTorque MHEV system diagnosis</td><td>RAM 1500 DT eTorque</td><td class="price-val">AED 250</td></tr>
+      <tr><td>8-speed TorqueFlite fluid service</td><td>RAM 1500 / 2500</td><td class="price-val">AED 700</td></tr>
+      <tr><td>Lifter noise inspection (HEMI)</td><td>5.7L / 6.2L engines</td><td class="price-val">AED 300</td></tr>
+      <tr><td>Full diagnostic scan</td><td>All modules</td><td class="price-val">AED 250</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.82rem;color:#6b7280;margin-bottom:2.5rem;">Prices are indicative. Final quote after vehicle inspection. Parts prices vary by model year and OEM vs quality aftermarket.</p>
+
+<h2 class="section-title">Our RAM Services in Dubai</h2>
+  <div class="why-section">
+  <div class="section-label">Why FixHive</div>
+  <h2 class="section-title">Why Choose FixHive for Your RAM Truck in Dubai?</h2>
+  <p>RAM trucks are growing rapidly in Dubai — the RAM 1500 and RAM 2500 are popular with families, contractors, and off-road enthusiasts. Maintaining a RAM truck correctly in the UAE means adapting service intervals for the heat: the 5.7L HEMI and 3.6L Pentastar engines both run harder in 45°C+ ambient temperatures, and the eTorque 48V mild-hybrid system on newer RAM 1500 models requires specific expertise to service without voiding function.</p>
+  <p>FixHive uses <strong>wiTECH 2.0 diagnostic platforms and Autel MaxiSys</strong> to access all RAM modules — engine control, TorqueFlite 8-speed transmission, 4x4 transfer case, eTorque MHEV system, and trailer brake control. We carry Mopar-specified fluids including ATF+4 transmission fluid and transfer case fluid for complete servicing.</p>
+  <p>RAM TRX owners require specialist knowledge of the supercharged 6.2L Hellcat engine — oil change intervals must be shortened to 5,000 km in UAE conditions, and the Fox suspension components require specialist inspection after dune use. FixHive has handled multiple TRX services in Dubai Investment Park.</p>
+</div>
+
+<div class="brand-svc-grid">
     <a href="engine-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F527;</span>Engine Repair &amp; Service</a>
     <a href="gearbox-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x2699;&#xFE0F;</span>Gearbox &amp; Transmission</a>
     <a href="brake-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F6D1;</span>Brake Repair</a>
@@ -332,7 +385,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="faq-item"><button class="faq-q">Do you use genuine Mopar parts?</button><div class="faq-a"><p>Yes, all RAM repairs use genuine Mopar parts or approved quality alternatives.</p></div></div>
       <div class="faq-item"><button class="faq-q">Can you fix RAM air suspension?</button><div class="faq-a"><p>Yes, we diagnose and repair RAM's active air suspension compressors and bags.</p></div></div>
       <div class="faq-item"><button class="faq-q">Do you offer pickup and delivery?</button><div class="faq-a"><p>Yes, we collect and deliver RAM trucks across Dubai at your convenience.</p></div></div>
+        <div class="faq-item">
+      <button class="faq-q">How often should I service my RAM 1500 in Dubai?</button>
+      <div class="faq-a"><p>We recommend every 7,500 km or every 6 months. The 5.7L HEMI and 3.6L Pentastar are robust engines but run under significant heat stress in the UAE. The eTorque 48V system on the DT platform should also be inspected at each service — the belt-starter-generator is vulnerable to heat damage if the battery cooling system is not maintained.</p></div>
     </div>
+    <div class="faq-item">
+      <button class="faq-q">Can you service the RAM TRX in Dubai?</button>
+      <div class="faq-a"><p>Yes. The supercharged 6.2L Hellcat in the TRX requires very specific servicing in the UAE: we use Pennzoil Ultra Platinum 5W-50 or equivalent, change oil every 5,000 km in UAE conditions, and inspect the intercooler, supercharger belt, and Fox suspension components. The TRX is a high-stress engine in hot conditions and benefits from proactive servicing.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Is the RAM 2500 diesel available in the UAE and do you service it?</button>
+      <div class="faq-a"><p>The RAM 2500 with Cummins 6.7L diesel is available in the UAE through grey import and some dealers. Yes, we service it — Cummins diesel servicing requires quality 15W-40 diesel oil and the AdBlue/DEF system must be maintained. We also service the diesel particulate filter (DPF) if urban use has caused fouling.</p></div>
+    </div>
+</div>
   </div>
 </section>
 
@@ -347,6 +412,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Book Your RAM Service in Dubai Today</h2>
   <p>Book your RAM truck service with Dubai's pickup specialists today.</p>
   <a href="https://wa.me/971541699500?text=Hi FixHive, I need a service/repair for my RAM Truck" class="btn-primary" style="background:#f5a623;color:#0a2463;padding:0.85rem 2rem;border-radius:30px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4F2; WhatsApp to Book</a>
+</section>
+
+<section class="brand-blog-links">
+  <h3>From Our Blog</h3>
+  <ul>
+    <li><a href="blog/engine-oil-uae-heat.html">Engine Oil in UAE Heat — Which Grade and How Often?</a></li>
+    <li><a href="blog/car-service-intervals-dubai.html">Car Service Intervals in Dubai — Follow the Book or Adapt?</a></li>
+  </ul>
 </section>
 
 <footer>

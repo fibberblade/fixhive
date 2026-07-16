@@ -83,7 +83,21 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .svc-tile-icon{font-size:1.25rem;flex-shrink:0}
     .svc-tile-note{font-size:.88rem;color:#6b7280;font-style:italic;margin:.6rem 0 2.5rem;line-height:1.65}
     @media(max-width:700px){.issues-grid{grid-template-columns:1fr}.brand-svc-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr}}</style>
+    @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr}}    .models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 2.5rem;}
+    .model-card{background:#f8faff;border:1.5px solid #e0e7ff;border-radius:10px;padding:1.1rem 1.2rem;}
+    .model-card h3{font-size:0.92rem;font-weight:800;color:#1e3a8a;margin:0 0 0.4rem;}
+    .model-card p{font-size:0.82rem;color:#4b5563;line-height:1.6;margin:0;}
+    .pricing-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2.5rem;font-size:0.9rem;}
+    .pricing-table thead tr{background:#1e3a8a;color:#fff;}
+    .pricing-table th{padding:0.8rem 1rem;text-align:left;}
+    .pricing-table th:first-child{border-radius:8px 0 0 0;}
+    .pricing-table th:last-child{border-radius:0 8px 0 0;}
+    .pricing-table tbody tr:nth-child(odd){background:#f8faff;}
+    .pricing-table td{padding:0.7rem 1rem;border-bottom:1px solid #e5e7eb;}
+    .pricing-table .price-val{font-weight:700;color:#1e3a8a;}
+    @media(max-width:700px){.models-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:420px){.models-grid{grid-template-columns:1fr;}}
+  </style>
   <link rel="stylesheet" href="chatbot.css"/>
 <script defer async src='https://cdn.trustindex.io/loader.js?3b03f0074cde804a372626da12c'></script>
 </head>
@@ -309,7 +323,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="section-label">What We Do</div>
   <h2 class="section-title" style="color:#1e3a8a;">Our Genesis Services in Dubai</h2>
-  <div class="brand-svc-grid">
+  
+
+  <div class="section-label">Models We Cover</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Genesis Models We Service in Dubai</h2>
+  <div class="models-grid">
+
+    <div class="model-card"><h3>GV80</h3><p>Genesis's flagship SUV — growing rapidly in the UAE. Known faults: 3.5T V6 twin-turbo oil interval critically short in UAE heat (every 7,500 km), optional air suspension compressor wear, and panoramic sunroof rattle from thermal expansion in heat.</p></div>
+    <div class="model-card"><h3>GV70 / Electrified GV70</h3><p>Mid-size SUV. Known faults on EV: battery range reduction in UAE summer (up to 25%), rapid brake dust accumulation from single-pedal driving style in UAE, and wireless charging pad overheating when parked in sun.</p></div>
+    <div class="model-card"><h3>GV60</h3><p>Electric compact SUV. Known faults: battery range significantly reduced in UAE heat, fingerprint sensor for start-up calibration issues in high ambient temperatures, and infotainment rear-camera lag.</p></div>
+    <div class="model-card"><h3>G80 / G70</h3><p>The luxury saloons. Known faults: 2.5T GDI engine carbon buildup on intake valves, rear air suspension on G80 (optional), and wireless Android Auto/CarPlay connectivity drops.</p></div>
+  </div>
+
+  <div class="section-label">Pricing Guide</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Genesis Service Pricing in Dubai</h2>
+  <table class="pricing-table">
+    <thead><tr><th>Service</th><th>Model / Engine</th><th>From (AED)</th></tr></thead>
+    <tbody>
+      <tr><td>Minor service (oil + filter)</td><td>G70 / GV70</td><td class="price-val">AED 700</td></tr>
+      <tr><td>Minor service (oil + filter)</td><td>G80 / GV80</td><td class="price-val">AED 900</td></tr>
+      <tr><td>EV service check</td><td>GV60 / Electrified GV70</td><td class="price-val">AED 400</td></tr>
+      <tr><td>Major service</td><td>All petrol models</td><td class="price-val">AED 1,800+</td></tr>
+      <tr><td>Air suspension diagnosis</td><td>GV80 / G80</td><td class="price-val">AED 200</td></tr>
+      <tr><td>GDI carbon clean</td><td>G70 / GV70 2.5T</td><td class="price-val">AED 900+</td></tr>
+      <tr><td>Full diagnostic scan</td><td>All modules</td><td class="price-val">AED 250</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.82rem;color:#6b7280;margin-bottom:2.5rem;">Prices are indicative. Final quote after vehicle inspection. Parts prices vary by model year and OEM vs quality aftermarket.</p>
+
+<div class="brand-svc-grid">
     <a href="engine-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">⚙️</span><span>Genesis Engine Repair</span></a>
     <a href="gearbox-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">🔄</span><span>Genesis Gearbox Repair</span></a>
     <a href="brake-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">🔧</span><span>Genesis Suspension Repair</span></a>
@@ -358,6 +400,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p>WhatsApp us your Genesis model and issue — we'll give you an honest quote before you drive in.</p>
   <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="btn-primary" target="_blank" rel="noopener">📲 Book on WhatsApp</a>
 </section>
+<section class="brand-blog-links">
+  <h3>From Our Blog</h3>
+  <ul>
+    <li><a href="blog/car-service-intervals-dubai.html">Car Service Intervals in Dubai — Follow the Book or Adapt?</a></li>
+    <li><a href="blog/ev-charging-dubai-guide.html">EV Charging in Dubai — Complete Guide</a></li>
+  </ul>
+</section>
+
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">

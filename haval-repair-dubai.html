@@ -82,6 +82,23 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .svc-tile-note{font-size:0.88rem;color:#6b7280;font-style:italic;margin:0.6rem 0 2.5rem;line-height:1.65;}
     @media(max-width:700px){.issues-grid{grid-template-columns:1fr;}.brand-svc-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr;}}
+      .models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 2.5rem;}
+    .model-card{background:#f8faff;border:1.5px solid #e0e7ff;border-radius:10px;padding:1.1rem 1.2rem;}
+    .model-card h3{font-size:0.92rem;font-weight:800;color:#1e3a8a;margin:0 0 0.4rem;}
+    .model-card p{font-size:0.82rem;color:#4b5563;line-height:1.6;margin:0;}
+    .pricing-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2.5rem;font-size:0.9rem;}
+    .pricing-table thead tr{background:#1e3a8a;color:#fff;}
+    .pricing-table th{padding:0.8rem 1rem;text-align:left;}
+    .pricing-table th:first-child{border-radius:8px 0 0 0;}
+    .pricing-table th:last-child{border-radius:0 8px 0 0;}
+    .pricing-table tbody tr:nth-child(odd){background:#f8faff;}
+    .pricing-table td{padding:0.7rem 1rem;border-bottom:1px solid #e5e7eb;}
+    .pricing-table .price-val{font-weight:700;color:#1e3a8a;}
+    @media(max-width:700px){.models-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:420px){.models-grid{grid-template-columns:1fr;}}
+      .why-section{background:#f0f4ff;border-left:4px solid #1e3a8a;border-radius:0 10px 10px 0;padding:1.5rem 2rem;margin:2rem 0 2.5rem;}
+    .why-section p{font-size:0.88rem;color:#374151;line-height:1.8;margin:0 0 0.8rem;}
+    .why-section p:last-child{margin:0;}
   </style>
   <link rel="stylesheet" href="chatbot.css" />
 <script defer async src='https://cdn.trustindex.io/loader.js?3b03f0074cde804a372626da12c'></script>
@@ -305,8 +322,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <h2 class="section-title">Our Haval Services in Dubai</h2>
-  <div class="brand-svc-grid">
+  
+
+  <div class="section-label">Models We Cover</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Haval Models We Service in Dubai</h2>
+  <div class="models-grid">
+
+    <div class="model-card"><h3>H6 (Third Gen)</h3><p>Haval's best-selling SUV in the UAE. Known faults: 7DCT dual-clutch hesitation and judder at low speeds in stop-start traffic (very common in Dubai), 12V battery drain when parked in UAE heat, and AC refrigerant recharge frequency higher than average in extreme temperatures.</p></div>
+    <div class="model-card"><h3>H9</h3><p>Haval's full-size 4WD SUV. Known faults: 2.0T turbo boost fluctuation (fuel quality sensitive — requires 95+ octane), transfer case service interval often missed, and front differential oil seal leaks after off-road use.</p></div>
+    <div class="model-card"><h3>Jolion / Jolion HEV</h3><p>Compact SUV with hybrid option. Known faults: HEV battery thermal management in UAE heat (range reduction), CVT hesitation in stop-start, and sunroof rattle from thermal expansion in high temperatures.</p></div>
+    <div class="model-card"><h3>Dargo</h3><p>Performance-styled SUV. Known faults: 2.0T intercooler efficiency reduction in UAE ambient heat, 7DCT clutch pack wear in traffic, and tyre wear faster on UAE road surfaces.</p></div>
+  </div>
+
+  <div class="section-label">Pricing Guide</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Haval Service Pricing in Dubai</h2>
+  <table class="pricing-table">
+    <thead><tr><th>Service</th><th>Model / Engine</th><th>From (AED)</th></tr></thead>
+    <tbody>
+      <tr><td>Minor service (oil + filter)</td><td>Jolion / H6</td><td class="price-val">AED 350</td></tr>
+      <tr><td>Minor service (oil + filter)</td><td>H9 / Dargo</td><td class="price-val">AED 500</td></tr>
+      <tr><td>Major service</td><td>All models</td><td class="price-val">AED 800+</td></tr>
+      <tr><td>7DCT fluid service</td><td>H6 / Dargo / Jolion</td><td class="price-val">AED 400</td></tr>
+      <tr><td>Transfer case service</td><td>H9</td><td class="price-val">AED 350</td></tr>
+      <tr><td>AC diagnosis + regas</td><td>All models</td><td class="price-val">AED 300</td></tr>
+      <tr><td>Full diagnostic scan</td><td>All modules</td><td class="price-val">AED 200</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.82rem;color:#6b7280;margin-bottom:2.5rem;">Prices are indicative. Final quote after vehicle inspection. Parts prices vary by model year and OEM vs quality aftermarket.</p>
+
+<h2 class="section-title">Our Haval Services in Dubai</h2>
+  <div class="why-section">
+  <div class="section-label">Why FixHive</div>
+  <h2 class="section-title">Why Choose FixHive for Your Haval in Dubai?</h2>
+  <p>Haval has established a strong position in the UAE's value-SUV segment — the H6 and Jolion are popular family vehicles, and the H9 attracts off-road enthusiasts. As with other Chinese brands in the UAE, the key to reliable long-term ownership is adapting service intervals to UAE conditions: the 7DCT dual-clutch transmission used in most Haval petrol models requires fresh fluid every 40,000 km in Dubai heat to avoid the shudder and engagement hesitation that owners sometimes attribute incorrectly to a fault.</p>
+  <p>FixHive uses <strong>Autel MaxiSys and brand-specific GW-diagnostic compatible tools</strong> to access all Haval ECUs including engine, 7DCT, 4WD transfer case (H9), HEV battery system (Jolion HEV), ABS, SRS, and body control. We carry the correct ZF-sourced DCT fluid for Haval gearbox services and use 5W-40 fully synthetic for all petrol engine services.</p>
+</div>
+
+<div class="brand-svc-grid">
     <a href="engine-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F527;</span>Engine Repair &amp; Service</a>
     <a href="gearbox-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x2699;&#xFE0F;</span>Gearbox &amp; Transmission</a>
     <a href="brake-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F6D1;</span>Brake Repair</a>
@@ -332,7 +384,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="faq-item"><button class="faq-q">Can you service Haval's dual-clutch gearbox?</button><div class="faq-a"><p>Yes, we have trained technicians for Haval's 7-speed and 8-speed DCT systems.</p></div></div>
       <div class="faq-item"><button class="faq-q">Do you stock Haval spare parts?</button><div class="faq-a"><p>Yes, we keep common wear items in stock and can order specialty parts quickly.</p></div></div>
       <div class="faq-item"><button class="faq-q">Do you offer a pickup service?</button><div class="faq-a"><p>Yes, we collect and deliver vehicles across Dubai at your convenience.</p></div></div>
+        <div class="faq-item">
+      <button class="faq-q">How much does a Haval H6 service cost in Dubai?</button>
+      <div class="faq-a"><p>A Haval H6 minor service (oil, filter, inspection) at FixHive starts from AED 350. Full major service including spark plugs, 7DCT fluid, and comprehensive inspection starts from AED 800. We use 5W-40 fully synthetic and quality OEM-equivalent filter kits. DCT fluid change is AED 400 and is strongly recommended every 40,000 km in UAE conditions.</p></div>
     </div>
+    <div class="faq-item">
+      <button class="faq-q">Why does my Haval H6 hesitate in stop-start traffic?</button>
+      <div class="faq-a"><p>Low-speed hesitation and shudder on the Haval H6 with 7DCT is very common in UAE stop-start conditions. It is usually caused by degraded DCT fluid — the clutch packs do not engage cleanly when the fluid has lost its friction coefficient. Fresh 7DCT fluid almost always resolves this within a few hundred kilometres of driving. If it persists after a fluid change, a TCU software update is the next step.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do you service the Haval H9 4x4 in Dubai?</button>
+      <div class="faq-a"><p>Yes. The Haval H9 2.0T AWD is a capable off-road SUV. Our service package includes engine oil, air filter, transfer case fluid check, front and rear differential fluid check, and 4WD system diagnostic scan. For off-road use in the UAE, we recommend shortening transfer case and differential fluid intervals to 30,000 km.</p></div>
+    </div>
+</div>
   </div>
 </section>
 
@@ -347,6 +411,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Book Your Haval Service in Dubai Today</h2>
   <p>Book your Haval service with Dubai's trusted SUV specialists today.</p>
   <a href="https://wa.me/971541699500?text=Hi FixHive, I need a service/repair for my Haval" class="btn-primary" style="background:#f5a623;color:#0a2463;padding:0.85rem 2rem;border-radius:30px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4F2; WhatsApp to Book</a>
+</section>
+
+<section class="brand-blog-links">
+  <h3>From Our Blog</h3>
+  <ul>
+    <li><a href="blog/car-service-intervals-dubai.html">Car Service Intervals in Dubai — Follow the Book or Adapt?</a></li>
+    <li><a href="blog/engine-oil-uae-heat.html">Engine Oil in UAE Heat — Which Grade to Use</a></li>
+  </ul>
 </section>
 
 <footer>

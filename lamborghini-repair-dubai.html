@@ -82,6 +82,23 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .svc-tile-note{font-size:0.88rem;color:#6b7280;font-style:italic;margin:0.6rem 0 2.5rem;line-height:1.65;}
     @media(max-width:700px){.issues-grid{grid-template-columns:1fr;}.brand-svc-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr;}}
+      .models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 2.5rem;}
+    .model-card{background:#f8faff;border:1.5px solid #e0e7ff;border-radius:10px;padding:1.1rem 1.2rem;}
+    .model-card h3{font-size:0.92rem;font-weight:800;color:#1e3a8a;margin:0 0 0.4rem;}
+    .model-card p{font-size:0.82rem;color:#4b5563;line-height:1.6;margin:0;}
+    .pricing-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2.5rem;font-size:0.9rem;}
+    .pricing-table thead tr{background:#1e3a8a;color:#fff;}
+    .pricing-table th{padding:0.8rem 1rem;text-align:left;}
+    .pricing-table th:first-child{border-radius:8px 0 0 0;}
+    .pricing-table th:last-child{border-radius:0 8px 0 0;}
+    .pricing-table tbody tr:nth-child(odd){background:#f8faff;}
+    .pricing-table td{padding:0.7rem 1rem;border-bottom:1px solid #e5e7eb;}
+    .pricing-table .price-val{font-weight:700;color:#1e3a8a;}
+    @media(max-width:700px){.models-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:420px){.models-grid{grid-template-columns:1fr;}}
+      .why-section{background:#f0f4ff;border-left:4px solid #1e3a8a;border-radius:0 10px 10px 0;padding:1.5rem 2rem;margin:2rem 0 2.5rem;}
+    .why-section p{font-size:0.88rem;color:#374151;line-height:1.8;margin:0 0 0.8rem;}
+    .why-section p:last-child{margin:0;}
   </style>
   <link rel="stylesheet" href="chatbot.css" />
 <script defer async src='https://cdn.trustindex.io/loader.js?3b03f0074cde804a372626da12c'></script>
@@ -305,8 +322,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <h2 class="section-title">Our Lamborghini Services in Dubai</h2>
-  <div class="brand-svc-grid">
+  
+
+  <div class="section-label">Models We Cover</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Lamborghini Models We Service in Dubai</h2>
+  <div class="models-grid">
+
+    <div class="model-card"><h3>Urus / Urus Performante / Urus SE</h3><p>The Lamborghini Super SUV — hugely popular in the UAE. Shares platform with Audi RS Q8 and Porsche Cayenne Turbo. Known faults: air suspension compressor wear in UAE heat, 4.0L twin-turbo V8 oil change intervals critically short in extreme heat (every 7,500 km max), and carbon ceramic brake (CCBC) dust contaminating callipers.</p></div>
+    <div class="model-card"><h3>Huracán EVO / STO / Tecnica</h3><p>The V10 supercar. Known faults: clutch wear accelerated by Dubai stop-start traffic (dual-clutch LDF transmission), 12V battery drain when parked in UAE heat for extended periods, and oil temperature running high in congested conditions requiring cooling system checks.</p></div>
+    <div class="model-card"><h3>Revuelto</h3><p>The successor to the Aventador — 6.5L V12 + hybrid system. Known faults: first services are critical for V12 seating, PHEV battery thermal management in UAE heat, and carbon fibre body panel care in dusty conditions.</p></div>
+  </div>
+
+  <div class="section-label">Pricing Guide</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Lamborghini Service Pricing in Dubai</h2>
+  <table class="pricing-table">
+    <thead><tr><th>Service</th><th>Model / Engine</th><th>From (AED)</th></tr></thead>
+    <tbody>
+      <tr><td>Minor service (oil + filter)</td><td>Urus / Urus Performante</td><td class="price-val">AED 3,000+</td></tr>
+      <tr><td>Minor service (oil + filter)</td><td>Huracán / Revuelto</td><td class="price-val">AED 4,500+</td></tr>
+      <tr><td>Major service</td><td>Urus</td><td class="price-val">AED 6,000+</td></tr>
+      <tr><td>Air suspension diagnosis</td><td>Urus</td><td class="price-val">AED 300</td></tr>
+      <tr><td>Carbon ceramic brake inspection</td><td>All models</td><td class="price-val">AED 300</td></tr>
+      <tr><td>Battery / hybrid system check</td><td>Urus SE / Revuelto</td><td class="price-val">AED 350</td></tr>
+      <tr><td>Full diagnostic scan</td><td>All modules (ODIS)</td><td class="price-val">AED 350</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.82rem;color:#6b7280;margin-bottom:2.5rem;">Prices are indicative. Final quote after vehicle inspection. Parts prices vary by model year and OEM vs quality aftermarket.</p>
+
+<h2 class="section-title">Our Lamborghini Services in Dubai</h2>
+  <div class="why-section">
+  <div class="section-label">Why FixHive</div>
+  <h2 class="section-title">Why Choose FixHive for Your Lamborghini in Dubai?</h2>
+  <p>Lamborghini in Dubai is not rare — the Urus in particular is a common sight, and Huracán and Aventador/Revuelto models are well represented. What is rare is an independent garage in the UAE with the equipment and expertise to service them correctly. FixHive uses <strong>ODIS (Offboard Diagnostic and Information System)</strong> — the same Volkswagen Group diagnostic platform used for Lamborghini, Audi, Porsche, and Bentley — giving full access to every ECU, including the Urus&rsquo;s Lamborghini-specific Dinamica Veicolo Integrata (LDI) dynamics system.</p>
+  <p>The Urus shares its platform with the Audi RS Q8, Porsche Cayenne Turbo, and Bentley Bentayga — all sharing the MLB Evo architecture. This means components, service procedures, and diagnostic protocols are consistent. FixHive services all four makes, giving us deep familiarity with the platform in UAE conditions specifically.</p>
+  <p>Lamborghini authorised service in Dubai commands some of the highest dealer fees in the region. FixHive provides ODIS diagnostic capability and OEM-equivalent parts at a fraction of authorised dealer pricing — without compromising on the quality of fluids, parts, or procedures. We use Castrol EDGE 0W-40 or equivalent for Urus V8 services and Lamborghini-specified LDF fluid for all dual-clutch gearbox services.</p>
+</div>
+
+<div class="brand-svc-grid">
     <a href="engine-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F527;</span>Engine Repair &amp; Service</a>
     <a href="gearbox-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x2699;&#xFE0F;</span>Gearbox &amp; Transmission</a>
     <a href="brake-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F6D1;</span>Brake Repair</a>
@@ -332,7 +384,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="faq-item"><button class="faq-q">Do you use genuine Lamborghini parts?</button><div class="faq-a"><p>Yes, all parts are OEM Lamborghini or manufacturer-approved alternatives.</p></div></div>
       <div class="faq-item"><button class="faq-q">Can you service the Lamborghini Urus air suspension?</button><div class="faq-a"><p>Yes, our technicians are trained on the Urus's advanced air suspension and electric systems.</p></div></div>
       <div class="faq-item"><button class="faq-q">Do you offer collection and delivery?</button><div class="faq-a"><p>Yes, we offer white-glove collection and delivery for all Lamborghini customers in Dubai.</p></div></div>
+        <div class="faq-item">
+      <button class="faq-q">How much does a Lamborghini Urus service cost in Dubai?</button>
+      <div class="faq-a"><p>A Lamborghini Urus minor service at FixHive starts from AED 3,000, compared to AED 7,000–10,000+ at an authorised dealer. We use Castrol EDGE 0W-40 (VW 504.00/507.00 spec) and quality OEM-equivalent filter kits. The Urus 4.0L twin-turbo V8 takes approximately 8.5 litres of oil per service. We also check air suspension, brake fluid, and DCT fluid at each service visit.</p></div>
     </div>
+    <div class="faq-item">
+      <button class="faq-q">Can you service a Lamborghini Huracán in Dubai?</button>
+      <div class="faq-a"><p>Yes. The Huracán uses a 5.2L naturally aspirated V10 and a Lamborghini Doppia Frizione (LDF) dual-clutch gearbox. FixHive uses ODIS to service all Huracán variants. In Dubai the main concern is clutch wear from stop-start traffic — we check clutch wear indicators at every service. Battery conditioning is also important on Huracáns stored between uses.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do you service Lamborghini under warranty?</button>
+      <div class="faq-a"><p>FixHive is an independent specialist, not an authorised dealer. Servicing at FixHive does not affect your statutory rights under UAE consumer protection law — manufacturers cannot legally void your warranty solely because you used a qualified independent garage. We document every service with OEM-equivalent parts and sign off the service book. We recommend confirming your warranty position with your dealer before each service interval.</p></div>
+    </div>
+</div>
   </div>
 </section>
 
@@ -347,6 +411,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Book Your Lamborghini Service in Dubai Today</h2>
   <p>Book your Lamborghini service with Dubai's supercar specialists today.</p>
   <a href="https://wa.me/971541699500?text=Hi FixHive, I need a service/repair for my Lamborghini" class="btn-primary" style="background:#f5a623;color:#0a2463;padding:0.85rem 2rem;border-radius:30px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4F2; WhatsApp to Book</a>
+</section>
+
+<section class="brand-blog-links">
+  <h3>From Our Blog</h3>
+  <ul>
+    <li><a href="blog/lamborghini-maintenance-cost-uae.html">Lamborghini Maintenance Cost UAE — What to Expect</a></li>
+    <li><a href="blog/ferrari-service-cost-dubai.html">Supercar Service Costs Dubai — Ferrari, Lamborghini & More</a></li>
+  </ul>
 </section>
 
 <footer>

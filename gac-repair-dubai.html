@@ -82,6 +82,23 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .svc-tile-note{font-size:0.88rem;color:#6b7280;font-style:italic;margin:0.6rem 0 2.5rem;line-height:1.65;}
     @media(max-width:700px){.issues-grid{grid-template-columns:1fr;}.brand-svc-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr;}}
+      .models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 2.5rem;}
+    .model-card{background:#f8faff;border:1.5px solid #e0e7ff;border-radius:10px;padding:1.1rem 1.2rem;}
+    .model-card h3{font-size:0.92rem;font-weight:800;color:#1e3a8a;margin:0 0 0.4rem;}
+    .model-card p{font-size:0.82rem;color:#4b5563;line-height:1.6;margin:0;}
+    .pricing-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2.5rem;font-size:0.9rem;}
+    .pricing-table thead tr{background:#1e3a8a;color:#fff;}
+    .pricing-table th{padding:0.8rem 1rem;text-align:left;}
+    .pricing-table th:first-child{border-radius:8px 0 0 0;}
+    .pricing-table th:last-child{border-radius:0 8px 0 0;}
+    .pricing-table tbody tr:nth-child(odd){background:#f8faff;}
+    .pricing-table td{padding:0.7rem 1rem;border-bottom:1px solid #e5e7eb;}
+    .pricing-table .price-val{font-weight:700;color:#1e3a8a;}
+    @media(max-width:700px){.models-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:420px){.models-grid{grid-template-columns:1fr;}}
+      .why-section{background:#f0f4ff;border-left:4px solid #1e3a8a;border-radius:0 10px 10px 0;padding:1.5rem 2rem;margin:2rem 0 2.5rem;}
+    .why-section p{font-size:0.88rem;color:#374151;line-height:1.8;margin:0 0 0.8rem;}
+    .why-section p:last-child{margin:0;}
   </style>
   <link rel="stylesheet" href="chatbot.css" />
 <script defer async src='https://cdn.trustindex.io/loader.js?3b03f0074cde804a372626da12c'></script>
@@ -305,8 +322,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <h2 class="section-title">Our GAC Services in Dubai</h2>
-  <div class="brand-svc-grid">
+  
+
+  <div class="section-label">Models We Cover</div>
+  <h2 class="section-title" style="color:#1e3a8a;">GAC Models We Service in Dubai</h2>
+  <div class="models-grid">
+
+    <div class="model-card"><h3>GS8</h3><p>GAC's flagship 7-seat SUV — growing rapidly in the UAE. Known faults: CVT fluid neglect leading to transmission slip and failure, AC condenser clogging from UAE road dust, and panoramic roof drainage seal cracking in heat.</p></div>
+    <div class="model-card"><h3>GS5</h3><p>Mid-size SUV. Known faults: 1.5T turbo engine timing chain noise on early builds, infotainment requiring software updates for Arabic interface, and brake dust accumulation in UAE conditions.</p></div>
+    <div class="model-card"><h3>Emkoo</h3><p>GAC's new compact crossover. Known faults: 1.5T DCT hesitation at low speed in stop-start, AC compressor output at high ambient temperatures, and early oil changes critical during run-in period.</p></div>
+    <div class="model-card"><h3>Empow</h3><p>Sport compact. Known faults: 2.0T turbo requires premium 98-octane fuel — misfires on lower grade, intercooler pipe clip failures, and tyre wear faster than expected on UAE roads.</p></div>
+  </div>
+
+  <div class="section-label">Pricing Guide</div>
+  <h2 class="section-title" style="color:#1e3a8a;">GAC Service Pricing in Dubai</h2>
+  <table class="pricing-table">
+    <thead><tr><th>Service</th><th>Model / Engine</th><th>From (AED)</th></tr></thead>
+    <tbody>
+      <tr><td>Minor service (oil + filter)</td><td>GS5 / Emkoo / Empow</td><td class="price-val">AED 400</td></tr>
+      <tr><td>Minor service (oil + filter)</td><td>GS8</td><td class="price-val">AED 500</td></tr>
+      <tr><td>Major service</td><td>All models</td><td class="price-val">AED 900+</td></tr>
+      <tr><td>CVT fluid service</td><td>GS8</td><td class="price-val">AED 450</td></tr>
+      <tr><td>AC diagnosis</td><td>All models</td><td class="price-val">AED 150</td></tr>
+      <tr><td>Full diagnostic scan</td><td>All modules</td><td class="price-val">AED 200</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.82rem;color:#6b7280;margin-bottom:2.5rem;">Prices are indicative. Final quote after vehicle inspection. Parts prices vary by model year and OEM vs quality aftermarket.</p>
+
+<h2 class="section-title">Our GAC Services in Dubai</h2>
+  <div class="why-section">
+  <div class="section-label">Why FixHive</div>
+  <h2 class="section-title">Why Choose FixHive for Your GAC in Dubai?</h2>
+  <p>GAC (Guangzhou Automobile Company) has grown rapidly in UAE market share — the GS8 and GS5 are now common across Dubai, and newer models like the Emkoo and Empow are gaining popularity. As Chinese-brand vehicles establish themselves in the UAE, specialist servicing knowledge becomes increasingly important: CVT fluid neglect is the leading cause of GAC transmission failure, and the UAE heat accelerates fluid degradation compared to the service intervals set for cooler climates.</p>
+  <p>FixHive uses <strong>Autel MaxiSys and brand-specific diagnostic interfaces</strong> to read all GAC ECUs — engine, transmission, HVAC, SRS, and body control modules. We carry the correct Aisin-sourced ATF and CVT fluids for all GAC transmission types, and use 5W-30 fully synthetic oil meeting the GM 6094M specification used in GAC&rsquo;s licensed GM engines.</p>
+  <p>We recommend new GAC owners shorten their first service interval to 5,000 km to flush initial metal particles from the engine during the run-in period — then follow a 7,500 km interval in UAE conditions thereafter. CVT fluid on the GS8 should be changed every 40,000 km, not the 80,000 km interval sometimes listed in the owner manual.</p>
+</div>
+
+<div class="brand-svc-grid">
     <a href="engine-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F527;</span>Engine Repair &amp; Service</a>
     <a href="gearbox-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x2699;&#xFE0F;</span>Gearbox &amp; Transmission</a>
     <a href="brake-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F6D1;</span>Brake Repair</a>
@@ -332,7 +384,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="faq-item"><button class="faq-q">Do you use genuine GAC parts?</button><div class="faq-a"><p>Yes, we use OEM GAC parts and approved equivalents for all repairs.</p></div></div>
       <div class="faq-item"><button class="faq-q">Can you reset GAC service reminders?</button><div class="faq-a"><p>Yes, our diagnostic tools fully reset GAC service indicators and fault codes.</p></div></div>
       <div class="faq-item"><button class="faq-q">Do you offer pickup and drop-off?</button><div class="faq-a"><p>Yes, we offer convenient collection and delivery across Dubai.</p></div></div>
+        <div class="faq-item">
+      <button class="faq-q">How much does a GAC GS8 service cost in Dubai?</button>
+      <div class="faq-a"><p>A GAC GS8 minor service (oil, filter, inspection) at FixHive starts from AED 500. Major service including spark plugs, CVT fluid, and full inspection starts from AED 1,000. We use 5W-30 fully synthetic meeting GM 6094M specification and quality OEM-equivalent filter kits.</p></div>
     </div>
+    <div class="faq-item">
+      <button class="faq-q">Does GAC have good service support in Dubai?</button>
+      <div class="faq-a"><p>GAC's authorised dealer network in the UAE is growing. However, for out-of-warranty vehicles or owners seeking competitive pricing, FixHive provides full GAC service capability with Autel diagnostic tools. We stock common GAC filters, spark plugs, and transmission fluids, meaning same-day service is usually possible without waiting for parts.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">What should I watch on my GAC GS8 in Dubai?</button>
+      <div class="faq-a"><p>The three main items: (1) CVT fluid — change every 40,000 km, not 80,000 km, in UAE heat; failure is expensive. (2) AC condenser — clean it annually as UAE road dust reduces cooling efficiency significantly. (3) Air filter — UAE dust clogs air filters faster than temperate markets; check every 10,000 km.</p></div>
+    </div>
+</div>
   </div>
 </section>
 
@@ -347,6 +411,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Book Your GAC Service in Dubai Today</h2>
   <p>Book your GAC service with Dubai's trusted specialists today.</p>
   <a href="https://wa.me/971541699500?text=Hi FixHive, I need a service/repair for my GAC" class="btn-primary" style="background:#f5a623;color:#0a2463;padding:0.85rem 2rem;border-radius:30px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4F2; WhatsApp to Book</a>
+</section>
+
+<section class="brand-blog-links">
+  <h3>From Our Blog</h3>
+  <ul>
+    <li><a href="blog/car-service-intervals-dubai.html">Car Service Intervals in Dubai — Follow the Book or Adapt?</a></li>
+    <li><a href="blog/engine-oil-uae-heat.html">Engine Oil in UAE Heat — Which Grade to Use</a></li>
+  </ul>
 </section>
 
 <footer>

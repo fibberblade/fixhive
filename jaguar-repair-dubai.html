@@ -83,7 +83,21 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .svc-tile-icon{font-size:1.25rem;flex-shrink:0}
     .svc-tile-note{font-size:.88rem;color:#6b7280;font-style:italic;margin:.6rem 0 2.5rem;line-height:1.65}
     @media(max-width:700px){.issues-grid{grid-template-columns:1fr}.brand-svc-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr}}</style>
+    @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr}}    .models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 2.5rem;}
+    .model-card{background:#f8faff;border:1.5px solid #e0e7ff;border-radius:10px;padding:1.1rem 1.2rem;}
+    .model-card h3{font-size:0.92rem;font-weight:800;color:#1e3a8a;margin:0 0 0.4rem;}
+    .model-card p{font-size:0.82rem;color:#4b5563;line-height:1.6;margin:0;}
+    .pricing-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2.5rem;font-size:0.9rem;}
+    .pricing-table thead tr{background:#1e3a8a;color:#fff;}
+    .pricing-table th{padding:0.8rem 1rem;text-align:left;}
+    .pricing-table th:first-child{border-radius:8px 0 0 0;}
+    .pricing-table th:last-child{border-radius:0 8px 0 0;}
+    .pricing-table tbody tr:nth-child(odd){background:#f8faff;}
+    .pricing-table td{padding:0.7rem 1rem;border-bottom:1px solid #e5e7eb;}
+    .pricing-table .price-val{font-weight:700;color:#1e3a8a;}
+    @media(max-width:700px){.models-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:420px){.models-grid{grid-template-columns:1fr;}}
+  </style>
   <link rel="stylesheet" href="chatbot.css"/>
 <script defer async src='https://cdn.trustindex.io/loader.js?3b03f0074cde804a372626da12c'></script>
 </head>
@@ -309,7 +323,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="section-label">What We Do</div>
   <h2 class="section-title" style="color:#1e3a8a;">Our Jaguar Services in Dubai</h2>
-  <div class="brand-svc-grid">
+  
+
+  <div class="section-label">Models We Cover</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Jaguar Models We Service in Dubai</h2>
+  <div class="models-grid">
+
+    <div class="model-card"><h3>F-Pace</h3><p>Jaguar's best-selling SUV — common in the UAE. Known faults: Ingenium 2.0T water pump failure (same issue as Stelvio — Jaguar Land Rover shared platform), optional air suspension compressor wear in UAE heat, and InControl infotainment freezing requiring software update.</p></div>
+    <div class="model-card"><h3>I-Pace (EV)</h3><p>Jaguar's electric SUV. Known faults: high-voltage battery thermal management in UAE heat leads to significant range reduction, AC charging speed limited in extreme ambient temperatures, and brake actuator software issues.</p></div>
+    <div class="model-card"><h3>XF / XE</h3><p>The Jaguar saloons. Known faults: Ingenium timing chain/belt service-critical, panoramic sunroof drainage blocked by UAE sand causing interior leaks in rare rainfall, and leather dashboard cracking from UAE UV exposure.</p></div>
+    <div class="model-card"><h3>E-Pace</h3><p>Compact SUV. Known faults: 2.0T Ingenium valve cover oil leaks, 9-speed gearbox hesitation (software update available), and AC evaporator leaks on early builds.</p></div>
+  </div>
+
+  <div class="section-label">Pricing Guide</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Jaguar Service Pricing in Dubai</h2>
+  <table class="pricing-table">
+    <thead><tr><th>Service</th><th>Model / Engine</th><th>From (AED)</th></tr></thead>
+    <tbody>
+      <tr><td>Minor service (oil + filter)</td><td>E-Pace / XE</td><td class="price-val">AED 900</td></tr>
+      <tr><td>Minor service (oil + filter)</td><td>F-Pace / XF</td><td class="price-val">AED 1,100</td></tr>
+      <tr><td>EV service check</td><td>I-Pace</td><td class="price-val">AED 500</td></tr>
+      <tr><td>Major service</td><td>All petrol models</td><td class="price-val">AED 2,200+</td></tr>
+      <tr><td>Water pump replacement</td><td>F-Pace / E-Pace 2.0T</td><td class="price-val">AED 1,600+</td></tr>
+      <tr><td>Air suspension diagnosis</td><td>F-Pace (optional)</td><td class="price-val">AED 200</td></tr>
+      <tr><td>Full IID / dealer diagnostic scan</td><td>All modules</td><td class="price-val">AED 300</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.82rem;color:#6b7280;margin-bottom:2.5rem;">Prices are indicative. Final quote after vehicle inspection. Parts prices vary by model year and OEM vs quality aftermarket.</p>
+
+<div class="brand-svc-grid">
     <a href="engine-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">⚙️</span><span>Jaguar Engine Repair</span></a>
     <a href="gearbox-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">🔄</span><span>Jaguar Gearbox Repair</span></a>
     <a href="brake-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">🔧</span><span>Jaguar Suspension Repair</span></a>
@@ -358,6 +400,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p>WhatsApp us your Jaguar model and issue — we'll give you an honest quote before you drive in.</p>
   <a href="https://wa.me/971541699500?text=Hey%2C%20I%20saw%20your%20website%2C%20I%20wanted%20to%20book%20an%20appointment" class="btn-primary" target="_blank" rel="noopener">📲 Book on WhatsApp</a>
 </section>
+<section class="brand-blog-links">
+  <h3>From Our Blog</h3>
+  <ul>
+    <li><a href="blog/car-service-intervals-dubai.html">Car Service Intervals in Dubai — Follow the Book or Adapt?</a></li>
+    <li><a href="blog/land-rover-air-suspension-uae.html">Land Rover Air Suspension Problems UAE — JLR Platform Guide</a></li>
+  </ul>
+</section>
+
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">

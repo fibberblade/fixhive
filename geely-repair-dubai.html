@@ -82,6 +82,23 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .svc-tile-note{font-size:0.88rem;color:#6b7280;font-style:italic;margin:0.6rem 0 2.5rem;line-height:1.65;}
     @media(max-width:700px){.issues-grid{grid-template-columns:1fr;}.brand-svc-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr;}}
+      .models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 2.5rem;}
+    .model-card{background:#f8faff;border:1.5px solid #e0e7ff;border-radius:10px;padding:1.1rem 1.2rem;}
+    .model-card h3{font-size:0.92rem;font-weight:800;color:#1e3a8a;margin:0 0 0.4rem;}
+    .model-card p{font-size:0.82rem;color:#4b5563;line-height:1.6;margin:0;}
+    .pricing-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2.5rem;font-size:0.9rem;}
+    .pricing-table thead tr{background:#1e3a8a;color:#fff;}
+    .pricing-table th{padding:0.8rem 1rem;text-align:left;}
+    .pricing-table th:first-child{border-radius:8px 0 0 0;}
+    .pricing-table th:last-child{border-radius:0 8px 0 0;}
+    .pricing-table tbody tr:nth-child(odd){background:#f8faff;}
+    .pricing-table td{padding:0.7rem 1rem;border-bottom:1px solid #e5e7eb;}
+    .pricing-table .price-val{font-weight:700;color:#1e3a8a;}
+    @media(max-width:700px){.models-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:420px){.models-grid{grid-template-columns:1fr;}}
+      .why-section{background:#f0f4ff;border-left:4px solid #1e3a8a;border-radius:0 10px 10px 0;padding:1.5rem 2rem;margin:2rem 0 2.5rem;}
+    .why-section p{font-size:0.88rem;color:#374151;line-height:1.8;margin:0 0 0.8rem;}
+    .why-section p:last-child{margin:0;}
   </style>
   <link rel="stylesheet" href="chatbot.css" />
 <script defer async src='https://cdn.trustindex.io/loader.js?3b03f0074cde804a372626da12c'></script>
@@ -305,8 +322,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <h2 class="section-title">Our Geely Services in Dubai</h2>
-  <div class="brand-svc-grid">
+  
+
+  <div class="section-label">Models We Cover</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Geely Models We Service in Dubai</h2>
+  <div class="models-grid">
+
+    <div class="model-card"><h3>Coolray</h3><p>Geely's popular compact SUV. Known faults: 1.5T DCT dual-clutch shudder at slow speeds in stop-start traffic (very common in Dubai), oil consumption on early production builds, and AC performance drop at peak UAE temperatures (45°C+).</p></div>
+    <div class="model-card"><h3>Monjaro</h3><p>Mid-size flagship SUV. Known faults: PHEV battery thermal management reducing electric range in UAE heat, 2.0T turbo lag noticeable on UAE highway merges, and tyre wear faster than expected on sport suspension trim.</p></div>
+    <div class="model-card"><h3>Okavango</h3><p>3-row SUV popular with families. Known faults: 2.0T oil interval should be shortened to 7,500 km in UAE heat, infotainment connectivity issues with Arabic region settings, and transmission fluid service often overlooked.</p></div>
+    <div class="model-card"><h3>Emgrand</h3><p>Entry-level saloon. Known faults: CVT fluid neglect (service every 40,000 km in UAE heat), AC refrigerant recharge frequency in extreme heat, and brake pad dust accumulation.</p></div>
+  </div>
+
+  <div class="section-label">Pricing Guide</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Geely Service Pricing in Dubai</h2>
+  <table class="pricing-table">
+    <thead><tr><th>Service</th><th>Model / Engine</th><th>From (AED)</th></tr></thead>
+    <tbody>
+      <tr><td>Minor service (oil + filter)</td><td>Emgrand / Coolray</td><td class="price-val">AED 350</td></tr>
+      <tr><td>Minor service (oil + filter)</td><td>Okavango / Monjaro</td><td class="price-val">AED 500</td></tr>
+      <tr><td>Major service</td><td>All models</td><td class="price-val">AED 800+</td></tr>
+      <tr><td>DCT fluid service</td><td>Coolray / Monjaro</td><td class="price-val">AED 400</td></tr>
+      <tr><td>CVT fluid service</td><td>Emgrand</td><td class="price-val">AED 400</td></tr>
+      <tr><td>AC diagnosis + regas</td><td>All models</td><td class="price-val">AED 300</td></tr>
+      <tr><td>Full diagnostic scan</td><td>All modules</td><td class="price-val">AED 200</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.82rem;color:#6b7280;margin-bottom:2.5rem;">Prices are indicative. Final quote after vehicle inspection. Parts prices vary by model year and OEM vs quality aftermarket.</p>
+
+<h2 class="section-title">Our Geely Services in Dubai</h2>
+  <div class="why-section">
+  <div class="section-label">Why FixHive</div>
+  <h2 class="section-title">Why Choose FixHive for Your Geely in Dubai?</h2>
+  <p>Geely has made significant inroads into the UAE market — the Coolray in particular offers strong value and good specification, and the Monjaro PHEV represents a more sophisticated product as the brand grows upmarket. Geely&rsquo;s vehicles use a mix of proprietary and Volvo-licensed technology (Geely owns Volvo), meaning the engineering quality is higher than many expect from a Chinese brand — but specific UAE-condition servicing knowledge is still essential.</p>
+  <p>FixHive uses <strong>Autel MaxiSys and GDS (Global Diagnostic System) compatible tools</strong> to access all Geely ECUs — engine, 7DCT dual-clutch transmission, PHEV battery management, SRS, ABS, and body control. The Coolray&rsquo;s 7-speed DCT is a known trouble area in stop-start Dubai traffic — we carry the correct Bosch DCT fluid for gearbox services and recommend changing it every 40,000 km in UAE conditions.</p>
+</div>
+
+<div class="brand-svc-grid">
     <a href="engine-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F527;</span>Engine Repair &amp; Service</a>
     <a href="gearbox-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x2699;&#xFE0F;</span>Gearbox &amp; Transmission</a>
     <a href="brake-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F6D1;</span>Brake Repair</a>
@@ -332,7 +384,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="faq-item"><button class="faq-q">Do you use genuine Geely parts?</button><div class="faq-a"><p>Yes, we use genuine OEM parts or manufacturer-approved alternatives.</p></div></div>
       <div class="faq-item"><button class="faq-q">Can you service Geely's DSG gearbox?</button><div class="faq-a"><p>Yes, our technicians are trained on Geely's dual-clutch gearbox systems.</p></div></div>
       <div class="faq-item"><button class="faq-q">Do you offer warranty on repairs?</button><div class="faq-a"><p>Yes, all our repairs carry a workmanship warranty for your peace of mind.</p></div></div>
+        <div class="faq-item">
+      <button class="faq-q">How much does a Geely Coolray service cost in Dubai?</button>
+      <div class="faq-a"><p>A Geely Coolray minor service (oil, filter, inspection) at FixHive starts from AED 350. We use 5W-40 fully synthetic (ACEA A3/B4) and quality OEM-equivalent filter kits. DCT fluid service (recommended every 40,000 km in UAE) is AED 400 additional and significantly reduces the shudder risk at low speeds.</p></div>
     </div>
+    <div class="faq-item">
+      <button class="faq-q">Why does my Geely Coolray shudder in slow traffic?</button>
+      <div class="faq-a"><p>The 7DCT shudder is a known characteristic in stop-start conditions — the dual-clutch engages and disengages repeatedly at very low speeds. The fix in most cases is fresh DCT fluid (the original fluid degrades with heat in UAE conditions) and a TCU (Transmission Control Unit) software update if available for your build date. FixHive performs both.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do you service the Geely Monjaro PHEV in Dubai?</button>
+      <div class="faq-a"><p>Yes. The Monjaro PHEV uses a 2.0T engine paired with a PHEV battery system. The main UAE-specific concern is battery thermal management — EV range is reduced in summer heat. We check the battery cooling circuit and fluid level at every Monjaro PHEV service. Engine services use 0W-20 or 5W-30 as specified for the 2.0T variant in your owner manual.</p></div>
+    </div>
+</div>
   </div>
 </section>
 
@@ -347,6 +411,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Book Your Geely Service in Dubai Today</h2>
   <p>Book your Geely service with Dubai's trusted specialists today.</p>
   <a href="https://wa.me/971541699500?text=Hi FixHive, I need a service/repair for my Geely" class="btn-primary" style="background:#f5a623;color:#0a2463;padding:0.85rem 2rem;border-radius:30px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4F2; WhatsApp to Book</a>
+</section>
+
+<section class="brand-blog-links">
+  <h3>From Our Blog</h3>
+  <ul>
+    <li><a href="blog/car-service-intervals-dubai.html">Car Service Intervals in Dubai — Follow the Book or Adapt?</a></li>
+    <li><a href="blog/dubai-heat-destroys-car-ac.html">How Dubai Heat Destroys Your Car AC</a></li>
+  </ul>
 </section>
 
 <footer>

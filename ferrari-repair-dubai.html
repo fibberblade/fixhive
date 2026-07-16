@@ -82,6 +82,23 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .svc-tile-note{font-size:0.88rem;color:#6b7280;font-style:italic;margin:0.6rem 0 2.5rem;line-height:1.65;}
     @media(max-width:700px){.issues-grid{grid-template-columns:1fr;}.brand-svc-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr;}}
+      .models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 2.5rem;}
+    .model-card{background:#f8faff;border:1.5px solid #e0e7ff;border-radius:10px;padding:1.1rem 1.2rem;}
+    .model-card h3{font-size:0.92rem;font-weight:800;color:#1e3a8a;margin:0 0 0.4rem;}
+    .model-card p{font-size:0.82rem;color:#4b5563;line-height:1.6;margin:0;}
+    .pricing-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2.5rem;font-size:0.9rem;}
+    .pricing-table thead tr{background:#1e3a8a;color:#fff;}
+    .pricing-table th{padding:0.8rem 1rem;text-align:left;}
+    .pricing-table th:first-child{border-radius:8px 0 0 0;}
+    .pricing-table th:last-child{border-radius:0 8px 0 0;}
+    .pricing-table tbody tr:nth-child(odd){background:#f8faff;}
+    .pricing-table td{padding:0.7rem 1rem;border-bottom:1px solid #e5e7eb;}
+    .pricing-table .price-val{font-weight:700;color:#1e3a8a;}
+    @media(max-width:700px){.models-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:420px){.models-grid{grid-template-columns:1fr;}}
+      .why-section{background:#f0f4ff;border-left:4px solid #1e3a8a;border-radius:0 10px 10px 0;padding:1.5rem 2rem;margin:2rem 0 2.5rem;}
+    .why-section p{font-size:0.88rem;color:#374151;line-height:1.8;margin:0 0 0.8rem;}
+    .why-section p:last-child{margin:0;}
   </style>
   <link rel="stylesheet" href="chatbot.css" />
 <script defer async src='https://cdn.trustindex.io/loader.js?3b03f0074cde804a372626da12c'></script>
@@ -305,8 +322,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <h2 class="section-title">Our Ferrari Services in Dubai</h2>
-  <div class="brand-svc-grid">
+  
+
+  <div class="section-label">Models We Cover</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Ferrari Models We Service in Dubai</h2>
+  <div class="models-grid">
+
+    <div class="model-card"><h3>Roma / Portofino M</h3><p>Ferrari's entry-level GT and convertible. Known faults: 3.9L twin-turbo V8 oil change intervals critically short in UAE heat (every 8,000 km), DCT dual-clutch pack wear in Dubai stop-start traffic, and 12V battery drain when parked.</p></div>
+    <div class="model-card"><h3>SF90 Stradale / XX</h3><p>Ferrari's PHEV flagship. Known faults: high-voltage battery thermal management in UAE summer heat, carbon ceramic brake contamination from sand, and tyre wear on 21-inch Michelin Pilot Sport Cup 2 in UAE temperatures.</p></div>
+    <div class="model-card"><h3>296 GTB / GTS</h3><p>The 3.0L twin-turbo V6 + hybrid. Known faults: PHEV battery range reduction in heat, intercooler efficiency reduction, and DCT paddle shifter calibration in extreme temperatures.</p></div>
+    <div class="model-card"><h3>Purosangue</h3><p>Ferrari's first SUV — 6.5L naturally aspirated V12. Known faults: oil level monitoring critical (V12 consumes more in heat), air suspension setup critical for correct ride, and first services must be done on time.</p></div>
+    <div class="model-card"><h3>F8 Tributo / Spider</h3><p>Mid-engine sports car. Known faults: 3.9L twin-turbo oil seal leaks on high-mileage examples, spider roof hydraulics (convertible), and cam cover gaskets on extended service intervals.</p></div>
+  </div>
+
+  <div class="section-label">Pricing Guide</div>
+  <h2 class="section-title" style="color:#1e3a8a;">Ferrari Service Pricing in Dubai</h2>
+  <table class="pricing-table">
+    <thead><tr><th>Service</th><th>Model / Engine</th><th>From (AED)</th></tr></thead>
+    <tbody>
+      <tr><td>Minor service (oil + filter)</td><td>Roma / 296 GTB</td><td class="price-val">AED 5,000+</td></tr>
+      <tr><td>Minor service (oil + filter)</td><td>SF90 / Purosangue</td><td class="price-val">AED 7,000+</td></tr>
+      <tr><td>Major service (spark plugs, belts)</td><td>All models</td><td class="price-val">AED 12,000+</td></tr>
+      <tr><td>DCT clutch inspection</td><td>All DCT models</td><td class="price-val">AED 500</td></tr>
+      <tr><td>PHEV battery system check</td><td>SF90 / 296 GTB</td><td class="price-val">AED 500</td></tr>
+      <tr><td>Full Ferrari SD diagnostic scan</td><td>All modules</td><td class="price-val">AED 500</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.82rem;color:#6b7280;margin-bottom:2.5rem;">Prices are indicative. Final quote after vehicle inspection. Parts prices vary by model year and OEM vs quality aftermarket.</p>
+
+<h2 class="section-title">Our Ferrari Services in Dubai</h2>
+  <div class="why-section">
+  <div class="section-label">Why FixHive</div>
+  <h2 class="section-title">Why Choose FixHive for Your Ferrari in Dubai?</h2>
+  <p>Ferrari ownership in Dubai carries unique service challenges. The extreme ambient heat (45°C+) creates conditions the engines were not primarily designed for — oil service intervals must be shortened, tyre compounds behave differently, and brake systems run hotter than in the European conditions where most Ferrari development occurs. FixHive technicians understand these UAE-specific factors and adapt service procedures accordingly.</p>
+  <p>We use <strong>Ferrari SD (System Diagnosis) compatible diagnostic tools and Autel MaxiSys Ultra</strong> to access all Ferrari ECUs — F1 dual-clutch gearbox, chassis and suspension, KERS/hybrid systems on SF90 and 296 GTB, climate control, and all body electronics. Oil services use Ferrari-specified Esso Ultron 0W-40 or equivalent Shell/Castrol Ferrari-approved grades in the correct specification for each engine variant.</p>
+  <p>Ferrari authorised service in Dubai is among the most expensive in the region — and service slot availability can be limited. FixHive offers the same technical capability at an independent rate with direct access to the technician, faster turnaround, and honest communication about what is genuinely required versus what is upsold. Many UAE Ferrari owners use FixHive for routine services while returning to the dealer only for warranty-specific interventions.</p>
+</div>
+
+<div class="brand-svc-grid">
     <a href="engine-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F527;</span>Engine Repair &amp; Service</a>
     <a href="gearbox-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x2699;&#xFE0F;</span>Gearbox &amp; Transmission</a>
     <a href="brake-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F6D1;</span>Brake Repair</a>
@@ -332,7 +385,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="faq-item"><button class="faq-q">Do you use genuine Ferrari parts?</button><div class="faq-a"><p>Yes, we source OEM Ferrari parts and approved alternatives to maintain manufacturer standards.</p></div></div>
       <div class="faq-item"><button class="faq-q">Can you repair Ferrari carbon-ceramic brakes?</button><div class="faq-a"><p>Yes, our technicians are equipped to inspect, machine, and replace Ferrari CCM brake systems.</p></div></div>
       <div class="faq-item"><button class="faq-q">Do you offer collection and delivery?</button><div class="faq-a"><p>Yes, we offer complimentary collection and delivery across Dubai for Ferrari customers.</p></div></div>
+        <div class="faq-item">
+      <button class="faq-q">How much does a Ferrari service cost in Dubai?</button>
+      <div class="faq-a"><p>A Ferrari Roma or F8 minor service (oil, filter, inspection) at FixHive starts from AED 5,000. Major service including spark plugs, brake fluid, and comprehensive inspection starts from AED 12,000. The SF90 Stradale and 296 GTB PHEV services start from AED 7,000 due to the additional hybrid battery system checks. All prices significantly less than authorised dealer quotes.</p></div>
     </div>
+    <div class="faq-item">
+      <button class="faq-q">Can you service Ferrari PHEV (SF90, 296 GTB) in Dubai?</button>
+      <div class="faq-a"><p>Yes. The SF90 Stradale and 296 GTB both use Ferrari's PHEV system — we check the high-voltage battery thermal management, the three electric motors, and the hybrid control unit at every service. In UAE heat, battery range on these models reduces significantly — an average of 15–25% less electric range in summer. We include a battery health check as standard on all PHEV Ferrari services.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do you service Ferrari F8, Roma, and Portofino M in Dubai?</button>
+      <div class="faq-a"><p>Yes — these are our most common Ferrari service jobs. The 3.9L twin-turbo V8 (F154CB/CD engines) is a well-documented platform. In Dubai the main priorities are: correct oil spec and interval (7,500 km maximum in UAE heat), DCT fluid condition, brake fluid hydration check, and tyre condition. We carry Ferrari-specification Esso Ultron 0W-40 for these services.</p></div>
+    </div>
+</div>
   </div>
 </section>
 
@@ -347,6 +412,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Book Your Ferrari Service in Dubai Today</h2>
   <p>Book your Ferrari service with Dubai's supercar specialists today.</p>
   <a href="https://wa.me/971541699500?text=Hi FixHive, I need a service/repair for my Ferrari" class="btn-primary" style="background:#f5a623;color:#0a2463;padding:0.85rem 2rem;border-radius:30px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4F2; WhatsApp to Book</a>
+</section>
+
+<section class="brand-blog-links">
+  <h3>From Our Blog</h3>
+  <ul>
+    <li><a href="blog/ferrari-service-cost-dubai.html">Ferrari Service Cost Dubai — What Owners Should Know</a></li>
+    <li><a href="blog/lamborghini-maintenance-cost-uae.html">Supercar Maintenance Costs UAE</a></li>
+  </ul>
 </section>
 
 <footer>

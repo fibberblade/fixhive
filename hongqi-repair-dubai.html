@@ -82,6 +82,23 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .svc-tile-note{font-size:0.88rem;color:#6b7280;font-style:italic;margin:0.6rem 0 2.5rem;line-height:1.65;}
     @media(max-width:700px){.issues-grid{grid-template-columns:1fr;}.brand-svc-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr;}}
+      .models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 2.5rem;}
+    .model-card{background:#f8faff;border:1.5px solid #e0e7ff;border-radius:10px;padding:1.1rem 1.2rem;}
+    .model-card h3{font-size:0.92rem;font-weight:800;color:#1e3a8a;margin:0 0 0.4rem;}
+    .model-card p{font-size:0.82rem;color:#4b5563;line-height:1.6;margin:0;}
+    .pricing-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2.5rem;font-size:0.9rem;}
+    .pricing-table thead tr{background:#1e3a8a;color:#fff;}
+    .pricing-table th{padding:0.8rem 1rem;text-align:left;}
+    .pricing-table th:first-child{border-radius:8px 0 0 0;}
+    .pricing-table th:last-child{border-radius:0 8px 0 0;}
+    .pricing-table tbody tr:nth-child(odd){background:#f8faff;}
+    .pricing-table td{padding:0.7rem 1rem;border-bottom:1px solid #e5e7eb;}
+    .pricing-table .price-val{font-weight:700;color:#1e3a8a;}
+    @media(max-width:700px){.models-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:420px){.models-grid{grid-template-columns:1fr;}}
+      .why-section{background:#f0f4ff;border-left:4px solid #1e3a8a;border-radius:0 10px 10px 0;padding:1.5rem 2rem;margin:2rem 0 2.5rem;}
+    .why-section p{font-size:0.88rem;color:#374151;line-height:1.8;margin:0 0 0.8rem;}
+    .why-section p:last-child{margin:0;}
   </style>
   <link rel="stylesheet" href="chatbot.css" />
 <script defer async src='https://cdn.trustindex.io/loader.js?3b03f0074cde804a372626da12c'></script>
@@ -306,7 +323,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <h2 class="section-title">Our Hongqi Services in Dubai</h2>
-  <div class="brand-svc-grid">
+  
+
+  <div class="section-label">Models We Cover</div>
+  <h2 class="section-title" style="color:#1e3a8a;">HongQi Models We Service in Dubai</h2>
+  <div class="models-grid">
+
+    <div class="model-card"><h3>H9</h3><p>HongQi's flagship luxury saloon. Uses a GM-sourced CA4GB 3.0L V6 engine shared with some Cadillac platforms. Known faults: oil leak from valve cover gaskets in UAE heat, ZF 8HP gearbox service interval often overlooked, and air suspension compressor wear.</p></div>
+    <div class="model-card"><h3>E-HS9 (Electric)</h3><p>HongQi's flagship electric SUV. Known faults: high-voltage battery range reduction of up to 25% in UAE summer heat (45°C+), DC fast-charging speed reduction in hot weather, and infotainment localisation issues with Arabic language packs.</p></div>
+    <div class="model-card"><h3>HS5</h3><p>Mid-size SUV. Known faults: 2.0T engine requires quality 98-octane fuel, timing chain noise on early examples, and infotainment software updates required for Arabic interface.</p></div>
+  </div>
+
+  <div class="section-label">Pricing Guide</div>
+  <h2 class="section-title" style="color:#1e3a8a;">HongQi Service Pricing in Dubai</h2>
+  <table class="pricing-table">
+    <thead><tr><th>Service</th><th>Model / Engine</th><th>From (AED)</th></tr></thead>
+    <tbody>
+      <tr><td>Minor service (oil + filter)</td><td>HS5</td><td class="price-val">AED 500</td></tr>
+      <tr><td>Minor service (oil + filter)</td><td>H9</td><td class="price-val">AED 800</td></tr>
+      <tr><td>EV service check</td><td>E-HS9</td><td class="price-val">AED 400</td></tr>
+      <tr><td>Major service</td><td>All models</td><td class="price-val">AED 1,400+</td></tr>
+      <tr><td>ZF 8HP gearbox fluid service</td><td>H9</td><td class="price-val">AED 750</td></tr>
+      <tr><td>EV battery health check</td><td>E-HS9</td><td class="price-val">AED 300</td></tr>
+      <tr><td>Full diagnostic scan</td><td>All modules</td><td class="price-val">AED 250</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.82rem;color:#6b7280;margin-bottom:2.5rem;">Prices are indicative. Final quote after vehicle inspection. Parts prices vary by model year and OEM vs quality aftermarket.</p>
+
+<div class="why-section">
+  <div class="section-label">Why FixHive</div>
+  <h2 class="section-title">Why Choose FixHive for Your HongQi in Dubai?</h2>
+  <p>HongQi (Red Flag) vehicles are a premium Chinese brand increasingly present in the UAE — the H9 luxury saloon and the E-HS9 electric SUV are the most common models. HongQi&rsquo;s approach to engineering combines GM-sourced engines (the H9 uses a CA4GB V6 closely related to the Cadillac 3.0T) with bespoke Chinese luxury content. This creates a unique servicing requirement: GM-specification fluids and ZF gearbox procedures, but with HongQi-specific diagnostic access.</p>
+  <p>FixHive uses <strong>Autel MaxiSys with HongQi-specific database access</strong> to read all ECUs on H9, E-HS9, and HS5 models. For the E-HS9 electric, we have EV-specific high-voltage safety procedures and battery management system access. All HongQi engine services use Dexos2-specification oil consistent with the GM-derived engine requirements.</p>
+</div>
+
+<div class="brand-svc-grid">
     <a href="engine-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F527;</span>Engine Repair &amp; Service</a>
     <a href="gearbox-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x2699;&#xFE0F;</span>Gearbox &amp; Transmission</a>
     <a href="brake-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F6D1;</span>Brake Repair</a>
@@ -332,7 +383,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="faq-item"><button class="faq-q">Do you service Hongqi electric vehicles?</button><div class="faq-a"><p>Yes, our EV-trained technicians handle Hongqi E-HS9 and EH7 battery and drivetrain systems.</p></div></div>
       <div class="faq-item"><button class="faq-q">How long does a Hongqi service take?</button><div class="faq-a"><p>Standard services are completed within a day; complex repairs are quoted individually.</p></div></div>
       <div class="faq-item"><button class="faq-q">Do you offer a pickup service?</button><div class="faq-a"><p>Yes, we collect and return your Hongqi across Dubai at your convenience.</p></div></div>
+        <div class="faq-item">
+      <button class="faq-q">How much does a HongQi H9 service cost in Dubai?</button>
+      <div class="faq-a"><p>A HongQi H9 minor service (oil, filter, inspection) at FixHive starts from AED 800. We use Dexos2-compliant 0W-20 or 5W-30 and quality OEM-equivalent filter kits. ZF 8HP gearbox fluid service (recommended every 80,000 km) is AED 750 additional. Air suspension diagnosis is AED 200 if required.</p></div>
     </div>
+    <div class="faq-item">
+      <button class="faq-q">Can you service the HongQi E-HS9 EV in Dubai?</button>
+      <div class="faq-a"><p>Yes. The E-HS9 is a large electric SUV with a complex high-voltage system. FixHive has EV servicing capability including battery thermal management checks, high-voltage safety inspection, coolant circuit service, and infotainment system updates. In UAE heat, E-HS9 battery range reduction of 20–30% is normal in summer — we can check if your range loss is within expected parameters or indicates a battery issue.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Is HongQi reliable in the UAE?</button>
+      <div class="faq-a"><p>Early feedback from UAE owners suggests the H9 is mechanically solid — the GM-derived engine and ZF gearbox are proven units. The main areas to watch are: oil valve cover gaskets (can leak on early H9 builds), ZF gearbox fluid neglect (must be changed, not lifetime fluid), and infotainment software (requires updates for Arabic localisation). FixHive has serviced H9 and E-HS9 models in the UAE and can give you an honest assessment.</p></div>
+    </div>
+</div>
   </div>
 </section>
 
@@ -347,6 +410,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Book Your Hongqi Service in Dubai Today</h2>
   <p>Book your Hongqi service with Dubai's premium car specialists today.</p>
   <a href="https://wa.me/971541699500?text=Hi FixHive, I need a service/repair for my Hongqi" class="btn-primary" style="background:#f5a623;color:#0a2463;padding:0.85rem 2rem;border-radius:30px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4F2; WhatsApp to Book</a>
+</section>
+
+<section class="brand-blog-links">
+  <h3>From Our Blog</h3>
+  <ul>
+    <li><a href="blog/ev-charging-dubai-guide.html">EV Charging in Dubai — Complete Guide</a></li>
+    <li><a href="blog/car-service-intervals-dubai.html">Car Service Intervals in Dubai — Follow the Book or Adapt?</a></li>
+  </ul>
 </section>
 
 <footer>

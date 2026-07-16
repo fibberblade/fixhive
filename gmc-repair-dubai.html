@@ -82,6 +82,23 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .svc-tile-note{font-size:0.88rem;color:#6b7280;font-style:italic;margin:0.6rem 0 2.5rem;line-height:1.65;}
     @media(max-width:700px){.issues-grid{grid-template-columns:1fr;}.brand-svc-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:420px){.brand-svc-grid{grid-template-columns:1fr;}}
+      .models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 2.5rem;}
+    .model-card{background:#f8faff;border:1.5px solid #e0e7ff;border-radius:10px;padding:1.1rem 1.2rem;}
+    .model-card h3{font-size:0.92rem;font-weight:800;color:#1e3a8a;margin:0 0 0.4rem;}
+    .model-card p{font-size:0.82rem;color:#4b5563;line-height:1.6;margin:0;}
+    .pricing-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2.5rem;font-size:0.9rem;}
+    .pricing-table thead tr{background:#1e3a8a;color:#fff;}
+    .pricing-table th{padding:0.8rem 1rem;text-align:left;}
+    .pricing-table th:first-child{border-radius:8px 0 0 0;}
+    .pricing-table th:last-child{border-radius:0 8px 0 0;}
+    .pricing-table tbody tr:nth-child(odd){background:#f8faff;}
+    .pricing-table td{padding:0.7rem 1rem;border-bottom:1px solid #e5e7eb;}
+    .pricing-table .price-val{font-weight:700;color:#1e3a8a;}
+    @media(max-width:700px){.models-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:420px){.models-grid{grid-template-columns:1fr;}}
+      .why-section{background:#f0f4ff;border-left:4px solid #1e3a8a;border-radius:0 10px 10px 0;padding:1.5rem 2rem;margin:2rem 0 2.5rem;}
+    .why-section p{font-size:0.88rem;color:#374151;line-height:1.8;margin:0 0 0.8rem;}
+    .why-section p:last-child{margin:0;}
   </style>
   <link rel="stylesheet" href="chatbot.css" />
 <script defer async src='https://cdn.trustindex.io/loader.js?3b03f0074cde804a372626da12c'></script>
@@ -305,8 +322,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <h2 class="section-title">Our GMC Services in Dubai</h2>
-  <div class="brand-svc-grid">
+  
+
+  <div class="section-label">Models We Cover</div>
+  <h2 class="section-title" style="color:#1e3a8a;">GMC Models We Service in Dubai</h2>
+  <div class="models-grid">
+
+    <div class="model-card"><h3>Yukon XL</h3><p>The most popular GMC in the UAE — a full-size 8-seat SUV. Known faults: 6.2L V8 AFM/DoD lifter failure (very common — causes ticking, oil consumption, and misfires), AC compressor failure in UAE summer heat, and transfer case chain stretch.</p></div>
+    <div class="model-card"><h3>Sierra 1500 / 2500</h3><p>Half-ton and three-quarter-ton pickup trucks. Known faults: 5.3L V8 AFM lifter failure (same issue as Yukon), Hydra-Matic 8-speed transmission shudder from torque converter, and high oil consumption on older 5.3L engines.</p></div>
+    <div class="model-card"><h3>Terrain</h3><p>Compact SUV. Known faults: 2.0T engine oil dilution in heavy Dubai stop-start traffic, panoramic sunroof drains blocking with sand, and infotainment reset loops requiring dealer update.</p></div>
+    <div class="model-card"><h3>Acadia</h3><p>3-row mid-size SUV. Known faults: CVT on older 3.6L models, transmission shudder, and AC blower motor resistor failure in UAE heat.</p></div>
+    <div class="model-card"><h3>Canyon</h3><p>Mid-size pickup. Known faults: 2.8L Duramax diesel DPF fouling in city use, 8-speed transmission hesitation, and transfer case actuator motor failure.</p></div>
+  </div>
+
+  <div class="section-label">Pricing Guide</div>
+  <h2 class="section-title" style="color:#1e3a8a;">GMC Service Pricing in Dubai</h2>
+  <table class="pricing-table">
+    <thead><tr><th>Service</th><th>Model / Engine</th><th>From (AED)</th></tr></thead>
+    <tbody>
+      <tr><td>Minor service (oil + filter)</td><td>Terrain / Acadia</td><td class="price-val">AED 550</td></tr>
+      <tr><td>Minor service (oil + filter)</td><td>Yukon XL / Sierra</td><td class="price-val">AED 900</td></tr>
+      <tr><td>Major service (full check)</td><td>All models</td><td class="price-val">AED 1,600+</td></tr>
+      <tr><td>AFM/DoD lifter inspection</td><td>Yukon XL / Sierra 5.3L / 6.2L</td><td class="price-val">AED 300</td></tr>
+      <tr><td>Hydra-Matic 8-speed fluid service</td><td>All applicable models</td><td class="price-val">AED 700</td></tr>
+      <tr><td>AC compressor diagnosis</td><td>All models</td><td class="price-val">AED 150</td></tr>
+      <tr><td>Full diagnostic scan</td><td>All modules</td><td class="price-val">AED 250</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.82rem;color:#6b7280;margin-bottom:2.5rem;">Prices are indicative. Final quote after vehicle inspection. Parts prices vary by model year and OEM vs quality aftermarket.</p>
+
+<h2 class="section-title">Our GMC Services in Dubai</h2>
+  <div class="why-section">
+  <div class="section-label">Why FixHive</div>
+  <h2 class="section-title">Why Choose FixHive for Your GMC in Dubai?</h2>
+  <p>GMC vehicles — especially the Yukon XL — are among the most popular large SUVs in the UAE. They are powerful, spacious, and well-suited to Dubai's roads, but the 5.3L and 6.2L V8 engines have known vulnerabilities that require specialist knowledge: the AFM/DoD lifter failure issue affects a significant percentage of Yukon XL and Sierra owners in the UAE, often presenting first as a light ticking noise before progressing to misfires and oil consumption.</p>
+  <p>FixHive uses <strong>GM MDI2 and Autel MaxiSys diagnostic tools</strong> to access all GMC modules — including the active fuel management (AFM) system, Hydra-Matic transmission adaptive data, and trailer brake controllers. We carry GM-specified Dexos1 Gen3 oil and transmission fluid for every service and can perform AFM delete procedures that eliminate the lifter failure risk entirely.</p>
+  <p>For Yukon XL owners running higher mileage, we offer a comprehensive inspection package covering AFM lifter condition, transfer case chain wear, AC compressor health, and differential fluid — the four most common wear points on high-mileage UAE Yukons. Catching these early saves significant repair costs.</p>
+</div>
+
+<div class="brand-svc-grid">
     <a href="engine-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F527;</span>Engine Repair &amp; Service</a>
     <a href="gearbox-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x2699;&#xFE0F;</span>Gearbox &amp; Transmission</a>
     <a href="brake-repair-dubai.html" class="brand-svc-tile"><span class="svc-tile-icon">&#x1F6D1;</span>Brake Repair</a>
@@ -332,7 +386,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="faq-item"><button class="faq-q">Can you work on GMC 4WD systems?</button><div class="faq-a"><p>Yes, we service all GMC four-wheel-drive and all-wheel-drive transfer cases and differentials.</p></div></div>
       <div class="faq-item"><button class="faq-q">Do you use genuine GM parts?</button><div class="faq-a"><p>Yes, we use ACDelco and genuine GM parts to maintain your warranty and performance.</p></div></div>
       <div class="faq-item"><button class="faq-q">Do you offer a pickup service?</button><div class="faq-a"><p>Yes, we offer convenient vehicle pickup and delivery across Dubai.</p></div></div>
+        <div class="faq-item">
+      <button class="faq-q">What is the AFM/DoD lifter problem on GMC Yukon XL?</button>
+      <div class="faq-a"><p>Active Fuel Management (AFM) — also called Dynamic Fuel Management (DFM) or DoD — deactivates cylinders at light throttle to save fuel. The oil passages that operate the lifters collapse under heat stress, causing the lifters to fail mechanically. This is a known GM issue on 5.3L and 6.2L V8 engines. Symptoms: ticking on cold start, oil consumption, and eventually misfires. FixHive can replace the affected lifters and optionally perform an AFM delete to prevent recurrence.</p></div>
     </div>
+    <div class="faq-item">
+      <button class="faq-q">How often should a GMC Yukon XL be serviced in Dubai?</button>
+      <div class="faq-a"><p>We recommend every 7,500 km or every 6 months in UAE conditions. GM specifies 12,000–15,000 km intervals but those are based on temperate climates. UAE heat degrades oil faster. If your Yukon tows frequently or is used in heavy traffic, 5,000 km oil changes on V8 models protect against the AFM lifter issue.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Can you service the GMC Terrain 2.0T in Dubai?</button>
+      <div class="faq-a"><p>Yes. The Terrain's 2.0L LTG turbocharged engine is straightforward to service. The main concern in the UAE is oil dilution from short-trip stop-start driving. We use Dexos1 Gen3 5W-30 and recommend an oil analysis after the first UAE service to establish your engine's baseline.</p></div>
+    </div>
+</div>
   </div>
 </section>
 
@@ -347,6 +413,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Book Your GMC Service in Dubai Today</h2>
   <p>Book your GMC service with Dubai's American truck specialists today.</p>
   <a href="https://wa.me/971541699500?text=Hi FixHive, I need a service/repair for my GMC" class="btn-primary" style="background:#f5a623;color:#0a2463;padding:0.85rem 2rem;border-radius:30px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4F2; WhatsApp to Book</a>
+</section>
+
+<section class="brand-blog-links">
+  <h3>From Our Blog</h3>
+  <ul>
+    <li><a href="blog/car-service-intervals-dubai.html">Car Service Intervals in Dubai — Follow the Book or Adapt?</a></li>
+    <li><a href="blog/engine-oil-uae-heat.html">Engine Oil in UAE Heat — Which Grade and How Often?</a></li>
+  </ul>
 </section>
 
 <footer>
