@@ -883,8 +883,10 @@ nav {
   padding: 0 5%;
   height: 72px;
   position: sticky;
-  top: 44px;
+  top: 0;
   z-index: 100;
+  overflow: visible !important;
+  white-space: normal !important;
 }
 .logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
 .logo img { height: 56px; width: auto; display: block; object-fit: contain; }
@@ -1016,15 +1018,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span></span><span></span><span></span>
   </button>
 </nav>
-
-  <!-- BREADCRUMB -->
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="https://myfixhive.ae/">Home</a>
-    <span aria-hidden="true">›</span>
-    <a href="https://myfixhive.ae/services.html">Services</a>
-    <span aria-hidden="true">›</span>
-    <span aria-current="page">Major Repairs — Engine, Gearbox &amp; Overheating</span>
-  </nav>
+<div class="mobile-menu" id="mobileMenu"></div>
 
   <!-- ============================================================
        MAIN CONTENT
@@ -1440,5 +1434,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     })();
   </script>
 
+<script src="chatbot.js" defer></script>
+<script src="/js/nav.js" defer></script>
+<script src="/js/search.js" defer></script>
 </body>
 </html>
