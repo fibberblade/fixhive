@@ -96,11 +96,15 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .blog-card:hover { box-shadow:0 8px 32px rgba(10,36,99,0.12); transform:translateY(-4px); border-color:#c7d7f0; }
     .blog-card[hidden] { display:none; }
 
-    .blog-card-banner { height:160px; display:flex; align-items:center; justify-content:center; font-size:3rem; }
+    .blog-card-banner { height:160px; display:flex; align-items:center; justify-content:center; font-size:3rem; position:relative; overflow:hidden; }
     .blog-card-banner.cat-ac      { background:linear-gradient(135deg,#0c4a6e,#0891b2); }
     .blog-card-banner.cat-engine  { background:linear-gradient(135deg,#1e3a8a,#1d4ed8); }
     .blog-card-banner.cat-preventive { background:linear-gradient(135deg,#14532d,#16a34a); }
     .blog-card-banner.cat-tips    { background:linear-gradient(135deg,#4c1d95,#7c3aed); }
+    .blog-card-banner img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s ease; }
+    .blog-card:hover .blog-card-banner img { transform:scale(1.05); }
+    .blog-banner-overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(10,27,60,.55) 0%, transparent 60%); }
+    .blog-banner-cat-icon { position:absolute; bottom:.75rem; right:.9rem; font-size:.7rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:#fff; background:rgba(245,166,35,.92); padding:.22rem .65rem; border-radius:20px; }
 
     .blog-card-body { padding:1.4rem 1.4rem 0; flex:1; display:flex; flex-direction:column; }
     .blog-card-meta { display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem; flex-wrap:wrap; justify-content:flex-end; }
@@ -109,6 +113,11 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .blog-card-cat.cat-ac        { background:#e0f2fe; color:#0369a1; }
     .blog-card-cat.cat-preventive{ background:#dcfce7; color:#15803d; }
     .blog-card-cat.cat-tips      { background:#f3e8ff; color:#6d28d9; }
+    .blog-card-cat.cat-engine    { background:#dbeafe; color:#1d4ed8; }
+    .blog-card-cat.cat-tyres     { background:#ede9fe; color:#5b21b6; }
+    .blog-card-cat.cat-brakes    { background:#fee2e2; color:#dc2626; }
+    .blog-card-cat.cat-buying    { background:#fef3c7; color:#b45309; }
+    .blog-card-cat.cat-ev        { background:#d1fae5; color:#065f46; }
 
     .blog-card-title { font-size:1.05rem; font-weight:800; color:#0d1b2a; line-height:1.4; margin:0 0 0.7rem; text-align:right; }
     .blog-card-excerpt { font-size:0.88rem; color:#4b5563; line-height:1.8; margin:0 0 1rem; flex:1; text-align:right; }
@@ -327,7 +336,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="blog-cats" id="blogCats">
   <button class="blog-cat-btn active" data-cat="all">جميع المقالات</button>
   <button class="blog-cat-btn" data-cat="ac">التكييف والتبريد</button>
+  <button class="blog-cat-btn" data-cat="engine">المحرك والنقل</button>
   <button class="blog-cat-btn" data-cat="preventive">الصيانة الوقائية</button>
+  <button class="blog-cat-btn" data-cat="tyres">الإطارات والجنوط</button>
+  <button class="blog-cat-btn" data-cat="brakes">الفرامل والتعليق</button>
+  <button class="blog-cat-btn" data-cat="buying">شراء وبيع السيارات</button>
+  <button class="blog-cat-btn" data-cat="ev">الهجين والكهربائي</button>
   <button class="blog-cat-btn" data-cat="tips">نصائح وإرشادات</button>
 </div>
 
@@ -1138,6 +1152,1148 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </article>
 
+<!-- 1. fuel-types-dubai-98-vs-95 -->
+<article class="blog-card" data-cat="engine" data-month="2025-11"
+  data-title="أنواع الوقود في دبي: هل تحتاج فعلاً إلى بنزين سوبر 98 أم يكفيك سوبر 95؟"
+  data-text="كثير من سائقي دبي يملؤون خزان سوبر 98 معتقدين أنه الأفضل دائماً، بينما يشغّل آخرون سياراتهم الرياضية بسوبر 95 لتوفير بضعة فلوس. كلا النهجين قد يكون خاطئاً.">
+  <div class="blog-card-banner">
+    <img src="../images/car-obd-diagnostic-scanner-dubai.webp" alt="جهاز فحص OBD تشخيصي للسيارة — قراءة أكواد أعطال المحرك في دبي" loading="lazy" width="800" height="400">
+    <div class="blog-banner-overlay"></div>
+    <span class="blog-banner-cat-icon">المحرك والنقل</span>
+  </div>
+  <div class="blog-card-body">
+    <div class="blog-card-meta">
+      <time class="blog-card-date" datetime="2025-11">نوفمبر 2025</time>
+      <span class="blog-card-cat cat-engine" style="background:#dbeafe;color:#1d4ed8;">المحرك والنقل</span>
+    </div>
+    <h2 class="blog-card-title"><a href="blog/fuel-types-dubai-98-vs-95.html">أنواع الوقود في دبي: هل تحتاج فعلاً إلى بنزين سوبر 98 أم يكفيك سوبر 95؟</a></h2>
+    <p class="blog-card-excerpt">كثير من سائقي دبي يملؤون خزان سوبر 98 معتقدين أنه الأفضل دائماً، بينما يشغّل آخرون سياراتهم الرياضية بسوبر 95 لتوفير بضعة فلوس. كلا النهجين قد يكون خاطئاً. إليك الإجابة الهندسية الفعلية لسيارتك تحديداً.</p>
+    <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+  </div>
+  <div class="blog-full">
+    <p>رقم الأوكتان (91 أو 95 أو 98 في الإمارات) يقيس مقاومة الوقود للاشتعال المبكر، وليس كمية الطاقة فيه. تحقق من دليل مالك سيارتك — الحد الأدنى المطلوب للأوكتان هو ما يهم، لا الدرجة الموصى بها فقط.</p>
+    <p>المحركات ذات نسبة الانضغاط العالية والتربو تحتاج فعلاً لسوبر 98. أما المحركات العادية الطبيعية السحب، فسوبر 95 يؤدي نفس الأداء دون أي فائدة إضافية من دفع 10–15% أكثر مقابل 98.</p>
+    <p>حرارة دبي الشديدة تزيد قليلاً من ميل بعض المحركات للطرقعة، لذا فإن التحول لـ98 في الصيف خيار احترازي معقول حتى للسيارات المصممة لـ95.</p>
+    <a href="https://wa.me/971541699500?text=لدي%20سؤال%20عن%20محرك%20سيارتي" class="blog-cta-inline" target="_blank" rel="noopener">📲 اسأل عن مشكلة في المحرك</a>
+  </div>
+</article>
+
+<!-- 2. gearbox-problems-dubai -->
+<article class="blog-card" data-cat="engine" data-month="2025-09"
+  data-title="مشاكل علبة التروس في دبي: العلامات التحذيرية والأسباب وما تكلفه الإصلاحات فعلياً"
+  data-text="إصلاح علبة التروس الشامل في دبي يكلف 8,000–25,000 درهم. صيانة السائل تكلف 400–800 درهم. العلامات التحذيرية تظهر قبل أشهر من العطل النهائي — إن عرفت ما تبحث عنه.">
+  <div class="blog-card-banner">
+    <img src="../images/jaguar-f-type-sports-car-service-dubai.webp" alt="جاكوار F-Type رياضية حمراء — متخصص جاكوار مستقل في دبي" loading="lazy" width="1200" height="1654">
+    <div class="blog-banner-overlay"></div>
+    <span class="blog-banner-cat-icon">المحرك والنقل</span>
+  </div>
+  <div class="blog-card-body">
+    <div class="blog-card-meta">
+      <time class="blog-card-date" datetime="2025-09">سبتمبر 2025</time>
+      <span class="blog-card-cat cat-engine" style="background:#dbeafe;color:#1d4ed8;">المحرك والنقل</span>
+    </div>
+    <h2 class="blog-card-title"><a href="blog/gearbox-problems-dubai.html">مشاكل علبة التروس في دبي: العلامات التحذيرية والأسباب وما تكلفه الإصلاحات فعلياً</a></h2>
+    <p class="blog-card-excerpt">إصلاح علبة التروس الشامل في دبي يكلف 8,000–25,000 درهم. صيانة السائل تكلف 400–800 درهم. العلامات التحذيرية التي تخبرك بالمسار الذي تسلكه تظهر قبل أشهر من العطل النهائي — إن عرفت ما تبحث عنه.</p>
+    <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+  </div>
+  <div class="blog-full">
+    <p>حركة المرور المتقطعة وحرارة دبي تُجهدان ناقل الحركة الأوتوماتيكي أكثر مما تتوقعه أغلب أدلة الشركات المصنعة. سائل ناقل الحركة يتأكسد أسرع، فيفقد لزوجته.</p>
+    <p>العلامات المبكرة: تأخر عند التحويل من P إلى D، تبديل خشن بين التروس، انزلاق أثناء التسارع، ورائحة احتراق من السائل. أي منها يستحق الفحص الفوري.</p>
+    <p>غيّر سائل ناقل الحركة كل 40,000–60,000 كم في دبي — وليس كل 100,000 كم كما توصي الكثير من الشركات المصنعة لمناخات أبرد.</p>
+    <a href="https://wa.me/971541699500?text=لدي%20مشكلة%20في%20علبة%20التروس%20وأحتاج%20تشخيصاً" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز تشخيص علبة التروس</a>
+  </div>
+</article>
+
+<!-- 3. hybrid-cars-dubai-2026 -->
+<article class="blog-card" data-cat="ev" data-month="2026-03"
+  data-title="السيارات الهجينة في دبي: هل تستحق العناء في 2026؟"
+  data-text="مع استقرار أسعار الوقود وحرارة صيف دبي الشديدة، تعِد السيارات الهجينة بتوفير حقيقي. لكن كيف تتحمل بطارياتها حجرات محرك تصل حرارتها لـ50 درجة؟">
+  <div class="blog-card-banner">
+    <img src="../images/electric-vehicle-charging-port-dubai.webp" alt="منفذ شحن سيارة كهربائية — صيانة السيارات الهجينة والكهربائية في فيكس هايف دبي" loading="lazy" width="1200" height="798">
+    <div class="blog-banner-overlay"></div>
+    <span class="blog-banner-cat-icon">الهجين والكهربائي</span>
+  </div>
+  <div class="blog-card-body">
+    <div class="blog-card-meta">
+      <time class="blog-card-date" datetime="2026-03">مارس 2026</time>
+      <span class="blog-card-cat cat-ev" style="background:#d1fae5;color:#065f46;">الهجين والكهربائي</span>
+    </div>
+    <h2 class="blog-card-title"><a href="blog/hybrid-cars-dubai-2026.html">السيارات الهجينة في دبي: هل تستحق العناء في 2026؟</a></h2>
+    <p class="blog-card-excerpt">مع استقرار أسعار الوقود وحرارة صيف دبي الشديدة، تعِد السيارات الهجينة بتوفير حقيقي. لكن كيف تتحمل بطارياتها حجرات محرك تصل حرارتها لـ50 درجة، وهل تكلفة الصيانة أقل فعلاً؟ ننظر في الأرقام الحقيقية.</p>
+    <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+  </div>
+  <div class="blog-full">
+    <p>الهجين الكامل من تويوتا/لكزس يحقق أفضل توفير في القيادة الحضرية المتقطعة — يبلغ سائقو كامري هايبرد في دبي عن 9–12 كم/لتر مقابل 8–10 كم/لتر للنسخة البنزينية.</p>
+    <p>بطاريات NiMH في هجينات تويوتا أثبتت متانة جيدة في حرارة الإمارات، حتى بعد 7–10 سنوات. بطاريات الليثيوم في السيارات القابلة للشحن أحدث وبياناتها طويلة الأمد ما زالت قيد التجميع.</p>
+    <p>لأصحاب القيادة الحضرية بشكل أساسي، يسترد الهجين فارق سعره خلال 3–4 سنوات وفق أسعار وقود 2026، مع مزايا اللوحة الخضراء وسالك المجاني.</p>
+    <a href="https://wa.me/971541699500?text=لدي%20سيارة%20هجينة%20وأحتاج%20صيانة" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز صيانة السيارة الهجينة</a>
+  </div>
+</article>
+
+<!-- 4. porsche-cayenne-rear-main-seal -->
+<article class="blog-card" data-cat="engine" data-month="2026-04"
+  data-title="تسرب حلقة الكرنك الخلفية في بورش كايين — كم تكلفة إصلاحه في دبي"
+  data-text="تسرب زيت في بورش كايين دائماً خبر سيئ — لكن تسرب حلقة الكرنك الخلفية هو ما يخشاه ملاك كايين أكثر من غيره. إنه مخفي وتدريجي ومكلف إن أُهمل.">
+  <div class="blog-card-banner">
+    <img src="../images/mercedes-gle-coupe-garage-dubai.webp" alt="مرسيدس-بنز GLE كوبيه بيضاء — صيانة مرسيدس مستقلة في دبي" loading="lazy" width="1200" height="801">
+    <div class="blog-banner-overlay"></div>
+    <span class="blog-banner-cat-icon">المحرك والنقل</span>
+  </div>
+  <div class="blog-card-body">
+    <div class="blog-card-meta">
+      <time class="blog-card-date" datetime="2026-04">أبريل 2026</time>
+      <span class="blog-card-cat cat-engine" style="background:#dbeafe;color:#1d4ed8;">المحرك والنقل</span>
+    </div>
+    <h2 class="blog-card-title"><a href="blog/porsche-cayenne-rear-main-seal.html">تسرب حلقة الكرنك الخلفية في بورش كايين — كم تكلفة إصلاحه في دبي</a></h2>
+    <p class="blog-card-excerpt">تسرب زيت في بورش كايين دائماً خبر سيئ — لكن تسرب حلقة الكرنك الخلفية هو ما يخشاه ملاك كايين أكثر من غيره. إنه مخفي وتدريجي ومكلف إن أُهمل. إليك كل ما تحتاج معرفته.</p>
+    <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+  </div>
+  <div class="blog-full">
+    <p>حلقة الكرنك الخلفية حلقة مطاطية رخيصة الثمن، لكن الوصول إليها يتطلب إزالة ناقل الحركة — أحياناً المحرك بأكمله — ما يجعل العمالة هي التكلفة الأكبر.</p>
+    <p>علامات التسرب: تنقيط زيت أسفل منتصف السيارة، زيت على غطاء ناقل الحركة، أو بقعة زيت طازجة على أرض الورشة بعد الركن. اختبار الصبغة بالأشعة فوق البنفسجية يحدد المصدر بدقة.</p>
+    <p>العمالة عند متخصص مستقل في دبي: 2,500–5,000 درهم إجمالاً، مقابل 6,000–12,000 درهم عند وكيل بورش — لنفس الجودة.</p>
+    <a href="https://wa.me/971541699500?text=لدى%20بورش%20كايين%20تسرب%20في%20حلقة%20الكرنك%20الخلفية%20في%20دبي" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز إصلاح تسرب زيت كايين</a>
+  </div>
+</article>
+
+<!-- 5. wheel-alignment-dubai -->
+<article class="blog-card" data-cat="tyres" data-month="2025-09"
+  data-title="ضبط زوايا العجلات في دبي: لماذا يهم أكثر مما تظن وكم مرة يجب فعله"
+  data-text="سوء ضبط زوايا العجلات يكلف سائقي دبي مالاً كل شهر عبر تآكل الإطارات المتسارع وزيادة استهلاك الوقود. كما يجعل سيارتك أقل أماناً.">
+  <div class="blog-card-banner">
+    <img src="../images/car-service-expert-advice-dubai.webp" alt="نصيحة خبير في صيانة السيارات — فيكس هايف غاراج دبي" loading="lazy" width="1200" height="800">
+    <div class="blog-banner-overlay"></div>
+    <span class="blog-banner-cat-icon">الإطارات والجنوط</span>
+  </div>
+  <div class="blog-card-body">
+    <div class="blog-card-meta">
+      <time class="blog-card-date" datetime="2025-09">سبتمبر 2025</time>
+      <span class="blog-card-cat cat-tyres" style="background:#ede9fe;color:#5b21b6;">الإطارات والجنوط</span>
+    </div>
+    <h2 class="blog-card-title"><a href="blog/wheel-alignment-dubai.html">ضبط زوايا العجلات في دبي: لماذا يهم أكثر مما تظن وكم مرة يجب فعله</a></h2>
+    <p class="blog-card-excerpt">سوء ضبط زوايا العجلات يكلف سائقي دبي مالاً كل شهر عبر تآكل الإطارات المتسارع وزيادة استهلاك الوقود. كما يجعل سيارتك أقل أماناً. ومع ذلك، لا يكتشف معظم السائقين اختلال الزوايا إلا بعد تلف إطار بالكامل.</p>
+    <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+  </div>
+  <div class="blog-full">
+    <p>ضبط الزوايا يشمل ثلاث قياسات: التوازي (Toe)، والميلان (Camber)، وزاوية الكاستر (Caster). أي انحراف عنها يسبب تآكلاً غير متساوٍ في الإطارات.</p>
+    <p>مطبات دبي الكثيرة وحواف الطرق المتضررة تُخرج الزوايا عن المواصفة أسرع من معظم المدن. سائقو دبي يحتاجون فحصاً أكثر تكراراً من فترة الشركة المصنعة.</p>
+    <p>ضبط الزوايا الحاسوبي للعجلات الأربع يكلف 150–350 درهم فقط — وقد يوفر عليك إطاراً كاملاً كل 20,000 كم.</p>
+    <a href="https://wa.me/971541699500?text=أحتاج%20فحص%20ضبط%20زوايا%20العجلات" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز ضبط زوايا العجلات</a>
+  </div>
+</article>
+
+<!-- 6. winter-driving-dubai -->
+<article class="blog-card" data-cat="preventive" data-month="2025-11"
+  data-title="القيادة الشتوية في دبي: ما الذي يتغير عند انخفاض الحرارة إلى 15 درجة مئوية"
+  data-text="شتاء دبي يجلب حرارة أبرد، وأمطاراً متفرقة، وضباباً صباحياً على طرق الإمارات. هذه الظروف غير مألوفة لكثير من سائقي دبي وتتطلب تعديلات محددة.">
+  <div class="blog-card-banner">
+    <img src="../images/volkswagen-beetle-classic-car-dubai.webp" alt="فولكسفاغن بيتل كلاسيكية — صيانة وإصلاح سيارات فولكسفاغن في دبي" loading="lazy" width="800" height="400">
+    <div class="blog-banner-overlay"></div>
+    <span class="blog-banner-cat-icon">الصيانة الوقائية</span>
+  </div>
+  <div class="blog-card-body">
+    <div class="blog-card-meta">
+      <time class="blog-card-date" datetime="2025-11">نوفمبر 2025</time>
+      <span class="blog-card-cat cat-preventive" style="background:#dcfce7;color:#15803d;">الصيانة الوقائية</span>
+    </div>
+    <h2 class="blog-card-title"><a href="blog/winter-driving-dubai.html">القيادة الشتوية في دبي: ما الذي يتغير عند انخفاض الحرارة إلى 15 درجة مئوية</a></h2>
+    <p class="blog-card-excerpt">شتاء دبي يجلب حرارة أبرد، وأمطاراً متفرقة، وضباباً صباحياً على طرق الإمارات. هذه الظروف غير مألوفة لكثير من سائقي دبي وتتطلب تعديلات محددة في القيادة وصيانة السيارة.</p>
+    <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+  </div>
+  <div class="blog-full">
+    <p>أول 15 دقيقة من أي مطر على طرق دبي هي الأخطر — الزيت والغبار المتراكمان لأشهر يجعلان الطريق زلقاً للغاية. زد مسافة تتبعك 3 أضعاف خلال هذه الفترة.</p>
+    <p>ضغط الإطارات ينخفض 4–5 رطل مع برودة الشتاء مقارنة بإعدادات الصيف — تحقق منه واضبطه في نوفمبر.</p>
+    <p>البطاريات التي أنهكها الصيف قد تفشل في صباحات يناير الباردة. اختبر حمل البطارية الآن قبل أن تُفاجأ بها متعطلة.</p>
+    <a href="https://wa.me/971541699500?text=أحتاج%20فحصاً%20شتوياً%20لسيارتي" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز الفحص الشتوي</a>
+  </div>
+</article>
+
+<!-- 7. year-end-car-check-dubai -->
+<article class="blog-card" data-cat="preventive" data-month="2025-12"
+  data-title="فحص نهاية العام للسيارة: 10 أشياء يجب فحصها قبل 2026"
+  data-text="ديسمبر هو الوقت المثالي لإجراء فحص صحي شامل لسيارتك قبل العام الجديد. هذه الفحوصات العشرة تستغرق أقل من ساعتين وقد توفر عليك فاتورة إصلاح كبيرة.">
+  <div class="blog-card-banner">
+    <img src="../images/engine-serpentine-belt-repair-dubai.webp" alt="سير المحرك المتعرج ونظام البكرات — إصلاح محركات السيارات في فيكس هايف دبي" loading="lazy" width="1200" height="675">
+    <div class="blog-banner-overlay"></div>
+    <span class="blog-banner-cat-icon">الصيانة الوقائية</span>
+  </div>
+  <div class="blog-card-body">
+    <div class="blog-card-meta">
+      <time class="blog-card-date" datetime="2025-12">ديسمبر 2025</time>
+      <span class="blog-card-cat cat-preventive" style="background:#dcfce7;color:#15803d;">الصيانة الوقائية</span>
+    </div>
+    <h2 class="blog-card-title"><a href="blog/year-end-car-check-dubai.html">فحص نهاية العام للسيارة: 10 أشياء يجب فحصها قبل 2026</a></h2>
+    <p class="blog-card-excerpt">ديسمبر هو الوقت المثالي لإجراء فحص صحي شامل لسيارتك قبل العام الجديد. هذه الفحوصات العشرة تستغرق أقل من ساعتين وقد توفر عليك فاتورة إصلاح كبيرة في 2026.</p>
+    <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+  </div>
+  <div class="blog-full">
+    <p>بعد أشهر من حرارة الصيف، سيارتك تحتاج تقييماً شاملاً: الزيت، البطارية، الفرامل، الإطارات، وسائل التبريد كلها تستحق الفحص.</p>
+    <p>لا تنسَ فلتر الهواء وفلتر المقصورة بعد موسم العواصف الرملية، ومساحات الزجاج قبل أول مطر شتوي.</p>
+    <p>فحص تشخيصي سريع بجهاز OBD يكشف أكواد الأعطال المعلقة قبل أن تتحول لمشكلة أكبر وأغلى ثمناً.</p>
+    <a href="https://wa.me/971541699500?text=أريد%20حجز%20فحص%20نهاية%20العام%20لسيارتي" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز فحص نهاية العام</a>
+  </div>
+</article>
+  <article class="blog-card" data-cat="tips" data-month="2026-04"
+    data-title="تلميع السيارات في دبي: كيف تحمي طلاءك من الغبار الصحراوي والأشعة فوق البنفسجية والرمال"
+    data-text="دبي واحدة من أكثر البيئات تطلباً لطلاء السيارات في العالم. إليك الأعداء الأربعة لطلاء سيارتك وخيارات الحماية المتاحة من الشمع إلى تغليف السيراميك وPPF.">
+    <div class="blog-card-banner">
+      <img src="../images/mechanic-engine-bay-service-dubai.webp" alt="ميكانيكي فيكس هايف يقوم بصيانة حجرة المحرك في ورشة بدبي" loading="lazy" width="1200" height="1800">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">نصائح وإرشادات</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-04">أبريل 2026</time>
+        <span class="blog-card-cat cat-tips">نصائح وإرشادات</span>
+      </div>
+      <h2 class="blog-card-title" dir="rtl"><a href="blog/car-detailing-dubai-paint.html">تلميع السيارات في دبي: كيف تحمي طلاءك من الغبار الصحراوي والأشعة فوق البنفسجية والرمال</a></h2>
+      <p class="blog-card-excerpt" dir="rtl">تلميع السيارات في دبي — كيف تحمي طلاء سيارتك من الرمال الصحراوية والأشعة فوق البنفسجية وفضلات الطيور وحرارة الصيف. ماذا يقدم كل مستوى حماية فعلياً.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full" dir="rtl">
+      <h3>الأعداء الأربعة لطلاء السيارة في دبي</h3>
+      <p>الأشعة فوق البنفسجية الشديدة (مؤشر 10–11 معظم السنة) تُبهت الطلاء وتؤكسده. غبار السيليكا الدقيق كاشط ويترك علامات دوامية عند المسح الجاف. فضلات الطيور الحمضية تحفر الطلاء الشفاف خلال ساعات في الحرارة. وبقع الماء العسر تترك رواسب معدنية عند التبخر.</p>
+      <h3>خيارات الحماية</h3>
+      <p>الشمع يدوم 1–3 أشهر فقط في حرارة دبي. طبقة الحماية (Sealant) البوليمرية تدوم 4–8 أشهر وخيار اقتصادي جيد. تغليف السيراميك يدوم 2–5 سنوات (1,500–5,000 درهم) ويوفر مقاومة ممتازة للأشعة وتنظيفاً أسهل. غشاء حماية الطلاء PPF يوفر أعلى حماية فيزيائية ضد الرقائق والخدوش (2,500–25,000 درهم حسب التغطية) ويُفضّل دمجه مع السيراميك.</p>
+      <h3>التوصية</h3>
+      <p>للسيارة الجديدة: PPF أمامي + تغليف سيراميك كامل من اليوم الأول. للسيارة المستعملة بحالة جيدة: تصحيح الطلاء ثم تغليف سيراميك. للنهج الاقتصادي: غسيل صحيح + طبقة حماية تُجدَّد كل 6 أشهر.</p>
+      <a href="https://wa.me/971541699500?text=أريد%20معرفة%20المزيد%20عن%20حماية%20طلاء%20سيارتي%20في%20دبي" class="blog-cta-inline" target="_blank" rel="noopener">📲 استفسر عن حماية الطلاء</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="buying" data-month="2025-10"
+    data-title="أفضل وقت لشراء سيارة جديدة في دبي: عروض نهاية العام"
+    data-text="من أكتوبر إلى يناير هو الوقت الذي يميل فيه سوق السيارات في دبي لصالح المشترين. إليك كيفية توقيت شرائك وما يجب فحصه قبل التوقيع.">
+    <div class="blog-card-banner">
+      <img src="../images/fiat-500-classic-car-service-dubai.webp" alt="سيارة فيات 500 كلاسيكية — صيانة وإصلاح في دبي" loading="lazy" width="1200" height="800">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">شراء وبيع السيارات</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2025-10">أكتوبر 2025</time>
+        <span class="blog-card-cat cat-buying" style="background:#fef3c7;color:#b45309;">شراء وبيع السيارات</span>
+      </div>
+      <h2 class="blog-card-title" dir="rtl"><a href="blog/best-time-buy-car-dubai.html">أفضل وقت لشراء سيارة جديدة في دبي: عروض نهاية العام</a></h2>
+      <p class="blog-card-excerpt" dir="rtl">الفترة من أكتوبر إلى يناير هي التي يميل فيها سوق السيارات في دبي بأكبر قدر لصالح المشتري. إليك كيفية توقيت شرائك، وما تفاوض عليه، وما يجب فحصه قبل التوقيع.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full" dir="rtl">
+      <h3>لماذا الربع الأخير هو أفضل نافذة؟</h3>
+      <p>تُطلق الشركات المصنّعة موديلات السنة الجديدة في سبتمبر–أكتوبر، فيسعى الوكلاء لتصريف المخزون قبل 31 ديسمبر بعروض أقوى في نوفمبر وديسمبر. مهرجان دبي للتسوق في يناير يمدّ نافذة العروض أكثر.</p>
+      <h3>ما تتفاوض عليه إلى جانب السعر</h3>
+      <p>باقة صيانة مجانية 2–3 سنوات، تسجيل وتأمين ضمن الصفقة، ضمان ممتد حتى 5 سنوات، إكسسوارات (تظليل، كاميرا لوحة قيادة)، ومرونة في قبول لون موجود بالمخزون.</p>
+      <h3>عند شراء سيارة مستعملة</h3>
+      <p>الفحص الفني المستقل قبل الشراء ضروري — فحوصات "المعتمد من الوكيل" ليست محايدة. أكثر ما يُكتشف: إصلاحات حوادث سابقة، إعادة طلاء غير معلَنة، تيل فرامل متآكل وتسريبات زيت.</p>
+      <a href="https://wa.me/971541699500?text=أحتاج%20فحص%20سيارة%20قبل%20الشراء" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز فحص ما قبل الشراء</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="engine" data-month="2026-01"
+    data-title="زيت المحرك في حرارة الإمارات: لماذا تُعد درجة لزوجة الزيت أهم مما تظن"
+    data-text="حرارة دبي تضغط على زيت محركك أكثر مما تتوقع. إليك كيف تختار الدرجة الصحيحة ولماذا الزيت الصناعي الكامل يستحق الفارق السعري.">
+    <div class="blog-card-banner">
+      <img src="../images/engine-serpentine-belt-repair-dubai.webp" alt="سير المحرك المضفر ونظام البكرات — إصلاح محرك فيكس هايف بدبي" loading="lazy" width="1200" height="675">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">المحرك والنقل</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-01">يناير 2026</time>
+        <span class="blog-card-cat cat-engine" style="background:#dbeafe;color:#1d4ed8;">المحرك والنقل</span>
+      </div>
+      <h2 class="blog-card-title" dir="rtl"><a href="blog/engine-oil-uae-heat.html">زيت المحرك في حرارة الإمارات: لماذا تُعد درجة لزوجة الزيت أهم مما تظن</a></h2>
+      <p class="blog-card-excerpt" dir="rtl">درجات حرارة دبي المحيطة تُقرّب زيت محركك من درجة حرارة التشغيل منذ الإقلاع، وتُسرّع أكسدته. إليك ماذا تعني أرقام اللزوجة فعلياً ولماذا الزيت الصناعي الكامل الخيار الأصح هنا.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full" dir="rtl">
+      <h3>ماذا تعني أرقام اللزوجة؟</h3>
+      <p>5W-40 هو الأكثر شيوعاً في الإمارات. الرقم الأول (لزوجة البرودة) غير مهم هنا لأن دبي نادراً ما تبرد. الرقم الثاني (اللزوجة الساخنة عند 100°م) هو ما يهم فعلاً — درجات 40 أو 50 توفر طبقة حماية أسمك تحت الحرارة الشديدة، وبعض المحركات عالية الأداء تستفيد من 5W-50 أو 10W-60 صيفاً.</p>
+      <h3>صناعي كامل مقابل نصف صناعي</h3>
+      <p>الزيت الصناعي الكامل يقاوم التحلل الحراري ويحافظ على لزوجة ثابتة بشكل أفضل بكثير من المعدني. الفارق السعري 100–200 درهم لكل تغيير — من أكثر الترقيات فعاليةً من حيث التكلفة لأي سيارة في الإمارات.</p>
+      <h3>فترة التغيير الصحيحة</h3>
+      <p>مع زيت صناعي كامل: فترة الشركة المصنعة (10,000–15,000 كم أو 12 شهراً) مناسبة عادةً. مع زيت معدني أو نصف صناعي: قلّصها إلى 7,500 كم أو 6 أشهر. الزيت الداكن ذو الرائحة المحروقة على عصا القياس يعني تغييراً فورياً بغض النظر عن الفترة.</p>
+      <a href="https://wa.me/971541699500?text=أحتاج%20تغيير%20زيت%20المحرك" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز تغيير الزيت</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="tips" data-month="2025-11"
+    data-title="التأمين على السيارات في دبي: ماذا تغطي بوليصتك فعلياً — وما لا تغطيه"
+    data-text="أغلب سائقي دبي غير مؤمَّنين بالقدر الكافي دون أن يدركوا ذلك. إليك الفرق بين تغطية الطرف الثالث والشاملة، وما تستثنيه أغلب البوليصات.">
+    <div class="blog-card-banner">
+      <img src="../images/eco-conscious-car-service-dubai.webp" alt="خدمة سيارات صديقة للبيئة — ورشة فيكس هايف بدبي" loading="lazy" width="1200" height="800">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">نصائح وإرشادات</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2025-11">نوفمبر 2025</time>
+        <span class="blog-card-cat cat-tips">نصائح وإرشادات</span>
+      </div>
+      <h2 class="blog-card-title" dir="rtl"><a href="blog/car-insurance-dubai-guide.html">التأمين على السيارات في دبي: ماذا تغطي بوليصتك فعلياً — وما لا تغطيه</a></h2>
+      <p class="blog-card-excerpt" dir="rtl">بوليصات التأمين في دبي أدق تفصيلاً مما يدركه معظم السائقين. هذا الدليل يشرح الفرق بين الشامل والطرف الثالث، وإصلاح الوكالة مقابل غير الوكالة، وما لا يُغطى غالباً.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full" dir="rtl">
+      <h3>شامل أم طرف ثالث؟</h3>
+      <p>تأمين الطرف الثالث هو الحد الأدنى القانوني ولا يغطي سيارتك أنت إطلاقاً. الشامل يغطي مركبتك بالإضافة للطرف الثالث. اختيار إصلاح الوكالة (قسط أعلى، قطع أصلية) مهم للسيارات ضمن الضمان؛ غير الوكالة مناسب للسيارات الأقدم من 5 سنوات.</p>
+      <h3>ما لا يُغطى غالباً</h3>
+      <p>الأعطال الميكانيكية الناتجة عن التآكل، أضرار القيادة خارج الطرق المعبدة، ثقوب وانفجارات الإطارات الفردية، واستهلاك القطع — كلها استثناءات شائعة تستحق قراءة البوليصة بعناية.</p>
+      <h3>التحمّل وخصم عدم المطالبة</h3>
+      <p>التحمّل عادة 500–2,500 درهم لكل مطالبة. إصلاح بسيط أقل من مبلغ التحمّل يعني الدفع من جيبك بالكامل. الحفاظ على خصم عدم المطالبة (حتى 20%) غالباً يستحق تحمّل تكلفة الإصلاحات الصغيرة بنفسك.</p>
+      <a href="https://wa.me/971541699500?text=أحتاج%20تقدير%20تكلفة%20إصلاح%20بعد%20حادث" class="blog-cta-inline" target="_blank" rel="noopener">📲 احصل على تقدير إصلاح</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="tyres" data-month="2026-02"
+    data-title="ما هي أفضل الإطارات لطرق دبي؟ تصنيفات الحرارة والسرعة وما يجب البحث عنه"
+    data-text="الإطارات الجيدة في أوروبا قد تفشل مبكراً على طرق دبي. إليك تصنيفات السرعة والحرارة وعمر الإطار وما يهم فعلياً عند الاختيار.">
+    <div class="blog-card-banner">
+      <img src="../images/car-service-expert-advice-dubai.webp" alt="استشارة خبير صيانة السيارات — ورشة فيكس هايف بدبي" loading="lazy" width="1200" height="800">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">الإطارات والجنوط</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-02">فبراير 2026</time>
+        <span class="blog-card-cat cat-tyres" style="background:#ede9fe;color:#5b21b6;">الإطارات والجنوط</span>
+      </div>
+      <h2 class="blog-card-title" dir="rtl"><a href="blog/best-tyres-dubai-roads.html">ما هي أفضل الإطارات لطرق دبي؟ تصنيفات الحرارة والسرعة وما يجب البحث عنه</a></h2>
+      <p class="blog-card-excerpt" dir="rtl">مزيج الحرارة الشديدة وسرعات الطرق السريعة العالية يجعل اختيار الإطار في دبي أكثر أهمية منه في معظم الأسواق. إليك ما تعنيه رموز الإطار فعلياً.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full" dir="rtl">
+      <h3>تصنيف السرعة والحرارة</h3>
+      <p>لا تركّب إطاراً بتصنيف سرعة أقل مما تتطلبه سيارتك — مسألة سلامة لا تفضيل، خاصة مع سرعات 120–140 كم/س. تصنيف مقاومة الحرارة UTQG من نوع A هو الأفضل لظروف دبي لأنه يعكس قدرة الإطار على تبديد الحرارة عند التشغيل المستمر.</p>
+      <h3>كل المواسم أم إطارات الصيف؟</h3>
+      <p>رغم الاسم، إطارات "كل المواسم" مصممة لتبقى مرنة في البرودة. في دبي، مركّب إطار الصيف المخصص غالباً أفضل — يعمل ضمن نطاقه الأمثل طوال السنة ويتآكل بشكل أكثر قابلية للتنبؤ.</p>
+      <h3>عمر الإطار</h3>
+      <p>افحص أي إطار أقدم من 5 سنوات واستبدله بحد أقصى 7 سنوات حتى لو بدا جيداً — تحقق من رمز DOT المكون من 4 أرقام على الجانب. حرارة الإمارات تسرّع تدهور المطاط بغض النظر عن عمق النقشة.</p>
+      <a href="https://wa.me/971541699500?text=أحتاج%20إطارات%20جديدة%20لسيارتي" class="blog-cta-inline" target="_blank" rel="noopener">📲 احصل على استشارة إطارات</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="engine" data-month="2026-03"
+    data-title="مشاكل علبة نقل الحركة في بورش كايين بدبي — شرح كامل لأعطال PTM والدفع الرباعي"
+    data-text="علبة نقل الحركة PTM في بورش كايين مكلفة الإصلاح عند التعطل. إليك الأعراض المبكرة وأسبابها الجذرية في ظروف الإمارات وكيف تتجنب الفاتورة الكبرى.">
+    <div class="blog-card-banner">
+      <img src="../images/nissan-juke-service-repair-dubai.webp" alt="نيسان جوك كروس أوفر — صيانة وإصلاح سيارات بدبي" loading="lazy" width="1200" height="1500">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">المحرك والنقل</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-03">مارس 2026</time>
+        <span class="blog-card-cat cat-engine" style="background:#dbeafe;color:#1d4ed8;">المحرك والنقل</span>
+      </div>
+      <h2 class="blog-card-title" dir="rtl"><a href="blog/porsche-cayenne-transfer-case-dubai.html">مشاكل علبة نقل الحركة في بورش كايين بدبي — شرح كامل لأعطال PTM والدفع الرباعي</a></h2>
+      <p class="blog-card-excerpt" dir="rtl">مشاكل علبة نقل الحركة ليست نادرة على أجيال Cayenne 955 و958 ذات الأميال المرتفعة في دبي. إليك الأعراض المبكرة والسبب الجذري القابل للوقاية منه.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full" dir="rtl">
+      <h3>الأعراض الشائعة</h3>
+      <p>مصباح تحذير AWD/4WD، اهتزاز أو رجفة عند الانعطاف الحاد بسرعة منخفضة، صوت أزيز من نفق ناقل الحركة، صعوبة التوجيه أثناء المناورات البطيئة، وتسرب سائل تحت منطقة ناقل الحركة.</p>
+      <h3>السبب الجذري في الإمارات</h3>
+      <p>سائل PTM (مواصفة G60) يتدهور بسرعة أكبر مع دورات الحرارة المتكررة. نوصي بتغييره كل 40,000–50,000 كم بدلاً من 60,000 كم الموصى بها من المصنّع — هذا هو السبب الأكثر شيوعاً والقابل للوقاية منه لأعطال PTM.</p>
+      <h3>تكلفة الإصلاح</h3>
+      <p>استبدال مجموعة القابض أو إعادة بناء علبة نقل الحركة: 5,000–12,000 درهم. استبدال وحدة تحكم PTM: 2,000–5,000 درهم. تغيير السائل الوقائي البسيط يوفر عليك هذه الفواتير في أغلب الحالات.</p>
+      <a href="https://wa.me/971541699500?text=لدي%20مشكلة%20في%20علبة%20نقل%20الحركة%20لسيارة%20بورش%20كايين%20في%20دبي" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز فحص PTM لسيارة كايين</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="brakes" data-month="2026-04"
+    data-title="اهتزاز الموت في جيب رانجلر بدبي — ما الذي يسببه فعلاً وكيف يُصلح بالشكل الصحيح"
+    data-text="اهتزاز مقود جيب رانجلر عند سرعة الطريق السريع تجربة مرعبة لكنها قابلة للإصلاح. إليك الأسباب الحقيقية والإصلاح الخاطئ الشائع الذي لا يحل المشكلة.">
+    <div class="blog-card-banner">
+      <img src="../images/chevrolet-camaro-performance-service-dubai.webp" alt="شيفروليه كامارو SS سيارة أداء — صيانة وإصلاح بدبي" loading="lazy" width="1200" height="743">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">الفرامل والتعليق</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-04">أبريل 2026</time>
+        <span class="blog-card-cat cat-brakes" style="background:#fee2e2;color:#dc2626;">الفرامل والتعليق</span>
+      </div>
+      <h2 class="blog-card-title" dir="rtl"><a href="blog/jeep-wrangler-death-wobble.html">اهتزاز الموت في جيب رانجلر بدبي — ما الذي يسببه فعلاً وكيف يُصلح بالشكل الصحيح</a></h2>
+      <p class="blog-card-excerpt" dir="rtl">مقدمة السيارة تهتز بعنف عند سرعة 80–110 كم/س بعد الاصطدام بمطب — أمر شائع في الإمارات، ولسوء الحظ يحصل كثير من الملاك على إصلاحات ناقصة لا تحل المشكلة.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full" dir="rtl">
+      <h3>ما هو اهتزاز الموت؟</h3>
+      <p>ليس عطلاً في قطعة واحدة بل حالة نظام — تآكل تراكمي في عدة مكونات للتوجيه والتعليق يسمح بلعب زائد، فيدخل المحور الأمامي في تذبذب رنيني يستمر حتى تخفض السرعة لأقل من 60–70 كم/س.</p>
+      <h3>الأسباب الشائعة</h3>
+      <p>تآكل جلب قضيب الدفع (الأكثر شيوعاً)، أطراف قضبان التوجيه، المفاصل الكروية، جلب أذرع التحكم، وتوازن العجلات أو تآكل الإطارات غير المتساوٍ.</p>
+      <h3>الإصلاح الخاطئ الشائع</h3>
+      <p>استبدال مثبت التوجيه فقط يخفف الأعراض دون معالجة الارتخاء الأساسي — سيعود الاهتزاز غالباً أسوأ. النهج الصحيح: فحص شامل على الرافعة، استبدال كل المكونات المهترئة معاً، ضبط الزوايا وموازنة العجلات، ثم استبدال مثبت التوجيه أخيراً.</p>
+      <a href="https://wa.me/971541699500?text=لدي%20اهتزاز%20في%20مقود%20جيب%20رانجلر%20وأريد%20حجز%20فحص" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز فحص التعليق الأمامي</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="engine" data-month="2026-02"
+    data-title="لماذا تسخن السيارات أكثر في صيف دبي — وماذا تفعل عندما يحدث ذلك"
+    data-text="درجات حرارة دبي الصيفية تكشف أي ضعف في نظام التبريد. إليك لماذا يرتفع مقياس الحرارة أكثر هنا، وماذا تفعل بالضبط إذا ارتفعت حرارة سيارتك.">
+    <div class="blog-card-banner">
+      <img src="../images/jaguar-f-type-sports-car-service-dubai.webp" alt="جاكوار F-Type رياضية حمراء — متخصص جاكوار مستقل بدبي" loading="lazy" width="1200" height="1654">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">المحرك والنقل</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-02">فبراير 2026</time>
+        <span class="blog-card-cat cat-engine" style="background:#dbeafe;color:#1d4ed8;">المحرك والنقل</span>
+      </div>
+      <h2 class="blog-card-title" dir="rtl"><a href="blog/car-overheating-dubai-summer.html">لماذا تسخن السيارات أكثر في صيف دبي — وماذا تفعل عندما يحدث ذلك</a></h2>
+      <p class="blog-card-excerpt" dir="rtl">فرق درجة الحرارة الصغير بين سائل التبريد والهواء المحيط في دبي يجعل الرادياتير أقل كفاءة، ومكثف التكييف يسخّن الهواء الداخل إليه أكثر. إليك الأسباب الشائعة وخطوات الطوارئ.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full" dir="rtl">
+      <h3>لماذا صيف دبي مختلف؟</h3>
+      <p>عندما تكون الحرارة المحيطة 48 درجة، يتقلص الفارق الحراري الذي يدفع تبديد الحرارة عبر الرادياتير. إضافة لذلك، مكثف التكييف يسخّن الهواء الداخل للرادياتير مسبقاً حتى 55–60 درجة عند تشغيل التكييف بأقصى طاقته.</p>
+      <h3>الأسباب الشائعة</h3>
+      <p>انخفاض أو تدهور سائل التبريد، انسداد زعانف الرادياتير بالغبار، تعطل مضخة الماء أو الثيرموستات، وخراطيم متشققة تعيق التدفق جزئياً.</p>
+      <h3>ماذا تفعل عند ارتفاع الحرارة؟</h3>
+      <p>أطفئ التكييف فوراً، شغّل التدفئة على أقصى سخونة (تعمل كمبادل حراري إضافي)، وإذا استمر الارتفاع توقف بأمان وأوقف المحرك. لا تفتح غطاء الرادياتير أبداً وهو ساخن — القيادة بضعة كيلومترات إضافية قد تكلف 8,000–25,000 درهم لإصلاح حشوة الرأس.</p>
+      <a href="https://wa.me/971541699500?text=سيارتي%20ترتفع%20حرارتها%20في%20الصيف%20وأريد%20حجز%20فحص" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز فحص نظام التبريد</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="engine" data-month="2026-04"
+    data-title="ارتفاع حرارة محرك السيارة في دبي — ماذا تفعل وكم يكلف الإصلاح"
+    data-text="طريقة تصرفك في أول دقائق ارتفاع حرارة المحرك تحدد الفرق بين إصلاح بخمسمئة درهم وإعادة بناء محرك بعشرين ألفاً. إليك ماذا تفعل بالضبط وتكاليف كل سيناريو.">
+    <div class="blog-card-banner">
+      <img src="../images/jaguar-f-type-sports-car-service-dubai.webp" alt="جاكوار F-Type رياضية حمراء — متخصص جاكوار مستقل بدبي" loading="lazy" width="1200" height="1654">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">المحرك والنقل</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-04">أبريل 2026</time>
+        <span class="blog-card-cat cat-engine" style="background:#dbeafe;color:#1d4ed8;">المحرك والنقل</span>
+      </div>
+      <h2 class="blog-card-title" dir="rtl"><a href="blog/engine-overheating-dubai.html">ارتفاع حرارة محرك السيارة في دبي — ماذا تفعل وكم يكلف الإصلاح</a></h2>
+      <p class="blog-card-excerpt" dir="rtl">إذا وصل مؤشر الحرارة للمنطقة الحمراء: توقف فوراً وأطفئ المحرك. كل دقيقة إضافية من القيادة تضاعف تكلفة الإصلاح. إليك الأسباب ومستويات الضرر وتكلفة كل مستوى.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full" dir="rtl">
+      <h3>الأسباب الشائعة</h3>
+      <p>تسرب سائل التبريد (الأكثر شيوعاً)، عطل الثرموستات أو مضخة المياه، انسداد الرادياتير، عطل مروحة التبريد في الزحام البطيء، أو عطل حشوة الرأس.</p>
+      <h3>مستويات الضرر والتكلفة</h3>
+      <p>ارتفاع طفيف مع إطفاء سريع: غالباً إصلاح بسيط للسبب الجذري (300–3,000 درهم). ارتفاع متوسط مع استمرار القيادة دقائق: يرجّح تلف حشوة الرأس (3,000–10,000 درهم). ارتفاع شديد حتى التعطل: تلف كارثي يتطلب إعادة بناء أو استبدال المحرك (10,000–35,000 درهم فأكثر).</p>
+      <h3>خاص بدبي</h3>
+      <p>الزحام المتقطع في حرارة 45 درجة يجعل المحرك يعتمد كلياً على مروحة التبريد الكهربائية عند التوقف — وعطلها في زحام الصيف طريق سريع لارتفاع الحرارة.</p>
+      <a href="https://wa.me/971541699500?text=توقفت%20سيارتي%20بسبب%20ارتفاع%20الحرارة%20وأحتاج%20مساعدة" class="blog-cta-inline" target="_blank" rel="noopener">📲 اطلب المساعدة الآن</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="engine" data-month="2026-04"
+    data-title="إصلاح أضرار الفيضانات لسيارات BMW في دبي — بعد أمطار الإمارات الغزيرة"
+    data-text="فيضانات الإمارات المفاجئة يمكن أن تُلحق ضرراً خفياً بسيارتك BMW. القيادة عبر مياه راكدة — حتى الضحلة منها — قد تدمر الإلكترونيات والمحرك وناقل الحركة.">
+    <div class="blog-card-banner">
+      <img src="../images/jaguar-f-type-sports-car-service-dubai.webp" alt="جاكوار F-Type رياضية حمراء — متخصص جاكوار مستقل بدبي" loading="lazy" width="1200" height="1654">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">المحرك والنقل</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-04">أبريل 2026</time>
+        <span class="blog-card-cat cat-engine" style="background:#dbeafe;color:#1d4ed8;">المحرك والنقل</span>
+      </div>
+      <h2 class="blog-card-title" dir="rtl"><a href="blog/bmw-flood-damage-repair-dubai.html">إصلاح أضرار الفيضانات لسيارات BMW في دبي — بعد أمطار الإمارات الغزيرة</a></h2>
+      <p class="blog-card-excerpt" dir="rtl">لا تحاول تشغيل سيارة تضررت من الفيضانات — القفل الهيدروستاتيكي عطل كارثي لا يمكن إصلاحه. إليك ما يجب فعله فوراً وما يتضرر فعلياً في سيارات BMW.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full" dir="rtl">
+      <h3>خطوات فورية</h3>
+      <p>لا تشغّل السيارة حتى لو بدت جافة. افصل البطارية إن أمكن بأمان، وثّق كل شيء للتأمين، وتواصل مع شركة التأمين قبل نقل السيارة، ثم اطلب سحبها لا قيادتها إلى ورشة متخصصة.</p>
+      <h3>ما يتضرر فعلياً</h3>
+      <p>المحرك ونظام سحب الهواء إذا تجاوزت المياه 40–60 سم. وحدات التحكم الإلكترونية (ABS، ناقل الحركة، الدخول المريح) الموجودة في حيّز المحرك والصندوق الخلفي. ناقل الحركة الأوتوماتيكي إذا دخلت المياه فتحة التنفيس (إصلاح 8,000–20,000 درهم). والداخلية التي تحتاج تجفيفاً احترافياً كاملاً لمنع العفن.</p>
+      <h3>التأمين</h3>
+      <p>معظم البوليصات الشاملة في الإمارات تغطي أضرار الفيضان إن لم تكن قد قدت عمداً في مياه عميقة. وثّق كل شيء واستشر ورشة متخصصة قبل أي قرار.</p>
+      <a href="https://wa.me/971541699500?text=سيارتي%20BMW%20تعرضت%20للفيضان%20وأحتاج%20فحصاً%20عاجلاً" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز فحص أضرار الفيضان</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="tips" data-month="2025-12"
+    data-title="كيف تحافظ على برودة مقصورة سيارتك عندما تكون متوقفة تحت شمس دبي"
+    data-text="سيارة متوقفة تحت شمس دبي في يوليو تصل حرارتها الداخلية إلى 70–80 درجة. إليك الإجراءات التي تحمي فعلياً لوحة القيادة والجلد والإلكترونيات.">
+    <div class="blog-card-banner">
+      <img src="../images/mercedes-gle-coupe-garage-dubai.webp" alt="مرسيدس-بنز GLE كوبيه بيضاء — صيانة مرسيدس مستقلة في دبي" loading="lazy" width="1200" height="801">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">نصائح وإرشادات</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2025-12">ديسمبر 2025</time>
+        <span class="blog-card-cat cat-tips">نصائح وإرشادات</span>
+      </div>
+      <h2 class="blog-card-title" dir="rtl"><a href="blog/keep-car-cool-dubai-sun.html">كيف تحافظ على برودة مقصورة سيارتك عندما تكون متوقفة تحت شمس دبي</a></h2>
+      <p class="blog-card-excerpt" dir="rtl">حرارة المقصورة الداخلية تشقق لوحة القيادة والجلد وتُسرّع تدهور الإلكترونيات. إليك الخطوات التي تُطيل فعلياً عمر داخلية سيارتك — وليس فقط تجعل العودة إليها أكثر احتمالاً.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full" dir="rtl">
+      <h3>الظل أولاً</h3>
+      <p>الركن في الظل هو الحل الحقيقي الوحيد — كل ما عداه مجرد تخفيف. مظلة زجاج أمامي عاكسة جيدة (50–150 درهم) تخفض حرارة لوحة القيادة 15–20 درجة.</p>
+      <h3>تظليل النوافذ والتهوية</h3>
+      <p>تظليل سيراميكي احترافي (600–1,500 درهم) يقلل اكتساب الحرارة الشمسية 40–70% ضمن الحدود القانونية (50% أمامي، 30% خلفي). عند العودة، افتح النوافذ الأربع وقُد 60–90 ثانية قبل تشغيل التكييف على إعادة التدوير الكامل لطرد الهواء الساخن أولاً.</p>
+      <h3>حماية إضافية</h3>
+      <p>أغطية مقاعد فاتحة اللون تحمي الجلد من الحروق والتدهور، وأنظمة التبريد المسبق عن بُعد (أصلية أو لاحقة التركيب) تجعل الداخلية مقبولة قبل لمس المقبض.</p>
+      <a href="https://wa.me/971541699500?text=لدي%20سؤال%20عن%20التكييف%20أو%20التبريد%20في%20سيارتي" class="blog-cta-inline" target="_blank" rel="noopener">📲 اسأل عن التكييف</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="ac" data-month="2026-03"
+    data-title="قائمة فحص التكييف قبل الصيف: لماذا مارس هو الوقت الصحيح لصيانته"
+    data-text="أبريل متأخر جداً — تمتلئ ورش دبي حينها بطوارئ التكييف. مارس هو الوقت الصحيح للفحص الشامل قبل أن يبدأ الصيف الحقيقي.">
+    <div class="blog-card-banner">
+      <img src="../images/mercedes-gle-coupe-garage-dubai.webp" alt="مرسيدس-بنز GLE كوبيه بيضاء — صيانة مرسيدس مستقلة في دبي" loading="lazy" width="1200" height="801">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">التكييف والتبريد</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-03">مارس 2026</time>
+        <span class="blog-card-cat cat-ac">التكييف والتبريد</span>
+      </div>
+      <h2 class="blog-card-title" dir="rtl"><a href="blog/ac-pre-summer-checklist-dubai.html">قائمة فحص التكييف قبل الصيف: لماذا مارس هو الوقت الصحيح لصيانته</a></h2>
+      <p class="blog-card-excerpt" dir="rtl">بحلول أبريل، تمتلئ ورش دبي باتصالات طوارئ التكييف. مارس نافذة معتدلة الحرارة مع سعة استيعابية كافية — إليك قائمة الفحص الكاملة وتكاليفها.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full" dir="rtl">
+      <h3>ماذا يشمل الفحص؟</h3>
+      <p>اختبار ضغط غاز التبريد، تفعيل الضاغط والتأكد من دوراته الصحيحة، فحص نظافة المكثف، استبدال فلتر هواء المقصورة إن لزم، فحص ملف المبخر بحثاً عن تكوّن الجليد، وتصريف المكثفات خالٍ من الانسداد.</p>
+      <h3>تعبئة أم صيانة كاملة؟</h3>
+      <p>إن فقد تكييفك غاز التبريد، أوجد الإصلاح التسرب أولاً بالصبغة فوق البنفسجية أو الكشف الإلكتروني قبل إعادة الشحن — إعادة الشحن وحدها دون إصلاح التسرب تعني تكرار المشكلة خلال أشهر.</p>
+      <h3>التكلفة التقريبية</h3>
+      <p>فحص واختبار ضغط: 150–300 درهم. إعادة شحن الغاز إن لزم: 200–500 درهم. فلتر هواء المقصورة: 100–200 درهم. فحص الضاغط في مارس يكشف مشاكل مبكرة قبل أن يرفع طلب الصيف أوقات الانتظار.</p>
+      <a href="https://wa.me/971541699500?text=مرحبًا%2C%20رأيت%20مدونتكم%20عن%20التكييف%20وأريد%20حجز%20فحص" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز فحص تكييف</a>
+    </div>
+  </article>
+    <!-- مقالة: فترات صيانة السيارة في دبي -->
+    <article class="blog-card" data-cat="preventive" data-month="2026-03"
+             data-title="فترات صيانة السيارة في دبي: اتبع دليل الشركة المصنعة أم تكيّف مع الحرارة؟"
+             data-text="جداول صيانة الشركات المصنعة مصممة لظروف عالمية متوسطة. حرارة دبي والغبار والزحام المتقطع تضع معظم المكونات تحت إجهاد أكبر — إليك بنداً ببند الفترات المعدّلة الموصى بها في الإمارات.">
+      <div class="blog-card-banner">
+        <img src="../images/eco-conscious-car-service-dubai.webp" alt="صيانة سيارات صديقة للبيئة — فيكس هايف غاراج دبي" loading="lazy" width="1200" height="800">
+        <div class="blog-banner-overlay"></div>
+        <span class="blog-banner-cat-icon">الصيانة الوقائية</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-date">مارس 2026</span>
+          <span class="blog-card-cat cat-preventive">الصيانة الوقائية</span>
+        </div>
+        <h2 class="blog-card-title"><a href="blog/car-service-intervals-dubai.html">فترات صيانة السيارة في دبي: اتبع دليل الشركة المصنعة أم تكيّف مع الحرارة؟</a></h2>
+        <p class="blog-card-excerpt">جداول الصيانة العالمية لا تراعي حرارة دبي ولا الغبار ولا الزحام المتقطع. إليك الفترات المعدّلة لكل بند — من زيت المحرك إلى سائل التبريد — لظروف الإمارات تحديداً.</p>
+        <button class="blog-read-btn" onclick="toggleArticle(this)"><i class="btn-arrow">‹</i> اقرأ المقالة</button>
+      </div>
+      <div class="blog-full">
+        <h3>لماذا فترة الشركة المصنعة لا تكفي في دبي</h3>
+        <p>الحرارة الشديدة، الغبار الدائم، والحمل المستمر على التكييف يسرّعون تدهور الزيت والفلاتر والسوائل مقارنة بالمناخات المعتدلة التي صُممت لها جداول الصيانة الأصلية.</p>
+        <h3>أبرز التعديلات الموصى بها</h3>
+        <ul>
+          <li>زيت المحرك التخليقي: كل 7,500–10,000 كم بدل 10,000–15,000 كم</li>
+          <li>فلتر هواء المقصورة: كل 12,000–15,000 كم بدل 20,000–30,000 كم</li>
+          <li>زيت ناقل الحركة الأوتوماتيكي: كل 40,000–60,000 كم بدل 60,000–100,000 كم</li>
+          <li>تنظيف سائل التبريد: كل سنتين بدل 3–5 سنوات</li>
+        </ul>
+        <p>الهدف هو المعايرة وفق ظروف الإمارات، وليس الإفراط في الصيانة — تغيير الزيت كل 3,000 كم مثلاً غير ضروري مع الزيت التخليقي الحديث.</p>
+        <a href="https://wa.me/971541699500?text=أحتاج%20حجز%20صيانة%20لسيارتي%20في%20دبي" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز صيانة</a>
+      </div>
+    </article>
+
+    <!-- مقالة: فحص السيارة بعد الصيف -->
+    <article class="blog-card" data-cat="preventive" data-month="2025-09"
+             data-title="فحص السيارة بعد الصيف: ماذا تفعل حرارة دبي بسيارتك خلال 5 أشهر"
+             data-text="بحلول سبتمبر، تكون سيارتك قد تحمّلت خمسة أشهر من الحرارة الشديدة. إليك ما يجب فحصه — سائل التبريد، التكييف، البطارية، الإطارات — قبل أن تختبئ المشاكل في الأشهر الأكثر برودة.">
+      <div class="blog-card-banner">
+        <img src="../images/mechanic-engine-diagnostic-service-dubai.webp" alt="فني معتمد يجري فحصاً تشخيصياً للمحرك — خدمة صيانة سيارات دبي" loading="lazy" width="800" height="400">
+        <div class="blog-banner-overlay"></div>
+        <span class="blog-banner-cat-icon">الصيانة الوقائية</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-date">سبتمبر 2025</span>
+          <span class="blog-card-cat cat-preventive">الصيانة الوقائية</span>
+        </div>
+        <h2 class="blog-card-title"><a href="blog/post-summer-car-check-dubai.html">فحص السيارة بعد الصيف: ماذا تفعل حرارة دبي بسيارتك خلال 5 أشهر</a></h2>
+        <p class="blog-card-excerpt">خمسة أشهر من الحرارة القصوى تجهد نظام التبريد والتكييف والبطارية والإطارات. فحص شامل في سبتمبر يكشف الأضرار المتراكمة قبل أن تتفاقم في الشتاء.</p>
+        <button class="blog-read-btn" onclick="toggleArticle(this)"><i class="btn-arrow">‹</i> اقرأ المقالة</button>
+      </div>
+      <div class="blog-full">
+        <h3>لماذا سبتمبر هو التوقيت الصحيح</h3>
+        <p>التقويم لا يقل أهمية عن الكيلومترات في دبي. فترة مايو–سبتمبر تُخضع السيارة لإجهاد لم تُصمَّم له جداول الصيانة القياسية.</p>
+        <h3>ما يجب فحصه</h3>
+        <ul>
+          <li>تركيز سائل التبريد وحالة الرادياتير</li>
+          <li>غاز التكييف وأختام الضاغط (نحو 3,000 ساعة تشغيل صيفية)</li>
+          <li>اختبار حمل البطارية — العدو الأول للبطارية هو الحرارة</li>
+          <li>عمق نقش الإطارات وتشقق الجدار الجانبي</li>
+          <li>نسبة الرطوبة في سائل الفرامل وحالة فلتر هواء المحرك</li>
+        </ul>
+        <p>سبتمبر من أفضل الأشهر لزيارة الورشة — ضغط الصيف انتهى ولدى الفنيين وقت للفحص بدقة.</p>
+        <a href="https://wa.me/971541699500?text=أرغب%20في%20حجز%20فحص%20سيارة%20بعد%20الصيف" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز فحص ما بعد الصيف</a>
+      </div>
+    </article>
+
+    <!-- مقالة: دليل شحن السيارات الكهربائية في دبي -->
+    <article class="blog-card" data-cat="ev" data-month="2025-10"
+             data-title="شحن السيارات الكهربائية في دبي: كل ما يحتاج تسلا وأصحاب السيارات الكهربائية معرفته"
+             data-text="شبكة شحن ديوا وSupercharger تسلا، الشحن المنزلي، تأثير الحرارة على المدى، وصيانة السيارات الكهربائية في دبي — دليل شامل لمالكي السيارات الكهربائية الجدد.">
+      <div class="blog-card-banner">
+        <img src="../images/hybrid-ev-charging-connector-dubai.webp" alt="موصل شحن سيارة هجينة/كهربائية — صيانة السيارات الكهربائية في دبي" loading="lazy" width="800" height="400">
+        <div class="blog-banner-overlay"></div>
+        <span class="blog-banner-cat-icon">الهجين والكهربائي</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-date">أكتوبر 2025</span>
+          <span class="blog-card-cat cat-ev" style="background:#d1fae5;color:#065f46;">الهجين والكهربائي</span>
+        </div>
+        <h2 class="blog-card-title"><a href="blog/ev-charging-dubai-guide.html">شحن السيارات الكهربائية في دبي: كل ما يحتاج تسلا وأصحاب السيارات الكهربائية معرفته</a></h2>
+        <p class="blog-card-excerpt">من شبكة ديوا العامة إلى Supercharger تسلا والشحن المنزلي — دليل عملي لمالكي السيارات الكهربائية في دبي، مع تأثير الحرارة على المدى وما تحتاجه من صيانة.</p>
+        <button class="blog-read-btn" onclick="toggleArticle(this)"><i class="btn-arrow">‹</i> اقرأ المقالة</button>
+      </div>
+      <div class="blog-full">
+        <h3>شبكة الشحن في دبي</h3>
+        <p>تُشغّل ديوا أكثر من 400 نقطة شحن ضمن مبادرة Green Charger (مجانية حالياً للمسجلين)، بينما تُشغّل تسلا شبكة Supercharger الخاصة بها في مواقع رئيسية مثل مول الإمارات ودبي مول.</p>
+        <h3>الشحن المنزلي</h3>
+        <p>صندوق شحن 7 كيلوواط يشحن معظم السيارات بين ليلة وضحاها، ويحتاج تصريحاً من ديوا. التكلفة عادة 2,500–5,000 درهم للتوريد والتركيب. الشقق أكثر تعقيداً وتتطلب موافقة إدارة المبنى.</p>
+        <h3>الحرارة والمدى والصيانة</h3>
+        <p>تشغيل التكييف في 45 درجة مئوية يقلل المدى 20–30%. يُنصح بالركن في الظل واستخدام التهيئة المسبقة أثناء الشحن. السيارات الكهربائية تحتاج صيانة أقل لكنها تبقى تتطلب فحص فرامل وإطارات وبطارية 12 فولت لدى متخصص مؤهل للجهد العالي.</p>
+        <a href="https://wa.me/971541699500?text=أحتاج%20صيانة%20لسيارتي%20الكهربائية" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز صيانة السيارة الكهربائية</a>
+      </div>
+    </article>
+
+    <!-- مقالة: مشاكل محرك BMW N63 -->
+    <article class="blog-card" data-cat="engine" data-month="2026-03"
+             data-title="مشاكل محرك BMW N63 — ما يجب أن يعرفه كل مالك X5 وX6 والفئة 5"
+             data-text="محرك N63 V8 توين-تيربو له مشاكل موثقة اعترفت بها BMW نفسها — استهلاك الزيت، أعطال التوربينات، تسريبات التبريد. في حرارة دبي تظهر هذه المشاكل بشكل أكثر حدة.">
+      <div class="blog-card-banner">
+        <img src="../images/luxury-car-workshop-multi-lift-dubai.webp" alt="ورشة سيارات فاخرة بروافع متعددة — فيكس هايف مدينة دبي للاستثمار" loading="lazy" width="800" height="400">
+        <div class="blog-banner-overlay"></div>
+        <span class="blog-banner-cat-icon">المحرك والنقل</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-date">مارس 2026</span>
+          <span class="blog-card-cat cat-engine" style="background:#dbeafe;color:#1d4ed8;">المحرك والنقل</span>
+        </div>
+        <h2 class="blog-card-title"><a href="blog/bmw-n63-engine-problems-dubai.html">مشاكل محرك BMW N63 — ما يجب أن يعرفه كل مالك X5 وX6 والفئة 5</a></h2>
+        <p class="blog-card-excerpt">محرك N63 V8 التوين-تيربو له نقاط ضعف موثقة رسمياً من BMW. إليك أبرز مشاكله المعروفة وكيف تحمي محركك في حرارة الإمارات.</p>
+        <button class="blog-read-btn" onclick="toggleArticle(this)"><i class="btn-arrow">‹</i> اقرأ المقالة</button>
+      </div>
+      <div class="blog-full">
+        <h3>تصميم "الوادي الساخن"</h3>
+        <p>يضع N63 التوربينين في وادي المحرك حيث قد تتجاوز الحرارة 200 درجة مئوية — ما يُجهد التوربينات وأنابيب الزيت والتبريد معاً.</p>
+        <h3>أبرز المشاكل المعروفة</h3>
+        <ul>
+          <li>استهلاك الزيت (1–2 لتر كل 1,000–2,000 كم) بسبب أختام سيقان الصمامات وتراكم الكربون</li>
+          <li>أعطال التوربينات — استبدال يكلف 6,000–15,000 درهم لكل توربين</li>
+          <li>تسريبات أنابيب التبريد وغطاء الصمامات البلاستيكية</li>
+          <li>تكوّن الكوك في حاقنات الوقود</li>
+        </ul>
+        <p>الاستجابة الصحيحة: افحص مستوى الزيت كل 1,000–2,000 كم ولا تنتظر تحذير اللوحة — تشغيل المحرك بزيت منخفض يسرّع تلف المحامل والتوربينات.</p>
+        <a href="https://wa.me/971541699500?text=لدي%20BMW%20بمحرك%20N63%20وأحتاج%20فحصاً" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز فحص BMW N63</a>
+      </div>
+    </article>
+
+    <!-- مقالة: تعليق الهواء في Land Rover بالإمارات -->
+    <article class="blog-card" data-cat="brakes" data-month="2026-03"
+             data-title="مشاكل تعليق الهواء في Land Rover بالإمارات — دليل Discovery وRange Rover"
+             data-text="نظام تعليق الهواء الإلكتروني EAS من Land Rover من أكثر فئات الإصلاح شيوعاً في دبي. أكياس الهواء والضاغط وحساسات الارتفاع لها أنماط أعطال معروفة تسرّعها حرارة الإمارات.">
+      <div class="blog-card-banner">
+        <img src="../images/brembo-brake-disc-caliper-replacement-dubai.webp" alt="قرص فرامل وكاليبر Brembo — خدمة استبدال الفرامل دبي" loading="lazy" width="1200" height="798">
+        <div class="blog-banner-overlay"></div>
+        <span class="blog-banner-cat-icon">الفرامل والتعليق</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-date">مارس 2026</span>
+          <span class="blog-card-cat cat-brakes" style="background:#fee2e2;color:#dc2626;">الفرامل والتعليق</span>
+        </div>
+        <h2 class="blog-card-title"><a href="blog/land-rover-air-suspension-uae.html">مشاكل تعليق الهواء في Land Rover بالإمارات — دليل Discovery وRange Rover</a></h2>
+        <p class="blog-card-excerpt">أكياس الهواء والضاغط وحساسات الارتفاع في نظام EAS من Land Rover تتعطل بمعدل أعلى في حرارة الإمارات. إليك أبرز نقاط الضعف وخيارات الإصلاح.</p>
+        <button class="blog-read-btn" onclick="toggleArticle(this)"><i class="btn-arrow">‹</i> اقرأ المقالة</button>
+      </div>
+      <div class="blog-full">
+        <h3>ما يتعطل أولاً</h3>
+        <p>أكياس الهواء تتدهور بفعل الحرارة والأشعة فوق البنفسجية (800–2,500 درهم للاستبدال). الضاغط يعمل بإفراط عند وجود تسريبات بطيئة ويحترق (1,500–4,000 درهم). حساسات الارتفاع تتأثر بالغبار والاهتزاز (400–1,000 درهم للحساس الواحد).</p>
+        <h3>الإصلاح أم التحويل إلى نوابض لولبية؟</h3>
+        <p>للمركبات الأقدم (L322، L320، Discovery 3/4)، يلغي طقم التحويل صيانة EAS المستمرة مقابل 3,000–7,000 درهم لكن يفقد ضبط الارتفاع. للمركبات الأحدث (L405+)، الإصلاح بقطع أصلية أو بديلة جيدة عادة هو القرار الأصح.</p>
+        <a href="https://wa.me/971541699500?text=تعليق%20الهواء%20في%20سيارتي%20Land%20Rover%20يعاني%20من%20مشاكل%20في%20دبي" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز إصلاح تعليق Land Rover</a>
+      </div>
+    </article>
+
+    <!-- مقالة: تغليف السيراميك مقابل PPF -->
+    <article class="blog-card" data-cat="tips" data-month="2025-12"
+             data-title="تغليف السيراميك مقابل PPF: أيهما مناسب لحماية طلاء سيارتك في دبي؟"
+             data-text="تغليف السيراميك وغشاء حماية الطلاء PPF يحلان مشكلتين مختلفتين. مقارنة شاملة بالتكلفة والعمر الافتراضي وأيهما يناسب ظروف دبي القاسية على الطلاء.">
+      <div class="blog-card-banner">
+        <img src="../images/mechanic-engine-bay-service-dubai.webp" alt="فني فيكس هايف يقوم بصيانة حجرة المحرك في ورشة دبي" loading="lazy" width="1200" height="1800">
+        <div class="blog-banner-overlay"></div>
+        <span class="blog-banner-cat-icon">نصائح وإرشادات</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-date">ديسمبر 2025</span>
+          <span class="blog-card-cat cat-tips">نصائح وإرشادات</span>
+        </div>
+        <h2 class="blog-card-title"><a href="blog/ceramic-coating-vs-ppf-dubai.html">تغليف السيراميك مقابل PPF: أيهما مناسب لحماية طلاء سيارتك في دبي؟</a></h2>
+        <p class="blog-card-excerpt">السيراميك يحسّن اللمعان ويسهّل التنظيف؛ PPF يحمي فيزيائياً من رقائق الحصى. مقارنة عملية لتختار الأنسب لسيارتك في مناخ دبي القاسي.</p>
+        <button class="blog-read-btn" onclick="toggleArticle(this)"><i class="btn-arrow">‹</i> اقرأ المقالة</button>
+      </div>
+      <div class="blog-full">
+        <h3>الفرق الجوهري</h3>
+        <p>تغليف السيراميك بوليمر كيميائي يحسّن اللمعان ويطرد الماء ويحمي من الأشعة فوق البنفسجية، لكنه لا يحمي من رقائق الحصى أو الخدوش العميقة (1,500–5,000 درهم، يدوم 2–5 سنوات).</p>
+        <p>PPF غشاء فيزيائي سميك (150–200 ميكرون) يمتص صدمات الحصى وله خاصية الشفاء الذاتي للخدوش السطحية (5,000–20,000 درهم، يدوم 5–10 سنوات).</p>
+        <h3>أفضل نهج</h3>
+        <p>كثير من الملاك يجمعون بين الاثنين: PPF على المصد الأمامي وغطاء المحرك وحواف الأبواب، مع تغليف سيراميك فوق PPF وباقي الأسطح للحماية الكاملة وسهولة التنظيف.</p>
+        <a href="https://wa.me/971541699500?text=أنا%20مهتم%20بحماية%20طلاء%20سيارتي" class="blog-cta-inline" target="_blank" rel="noopener">📲 احصل على عرض حماية الطلاء</a>
+      </div>
+    </article>
+
+    <!-- مقالة: مشاكل استهلاك الزيت في BMW -->
+    <article class="blog-card" data-cat="engine" data-month="2026-03"
+             data-title="مشاكل استهلاك الزيت في BMW — أي المحركات تستهلك الزيت وماذا تفعل حيال ذلك في دبي"
+             data-text="محركات N63 وN54 وN20 وS55 معروفة باستهلاك الزيت بين مواعيد الصيانة. إليك متى يكون الاستهلاك طبيعياً ومتى يستوجب فحصاً في حرارة الإمارات.">
+      <div class="blog-card-banner">
+        <img src="../images/mechanic-inspection-torch-car-repair-dubai.webp" alt="فني فيكس هايف يستخدم مصباح فحص على مكونات السيارة في دبي" loading="lazy" width="1200" height="800">
+        <div class="blog-banner-overlay"></div>
+        <span class="blog-banner-cat-icon">المحرك والنقل</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-date">مارس 2026</span>
+          <span class="blog-card-cat cat-engine" style="background:#dbeafe;color:#1d4ed8;">المحرك والنقل</span>
+        </div>
+        <h2 class="blog-card-title"><a href="blog/bmw-oil-consumption-issues.html">مشاكل استهلاك الزيت في BMW — أي المحركات تستهلك الزيت وماذا تفعل حيال ذلك في دبي</a></h2>
+        <p class="blog-card-excerpt">N63 وN54 وN20 وS55 من أكثر محركات BMW استهلاكاً للزيت. تعرّف على الحد الطبيعي، وكيف تفرّق بين التسرب الخارجي والاستهلاك الداخلي.</p>
+        <button class="blog-read-btn" onclick="toggleArticle(this)"><i class="btn-arrow">‹</i> اقرأ المقالة</button>
+      </div>
+      <div class="blog-full">
+        <h3>ما هو الاستهلاك الطبيعي؟</h3>
+        <p>يجب ألا يستهلك محرك BMW المصان جيداً أكثر من 0.5 لتر لكل 1,000 كم. الاستهلاك فوق لتر واحد لكل 1,000 كم يستوجب التحقيق — خاصة في محركات N63 التي قد تصل إلى 1–2 لتر.</p>
+        <h3>التشخيص الصحيح</h3>
+        <p>تسرب خارجي (زيت مرئي على حشيات غطاء الصمامات) يختلف عن استهلاك داخلي (دخان أزرق عند بدء التشغيل، رائحة عادم زيتية) — وقد يحدثان معاً.</p>
+        <p>في حرارة دبي: افحص مستوى الزيت أسبوعياً، احتفظ بزجاجة احتياطية بالمواصفة الصحيحة، ولا تشغّل السيارة أبداً تحت الحد الأدنى.</p>
+        <a href="https://wa.me/971541699500?text=سيارتي%20BMW%20تستهلك%20الزيت%20وأحتاج%20فحصها" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز تشخيص زيت BMW</a>
+      </div>
+    </article>
+
+    <!-- مقالة: فشل تعليق الهواء AIRMATIC في Mercedes-Benz -->
+    <article class="blog-card" data-cat="brakes" data-month="2026-04"
+             data-title="فشل تعليق الهواء في Mercedes-Benz بدبي — دليل ملاك GLE وGLS وS-Class"
+             data-text="نظام AIRMATIC يمنح جودة قيادة استثنائية لكنه يحمل نقاط عطل معروفة تسرّعها حرارة دبي — مساند الهواء، الضاغط، كتلة الصمامات. دليل شامل بالأسعار وخيارات الإصلاح.">
+      <div class="blog-card-banner">
+        <img src="../images/nissan-juke-service-repair-dubai.webp" alt="نيسان جوك — خدمة وإصلاح السيارات في دبي" loading="lazy" width="1200" height="1500">
+        <div class="blog-banner-overlay"></div>
+        <span class="blog-banner-cat-icon">الفرامل والتعليق</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-date">أبريل 2026</span>
+          <span class="blog-card-cat cat-brakes" style="background:#fee2e2;color:#dc2626;">الفرامل والتعليق</span>
+        </div>
+        <h2 class="blog-card-title"><a href="blog/mercedes-benz-air-suspension-failure.html">فشل تعليق الهواء في Mercedes-Benz بدبي — دليل ملاك GLE وGLS وS-Class</a></h2>
+        <p class="blog-card-excerpt">مساند الهواء والضاغط وكتلة الصمامات في نظام AIRMATIC لها نقاط عطل موثقة في حرارة الإمارات. إليك التكاليف الواقعية وخيارات الإصلاح المستقل.</p>
+        <button class="blog-read-btn" onclick="toggleArticle(this)"><i class="btn-arrow">‹</i> اقرأ المقالة</button>
+      </div>
+      <div class="blog-full">
+        <h3>نقاط الفشل الشائعة</h3>
+        <p>مساند الهواء تتدهور بفعل الحرارة (1,800–4,000 درهم للزاوية). الضاغط يحترق عند العمل المفرط (2,000–5,000 درهم). كتلة الصمامات تتصلب أختامها وتتسرب (1,500–3,500 درهم).</p>
+        <h3>نظام ABC في S-Class</h3>
+        <p>يستخدم سائلاً هيدروليكياً بدل الهواء وإصلاحاته أغلى — احسب ميزانية 5,000–15,000 درهم للأعمال الكبرى.</p>
+        <p>في فيكس هايف، تكلف إصلاحات AIRMATIC عادة 40–60% فقط من سعر الوكالة لنفس العمل.</p>
+        <a href="https://wa.me/971541699500?text=تعليق%20AIRMATIC%20في%20سيارتي%20Mercedes%20يعاني%20من%20عطل%20في%20دبي" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز إصلاح تعليق Mercedes</a>
+      </div>
+    </article>
+
+    <!-- مقالة: الإصلاح أم الاستبدال -->
+    <article class="blog-card" data-cat="tips" data-month="2025-10"
+             data-title="الإصلاح أم الاستبدال: متى يتوقف إصلاح سيارتك في دبي عن أن يكون منطقياً؟"
+             data-text="قاعدة الـ50% وحساب التكلفة السنوية الإجمالية يساعدانك على تقرير الاحتفاظ بسيارتك أو استبدالها — مع اعتبارات خاصة بانخفاض قيمة السيارات في سوق دبي.">
+      <div class="blog-card-banner">
+        <img src="../images/brembo-brake-disc-caliper-replacement-dubai.webp" alt="قرص فرامل وكاليبر Brembo — خدمة استبدال الفرامل دبي" loading="lazy" width="1200" height="798">
+        <div class="blog-banner-overlay"></div>
+        <span class="blog-banner-cat-icon">نصائح وإرشادات</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-date">أكتوبر 2025</span>
+          <span class="blog-card-cat cat-tips">نصائح وإرشادات</span>
+        </div>
+        <h2 class="blog-card-title"><a href="blog/repair-vs-replace-car-dubai.html">الإصلاح أم الاستبدال: متى يتوقف إصلاح سيارتك في دبي عن أن يكون منطقياً؟</a></h2>
+        <p class="blog-card-excerpt">قارن التكلفة السنوية للاحتفاظ بسيارتك وإصلاحها مقابل تمويل سيارة جديدة. قاعدة الـ50% تساعدك على اتخاذ القرار الصحيح في سوق دبي.</p>
+        <button class="blog-read-btn" onclick="toggleArticle(this)"><i class="btn-arrow">‹</i> اقرأ المقالة</button>
+      </div>
+      <div class="blog-full">
+        <h3>قاعدة الـ50%</h3>
+        <p>إذا تجاوزت تكلفة الإصلاح 50% من القيمة السوقية للسيارة، ففكّر جدياً في الاستبدال. معظم الحالات الأخرى تميل لصالح الإصلاح، خصوصاً للسيارة المسددة بالكامل.</p>
+        <h3>عوامل تميل نحو كل خيار</h3>
+        <p>الإصلاح منطقي مع قسط تأمين منخفض وسجل صيانة موثق وعطل فردي لا يشير لتدهور شامل. الاستبدال أفضل عند تكرار الأعطال المكلفة أو أضرار هيكلية أو عندما تصبح السيارة غير موثوقة.</p>
+        <p>في دبي، تفقد السيارات قيمتها بسرعة — سيارة بعمر 3 سنوات قد تساوي 50–60% فقط من سعرها الأصلي، ما يجعل إصلاح سيارة معروفة التاريخ خياراً أقوى غالباً.</p>
+        <a href="https://wa.me/971541699500?text=أحتاج%20فحصاً%20شاملاً%20لسيارتي%20لأقرر%20بين%20الإصلاح%20أو%20الاستبدال" class="blog-cta-inline" target="_blank" rel="noopener">📲 احصل على فحص شامل</a>
+      </div>
+    </article>
+
+    <!-- مقالة: أضواء تحذير لوحة القيادة -->
+    <article class="blog-card" data-cat="tips" data-month="2026-02"
+             data-title="ماذا تعني أضواء التحذير في لوحة القيادة فعلياً — دليل سائق دبي"
+             data-text="الفرق بين ضوء يستوجب التوقف فوراً وآخر يمكن تأجيله بضعة أيام. دليل شامل لأضواء التحذير الحمراء والكهرمانية وما يجب فعله بالضبط عند ظهور كل منها في حرارة دبي.">
+      <div class="blog-card-banner">
+        <img src="../images/luxury-car-workshop-multi-lift-dubai.webp" alt="ورشة سيارات فاخرة مع رافعات متعددة المركبات — فيكس هايف غاراج مدينة دبي للاستثمار" loading="lazy" width="800" height="400">
+        <div class="blog-banner-overlay"></div>
+        <span class="blog-banner-cat-icon">نصائح وإرشادات</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-date">فبراير 2026</span>
+          <span class="blog-card-cat cat-tips">نصائح وإرشادات</span>
+        </div>
+        <h2 class="blog-card-title"><a href="blog/dashboard-warning-lights-dubai.html">ماذا تعني أضواء التحذير في لوحة القيادة فعلياً — دليل سائق دبي</a></h2>
+        <p class="blog-card-excerpt">من ضوء حرارة المحرك إلى ضوء البطارية — تعرّف بالضبط على ما يستوجب التوقف فوراً وما يمكن حجز صيانته خلال أسبوع.</p>
+        <button class="blog-read-btn" onclick="toggleArticle(this)"><i class="btn-arrow">‹</i> اقرأ المقالة</button>
+      </div>
+      <div class="blog-full">
+        <h3>أضواء حمراء: توقف فوراً</h3>
+        <p>حرارة المحرك، ضغط الزيت، البطارية، ونظام الفرامل — جميعها تستوجب التوقف الآمن الفوري. القيادة ولو لمسافة قصيرة بعد ظهورها قد تسبب أضراراً كارثية خلال دقائق.</p>
+        <h3>أضواء كهرمانية: عالجها قريباً</h3>
+        <p>فحص المحرك الثابت يعني حجز فحص خلال أسبوع، أما الوامض فيستوجب زيارة ورشة في نفس اليوم. ضغط الإطارات وحرارة ناقل الحركة تحتاج انتباهاً سريعاً لكن ليس توقفاً فورياً.</p>
+        <p>في حرارة دبي 45 درجة، تتصاعد العواقب أسرع بكثير من المناخات الأبرد — تصرف بسرعة أكبر.</p>
+        <a href="https://wa.me/971541699500?text=لدي%20ضوء%20تحذير%20وأحتاج%20فحصاً%20تشخيصياً" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز فحصاً تشخيصياً</a>
+      </div>
+    </article>
+
+    <!-- مقالة: السيارة المتضررة من الفيضان -->
+    <article class="blog-card" data-cat="tips" data-month="2026-02"
+             data-title="هل يمكن إصلاح السيارة المتضررة من الفيضان؟ ميكانيكي في دبي يشرح الحقيقة"
+             data-text="من تبلل بسيط في المقصورة إلى قفل مائي كامل للمحرك — تصنيف أضرار الفيضان الأربعة وما هو قابل للإصلاح فعلياً وما يجب فعله فوراً بعد تعرض سيارتك للمياه.">
+      <div class="blog-card-banner">
+        <img src="../images/brembo-brake-disc-caliper-replacement-dubai.webp" alt="قرص فرامل وكاليبر Brembo — خدمة استبدال الفرامل في دبي" loading="lazy" width="1200" height="798">
+        <div class="blog-banner-overlay"></div>
+        <span class="blog-banner-cat-icon">نصائح وإرشادات</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-date">فبراير 2026</span>
+          <span class="blog-card-cat cat-tips">نصائح وإرشادات</span>
+        </div>
+        <h2 class="blog-card-title"><a href="blog/flood-damaged-car-repair-dubai.html">هل يمكن إصلاح السيارة المتضررة من الفيضان؟ ميكانيكي في دبي يشرح الحقيقة</a></h2>
+        <p class="blog-card-excerpt">إمكانية الإصلاح تعتمد على عمق المياه والأنظمة المتضررة وسرعة التصرف. تصنيف واضح لأربع درجات ضرر وما يجب فعله خلال 24 ساعة الأولى.</p>
+        <button class="blog-read-btn" onclick="toggleArticle(this)"><i class="btn-arrow">‹</i> اقرأ المقالة</button>
+      </div>
+      <div class="blog-full">
+        <h3>تصنيف أضرار الفيضان</h3>
+        <p>من تبلل المقصورة البسيط (قابل للإصلاح إذا جُفف خلال 24–48 ساعة) إلى مستوى لوحة القيادة (إصلاح كبير، والكثير منها خسارة كاملة) وصولاً إلى غمر مدخل هواء المحرك (قفل مائي، قد يستوجب استبدال المحرك بالكامل).</p>
+        <h3>ماذا تفعل فوراً</h3>
+        <ul>
+          <li>لا تشغّل السيارة أبداً — ولو "للتأكد أنها تعمل"</li>
+          <li>افصل البطارية لمنع الدوائر القصيرة</li>
+          <li>وثّق الحالة بالصور واتصل بالتأمين فوراً</li>
+          <li>انقلها لفحص احترافي خلال 24 ساعة</li>
+        </ul>
+        <p>تشغيل محرك مصاب بقفل مائي يسبب تلفاً كارثياً بتكلفة 15,000–40,000 درهم يمكن تجنبه بالكامل.</p>
+        <a href="https://wa.me/971541699500?text=سيارتي%20تضررت%20من%20الفيضان%20وأحتاج%20تقييماً" class="blog-cta-inline" target="_blank" rel="noopener">📲 احصل على تقييم ضرر الفيضان</a>
+      </div>
+    </article>
+  <article class="blog-card" data-cat="brakes" data-month="2026-01"
+    data-title="كم تدوم تيل الفرامل في دبي؟ الحقيقة عن الفرامل في ازدحام التوقف والانطلاق"
+    data-text="تقديرات الشركات المصنّعة (40,000–70,000 كم) لا تنطبق على ازدحام دبي. عمر تيل الفرامل الواقعي هنا 25,000–45,000 كم. علامات التحذير وتكلفة الاستبدال الفعلية.">
+    <div class="blog-card-banner">
+      <img src="../images/chevrolet-camaro-performance-service-dubai.webp" alt="شيفروليه كامارو SS سيارة أداء عالٍ — صيانة وإصلاح في دبي" loading="lazy" width="1200" height="743">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">الفرامل والتعليق</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-01">يناير 2026</time>
+        <span class="blog-card-cat cat-brakes" style="background:#fee2e2;color:#dc2626;">الفرامل والتعليق</span>
+      </div>
+      <h2 class="blog-card-title"><a href="blog/brake-pads-lifespan-dubai.html">كم تدوم تيل الفرامل في دبي؟ الحقيقة عن الفرامل في ازدحام التوقف والانطلاق</a></h2>
+      <p class="blog-card-excerpt">تقديرات المصنّع (40,000–70,000 كم) لا تصمد أمام ازدحام دبي والمطبات والحرارة. الواقع 25,000–45,000 كم. إليك علامات التآكل والتكلفة الحقيقية للاستبدال.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full">
+      <h3>لماذا تتآكل الفرامل أسرع في دبي</h3>
+      <p>ازدحام التوقف والانطلاق، مئات المطبات يومياً، الفرملة المفاجئة على الطرق السريعة، والحرارة المحيطة العالية — كل هذا يرفع درجة حرارة الفرامل ويسرّع تآكل التيل. السيارات الثقيلة (باترول، لاند كروزر، GLS) تتآكل أسرع من السيدان.</p>
+      <h3>متى تستبدل التيل</h3>
+      <p>صرير عند الفرملة الخفيفة، احتكاك معدني، اهتزاز الدواسة، أو انجراف لجانب واحد — كلها علامات تستدعي الفحص الفوري. تجاهلها يحوّل إصلاحاً رخيصاً إلى ضرر بالأقراص يكلف 1,000–3,000 درهم إضافية.</p>
+      <h3>التكلفة في دبي</h3>
+      <p>تيل أمامي: 300–1,500 درهم حسب السيارة. صيانة فرامل كاملة (تيل + أقراص + سائل، أربع زوايا): 2,500–6,000 درهم. سائل الفرامل يجب تغييره كل سنتين بغض النظر عن حالة التيل.</p>
+      <a href="https://wa.me/971541699500?text=أحتاج%20فحص%20الفرامل" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز فحص الفرامل</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="engine" data-month="2026-02"
+    data-title="مشاكل Nissan Patrol الشائعة بالإمارات — ما يحتاج كل مالك Y62 معرفته"
+    data-text="محرك VK56VD الـ V8، سلسلة التوقيت، ناقل الحركة السبع سرعات، علبة النقل وتعليق الهواء — نقاط الضعف المعروفة لنيسان باترول Y62 في ظروف الإمارات.">
+    <div class="blog-card-banner">
+      <img src="../images/fiat-500-classic-car-service-dubai.webp" alt="سيارة Fiat 500 كلاسيكية — صيانة وإصلاح في دبي" loading="lazy" width="1200" height="800">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">المحرك والنقل</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-02">فبراير 2026</time>
+        <span class="blog-card-cat cat-engine" style="background:#dbeafe;color:#1d4ed8;">المحرك والنقل</span>
+      </div>
+      <h2 class="blog-card-title"><a href="blog/nissan-patrol-common-problems-uae.html">مشاكل Nissan Patrol الشائعة بالإمارات — ما يحتاج كل مالك Y62 معرفته</a></h2>
+      <p class="blog-card-excerpt">باترول Y62 قوي وطويل العمر — لكنه يحمل نقاط ضعف معروفة: استهلاك الزيت، تمدد سلسلة التوقيت، ناقل الحركة وتعليق الهواء. إليك ما يجب مراقبته عند كل مسافة.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full">
+      <h3>المحرك وناقل الحركة</h3>
+      <p>محرك VK56VD V8 قوي لكنه يستهلك زيتاً بمعدل 0.5–1 لتر كل 5,000 كم في الإصدارات الأقدم. عند 100,000–200,000 كم راقب تمدد سلسلة التوقيت (صوت طرقعة عند الإقلاع، أكواد P0011/P0021) — إصلاحها 6,000–12,000 درهم. ناقل الحركة السبع سرعات يحتاج تغيير سائل عند 60,000 كم في الإمارات بدل توصية المصنّع 100,000 كم.</p>
+      <h3>علبة النقل وتعليق الهواء</h3>
+      <p>إهمال زيت علبة النقل بعد 60,000–80,000 كم يسبب تآكلاً مبكراً. إصدارات SE وPlatinum ذات تعليق الهواء تعاني أعطال الضاغط ومساند الهواء عند 80,000–120,000 كم — استبدال المسند 2,000–4,000 درهم، الضاغط 2,500–5,000 درهم.</p>
+      <a href="https://wa.me/971541699500?text=لدي%20نيسان%20باترول%20وأحتاج%20فحصاً" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز فحص باترول</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="ac" data-month="2026-02"
+    data-title="كيف تدمّر حرارة دبي تكييف سيارتك — وكيف تمنع ذلك"
+    data-text="تكييف السيارة في دبي يعمل نحو 3,000 ساعة خلال خمسة أشهر. ما يتعطل فعلياً — الضاغط، المكثف، فلتر المقصورة — وكيف تحمي النظام.">
+    <div class="blog-card-banner">
+      <img src="../images/engine-repair-spanner-mechanic-dubai.webp" alt="فني يشد براغي المحرك بمفتاح ربط — إصلاح سيارات دبي" loading="lazy" width="1200" height="900">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">التكييف والتبريد</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-02">فبراير 2026</time>
+        <span class="blog-card-cat cat-ac">التكييف والتبريد</span>
+      </div>
+      <h2 class="blog-card-title"><a href="blog/dubai-heat-destroys-car-ac.html">كيف تدمّر حرارة دبي تكييف سيارتك — وكيف تمنع ذلك</a></h2>
+      <p class="blog-card-excerpt">تكييف سيارتك في دبي يعمل بأقصى حمل نحو 3,000 ساعة خلال خمسة أشهر فقط — أضعاف ما صُمم له في أوروبا. إليك ما يتعطل فعلياً وكيف تمنع الأعطال المكلفة.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full">
+      <h3>ما الذي يتعطل ولماذا</h3>
+      <p>الضاغط يعمل بأقصى حمل ضد حرارة شديدة لأشهر متواصلة — استبداله يكلف 1,500–4,000 درهم. الغبار يسد زعانف المكثف فيرفع ضغط النظام ويسرّع فقدان غاز التبريد. النظام المشحون بشكل صحيح في أبريل قد ينقص 10–15٪ بحلول سبتمبر.</p>
+      <h3>فلتر المقصورة والصمام</h3>
+      <p>فلتر المقصورة المسدود بالغبار يقلل التبريد وقد يجمّد المبخر بالكامل — استبدله كل 15,000–20,000 كم. غالباً ما يُظن هذا عطلاً كبيراً بينما الحل فلتر جديد بسيط.</p>
+      <h3>كيف تحمي النظام</h3>
+      <p>صيانة سنوية مع اختبار ضغط، تنظيف المكثف بانتظام، تجنّب أقصى برودة باستمرار، والركن في الظل — كلها تقلل الحمل على الضاغط وتطيل عمر النظام.</p>
+      <a href="https://wa.me/971541699500?text=أحتاج%20صيانة%20تكييف%20لسيارتي" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز فحص تكييف</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="engine" data-month="2026-02"
+    data-title="أضرار الرمال والغبار على محركات السيارات في الإمارات — ما يحدث فعلاً بالداخل"
+    data-text="رمال الإمارات كاشطة بدقة ميكروسكوبية. فلتر الهواء، تآكل الأسطوانات والمحامل، محركات التوربو المعرّضة أكثر، وإجراءات الحماية.">
+    <div class="blog-card-banner">
+      <img src="../images/eco-conscious-car-service-dubai.webp" alt="خدمة صيانة سيارات صديقة للبيئة — فيكس هايف غاراج دبي" loading="lazy" width="1200" height="800">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">المحرك والنقل</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-02">فبراير 2026</time>
+        <span class="blog-card-cat cat-engine" style="background:#dbeafe;color:#1d4ed8;">المحرك والنقل</span>
+      </div>
+      <h2 class="blog-card-title"><a href="blog/sand-dust-engine-damage-uae.html">أضرار الرمال والغبار على محركات السيارات في الإمارات — ما يحدث فعلاً بالداخل</a></h2>
+      <p class="blog-card-excerpt">رمال الإمارات ناعمة وكاشطة بدقة ميكروسكوبية. إذا تجاوزت فلتر الهواء، تسبب تآكلاً تراكمياً غير مرئي في الأسطوانات والمحامل والتوربو. إليك كيف تحمي محركك.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full">
+      <h3>فلتر الهواء هو خط الدفاع الأول</h3>
+      <p>غبار الإمارات يحتوي جسيمات 1–10 ميكرون قد تمر عبر فلتر متآكل أو علبة غير محكمة الإغلاق. استبدل الفلتر كل 15,000–20,000 كم، وكل 10,000 كم في موسم العواصف الرملية.</p>
+      <h3>ماذا يحدث داخل المحرك</h3>
+      <p>جسيمات السيليكا أصلب من الفولاذ — تسبب تآكل جدار الأسطوانة، حلقات المكبس، موجّهات الصمامات والمحامل. محامل التوربو الدوّارة بسرعة فائقة معرّضة بشكل خاص؛ استبدال التوربو يكلف 3,000–12,000 درهم.</p>
+      <h3>الحماية</h3>
+      <p>فحص علبة الهواء بحثاً عن تشققات، استخدام زيت صناعي كامل، تفادي القيادة أثناء العواصف الرملية، وتغيير الزيت في مواعيده لإزالة الجسيمات العالقة.</p>
+      <a href="https://wa.me/971541699500?text=أحتاج%20فحصاً%20للمحرك%20بعد%20التعرض%20للرمال" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز فحص المحرك</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="buying" data-month="2026-02"
+    data-title="كيف تشتري سيارة مستعملة في دبي دون الوقوع في الفخ"
+    data-text="المستندات الواجب فحصها، الفحوصات البصرية للحوادث، اختبار القيادة، الفحص الفني المستقل، وتحذير من سيارات ضرر الفيضانات في السوق."
+    >
+    <div class="blog-card-banner">
+      <img src="../images/fiat-500-classic-car-service-dubai.webp" alt="فيات 500 كلاسيكية — صيانة وإصلاح في دبي" loading="lazy" width="1200" height="800">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">شراء وبيع السيارات</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-02">فبراير 2026</time>
+        <span class="blog-card-cat cat-buying" style="background:#fef3c7;color:#b45309;">شراء وبيع السيارات</span>
+      </div>
+      <h2 class="blog-card-title"><a href="blog/buy-pre-owned-car-dubai.html">كيف تشتري سيارة مستعملة في دبي دون الوقوع في الفخ</a></h2>
+      <p class="blog-card-excerpt">سوق السيارات المستعملة في دبي كبير لكن شفافيته متفاوتة. المستندات التي تفحصها، علامات ضرر الحوادث والفيضانات، وأهمية الفحص الفني المستقل قبل الشراء.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full">
+      <h3>المستندات والفحص البصري</h3>
+      <p>تحقق من الملكية وسجل التأمين وسجل الصيانة. افحص عدم انتظام الطلاء وفجوات الألواح غير المتساوية — علامات إصلاح حادث. تحت الغطاء، الطلاء الأسود الجديد على مناطق هيكلية علامة تحذير مهمة.</p>
+      <h3>اختبار القيادة والفحص المستقل</h3>
+      <p>انتبه لناقل الحركة والفرامل والتوجيه والتكييف. الخطوة الأهم: فحص فني مستقل قبل الشراء (300–600 درهم) يشمل مسحاً تشخيصياً OBD — تكلفة تافهة مقارنة بمشكلة خفية مكتشفة بعد الشراء.</p>
+      <h3>تحذير من ضرر الفيضانات</h3>
+      <p>بعد فيضانات 2024، دخلت سيارات متضررة غير مُفصح عنها إلى السوق. علامات: رائحة عفن، تآكل مفصلات الأبواب، عدم اتساق ضفيرة الأسلاك، وأعطال إلكترونية لا تتناسب مع عمر السيارة.</p>
+      <a href="https://wa.me/971541699500?text=أحتاج%20فحص%20ما%20قبل%20الشراء%20لسيارة%20مستعملة" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز فحص ما قبل الشراء</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="brakes" data-month="2026-03"
+    data-title="فشل تعليق الهواء في Porsche Cayenne بدبي — إصلاح أصلي أم تحويل إلى نوابض لولبية؟"
+    data-text="مساند الهواء، ضاغط الهواء، مخمدات PASM — ما يفشل في حرارة دبي، وهل الأفضل الإصلاح الأصلي أم التحويل إلى نوابض لولبية.">
+    <div class="blog-card-banner">
+      <img src="../images/mechanic-engine-bay-service-dubai.webp" alt="ميكانيكي فيكس هايف يقوم بخدمة حجرة المحرك في ورشة دبي" loading="lazy" width="1200" height="1800">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">الفرامل والتعليق</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-03">مارس 2026</time>
+        <span class="blog-card-cat cat-brakes" style="background:#fee2e2;color:#dc2626;">الفرامل والتعليق</span>
+      </div>
+      <h2 class="blog-card-title"><a href="blog/porsche-cayenne-air-suspension-failure.html">فشل تعليق الهواء في Porsche Cayenne بدبي — إصلاح أصلي أم تحويل إلى نوابض لولبية؟</a></h2>
+      <p class="blog-card-excerpt">مساند الهواء والضاغط ومخمدات PASM في كايين تتشقق وتتعطل في حرارة دبي. إليك الفرق بين الإصلاح وفق المواصفة الأصلية والتحويل إلى نوابض لولبية — وأيهما مناسب لسيارتك.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full">
+      <h3>ما الذي يفشل</h3>
+      <p>مساند الهواء تتشقق بفعل دورات الحرارة الشديدة (مساند أصلية 3,500–6,000 درهم للواحدة). الضاغط يُرهق ويحترق إذا عوّض عن تسريبات بطيئة (2,500–5,000 درهم). مخمدات PASM قد تفشل بشكل مستقل عبر عطل الصمام الكهرومغناطيسي.</p>
+      <h3>إصلاح أصلي أم تحويل لولبي؟</h3>
+      <p>الإصلاح الأصلي (10,000–18,000 درهم) يحافظ على الأداء الكامل — مناسب للسيارات الجيدة أو المُعدّة للبيع. التحويل إلى نوابض لولبية (4,000–8,000 درهم) يلغي أعطال تعليق الهواء المستقبلية نهائياً — خيار عملي للسيارات الأقدم أو ذات المسافة العالية.</p>
+      <a href="https://wa.me/971541699500?text=تعليق%20الهواء%20في%20سيارتي%20Porsche%20Cayenne%20يفشل%20في%20دبي" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز استشارة تعليق Cayenne</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="preventive" data-month="2026-03"
+    data-title="دليل صيانة فورد F-150 في الإمارات — الصيانة المناسبة لظروف دبي"
+    data-text="محركات EcoBoost وV8 Coyote، تراكم الكربون، ناقل الحركة 10R80، ونظام التبريد — الصيانة الصحيحة لفورد F-150 في حرارة الإمارات.">
+    <div class="blog-card-banner">
+      <img src="../images/engine-serpentine-belt-repair-dubai.webp" alt="نظام سير المحرك والبكرات — إصلاح محركات السيارات فيكس هايف دبي" loading="lazy" width="1200" height="675">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">الصيانة الوقائية</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-03">مارس 2026</time>
+        <span class="blog-card-cat cat-preventive">الصيانة الوقائية</span>
+      </div>
+      <h2 class="blog-card-title"><a href="blog/ford-f150-service-guide-uae.html">دليل صيانة فورد F-150 في الإمارات — الصيانة المناسبة لظروف دبي</a></h2>
+      <p class="blog-card-excerpt">فورد F-150 مصممة أساساً لظروف أمريكا الشمالية. إليك كيف تكيّف جدول الصيانة — تراكم الكربون في EcoBoost، ناقل الحركة 10 سرعات، ونظام التبريد — مع حرارة دبي.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full">
+      <h3>محركات EcoBoost</h3>
+      <p>تراكم الكربون على صمامات السحب هو المشكلة الأبرز في محركات الحقن المباشر — تنظيف بقشور الجوز كل 60,000–80,000 كم. غيّر الزيت كل 10,000–12,000 كم بزيت 5W-30 صناعي كامل — لا تمدد الفترات في حرارة الإمارات.</p>
+      <h3>محرك V8 Coyote وناقل الحركة</h3>
+      <p>محرك 5.0 لتر الطبيعي أقل عرضة للمشاكل من EcoBoost في الحرارة. ناقل الحركة 10R80 قد يظهر تردداً عند تغيير التروس — تأكد من تحديث برنامج وحدة التحكم وغيّر سائل Mercon ULV كل 50,000 كم.</p>
+      <a href="https://wa.me/971541699500?text=لدي%20فورد%20F-150%20وأحتاج%20صيانة%20في%20دبي" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز صيانة F-150</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="brakes" data-month="2026-04"
+    data-title="مطبات دبي تدمّر تعليق سيارتك — إليك ما يجب فحصه"
+    data-text="مطبات الإمارات أعلى وأحد من الأوروبية. ممتصات الصدمات، جلب التعليق، روابط قضيب مانع الدوران، ضبط الزوايا والإطارات — ما يتعطل أولاً وكيف تقلل الضرر.">
+    <div class="blog-card-banner">
+      <img src="../images/nissan-juke-service-repair-dubai.webp" alt="نيسان جوك كروس أوفر — صيانة وإصلاح سيارات دبي" loading="lazy" width="1200" height="1500">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">الفرامل والتعليق</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-04">أبريل 2026</time>
+        <span class="blog-card-cat cat-brakes" style="background:#fee2e2;color:#dc2626;">الفرامل والتعليق</span>
+      </div>
+      <h2 class="blog-card-title"><a href="blog/dubai-speed-bumps-suspension.html">مطبات دبي تدمّر تعليق سيارتك — إليك ما يجب فحصه</a></h2>
+      <p class="blog-card-excerpt">مطبات دبي أطول وأحدّ من نظيراتها العالمية — بمطب كل 100–200 متر في بعض المناطق. إليك مكونات التعليق التي تتعطل أولاً وكيف تقلل الضرر التراكمي.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full">
+      <h3>ما يتعطل أولاً</h3>
+      <p>ممتصات الصدمات هي الضحية الأكثر شيوعاً — تسريب الزيت يجعل القيادة مرتدة (400–1,500 درهم للزاوية). جلب التعليق وروابط قضيب مانع الدوران تتآكل بفعل الصدمات المتكررة (150–3,500 درهم حسب القطعة). ضبط الزوايا يتغيّر تدريجياً مسبباً تآكلاً غير متساوٍ للإطارات.</p>
+      <h3>كيف تقلل الضرر</h3>
+      <p>اعبر المطب بزاوية إن أمكن، أبطئ قبل المطب لا بعده، وافحص التعليق سنوياً لاكتشاف المكونات المتآكلة قبل تعطلها الكامل.</p>
+      <a href="https://wa.me/971541699500?text=أحتاج%20فحص%20التعليق%20بعد%20ضرر%20مطبات%20السرعة%20في%20دبي" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز فحص التعليق</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="tips" data-month="2026-01"
+    data-title="لماذا تفشل بطاريات السيارات أسرع في دبي — وكيف تمنع ذلك"
+    data-text="بطارية تدوم 4–6 سنوات في المناخ المعتدل تدوم 2–3 سنوات فقط في دبي. لماذا تدمّر الحرارة البطاريات، علامات التحذير، وكيف تطيل عمرها."
+    >
+    <div class="blog-card-banner">
+      <img src="../images/mechanic-inspection-torch-car-repair-dubai.webp" alt="ميكانيكي فيكس هايف يستخدم مصباح فحص على مكونات السيارة في دبي" loading="lazy" width="1200" height="800">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">نصائح وإرشادات</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-01">يناير 2026</time>
+        <span class="blog-card-cat cat-tips">نصائح وإرشادات</span>
+      </div>
+      <h2 class="blog-card-title"><a href="blog/car-battery-fail-dubai-heat.html">لماذا تفشل بطاريات السيارات أسرع في دبي — وكيف تمنع ذلك</a></h2>
+      <p class="blog-card-excerpt">بطارية تدوم 4–6 سنوات في أوروبا قد تفشل خلال 2–3 سنوات في دبي. الحرارة تسرّع تدهور الألواح الداخلية. إليك علامات التحذير وكيف تطيل عمر بطاريتك.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full">
+      <h3>لماذا تدمّر الحرارة البطاريات</h3>
+      <p>كل زيادة 8–10 درجات فوق 25 درجة مئوية تضاعف تقريباً معدل تدهور الألواح. حيّز محرك يبلغ 60–70 درجة صيفاً في دبي يُشغّل البطارية بمعدل تدهور أضعاف مقارنة بمناخ أوروبي. النمط الشائع: تعمل بشكل جيد صيفاً، ثم تفشل فجأة في أول صباح بارد.</p>
+      <h3>علامات التحذير وكيف تطيل العمر</h3>
+      <p>دوران بطيء عند التشغيل، خفوت الأضواء، أو الحاجة لبدء تشغيل بالكابلات — كلها تستدعي اختبار حمل فوري. اركن في الظل، استخدم بطاريات AGM (600–1,200 درهم، أطول عمراً) واختبر الحمل سنوياً بعد السنة الثانية.</p>
+      <a href="https://wa.me/971541699500?text=أحتاج%20اختبار%20حمل%20للبطارية%20أو%20استبدالها" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز اختبار البطارية</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="engine" data-month="2026-03"
+    data-title="فشل أنابيب التبريد في Porsche Cayenne — مشكلة البلاستيك التي تفاجئ الملاك"
+    data-text="توصيلات بلاستيكية سريعة الفك في نظام تبريد Cayenne تتشقق بفعل حرارة الإمارات. الموديلات المتأثرة، علامات التحذير، والإصلاح الوقائي الصحيح.">
+    <div class="blog-card-banner">
+      <img src="../images/mercedes-gle-coupe-garage-dubai.webp" alt="مرسيدس-بنز GLE كوبيه بيضاء — صيانة مرسيدس مستقلة في دبي" loading="lazy" width="1200" height="801">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">المحرك والنقل</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-03">مارس 2026</time>
+        <span class="blog-card-cat cat-engine" style="background:#dbeafe;color:#1d4ed8;">المحرك والنقل</span>
+      </div>
+      <h2 class="blog-card-title"><a href="blog/porsche-cayenne-coolant-pipe-failure.html">فشل أنابيب التبريد في Porsche Cayenne — مشكلة البلاستيك التي تفاجئ الملاك</a></h2>
+      <p class="blog-card-excerpt">توصيلات بلاستيكية سريعة الفك في نظام تبريد كايين تصبح هشة وتتشقق بفعل حرارة الإمارات، عادة بعد 80,000–120,000 كم. إليك الموديلات المتأثرة والإصلاح الوقائي الصحيح.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full">
+      <h3>ما الذي يفشل</h3>
+      <p>مجمّع توزيع التبريد البلاستيكي والتوصيلات سريعة الفك مصنوعة من نايلون مقوى يصبح هشاً بفعل دورة الحرارة المستمرة — تمدد وانكماش بين برودة الليل وحرارة تشغيل تتجاوز 80 درجة. يتشقق الموصل ويتطاير سائل التبريد فجأة، عادة بعد 80,000–120,000 كم في موديلات 955 و958.</p>
+      <h3>علامات التحذير والإصلاح</h3>
+      <p>انخفاض سائل التبريد بين الصيانات، رائحة حلوة من حجرة المحرك، أو بركة سائل ملوّن تحت السيارة. الإصلاح الوقائي الصحيح: استبدال كل التوصيلات بخراطيم سيليكون أو ألومنيوم محسّن (2,000–4,500 درهم) — نوصي بذلك عند 80,000 كم لتفادي مخاطرة فشل حشية الرأس (8,000–25,000 درهم).</p>
+      <a href="https://wa.me/971541699500?text=لدي%20سيارة%20Porsche%20Cayenne%20وأحتاج%20فحص%20نظام%20التبريد" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز فحص تبريد Cayenne</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-cat="preventive" data-month="2026-02"
+    data-title="دليل صيانة تويوتا لاند كروزر للأميال العالية — كيف تحافظ على تشغيل LC فوق 200,000 كم"
+    data-text="سير التوقيت، مضخة المياه، التعليق الأمامي وحاقنات الديزل عند 150,000–200,000 كم؛ أختام المحرك والتفاضلية عند 200,000–300,000 كم. ما يبقي لاند كروزر يعمل طويلاً.">
+    <div class="blog-card-banner">
+      <img src="../images/car-service-expert-advice-dubai.webp" alt="نصيحة خبير لصيانة السيارات — فيكس هايف غاراج دبي" loading="lazy" width="1200" height="800">
+      <div class="blog-banner-overlay"></div>
+      <span class="blog-banner-cat-icon">الصيانة الوقائية</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-meta">
+        <time class="blog-card-date" datetime="2026-02">فبراير 2026</time>
+        <span class="blog-card-cat cat-preventive">الصيانة الوقائية</span>
+      </div>
+      <h2 class="blog-card-title"><a href="blog/toyota-land-cruiser-high-mileage-service.html">دليل صيانة تويوتا لاند كروزر للأميال العالية — كيف تحافظ على تشغيل LC فوق 200,000 كم</a></h2>
+      <p class="blog-card-excerpt">سيارات لاند كروزر تتجاوز 300,000 كم بانتظام في الإمارات — لكن ذلك يتطلب صيانة استباقية لا رد فعل. إليك ما يحتاج انتباهاً عند كل مرحلة من مراحل الأميال العالية.</p>
+      <button class="blog-read-btn" onclick="toggleArticle(this)">اقرأ المقال <i class="btn-arrow">›</i></button>
+    </div>
+    <div class="blog-full">
+      <h3>150,000–200,000 كم</h3>
+      <p>افحص سلسلة التوقيت دورياً، استبدل مضخة المياه استباقياً عند 150,000–180,000 كم، وجدّد التعليق الأمامي بالكامل (جلب، مفاصل كرة، مساعدون). حاقنات الديزل تحتاج فحصاً وتنظيفاً (800–2,000 درهم).</p>
+      <h3>200,000–300,000 كم</h3>
+      <p>حشوات وأختام المحرك تبدأ بالتسريب — تجديدها استثمار وقائي. صيانة زيت التفاضليتين وعلبة نقل الحركة كل 40,000–60,000 كم إلزامية لتفادي تلف التروس. كاليبرات الفرامل قد تلتصق جزئياً وتحتاج صيانة دورية.</p>
+      <h3>القاعدة الذهبية</h3>
+      <p>تغيير الزيت كل 7,500 كم بزيت صناعي كامل، صيانة سائل التبريد بانتظام، وعدم تأجيل أي علامة تحذير مهما بدت بسيطة — هذا ما يفصل بين لاند كروزر يدوم 300,000 كم وآخر يتعطل مبكراً.</p>
+      <a href="https://wa.me/971541699500?text=لدي%20تويوتا%20لاند%20كروزر%20بحاجة%20إلى%20صيانة" class="blog-cta-inline" target="_blank" rel="noopener">📲 احجز صيانة لاند كروزر</a>
+    </div>
+  </article>
+
     <div class="blog-empty" id="blogEmpty">
       <p>لا توجد مقالات تطابق بحثك.<br>جرّب كلمة مختلفة أو <button onclick="clearSearch()" style="background:none;border:none;color:#1d4ed8;font-weight:700;cursor:pointer;font-size:inherit;padding:0;">امسح البحث</button>.</p>
     </div>
@@ -1160,11 +2316,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div>
       <h4>روابط سريعة</h4>
       <ul>
-        <li><a href="../services.html">جميع الخدمات</a></li>
-        <li><a href="../about.html">من نحن</a></li>
-        <li><a href="../faq.html">الأسئلة الشائعة</a></li>
-        <li><a href="../blogs.html">المدونة</a></li>
-        <li><a href="../contact.html">اتصل بنا</a></li>
+        <li><a href="services.html">جميع الخدمات</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+        <li><a href="blogs.html">المدونة</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
         <li><a href="https://wa.me/971541699500?text=مرحبًا%2C%20رأيت%20موقعكم%20وأريد%20حجز%20موعد">احجز عبر واتساب</a></li>
       </ul>
     </div>
