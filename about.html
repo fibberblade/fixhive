@@ -465,13 +465,17 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"></n
     @media(max-width: 560px){ .why-grid{ grid-template-columns: 1fr; } .why-cta-row{ flex-direction:column; align-items:flex-start; } }
 
     .timeline { padding: 60px 5%; background: #f8faff; }
+    .timeline-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
     .timeline-items {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto;
-      gap: 1.5rem 3rem;
-      max-width: 860px;
-      margin-top: 2rem;
+      gap: 1.5rem;
     }
     .timeline-item {
       background: #fff;
@@ -482,6 +486,9 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"></n
     .tl-year { font-size: 0.78rem; font-weight: 700; color: #b45309; letter-spacing: 1px; margin-bottom: 0.4rem; }
     .timeline-item h3 { font-size: 1rem; font-weight: 700; color: #0D1B2A; margin-bottom: 0.4rem; }
     .timeline-item p { font-size: 0.88rem; color: #4b5563; line-height: 1.6; margin: 0; }
+    .timeline-video { border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(13,27,42,0.12); }
+    .timeline-video video { display: block; width: 100%; height: auto; }
+    @media(max-width: 860px) { .timeline-layout { grid-template-columns: 1fr; } }
     @media(max-width: 600px) { .timeline-items { grid-template-columns: 1fr; } }
 
     .brands-grid {
@@ -778,26 +785,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="timeline" id="history">
   <div class="section-label">Our Journey</div>
   <div class="section-title">How We Got Here</div>
-  <div class="timeline-items">
-    <div class="timeline-item">
-      <div class="tl-year">2007</div>
-      <h3>Founded in Dubai</h3>
-      <p>Saher Auto General Repairing LLC opens its doors, starting with a small team of certified technicians focused on Japanese vehicles.</p>
+  <div class="timeline-layout">
+    <div class="timeline-items">
+      <div class="timeline-item">
+        <div class="tl-year">2007</div>
+        <h3>Founded in Dubai</h3>
+        <p>Saher Auto General Repairing LLC opens its doors, starting with a small team of certified technicians focused on Japanese vehicles.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-year">2020</div>
+        <h3>Hybrid & EV Capability</h3>
+        <p>Invested in specialist EV and hybrid training and equipment to serve the UAE's growing electric vehicle market.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-year">2012</div>
+        <h3>Expanding Our Expertise</h3>
+        <p>Added European and American vehicle servicing capabilities, bringing in specialists for BMW, Mercedes, and Ford platforms.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-year">2025</div>
+        <h3>FixHive — A New Identity</h3>
+        <p>Rebranded as FixHive Garage, reflecting our growth into a full-service garage trusted by thousands of Dubai drivers across all vehicle types.</p>
+      </div>
     </div>
-    <div class="timeline-item">
-      <div class="tl-year">2020</div>
-      <h3>Hybrid & EV Capability</h3>
-      <p>Invested in specialist EV and hybrid training and equipment to serve the UAE's growing electric vehicle market.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="tl-year">2012</div>
-      <h3>Expanding Our Expertise</h3>
-      <p>Added European and American vehicle servicing capabilities, bringing in specialists for BMW, Mercedes, and Ford platforms.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="tl-year">2025</div>
-      <h3>FixHive — A New Identity</h3>
-      <p>Rebranded as FixHive Garage, reflecting our growth into a full-service garage trusted by thousands of Dubai drivers across all vehicle types.</p>
+    <div class="timeline-video">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="images/Video/intro-video.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </div>
