@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="hmg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4B5320"/>
+      <stop offset="100%" stop-color="#2E3417"/>
+    </linearGradient>
+  </defs>
+  <polygon points="50,4 96,28 96,72 50,96 4,72 4,28" fill="url(#hmg)"/>
+  <polygon points="50,4 96,28 96,72 50,96 4,72 4,28" fill="none" stroke="#C9B037" stroke-width="1.5"/>
+  <text x="50" y="61" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="900" fill="#FFFFFF" letter-spacing="1">H</text>
+  <line x1="26" y1="43" x2="74" y2="43" stroke="#C9B037" stroke-width="1" opacity="0.7"/>
+</svg>
