@@ -94,7 +94,8 @@ Set-Location $localBase
 
 # Always upload all tracked site files
 $allFiles = git ls-files 2>$null | Where-Object {
-    $_ -match '\.(html|css|js|svg|json|webp|png|jpg|jpeg|ico|xml|txt)$'
+    $_ -match '\.(html|css|js|svg|json|webp|png|jpg|jpeg|ico|xml|txt)$' -or
+    (Split-Path $_ -Leaf) -eq '.htaccess'
 }
 
 Write-Host "Files to upload: $($allFiles.Count)"
