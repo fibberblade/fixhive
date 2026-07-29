@@ -4,29 +4,26 @@ AddCharset UTF-8 .html .htm .js .css .xml .json .txt
 
 RewriteEngine On
 
-# 1. HTTP -> HTTPS (preserves host)
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# All rules below resolve straight to the final canonical URL in ONE hop,
+# regardless of which combination of protocol/host/path the request came in as.
+# (Previously http+www requests took 2 hops: http->https first, then www->non-www
+# as a second redirect, since the old rule 1 used [L] before www was ever checked.)
 
-# 2. www + index.html -> canonical in one hop
-RewriteCond %{HTTP_HOST} ^www\.myfixhive\.ae$ [NC]
+# 1. Any request for /index.html -> https://myfixhive.ae/
 RewriteCond %{REQUEST_URI} ^/index\.html$
 RewriteRule ^ https://myfixhive.ae/ [R=301,L]
 
-# 3. www + /ar/index.html -> canonical in one hop
-RewriteCond %{HTTP_HOST} ^www\.myfixhive\.ae$ [NC]
+# 2. Any request for /ar/index.html -> https://myfixhive.ae/ar/
 RewriteCond %{REQUEST_URI} ^/ar/index\.html$
 RewriteRule ^ https://myfixhive.ae/ar/ [R=301,L]
 
-# 4. www -> non-www (all other pages)
+# 3. Any request to the www host (any protocol, any other page) -> https non-www
 RewriteCond %{HTTP_HOST} ^www\.myfixhive\.ae$ [NC]
 RewriteRule ^(.*)$ https://myfixhive.ae/$1 [R=301,L]
 
-# 5. /index.html -> / (non-www)
-RewriteRule ^index\.html$ https://myfixhive.ae/ [R=301,L]
-
-# 6. /ar/index.html -> /ar/ (non-www)
-RewriteRule ^ar/index\.html$ https://myfixhive.ae/ar/ [R=301,L]
+# 4. Remaining HTTP requests (already non-www at this point) -> HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://myfixhive.ae/$1 [R=301,L]
 
 ErrorDocument 404 /404.html
 
