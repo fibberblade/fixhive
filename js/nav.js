@@ -53,7 +53,8 @@
         { label: 'Service Packages',          href: '/service-packages.html' },
         { label: 'Detailing & Protection',    href: '/detailing.html' },
         { label: 'Gearbox & Drivetrain',      href: '/gearbox.html' },
-        { label: 'Advanced Diagnostics',      href: '/diagnostics.html' }
+        { label: 'Advanced Diagnostics',      href: '/diagnostics.html' },
+        { label: 'Car Programming',           href: '/car-programming-dubai.html' }
       ]
     },
     { label: '🔬 Free AI Diagnosis', href: '/diagnosis.html', cls: 'mob-diagnosis' },
