@@ -340,7 +340,7 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"></n
   var observer = new MutationObserver(function () {
     if (repositionTiWidget()) observer.disconnect();
   });
-  observer.observe(document.body, { childList: true, subtree: true });
+  observer.observe(document.documentElement, { childList: true, subtree: true });
 })();
 </script>
 </head>
