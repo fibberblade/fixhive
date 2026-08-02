@@ -832,3 +832,10 @@ a.pay-badge:hover { opacity: 0.8; transform: translateY(-2px); }
   .bs-specials-grid { grid-template-columns: 1fr; }
   .bs-footer-cta { flex-direction: column; text-align: center; }
 }
+
+/* ── TRUSTINDEX CERTIFICATE WIDGET — moved off bottom-right to avoid ── */
+/* ── colliding with the AI chat launcher (#fh-chat-launcher)        ── */
+.ti-sticky-button {
+  right: auto !important;
+  left: 15px !important;
+}
