@@ -59,6 +59,23 @@ src="https://www.facebook.com/tr?id=7949223353241312&ev=PageView&noscript=1"
     .quick-links ul a:hover { background: #F5A623; }
   </style>
 <script defer async src='https://cdn.trustindex.io/loader.js?3b03f0074cde804a372626da12c'></script>
+<script defer async src='https://cdn.trustindex.io/loader-cert.js?f67efce78d0528047d46567b7f9'></script>
+<script>
+(function () {
+  function repositionTiWidget() {
+    var btn = document.querySelector('.ti-sticky-button');
+    if (!btn) return false;
+    btn.style.setProperty('right', 'auto', 'important');
+    btn.style.setProperty('left', '15px', 'important');
+    return true;
+  }
+  if (repositionTiWidget()) return;
+  var observer = new MutationObserver(function () {
+    if (repositionTiWidget()) observer.disconnect();
+  });
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->

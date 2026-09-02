@@ -17,6 +17,14 @@ RewriteRule ^ https://myfixhive.ae/ [R=301,L]
 RewriteCond %{REQUEST_URI} ^/ar/index\.html$
 RewriteRule ^ https://myfixhive.ae/ar/ [R=301,L]
 
+# 5. Short-URL aliases -> canonical SEO pages (301)
+RewriteRule ^diagnostics\.html$ https://myfixhive.ae/car-diagnostics-dubai.html [R=301,L]
+RewriteRule ^ac-service\.html$ https://myfixhive.ae/car-ac-repair-dubai.html [R=301,L]
+RewriteRule ^pre-purchase-inspection\.html$ https://myfixhive.ae/pre-purchase-inspection-dubai.html [R=301,L]
+RewriteRule ^engine\.html$ https://myfixhive.ae/engine-repair-dubai.html [R=301,L]
+RewriteRule ^ar/engine\.html$ https://myfixhive.ae/ar/engine-repair-dubai.html [R=301,L]
+RewriteRule ^ar/electrical\.html$ https://myfixhive.ae/ar/electrical-repair-dubai.html [R=301,L]
+
 # 3. Any request to the www host (any protocol, any other page) -> https non-www
 RewriteCond %{HTTP_HOST} ^www\.myfixhive\.ae$ [NC]
 RewriteRule ^(.*)$ https://myfixhive.ae/$1 [R=301,L]
