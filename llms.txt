@@ -1,0 +1,78 @@
+# FixHive Garage
+
+> FixHive Garage (Saher Auto General Repairing LLC) is an independent, premium automotive repair workshop in Dubai Investment Park (DIP 1), Dubai, UAE, offering dealer-level diagnostics and repair for 45+ car brands — from mainstream Japanese and Korean makes to European luxury and exotic marques (Ferrari, Lamborghini, Rolls-Royce, Bentley, Aston Martin, Maserati) — at independent-garage prices.
+
+Address: WH2 FixHive, 80 Street, Dubai Investment Park First, Dubai, UAE (24.972111, 55.1737988).
+Hours: Monday–Saturday, 08:30–19:00. Closed Sundays.
+Contact: +971 54 169 9500 (phone & WhatsApp) · sale.ae@myfixhive.ae
+Warranty: 12 months / 10,000 km on parts and labor. Diagnostic platforms include VCDS, ISTA, and PIWIS for dealer-grade fault reading and programming. 4.9-star Google rating, 18+ years serving Dubai.
+An Arabic version of most pages is available under the same path prefixed with /ar/ (e.g. /ar/services.html).
+
+## Services
+
+- [All Services](https://myfixhive.ae/services.html): Overview of every repair and maintenance service offered.
+- [Engine Repair](https://myfixhive.ae/engine-repair-dubai.html): Engine diagnostics, rebuilds, and repair.
+- [Engine & Gearbox Overheating Repair](https://myfixhive.ae/engine-gearbox-overheating-repair-dubai.html): Diagnosis and repair of overheating engines and transmissions.
+- [Gearbox / Transmission Repair](https://myfixhive.ae/gearbox-repair-dubai.html): Automatic and manual transmission repair and rebuilds.
+- [Car AC Repair](https://myfixhive.ae/car-ac-repair-dubai.html): AC regassing, compressor, and system repair for UAE heat.
+- [Brake Repair](https://myfixhive.ae/brake-repair-dubai.html): Brake pad, disc, and full brake system service.
+- [Suspension Repair](https://myfixhive.ae/suspension-repair-dubai.html): Includes air suspension diagnostics and repair.
+- [Oil Change](https://myfixhive.ae/oil-change-dubai.html): Scheduled oil and filter changes.
+- [Electrical Repair](https://myfixhive.ae/electrical-repair-dubai.html): Vehicle electrical fault diagnosis and repair.
+- [Car Diagnostics](https://myfixhive.ae/car-diagnostics-dubai.html): Dealer-level fault code diagnosis and ECU work.
+- [Car Programming & Diagnosis](https://myfixhive.ae/diagnosis.html): Includes an AI-assisted car diagnosis tool.
+- [Hybrid & EV Servicing](https://myfixhive.ae/hybrid-ev.html): Maintenance and repair for hybrid and electric vehicles.
+- [Body & Exterior Work](https://myfixhive.ae/body.html): Bodywork, panel, and paint repair.
+- [Car Detailing](https://myfixhive.ae/car-detailing-dubai.html): Detailing, ceramic coating, and PPF.
+- [Tyres & Wheels](https://myfixhive.ae/tyres.html): Tyre replacement, alignment, and wheel service.
+- [Pre-Purchase Inspection](https://myfixhive.ae/pre-purchase-inspection-dubai.html): Independent inspection before buying a used car.
+- [Service Packages](https://myfixhive.ae/service-packages.html): Bundled maintenance packages.
+- [Current Offers](https://myfixhive.ae/offers.html): Active promotions and discounts.
+
+## Brands Serviced
+
+Dedicated pages exist for each brand at `/{brand}-repair-dubai.html`, covering common issues, service pricing, and why FixHive is qualified to work on that make. Full list: [Brands Overview](https://myfixhive.ae/brands.html).
+
+Mainstream & Japanese/Korean: [Toyota](https://myfixhive.ae/toyota-repair-dubai.html), [Nissan](https://myfixhive.ae/nissan-repair-dubai.html), [Honda](https://myfixhive.ae/honda-repair-dubai.html), [Hyundai](https://myfixhive.ae/hyundai-repair-dubai.html), [Kia](https://myfixhive.ae/kia-repair-dubai.html), [Mazda](https://myfixhive.ae/mazda-repair-dubai.html), [Mitsubishi](https://myfixhive.ae/mitsubishi-repair-dubai.html), [Suzuki](https://myfixhive.ae/suzuki-repair-dubai.html), [Subaru](https://myfixhive.ae/subaru-repair-dubai.html), [Isuzu](https://myfixhive.ae/isuzu-repair-dubai.html), [Daihatsu](https://myfixhive.ae/daihatsu-repair-dubai.html), [Infiniti](https://myfixhive.ae/infiniti-repair-dubai.html), [Genesis](https://myfixhive.ae/genesis-repair-dubai.html), [Lexus](https://myfixhive.ae/lexus-repair-dubai.html).
+
+European: [BMW](https://myfixhive.ae/bmw-repair-dubai.html), [Mercedes-Benz](https://myfixhive.ae/mercedes-benz-repair-dubai.html), [Audi](https://myfixhive.ae/audi-repair-dubai.html), [Volkswagen](https://myfixhive.ae/volkswagen-repair-dubai.html), [Porsche](https://myfixhive.ae/porsche-repair-dubai.html), [Land Rover](https://myfixhive.ae/land-rover-repair-dubai.html), [Jaguar](https://myfixhive.ae/jaguar-repair-dubai.html), [Volvo](https://myfixhive.ae/volvo-repair-dubai.html), [Mini](https://myfixhive.ae/mini-repair-dubai.html), [Peugeot](https://myfixhive.ae/peugeot-repair-dubai.html), [Renault](https://myfixhive.ae/renault-repair-dubai.html), [Fiat](https://myfixhive.ae/fiat-repair-dubai.html), [Alfa Romeo](https://myfixhive.ae/alfa-romeo-repair-dubai.html).
+
+Luxury & Exotic: [Ferrari](https://myfixhive.ae/ferrari-repair-dubai.html), [Lamborghini](https://myfixhive.ae/lamborghini-repair-dubai.html), [Rolls-Royce](https://myfixhive.ae/rolls-royce-repair-dubai.html), [Bentley](https://myfixhive.ae/bentley-repair-dubai.html), [Aston Martin](https://myfixhive.ae/aston-martin-repair-dubai.html), [Maserati](https://myfixhive.ae/maserati-repair-dubai.html), [Maybach](https://myfixhive.ae/maybach-repair-dubai.html).
+
+American: [Ford](https://myfixhive.ae/ford-repair-dubai.html), [Chevrolet](https://myfixhive.ae/chevrolet-repair-dubai.html), [GMC](https://myfixhive.ae/gmc-repair-dubai.html), [Jeep](https://myfixhive.ae/jeep-repair-dubai.html), [Dodge](https://myfixhive.ae/dodge-repair-dubai.html), [Chrysler](https://myfixhive.ae/chrysler-repair-dubai.html), [Cadillac](https://myfixhive.ae/cadillac-repair-dubai.html), [Lincoln](https://myfixhive.ae/lincoln-repair-dubai.html), [RAM](https://myfixhive.ae/ram-repair-dubai.html), [Tesla](https://myfixhive.ae/tesla-repair-dubai.html).
+
+Chinese: [BYD](https://myfixhive.ae/byd-repair-dubai.html), [MG](https://myfixhive.ae/mg-repair-dubai.html), [Geely](https://myfixhive.ae/geely-repair-dubai.html), [Chery](https://myfixhive.ae/chery-repair-dubai.html), [Changan](https://myfixhive.ae/changan-repair-dubai.html), [Haval](https://myfixhive.ae/haval-repair-dubai.html), [GAC](https://myfixhive.ae/gac-repair-dubai.html), [Jetour](https://myfixhive.ae/jetour-repair-dubai.html), [Hongqi](https://myfixhive.ae/hongqi-repair-dubai.html).
+
+## Guides
+
+A selection of the most commonly referenced maintenance guides from the FixHive blog; the full archive is at [Blog](https://myfixhive.ae/blogs.html).
+
+- [Car Overheating in Dubai Summer](https://myfixhive.ae/blog/car-overheating-dubai-summer.html)
+- [Why Dubai Heat Destroys Car AC](https://myfixhive.ae/blog/dubai-heat-destroys-car-ac.html)
+- [Car Battery Failure in Dubai Heat](https://myfixhive.ae/blog/car-battery-fail-dubai-heat.html)
+- [Car Service Intervals in Dubai](https://myfixhive.ae/blog/car-service-intervals-dubai.html)
+- [Brake Pad Lifespan in Dubai](https://myfixhive.ae/blog/brake-pads-lifespan-dubai.html)
+- [Repair vs. Replace a Car in Dubai](https://myfixhive.ae/blog/repair-vs-replace-car-dubai.html)
+- [How to Choose a Trustworthy Mechanic in Dubai](https://myfixhive.ae/blog/choose-trustworthy-mechanic-dubai.html)
+- [OBD Fault Codes Explained](https://myfixhive.ae/blog/obd-fault-codes-dubai.html)
+- [Dashboard Warning Lights Guide](https://myfixhive.ae/blog/dashboard-warning-lights-dubai.html)
+- [Buying a Pre-Owned Car in Dubai](https://myfixhive.ae/blog/buy-pre-owned-car-dubai.html)
+- [Hybrid Cars in Dubai (2026)](https://myfixhive.ae/blog/hybrid-cars-dubai-2026.html)
+- [EV Charging in Dubai: A Guide](https://myfixhive.ae/blog/ev-charging-dubai-guide.html)
+- [Land Rover Air Suspension Issues in the UAE](https://myfixhive.ae/blog/land-rover-air-suspension-uae.html)
+- [Porsche Cayenne Air Suspension Failure](https://myfixhive.ae/blog/porsche-cayenne-air-suspension-failure.html)
+- [BMW N63 Engine Problems in Dubai](https://myfixhive.ae/blog/bmw-n63-engine-problems-dubai.html)
+
+## Company
+
+- [About FixHive](https://myfixhive.ae/about.html): Company background and story.
+- [Our Team](https://myfixhive.ae/team.html): Technicians and staff.
+- [FAQ](https://myfixhive.ae/faq.html): Common customer questions.
+- [Gallery](https://myfixhive.ae/gallery.html): Workshop and work photos.
+- [Contact](https://myfixhive.ae/contact.html): Location, phone, WhatsApp, and hours.
+- [Privacy Policy](https://myfixhive.ae/privacy-policy.html)
+
+## Optional
+
+- [Arabic Homepage](https://myfixhive.ae/ar/): Arabic-language version of the site (most pages have an /ar/ equivalent).
+- [Full Sitemap](https://myfixhive.ae/sitemap.xml): Complete machine-readable list of all pages, including all 80+ blog posts and their Arabic translations.
