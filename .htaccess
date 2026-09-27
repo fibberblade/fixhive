@@ -17,13 +17,27 @@ RewriteRule ^ https://myfixhive.ae/ [R=301,L]
 RewriteCond %{REQUEST_URI} ^/ar/index\.html$
 RewriteRule ^ https://myfixhive.ae/ar/ [R=301,L]
 
-# 5. Short-URL aliases -> canonical SEO pages (301)
+# 5. Short-URL aliases -> canonical SEO pages (301) — complete list
+# EN short URLs
 RewriteRule ^diagnostics\.html$ https://myfixhive.ae/car-diagnostics-dubai.html [R=301,L]
 RewriteRule ^ac-service\.html$ https://myfixhive.ae/car-ac-repair-dubai.html [R=301,L]
 RewriteRule ^pre-purchase-inspection\.html$ https://myfixhive.ae/pre-purchase-inspection-dubai.html [R=301,L]
 RewriteRule ^engine\.html$ https://myfixhive.ae/engine-repair-dubai.html [R=301,L]
+RewriteRule ^electrical\.html$ https://myfixhive.ae/electrical-repair-dubai.html [R=301,L]
+RewriteRule ^brakes\.html$ https://myfixhive.ae/brake-repair-dubai.html [R=301,L]
+RewriteRule ^gearbox\.html$ https://myfixhive.ae/gearbox-repair-dubai.html [R=301,L]
+RewriteRule ^detailing\.html$ https://myfixhive.ae/car-detailing-dubai.html [R=301,L]
+RewriteRule ^suspension\.html$ https://myfixhive.ae/suspension-repair-dubai.html [R=301,L]
+# AR short URLs
 RewriteRule ^ar/engine\.html$ https://myfixhive.ae/ar/engine-repair-dubai.html [R=301,L]
 RewriteRule ^ar/electrical\.html$ https://myfixhive.ae/ar/electrical-repair-dubai.html [R=301,L]
+RewriteRule ^ar/diagnostics\.html$ https://myfixhive.ae/ar/car-diagnostics-dubai.html [R=301,L]
+RewriteRule ^ar/ac-service\.html$ https://myfixhive.ae/ar/car-ac-repair-dubai.html [R=301,L]
+RewriteRule ^ar/brakes\.html$ https://myfixhive.ae/ar/brake-repair-dubai.html [R=301,L]
+RewriteRule ^ar/gearbox\.html$ https://myfixhive.ae/ar/gearbox-repair-dubai.html [R=301,L]
+RewriteRule ^ar/detailing\.html$ https://myfixhive.ae/ar/car-detailing-dubai.html [R=301,L]
+RewriteRule ^ar/pre-purchase-inspection\.html$ https://myfixhive.ae/ar/pre-purchase-inspection-dubai.html [R=301,L]
+RewriteRule ^ar/suspension\.html$ https://myfixhive.ae/ar/suspension-repair-dubai.html [R=301,L]
 
 # 3. Any request to the www host (any protocol, any other page) -> https non-www
 RewriteCond %{HTTP_HOST} ^www\.myfixhive\.ae$ [NC]
