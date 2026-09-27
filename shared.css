@@ -414,9 +414,16 @@ footer {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 2.5rem;
   margin-bottom: 2.5rem;
+}
+.footer-cert img {
+  max-width: 130px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
 }
 .footer-brand .logo { font-size: 1.4rem; display: block; margin-bottom: 0.8rem; }
 .footer-brand p { font-size: 0.87rem; line-height: 1.65; max-width: 280px; }
