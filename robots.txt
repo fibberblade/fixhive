@@ -4,6 +4,7 @@ Disallow: /*?brand=
 
 User-agent: Googlebot
 Allow: /
+Disallow: /*?brand=
 
 User-agent: Bingbot
 Allow: /
