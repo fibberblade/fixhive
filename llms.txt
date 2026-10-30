@@ -18,6 +18,7 @@ An Arabic version of most pages is available under the same path prefixed with /
 - [Brake Repair](https://myfixhive.ae/brake-repair-dubai.html): Brake pad, disc, and full brake system service.
 - [Suspension Repair](https://myfixhive.ae/suspension-repair-dubai.html): Includes air suspension diagnostics and repair.
 - [Oil Change](https://myfixhive.ae/oil-change-dubai.html): Scheduled oil and filter changes.
+- [Fuel Injector Cleaning](https://myfixhive.ae/fuel-injector-cleaning-dubai.html): Ultrasonic injector cleaning with before/after flow-bench testing for petrol (PFI, GDI) and diesel injectors; fixes misfires, rough idle and high fuel consumption. Price on request; most cars same day.
 - [Electrical Repair](https://myfixhive.ae/electrical-repair-dubai.html): Vehicle electrical fault diagnosis and repair.
 - [Car Diagnostics](https://myfixhive.ae/car-diagnostics-dubai.html): Dealer-level fault code diagnosis and ECU work.
 - [Car Programming & Diagnosis](https://myfixhive.ae/diagnosis.html): Includes an AI-assisted car diagnosis tool.

@@ -1009,4 +1009,42 @@
   <url><loc>https://myfixhive.ae/ar/blog/wheel-alignment-dubai.html</loc><lastmod>2026-08-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://myfixhive.ae/ar/blog/winter-driving-dubai.html</loc><lastmod>2026-08-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://myfixhive.ae/ar/blog/year-end-car-check-dubai.html</loc><lastmod>2026-08-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://myfixhive.ae/fuel-injector-cleaning-dubai.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/fuel-injector-cleaning-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/fuel-injector-cleaning-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/fuel-injector-cleaning-dubai.html"/>
+    <video:video>
+      <video:thumbnail_loc>https://myfixhive.ae/images/fuel-injector-cleaning-dubai.jpg</video:thumbnail_loc>
+      <video:title>Fuel Injector Cleaning &amp; Flow Test — FixHive Garage Dubai</video:title>
+      <video:description>Fuel injectors removed and run on a calibrated flow bench at FixHive Garage, Dubai Investment Park. Graduated tubes compare each injector before and after ultrasonic cleaning.</video:description>
+      <video:content_loc>https://myfixhive.ae/images/fuel-injector-cleaning-dubai.mp4</video:content_loc>
+      <video:duration>16</video:duration>
+      <video:publication_date>2026-10-30T09:00:00+04:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://myfixhive.ae/ar/fuel-injector-cleaning-dubai.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://myfixhive.ae/fuel-injector-cleaning-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://myfixhive.ae/ar/fuel-injector-cleaning-dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myfixhive.ae/fuel-injector-cleaning-dubai.html"/>
+    <video:video>
+      <video:thumbnail_loc>https://myfixhive.ae/images/fuel-injector-cleaning-dubai.jpg</video:thumbnail_loc>
+      <video:title>تنظيف واختبار بخاخات الوقود — فيكس هايف دبي</video:title>
+      <video:description>فك بخاخات الوقود واختبارها على جهاز تدفق معاير في ورشة فيكس هايف بمجمع دبي للاستثمار، ومقارنة كل بخاخ قبل وبعد التنظيف بالموجات فوق الصوتية.</video:description>
+      <video:content_loc>https://myfixhive.ae/images/fuel-injector-cleaning-dubai.mp4</video:content_loc>
+      <video:duration>16</video:duration>
+      <video:publication_date>2026-10-30T09:00:00+04:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
 </urlset>

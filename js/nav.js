@@ -57,7 +57,8 @@
         { label: 'Gearbox Repair Dubai',        href: '/gearbox-repair-dubai.html' },
         { label: 'Major Repairs',               href: '/engine-gearbox-overheating-repair-dubai.html' },
         { label: 'Car Diagnostics Dubai',       href: '/car-diagnostics-dubai.html' },
-        { label: 'Car Programming Dubai',       href: '/car-programming-dubai.html' }
+        { label: 'Car Programming Dubai',       href: '/car-programming-dubai.html' },
+        { label: 'Injector Cleaning Dubai',     href: '/fuel-injector-cleaning-dubai.html' }
       ]
     },
     { label: '🔬 Free AI Diagnosis', href: '/diagnosis.html', cls: 'mob-diagnosis' },
